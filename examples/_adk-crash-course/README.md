@@ -1,103 +1,59 @@
-# Agent Development Kit (ADK) Crash Course
+# ADK Crash Course
 
-This repository contains examples for learning Google's Agent Development Kit (ADK), a powerful framework for building LLM-powered agents.
+This directory contains a progressive series of examples designed to teach the fundamentals of building agents with the Agent Development Kit (ADK). Each example builds on the previous one, introducing new concepts incrementally.
+
+## Learning Path
+
+Follow these examples in order to build your understanding from basic to advanced:
+
+1. **Basic Agent** - Creating your first simple ADK agent
+2. **Tool Agent** - Adding custom tools to your agent
+3. **LiteLLM Agent** - Working with different LLM providers
+4. **Structured Outputs** - Controlling agent output formats
+5. **Sessions and State** - Implementing memory and context
+6. **Persistent Storage** - Saving information across sessions
+7. **Multi-Agent** - Creating a system with multiple agents
+8. **Stateful Multi-Agent** - Building complex agent interactions
+9. **Callbacks** - Adding hooks for monitoring and control
+10. **Sequential Agent** - Implementing step-by-step workflows
+11. **Parallel Agent** - Running multiple agents concurrently
+12. **Loop Agent** - Creating agents with iterative processing
+
+## Prerequisites
+
+- Python 3.9+
+- Google ADK (`pip install google-adk`)
+- API keys for various LLMs (depends on example)
 
 ## Getting Started
 
-### Setup Environment
+Each example folder contains its own README with specific instructions, but the general process is:
 
-You only need to create one virtual environment for all examples in this course. Follow these steps to set it up:
+1. Navigate to the example directory
+2. Review the README for that example
+3. Set up any required API keys
+4. Run the example code
+5. Experiment with modifications
 
-```bash
-# Create virtual environment in the root directory
-python -m venv .venv
+## Example Structure
 
-# Activate (each new terminal)
-# macOS/Linux:
-source .venv/bin/activate
-# Windows CMD:
-.venv\Scripts\activate.bat
-# Windows PowerShell:
-.venv\Scripts\Activate.ps1
+Each example typically follows this structure:
 
-# Install dependencies
-pip install -r requirements.txt
+```
+example-name/
+├── README.md           # Instructions and explanation
+├── agent_name/         # Main agent code
+│   ├── __init__.py
+│   ├── agent.py        # Core agent definition
+│   └── tools/          # (If applicable)
+└── requirements.txt    # Dependencies
 ```
 
-Once set up, this single environment will work for all examples in the repository.
+## Recommended Learning Approach
 
-### Setting Up API Keys
+1. **Start with the basics**: Understand how a simple agent works before moving to more complex examples
+2. **Read the code**: Each example is thoroughly commented to explain key concepts
+3. **Modify and experiment**: After running an example, try changing parameters and behavior
+4. **Build your own**: After completing the crash course, try creating your own agent from scratch
 
-1. Create an account in Google Cloud https://cloud.google.com/?hl=en
-2. Create a new project
-3. Go to https://aistudio.google.com/apikey
-4. Create an API key
-5. Assign key to the project
-6. Connect to a billing account
-
-Each example folder contains a `.env.example` file. For each project you want to run:
-
-1. Navigate to the example folder
-2. Rename `.env.example` to `.env` 
-3. Open the `.env` file and replace the placeholder with your API key:
-   ```
-   GOOGLE_API_KEY=your_api_key_here
-   ```
-
-You'll need to repeat this for each example project you want to run.
-
-## Examples Overview
-
-Here's what you can learn from each example folder:
-
-### 1. Basic Agent
-Introduction to the simplest form of ADK agents. Learn how to create a basic agent that can respond to user queries.
-
-### 2. Tool Agent
-Learn how to enhance agents with tools that allow them to perform actions beyond just generating text.
-
-### 3. LiteLLM Agent
-Example of using LiteLLM to abstract away LLM provider details and easily switch between different models.
-
-### 4. Structured Outputs
-Learn how to use Pydantic models with `output_schema` to ensure consistent, structured responses from your agents.
-
-### 5. Sessions and State
-Understand how to maintain state and memory across multiple interactions using sessions.
-
-### 6. Persistent Storage
-Learn techniques for storing agent data persistently across sessions and application restarts.
-
-### 7. Multi-Agent
-See how to orchestrate multiple specialized agents working together to solve complex tasks.
-
-### 8. Stateful Multi-Agent
-Build agents that maintain and update state throughout complex multi-turn conversations.
-
-### 9. Callbacks
-Implement event callbacks to monitor and respond to agent behaviors in real-time.
-
-### 10. Sequential Agent
-Create pipeline workflows where agents operate in a defined sequence to process information.
-
-### 11. Parallel Agent
-Leverage concurrent operations with parallel agents for improved efficiency and performance.
-
-### 12. Loop Agent
-Build sophisticated agents that can iteratively refine their outputs through feedback loops.
-
-## Official Documentation
-
-For more detailed information, check out the official ADK documentation:
-- https://google.github.io/adk-docs/get-started/quickstart
-
-## Support
-
-Need help or run into issues? Join our free AI Developer Accelerator community on Skool:
-- [AI Developer Accelerator Community](https://www.skool.com/ai-developer-accelerator/about)
-
-In the community you'll find:
-- Weekly coaching and support calls
-- Early access to code from YouTube projects
-- A network of AI developers of all skill levels ready to help
-- Behind-the-scenes looks at how these apps are built
+Happy learning!
