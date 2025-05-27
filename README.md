@@ -1,10 +1,21 @@
 # 🤖 Awesome ADK Agents
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![ADK Version](https://img.shields.io/badge/ADK-Latest-orange)](https://google.github.io/adk-docs/)
+<p align="center">
+  <img src="https://google.github.io/adk-docs/_static/adk_logo.png" width="400px" alt="Agent Development Kit">
+</p>
+
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+  <a href="https://google.github.io/adk-docs/"><img src="https://img.shields.io/badge/ADK-Latest-orange" alt="ADK Version"></a>
+  <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
+</p>
 
 A curated collection of ready-to-use agents built with Google's Agent Development Kit (ADK). From simple helpers to complex multi-agent systems, this repository serves as both a learning resource and a practical toolkit for developers working with ADK.
+
+<p align="center">
+  <b>⭐ Star this repo to stay updated with new agents and features! ⭐</b>
+</p>
 
 ## 📚 What is ADK?
 
@@ -12,12 +23,12 @@ A curated collection of ready-to-use agents built with Google's Agent Developmen
 
 ADK allows you to create, deploy, and orchestrate agent architectures ranging from simple tasks to complex workflows, with features like:
 
-- Multi-agent system design
-- Rich tool ecosystem
-- Flexible orchestration
-- Integrated developer tooling
-- Native streaming support
-- Built-in agent evaluation
+- 🧩 **Multi-agent system design** - Build applications with specialized agents working together
+- 🛠️ **Rich tool ecosystem** - Equip agents with diverse capabilities through function tools
+- 🔄 **Flexible orchestration** - Define complex workflows with sequential, parallel, and loop agents
+- 🧪 **Integrated developer tooling** - Debug and visualize agent interactions with the dev UI
+- 📡 **Native streaming support** - Create real-time, interactive experiences
+- 📊 **Built-in agent evaluation** - Assess and improve agent performance systematically
 
 ## 🧭 Table of Contents
 
@@ -38,27 +49,42 @@ ADK allows you to create, deploy, and orchestrate agent architectures ranging fr
 
 The **awesome-adk-agents** repository is a comprehensive collection of agent examples, templates, and production-ready implementations built using ADK. Whether you're just getting started with ADK or building sophisticated agent systems, this repository provides:
 
-- **Practical Examples**: Learn ADK by examining real, working agents
-- **Templates**: Jump-start your development with pre-built agent structures
-- **Production-Ready Agents**: Deploy and use fully functional agents for common tasks
-- **Learning Resources**: Progress from basic to advanced ADK concepts
+- 💻 **Practical Examples**: Learn ADK by examining real, working agents
+- 🧰 **Templates**: Jump-start your development with pre-built agent structures
+- 🚀 **Production-Ready Agents**: Deploy and use fully functional agents for common tasks
+- 📚 **Learning Resources**: Progress from basic to advanced ADK concepts through tutorials
 
 ## 📂 Repository Structure
 
 The repository is organized into categories based on agent complexity and use case:
 
-```
-awesome-adk-agents/
-├── examples/               # Learning-focused examples
-│   ├── _adk-crash-course/  # Step-by-step tutorial agents
-│   ├── academic-research/  # Research assistance agents
-│   ├── brand-search/       # Marketing & SEO agents
-│   └── ...
-├── project-manager-agent/  # Tool for managing ADK agent projects
-└── ...
-```
 
-Each agent or agent system is contained in its own directory with consistent structure and documentation.
+### 🔬 Domain-Specific Agents
+
+| Agent | Description | Category |
+|-------|-------------|----------|
+| [Academic Research](examples/academic-research/) | Research assistance with paper analysis | Research |
+| [Brand Search Optimization](examples/brand-search-optimization/) | SEO and marketing optimization tools | Marketing |
+| [Customer Service](examples/customer-service/) | Customer support automation | Business |
+| [Data Science](examples/data-science/) | Analytics and data processing | Analytics |
+| [Financial Advisor](examples/financial-advisor/) | Investment and financial planning | Finance |
+| [FOMC Research](examples/fomc-research/) | Federal Reserve policy analysis | Finance |
+| [LLM Auditor](examples/llm-auditor/) | Evaluation and improvement of LLM outputs | AI Safety |
+| [Marketing Agency](examples/marketing-agency/) | Content creation and marketing tools | Marketing |
+| [Personalized Shopping](examples/personalized-shopping/) | Customized retail recommendations | Retail |
+| [RAG](examples/RAG/) | Retrieval-augmented generation implementations | Knowledge |
+| [Software Bug Assistant](examples/software-bug-assistant/) | Programming help and debugging | Development |
+| [Time Series Forecasting](examples/time-series-forecasting/) | Predictive analytics for temporal data | Analytics |
+| [Travel Concierge](examples/travel-concierge/) | Trip planning and booking assistance | Travel |
+| [YouTube Thumbnail Agent](examples/youtube-thumbnail-agent/) | Content optimization for video creators | Content |
+
+### 🛠️ Utility Agents
+
+| Agent | Description | Category |
+|-------|-------------|----------|
+| [Project Manager Agent](project-manager-agent/) | Tool for managing ADK agent projects | Development |
+
+Each agent directory contains its own README with detailed instructions, requirements, and usage examples.
 
 ## 🚀 Getting Started
 
@@ -71,24 +97,24 @@ Each agent or agent system is contained in its own directory with consistent str
 
 ### Installation
 
-1. Clone this repository:
+1. **Clone this repository**:
    ```bash
    git clone https://github.com/yourusername/awesome-adk-agents.git
    cd awesome-adk-agents
    ```
 
-2. Navigate to any agent directory and follow its specific README instructions.
+2. **Navigate to any agent directory** and follow its specific README instructions.
 
 ## 🧩 Agent Categories
 
 The repository includes agents for various domains and use cases:
 
-- **Data Processing**: ETL, analysis, and data transformation agents
-- **Autonomous Workflows**: Agents that complete complex multi-step tasks
-- **Development Tools**: Coding assistants, project management, and DevOps agents
-- **API Wrappers**: Agents that simplify interactions with external services
-- **Personal Assistants**: Task management, scheduling, and productivity agents
-- **Multi-Agent Systems**: Complex architectures with specialized sub-agents
+- 📊 **Data Processing**: ETL, analysis, and data transformation agents
+- 🔄 **Autonomous Workflows**: Agents that complete complex multi-step tasks
+- 🛠️ **Development Tools**: Coding assistants, project management, and DevOps agents
+- 🔌 **API Wrappers**: Agents that simplify interactions with external services
+- 📱 **Personal Assistants**: Task management, scheduling, and productivity agents
+- 🧠 **Multi-Agent Systems**: Complex architectures with specialized sub-agents
 
 ## 💡 Use Cases
 
@@ -132,13 +158,14 @@ Please see our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructi
 
 ### Contribution Process
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-agent`)
-3. Implement your changes
-4. Add tests and documentation
-5. Commit your changes (`git commit -m 'Add amazing agent'`)
-6. Push to the branch (`git push origin feature/amazing-agent`)
-7. Open a Pull Request
+1. **Fork the Repository** - Create your own fork of the project
+2. **Create a Branch** - Make a new branch for your contribution
+   ```bash
+   git checkout -b feature/amazing-agent
+   ```
+3. **Make Changes** - Implement your contribution following the structure guidelines
+4. **Test Your Changes** - Ensure your agent works as expected
+5. **Submit a Pull Request** - Open a PR against the main repository
 
 ## 🛣️ Roadmap
 
@@ -163,4 +190,12 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 
 ---
 
-*This repository is not officially affiliated with Google or the ADK team. It is a community-driven collection of agent implementations.*
+<p align="center">
+  <a href="https://github.com/yourusername/awesome-adk-agents/stargazers">
+    <img src="https://img.shields.io/github/stars/yourusername/awesome-adk-agents?style=social" alt="GitHub stars">
+  </a>
+</p>
+
+<p align="center">
+  <i>This repository is not officially affiliated with Google or the ADK team. It is a community-driven collection of agent implementations.</i>
+</p>
