@@ -1,13 +1,12 @@
 # 🤖 Awesome ADK Agents
 
 <p align="center">
-  <img src="https://google.github.io/adk-docs/_static/adk_logo.png" width="400px" alt="Agent Development Kit">
+  <img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="400px" alt="Agent Development Kit">
 </p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <a href="https://google.github.io/adk-docs/"><img src="https://img.shields.io/badge/ADK-Latest-orange" alt="ADK Version"></a>
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
 </p>
 
