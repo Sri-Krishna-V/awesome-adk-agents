@@ -1,0 +1,5 @@
+google-adk==0.4.0
+google-generativeai==0.8.5
+python-dotenv==1.1.0
+openai==1.77.0
+requests==2.32.3
