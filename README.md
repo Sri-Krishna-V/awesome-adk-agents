@@ -57,7 +57,6 @@ The **awesome-adk-agents** repository is a comprehensive collection of agent exa
 
 The repository is organized into categories based on agent complexity and use case:
 
-
 ### 🔬 Domain-Specific Agents
 
 | Agent | Description | Category |
@@ -97,6 +96,7 @@ Each agent directory contains its own README with detailed instructions, require
 ### Installation
 
 1. **Clone this repository**:
+
    ```bash
    git clone https://github.com/yourusername/awesome-adk-agents.git
    cd awesome-adk-agents
@@ -159,9 +159,11 @@ Please see our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructi
 
 1. **Fork the Repository** - Create your own fork of the project
 2. **Create a Branch** - Make a new branch for your contribution
+
    ```bash
    git checkout -b feature/amazing-agent
    ```
+
 3. **Make Changes** - Implement your contribution following the structure guidelines
 4. **Test Your Changes** - Ensure your agent works as expected
 5. **Submit a Pull Request** - Open a PR against the main repository

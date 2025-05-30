@@ -14,7 +14,8 @@ The most valuable contribution is adding new, well-documented agent implementati
 
 1. **Decide on an agent concept** that isn't already covered
 2. **Follow the standard agent structure**:
-   ```
+
+   ```   
    agent-name/
    ├── README.md                 # Description, usage, examples
    ├── agent_name/               # Main agent code
@@ -27,6 +28,7 @@ The most valuable contribution is adding new, well-documented agent implementati
    ├── tests/                    # Unit and integration tests
    └── eval/                     # Evaluation datasets and metrics
    ```
+
 3. **Create thorough documentation** including:
    - What the agent does
    - Prerequisites and setup
@@ -65,19 +67,25 @@ Quality testing helps ensure agents work as expected:
 
 1. **Fork the Repository** - Create your own fork of the project
 2. **Create a Branch** - Make a new branch for your contribution
+
    ```bash
    git checkout -b feature/amazing-agent
    ```
+
 3. **Make Changes** - Implement your contribution following the structure guidelines
 4. **Test Your Changes** - Ensure your agent works as expected
 5. **Commit Changes** - Use clear commit messages
+
    ```bash
    git commit -m 'Add amazing agent for [specific purpose]'
    ```
+
 6. **Push to Your Fork** - Upload your changes
+
    ```bash
    git push origin feature/amazing-agent
    ```
+
 7. **Submit a Pull Request** - Open a PR against the main repository
 
 ## Pull Request Guidelines
@@ -110,4 +118,4 @@ When submitting a pull request, please:
 
 If you have any questions about contributing, please open an issue or reach out to the repository maintainers.
 
-Thank you for your contributions! 
+Thank you for your contributions!
