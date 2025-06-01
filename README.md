@@ -13,6 +13,7 @@
 ## 📖 Table of Contents
 
 - [What is Google's Agent Development Kit (ADK)?](#what-is-googles-agent-development-kit-adk)
+- [🚀 Getting Started](#-getting-started--installation)
 - [✨ Agent Showcase](#-agent-showcase)
   - [My ADK Agents](#my-adk-agents)
   - [Examples from Google Agent Garden](#examples-from-google-agent-garden)
@@ -81,6 +82,10 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 - 📞 [Customer Service Agent](./examples/google_agent_garden/customer-service/): Multi-channel customer support automation
 - 💰 [Financial Advisor](./examples/google_agent_garden/financial-advisor/): Personalized financial planning and investment advice
 
+#### 💹 Trading & Finance
+
+- 📈 [Agentic Trading Simulator](./examples/agentic-trading/): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
+
 #### 🛍️ E-commerce & Marketing
 
 - 🛒 [Personalized Shopping](./examples/google_agent_garden/personalized-shopping/): AI-driven product recommendations and shopping assistance
@@ -118,6 +123,10 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 - 📞 [Callbacks and Webhooks](./examples/_aiwithbrandon/_adk-crash-course/9-callbacks/): Event-driven agent responses
 
 ## 🚀 Getting Started / Installation
+
+👋 **New to ADK agents?** Check out our comprehensive [**Getting Started Guide**](./GETTING_STARTED.md) for step-by-step instructions!
+
+### Quick Start
 
 Follow these steps to set up the repository and start working with ADK agents:
 

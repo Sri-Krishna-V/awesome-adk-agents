@@ -1,7 +1,9 @@
-# Agentic Trading Simulator
+# 📈 Agentic Trading Simulator
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Framework-ADK-4285F4.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhGVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAA6ABAAMAAAABAAEAAKACAAQAAAABAAAADqADAAQAAAABAAAADgAAAABOylT5AAAACXBIWXMAAAsTAAALEwEAmpwYAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAACRUlEQVQoFXVSS2gTQRj+Z3aziUlF1ISkRqqpVpCaixgkkEOaUGktBopuRQXxKF68pIdCpSsYH4gWxINHT8ZmVUR7MaRND4pUFBFfB7GXqt1iAlGS5rn7O7NpFg/6HeZ/zPfN/PMxAOtQFKSd/L8RFYtDOEmWUVBVovM8fgHDDc+iv+I9VxcgAAhdEtUbP16dTL80uRlZUMdUnXREPBb3/7pDm65g1f3iS9094QRjOwBZWwO09REQ3++kD86qY6DLTAydEWOXy8lYqpzjp/4LB+4fzYVmjiXNPTYyVRRi8IIgRijqk4eua65YqnJLzqDA+wPXijdOALpbzocTaHRFeA+IYliPZaVGCD2cHfdVCJRT6lj7zS1dupoGUhCrsREgVc0Ucm1UQXFBIa3IlVJvU5ceiQTmNyPmddR9DbAZur28Wt1xJi4YjiFq2Eeen7q3FM1HGY2DGQPM1dM3C/5izZ6sGdA9Jzm1YAOc2xzfNj3bNfUJ9t2dhj74DRkQgBlk6vhSy+49b8zBG1wBD69xD4wiQI+Zg/dIHUL97Twq8mi9UaSfo03snSXd8HMlkbitBYbGPxyftHHS99HdW0qDkC4MhOIEFlqoALWEhuGoEVia5UQbLCdoffVdcObSV15v1EpPmfdbkWDbVdazhJQ2KwSlx7gIAfeTtz1EEv3F+MFBLqw7nVNIYNoz//oiG5+Cwj4UIpgGYR58tayQwJzLy8kcODxs53E5HN7AI4fy12WW2Nxhy0e5X+rk7Ia286yBMvtq6/gDb7bjW6TkRnEAAAAASUVORK5CYII=)](https://github.com/google/adk-python)
+> **Credits**: [kweinmeister](https://github.com/kweinmeister)
+
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Framework-ADK-4285F4.svg)](https://github.com/google/adk-python)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 This project demonstrates an agent-based trading system simulation featuring distinct agents for trading logic and risk management, communicating via the Agent-to-Agent (A2A) protocol. It includes a web-based simulator UI to configure, run, and visualize trading strategy performance.
@@ -62,64 +64,89 @@ graph LR
 
 This project utilizes the A2A protocol for the critical communication link between the trading logic (AlphaBot) and the risk assessment logic (RiskGuard). Here's how it applies the core A2A concepts:
 
-*   **A2A Server:** Both AlphaBot and RiskGuard act as A2A Servers, exposing HTTP endpoints defined by the A2A specification.
-*   **A2A Client:**
-    *   The Simulator UI acts as a client when initiating a task with AlphaBot (`tasks/send`).
-    *   AlphaBot acts as a client when sending a trade proposal task to RiskGuard (`tasks/send`).
-*   **Task:** The primary unit of work.
-    *   The Simulator sends a task to AlphaBot containing market/portfolio data.
-    *   AlphaBot sends a sub-task to RiskGuard containing the proposed trade details.
-*   **Message/Part:** Data like market state, portfolio details, and trade proposals are exchanged within A2A Messages using appropriate Parts (likely `DataPart` for structured JSON).
-*   **Artifact:** RiskGuard returns its assessment (approved/rejected with reason) as an Artifact within the A2A response to AlphaBot. AlphaBot may also use artifacts to return structured results to the Simulator.
-*   **Agent Card:** While not explicitly fetched dynamically in this simplified local setup, in a real-world scenario, AlphaBot could discover RiskGuard's capabilities and endpoint URL by fetching its `agent.json` file (Agent Card). The ADK framework handles much of the underlying A2A protocol implementation details.
+* **A2A Server:** Both AlphaBot and RiskGuard act as A2A Servers, exposing HTTP endpoints defined by the A2A specification.
+* **A2A Client:**
+  * The Simulator UI acts as a client when initiating a task with AlphaBot (`tasks/send`).
+  * AlphaBot acts as a client when sending a trade proposal task to RiskGuard (`tasks/send`).
+* **Task:** The primary unit of work.
+  * The Simulator sends a task to AlphaBot containing market/portfolio data.
+  * AlphaBot sends a sub-task to RiskGuard containing the proposed trade details.
+* **Message/Part:** Data like market state, portfolio details, and trade proposals are exchanged within A2A Messages using appropriate Parts (likely `DataPart` for structured JSON).
+* **Artifact:** RiskGuard returns its assessment (approved/rejected with reason) as an Artifact within the A2A response to AlphaBot. AlphaBot may also use artifacts to return structured results to the Simulator.
+* **Agent Card:** While not explicitly fetched dynamically in this simplified local setup, in a real-world scenario, AlphaBot could discover RiskGuard's capabilities and endpoint URL by fetching its `agent.json` file (Agent Card). The ADK framework handles much of the underlying A2A protocol implementation details.
 
 This demonstrates how A2A enables modularity, allowing specialized agents to collaborate effectively.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-* [Python](https://www.python.org/downloads/) (Version 3.11+ recommended)
-* [Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/install) (Required for Cloud Run deployment)
+* [Python](https://www.python.org/downloads/) (Version 3.11+ required)
+* [Git](https://git-scm.com/) for cloning the repository
+* [Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/install) (Optional - for Cloud Run deployment)
 
-### Installation
+### Option 1: Automated Setup (Recommended)
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/kweinmeister/agentic-trading
-    cd agentic-trading
-    ```
+**For Windows Users:**
 
-2. **Install Python dependencies:**
-    Create a virtual environment (recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate # On Windows use `venv\Scripts\activate`
-    ```
-    Install all requirements for local development and testing:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Running Locally
-
-The easiest way to run all services locally is using the provided script:
-
-```bash
-./deploy_local.sh
+```powershell
+# Run setup and start services
+.\setup.ps1
+.\deploy_local.ps1
+# Open browser to http://127.0.0.1:8000
 ```
 
-This script will:
+**For Linux/Mac Users:**
 
-* Start the **RiskGuard** service (Default: `http://127.0.0.1:8080`)
-* Start the **AlphaBot** service (Default: `http://127.0.0.1:8081`)
-* Start the **Simulator UI** service (Default: `http://127.0.0.1:8000`)
+```bash
+# Create virtual environment and install dependencies  
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+./deploy_local.sh
+# Open browser to http://127.0.0.1:8000
+```
 
-Wait for the script to report that all services have started, then access the Simulator UI in your browser at `http://127.0.0.1:8000`.
+### Option 2: Manual Setup
 
-To stop the services, use the `kill` command shown in the script's output or `Ctrl+C` if you run the commands manually.
+1. **Clone and navigate:**
 
-### Running Tests
+    ```bash
+    git clone https://github.com/your-username/awesome-adk-agents
+    cd awesome-adk-agents/examples/agentic-trading
+    ```
+
+2. **Create virtual environment:**
+
+    ```bash
+    python -m venv venv
+    # Windows: venv\Scripts\activate
+    # Linux/Mac: source venv/bin/activate
+    ```
+
+3. **Install and verify:**
+
+    ```bash
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    python -c "import google.adk; import pandas; import fastapi; print('✅ All dependencies installed')"
+    ```
+
+### 🆘 Need Help?
+
+* Check [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for common issues
+* Windows users: Use PowerShell for best results
+* Port conflicts: Run `.\stop_local.ps1` (Windows) to stop services
+
+### Service Health Check
+
+Once running, verify all services are working:
+
+* **Simulator UI**: <http://127.0.0.1:8000> (Main application)
+* **AlphaBot**: <http://127.0.0.1:8081/agent.json> (Agent metadata)
+* **RiskGuard**: <http://127.0.0.1:8080/agent.json> (Agent metadata)
+
+## Running Tests
 
 Ensure development dependencies are installed:
 
@@ -133,45 +160,46 @@ Run tests using pytest:
 pytest tests/
 ```
 
-## Deployment
+## Cloud Deployment
 
-This application includes scripts and configuration for deployment to [Google Cloud Run](https://cloud.google.com/run/docs).
+### Google Cloud Run
 
-### Cloud Run (Publicly Accessible)
-
-The `deploy_cloud_run.sh` script automates the deployment of all three services to Cloud Run, making them publicly accessible.
-
-**Before running:**
-
-1. **Set your Google Cloud Project ID:** Edit the script and replace `"your-gcp-project-id"` with your actual project ID, or set the `PROJECT_ID` environment variable.
-2. **Authenticate `gcloud`:** Ensure you are logged in with the necessary permissions (`gcloud auth login`, `gcloud config set project YOUR_PROJECT_ID`).
-3. **Enable APIs:** The script attempts to enable required APIs (Cloud Run, Cloud Build, Artifact Registry). Ensure your account has permission to do this.
-
-**Run the script:**
+Deploy all services to Cloud Run using the automated script:
 
 ```bash
 ./deploy_cloud_run.sh
 ```
 
-The script will:
+**Prerequisites:**
 
-1. Create a [Google Artifact Registry](https://cloud.google.com/artifact-registry/docs) repository (if it doesn't exist).
-2. Build container images for RiskGuard, AlphaBot, and Simulator using [Google Cloud Build](https://cloud.google.com/build/docs) (`cloudbuild-*.yaml` files) and push them to Artifact Registry.
-3. Deploy each service to Cloud Run, configuring necessary environment variables (`RISKGUARD_SERVICE_URL`, `ALPHABOT_SERVICE_URL`) for inter-service communication.
-4. Output the final URL for the Simulator UI.
+1. Set your Google Cloud Project ID in the script or environment variable
+2. Authenticate with `gcloud auth login`
+3. Ensure you have permissions for Cloud Run, Cloud Build, and Artifact Registry
 
-**Important Security Note:** The public deployment script makes your services accessible to anyone on the internet. For production or sensitive environments, you **must** secure your deployment. Consider using [Google Cloud Identity-Aware Proxy (IAP)](https://cloud.google.com/iap/docs) or other authentication/authorization mechanisms to control access.
+The script will build and deploy all services, then output the Simulator UI URL.
+
+**⚠️ Security Note:** The public deployment makes services accessible to anyone on the internet. For production, implement proper authentication using [Google Cloud IAP](https://cloud.google.com/iap/docs).
 
 ## Configuration
 
-* **Default Parameters:** Default settings for SMA periods, risk limits, simulation parameters, and local service URLs are defined in `common/config.py`.
-* **Service URLs (Deployment):** When deploying to Cloud Run, the deployment scripts automatically pass the necessary service URLs (`RISKGUARD_SERVICE_URL`, `ALPHABOT_SERVICE_URL`) as environment variables to the dependent services (AlphaBot needs RiskGuard's URL, Simulator needs both).
-* **Environment Variable `PORT`:** The Dockerfiles and Cloud Run use the standard `PORT` environment variable (automatically provided by Cloud Run) to determine the listening port.
+* **Default Settings**: See `common/config.py` for SMA periods, risk limits, and service URLs
+* **Environment Variables**: Service URLs are automatically configured during deployment
+* **Port Configuration**: Uses standard `PORT` environment variable for Cloud Run compatibility
 
-## Contributing
+## Quick Reference
 
-Contributions are welcome! Please feel free to submit pull requests or open issues.
+| Action | Windows | Linux/Mac |
+|--------|---------|-----------|
+| Setup Environment | `.\setup.ps1` | `./setup.sh` |
+| Start Services | `.\deploy_local.ps1` | `./deploy_local.sh` |
+| Stop Services | `.\stop_local.ps1` | `Ctrl+C` |
+| Validate Setup | `.\validate_setup.ps1` | Manual check |
+| View Logs | Check PowerShell output | Check terminal output |
 
-## License
+**Default URLs:**
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE file](LICENSE) for details.
+* Simulator UI: <http://127.0.0.1:8000>
+* AlphaBot: <http://127.0.0.1:8081>
+* RiskGuard: <http://127.0.0.1:8080>
+
+For additional help, see [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) and [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md).

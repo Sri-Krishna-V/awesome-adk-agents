@@ -1,4 +1,4 @@
-google-adk[database]==0.3.0
+google-adk[database]==1.1.0 #If it is not working use 0.3.0
 yfinance==0.2.56
 psutil==5.9.5
 litellm==1.66.3

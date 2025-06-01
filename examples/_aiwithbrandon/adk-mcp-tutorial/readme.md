@@ -1,177 +1,177 @@
-# ADK Agent MCP Server
+# 🤖 ADK Agent MCP Server Integration
 
-This project demonstrates an Agent Development Kit (ADK) agent that interacts with a local SQLite database. The interaction is facilitated by a Model Context Protocol (MCP) server that exposes tools to query and modify the database.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![Google ADK](https://img.shields.io/badge/Google-ADK-4285F4.svg)](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder)
+[![MCP](https://img.shields.io/badge/Protocol-MCP-green.svg)](https://modelcontextprotocol.io/)
 
-## Project Structure
+> **🎥 Learn More**: Check out the [ADK Crash Course](https://www.youtube.com/watch?v=P4VFL9nIaIA&t=9496s) by Brandon Hancock for comprehensive ADK learning!
 
-```
-adk-mcp/
+This project demonstrates how to integrate Google's Agent Development Kit (ADK) with Model Context Protocol (MCP) servers. Learn how ADK agents can interact with local SQLite databases through MCP, enabling powerful data-driven agent applications.
+
+## 🌟 What You'll Learn
+
+- **MCP Integration**: Connect ADK agents to Model Context Protocol servers
+- **Database Operations**: Perform CRUD operations through agent conversations
+- **Local & Remote MCP**: Work with both local and remote MCP server configurations
+- **Real-world Applications**: Build practical database-driven agent systems
+
+## 📁 Project Structure
+
+```text
+adk-mcp-tutorial/
 ├── local_mcp/
-│   ├── agent.py             # The ADK agent for the local SQLite DB
+│   ├── agent.py             # The ADK agent for local SQLite DB
 │   ├── server.py            # The MCP server exposing database tools
-│   ├── create_db.py         # Script to initialize the SQLite database
+│   ├── create_db.py         # Script to initialize SQLite database
 │   ├── database.db          # The SQLite database file
 │   └── __init__.py
-├── remote_mcp_agent/        # Example agent for connecting to a remote MCP server
-│   ├── agent.py             # The ADK agent configured for a remote MCP
+├── remote_mcp_agent/        # Example agent for remote MCP server
+│   ├── agent.py             # The ADK agent for remote MCP
 │   └── __init__.py
-├── .env                   # For GOOGLE_API_KEY (ensure it's in .gitignore if repo is public)
-├── requirements.txt       # Python dependencies
-└── readme.md              # This file
+├── demo_comparison/         # Comparison demos
+├── .env                     # Environment variables (create this)
+├── requirements.txt         # Python dependencies
+└── README.md               # This file
 ```
 
-## Setup Instructions
+## 🚀 Quick Start
 
-### 1. Prerequisites
-- Python 3.8 or newer
-- Access to a terminal or command prompt
+### Prerequisites
 
-### 2. Create and Activate Virtual Environment
+- **Python 3.8+**
+- **Google API Key** from [Google AI Studio](https://aistudio.google.com/)
+- Terminal or command prompt access
 
-It's highly recommended to use a virtual environment to manage project dependencies.
+### 1. Set Up Virtual Environment
 
 ```bash
-# Create a virtual environment (e.g., named .venv)
-python3 -m venv .venv
-```
+# Create virtual environment
+python -m venv .venv
 
-Activate the virtual environment:
+# Activate on Windows
+.venv\Scripts\activate
 
-On macOS/Linux:
-```bash
-# Activate virtual environment
+# Activate on macOS/Linux
 source .venv/bin/activate
 ```
 
-On Windows:
-```bash
-# Activate virtual environment
-.venv\Scripts\activate
-```
-
-### 3. Install Dependencies
-
-Install all required Python packages using pip:
+### 2. Install Dependencies
 
 ```bash
-# Install all dependencies from requirements.txt
 pip install -r requirements.txt
 ```
 
-### 4. Set Up Gemini API Key (for the ADK Agent)
+### 3. Configure Environment Variables
 
-The ADK agent in this project uses a Gemini model. You'll need a Gemini API key.
+Create a `.env` file in the project root:
 
-1.  Create or use an existing [Google AI Studio](https://aistudio.google.com/) account.
-2.  Get your Gemini API key from the [API Keys section](https://aistudio.google.com/app/apikeys).
-3.  Set the API key as an environment variable. Create a `.env` file in the **root of the `adk-mcp` project** (i.e., next to the `local_mcp` folder and `readme.md`):
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+```
 
-    ```env
-    # .env
-    GOOGLE_API_KEY=your_gemini_api_key_here
-    ```
-    The `server.py` and `agent.py` will load this key.
+Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikeys).
 
-### 5. Create the SQLite Database and Tables
+### 4. Initialize Database
 
-The project includes a script to create and populate the SQLite database (`database.db`) with some initial tables (`users`, `todos`) and dummy data.
-
-Navigate to the `local_mcp` directory and run the script:
 ```bash
 cd local_mcp
-python3 create_db.py
+python create_db.py
 cd ..
 ```
-This will create `local_mcp/database.db` if it doesn't already exist.
 
-## Running the Agent and MCP Server
+### 5. Run the Agent
 
-The ADK agent (`local_mcp/agent.py`) is configured to automatically start the MCP server (`local_mcp/server.py`) when it initializes its MCP toolset.
+```bash
+python local_mcp/agent.py
+```
 
-To run the agent:
+## 🛠️ Available Database Tools
 
-1.  Ensure your virtual environment is active and you are in the root directory of the `adk-mcp` project.
-2.  Execute the agent script:
+The MCP server exposes these tools for the ADK agent:
 
-    ```bash
-    python3 local_mcp/agent.py
-    ```
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `list_db_tables` | Lists all database tables | `dummy_param: str` |
+| `get_table_schema` | Gets table schema | `table_name: str` |
+| `query_db_table` | Queries table data | `table_name: str`, `columns: str`, `condition: str` |
+| `insert_data` | Inserts new records | `table_name: str`, `data: dict` |
+| `delete_data` | Deletes records | `table_name: str`, `condition: str` |
 
-This will:
-- Start the `agent.py` script.
-- The agent, upon initializing the `MCPToolset`, will execute the `python3 local_mcp/server.py` command.
-- The `server.py` (MCP server) will start and listen for tool calls from the agent via stdio.
-- The agent will then be ready to process your instructions (which you would typically provide in a client application or test environment that uses this agent).
+## 🔧 Advanced Setup (Optional)
 
-You should see log output from both the agent (if any) and the MCP server (in `local_mcp/mcp_server_activity.log`, and potentially to the console if you uncommented the stream handler in `server.py`).
+### Node.js for External MCP Servers
 
-## Additional Setup for Other MCP Servers (Node.js & Docker)
+Some MCP servers require Node.js:
 
-While the local SQLite MCP server in this specific project (`local_mcp/server.py`) only requires Python for its own execution, you might want to use this ADK agent to connect to *other* MCP servers that have different runtime dependencies. Two common dependencies for such external MCP servers are Node.js (which provides `npx` for running JavaScript-based servers) and Docker (for servers distributed as Docker images).
+1. Install [Node.js](https://nodejs.org/) (LTS version recommended)
+2. Verify installation:
 
-If you plan to use MCP servers requiring these, here's how to set them up:
+```bash
+node -v
+npm -v
+npx -v
+```
 
-### Node.js and npx
+### Docker for Containerized MCP Servers
 
-`npx` is a package runner tool that comes with `npm` (Node Package Manager), which is included with Node.js. It's often used to run MCP servers built with Node.js without needing to install them globally.
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+2. Verify installation:
 
--   **Installation**: Download and install Node.js (which includes `npm` and `npx`) from the [official Node.js website](https://nodejs.org/). It is recommended to install the LTS (Long Term Support) version.
--   **Verification**: After installation, open a new terminal or command prompt window and verify the installations by typing:
-    ```bash
-    node -v
-    npm -v
-    npx -v
-    ```
-    You should see version numbers printed for each command, confirming they are installed and in your system's PATH.
+```bash
+docker --version
+```
 
-### Docker
+## 🐛 Troubleshooting
 
-Docker allows applications to be packaged and run in isolated environments called containers. Some MCP servers are distributed as Docker images, making them easy to run across different operating systems.
+### Common Issues
 
--   **Installation**: Download and install Docker Desktop from the [official Docker website](https://www.docker.com/products/docker-desktop/). Docker Desktop is available for Windows, macOS, and Linux and provides a graphical interface as well as command-line tools.
--   **Post-Installation**: Ensure Docker Desktop is running after installation, as this starts the Docker daemon (the background service that manages containers).
--   **Verification**: Open a terminal or command prompt and verify the Docker installation by typing:
-    ```bash
-    docker --version
-    # You can also run a test container to ensure Docker is working correctly:
-    # docker run hello-world
-    ```
-    The first command should display your Docker version. Running `docker run hello-world` will download and run a small test image, confirming Docker is operational.
+**File Not Found Errors**
+- Ensure `server.py` path is correct in `agent.py`
+- Check that you're running from the project root directory
 
-Setting up these tools will broaden the range of MCP servers your ADK agent can potentially interact with.
+**Database Errors**
+- Run `python local_mcp/create_db.py` to create the database
+- Verify `database.db` exists in the `local_mcp/` folder
 
-## Available Database Tools (Exposed by MCP Server)
+**API Key Issues**
+- Check your `.env` file is in the project root
+- Ensure `GOOGLE_API_KEY` is set correctly
+- Verify your API key is valid at [Google AI Studio](https://aistudio.google.com/)
 
-The `local_mcp/server.py` exposes the following tools for the ADK agent to use:
+**MCP Connection Issues**
+- Check `local_mcp/mcp_server_activity.log` for detailed logs
+- Ensure no other processes are using the same ports
 
--   **`list_db_tables(dummy_param: str) -> dict`**: Lists all tables in the database.
-    *   *Note*: Requires a `dummy_param` string due to current ADK schema generation behavior; the agent's instructions guide it to provide a default.
--   **`get_table_schema(table_name: str) -> dict`**: Retrieves the schema (column names and types) for a specified table.
--   **`query_db_table(table_name: str, columns: str, condition: str) -> list[dict]`**: Queries a table.
-    *   `columns`: Comma-separated list of columns (e.g., "id, username") or "*" for all.
-    *   `condition`: SQL WHERE clause (e.g., "email LIKE '%@example.com'"). The agent is instructed to use "1=1" if no condition is implied.
--   **`insert_data(table_name: str, data: dict) -> dict`**: Inserts a new row into a table.
-    *   `data`: A dictionary where keys are column names and values are the corresponding data for the new row.
--   **`delete_data(table_name: str, condition: str) -> dict`**: Deletes rows from a table based on a condition.
-    *   *Note*: The condition cannot be empty as a safety measure.
+## 💡 Example Interactions
 
-The agent (`local_mcp/agent.py`) has specific instructions on how to use these tools effectively, including using smart defaults for parameters if not explicitly provided by the end-user's request.
+Once running, you can interact with the agent using natural language:
 
-## Troubleshooting
+- *"What tables are in the database?"*
+- *"Show me all users"*
+- *"Add a new user named John with email john@example.com"*
+- *"Find all todos that are completed"*
+- *"Delete the user with ID 5"*
 
--   **`No such file or directory` for `server.py`**:
-    *   Ensure `PATH_TO_YOUR_MCP_SERVER_SCRIPT` in `local_mcp/agent.py` correctly points to `local_mcp/server.py`. The current setup uses `(Path(__file__).parent / "server.py").resolve()`, which should be correct after the folder consolidation.
--   **`McpError: Input must be an instance of Schema, got <class 'NoneType'>` (Client-side Error)**:
-    *   This error might occur if `adk_to_mcp_tool_type` in `server.py` generates a `None` input schema for a tool. The `list_db_tables` tool in `server.py` includes a `dummy_param` as a workaround for this known issue with parameter-less functions. The server also has a patch to provide a default schema if one is `None`.
--   **Database Errors (e.g., "no such table")**:
-    *   Ensure you have run `python3 local_mcp/create_db.py` to create the `database.db` file and its tables.
-    *   Verify the `DATABASE_PATH` in `local_mcp/server.py` correctly points to `local_mcp/database.db`.
--   **API Key Issues**:
-    *   Make sure your `GOOGLE_API_KEY` is correctly set in the `.env` file in the project root and that the file is being loaded.
--   **MCP Server Log**:
-    *   Check `local_mcp/mcp_server_activity.log` for detailed logs from the MCP server, which can help diagnose issues with tool calls or database operations.
+## 🔗 Navigation
 
-## Future Enhancements (Ideas)
-- Add an "update_data" tool to the MCP server.
-- Implement more sophisticated error handling and reporting in the server tools.
-- Develop a simple client application (e.g., a CLI or basic web UI) to interact with the ADK agent.
+- **[⬅️ Back to AI with Brandon Examples](../README.md)**
+- **[🎬 Watch the ADK Tutorial](https://www.youtube.com/watch?v=P4VFL9nIaIA&t=9496s)**
+- **[📚 Explore Other Examples](../)**
+
+## 🙏 Credits
+
+Created by **[Brandon Hancock](https://github.com/bhancockio)** - Thank you for making ADK and MCP integration accessible!
+
+## 🚀 Next Steps
+
+- Explore the [ADK Crash Course](../_adk-crash-course/) for more examples
+- Try the [RAG Agent](../adk-rag-agent/) for document-based interactions
+- Build your own MCP server for custom data sources
+
+## 📄 License
+
+Please refer to the original creator's licensing terms.
+
+---
+
+**Ready to build data-driven agents?** 🗃️ Start by running the setup commands above!
