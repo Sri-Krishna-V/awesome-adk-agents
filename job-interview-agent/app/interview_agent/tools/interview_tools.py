@@ -4,7 +4,7 @@ Interview session management tools for conducting mock interviews.
 
 import json
 import random
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, Optional
 from pathlib import Path
 from datetime import datetime
 
@@ -457,9 +457,9 @@ Take your time and feel free to ask clarifying questions.
 def provide_feedback(
     session_id: str,
     answer_text: str,
-    strengths: str = "",
-    areas_for_improvement: str = "",
-    specific_suggestions: str = ""
+    strengths: Optional[str] = None,
+    areas_for_improvement: Optional[str] = None,
+    specific_suggestions: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Provide detailed feedback on the candidate's answer.
@@ -467,14 +467,19 @@ def provide_feedback(
     Args:
         session_id: Active session identifier
         answer_text: The candidate's answer to evaluate
-        strengths: What the candidate did well
-        areas_for_improvement: Areas that need work
-        specific_suggestions: Specific actionable suggestions
+        strengths: Optional; What the candidate did well (default: None)
+        areas_for_improvement: Optional; Areas that need work (default: None)
+        specific_suggestions: Optional; Specific actionable suggestions (default: None)
 
     Returns:
         Dictionary with structured feedback
     """
     try:
+        # Handle defaults for optional parameters
+        strengths = strengths or ""
+        areas_for_improvement = areas_for_improvement or ""
+        specific_suggestions = specific_suggestions or ""
+
         # Load session data
         session_data = load_session_data(session_id)
         if not session_data:
@@ -490,8 +495,19 @@ def provide_feedback(
                 "message": "No active question to provide feedback for."
             }
 
+        # Get current question details for better context
+        question_details = None
+        for q in session_data.get("questions_asked", []):
+            if q.get("question_number") == current_question:
+                question_details = q
+                break
+
         # Auto-generate feedback if not provided
         if not strengths and not areas_for_improvement:
+            # Generate feedback based on question type if available
+            question_type = question_details.get("type", "") if question_details else ""
+            category = question_details.get("category", "") if question_details else ""
+            
             feedback_text = f"""
 **Feedback for Question {current_question}**
 
@@ -516,7 +532,7 @@ Overall, this was a solid response that demonstrates relevant experience!
             """
         else:
             # Use provided feedback
-            feedback_parts = ["**Feedback for Question {current_question}**\n"]
+            feedback_parts = [f"**Feedback for Question {current_question}**\n"]
 
             if strengths:
                 feedback_parts.append(f"**What went well:**\n{strengths}\n")
@@ -541,12 +557,15 @@ Overall, this was a solid response that demonstrates relevant experience!
             "feedback_given_at": datetime.now().isoformat()
         }
 
-        session_data.setdefault("feedback_given", []).append(feedback_entry)
-        session_data.setdefault("answers_given", []).append({
+        # Store answer with timestamp
+        answer_entry = {
             "question_number": current_question,
             "answer": answer_text,
             "answered_at": datetime.now().isoformat()
-        })
+        }
+
+        session_data.setdefault("feedback_given", []).append(feedback_entry)
+        session_data.setdefault("answers_given", []).append(answer_entry)
 
         save_session_data(session_id, session_data)
 
@@ -558,6 +577,7 @@ Overall, this was a solid response that demonstrates relevant experience!
                 "improvements_provided": bool(areas_for_improvement),
                 "suggestions_provided": bool(specific_suggestions)
             },
+            "question_number": current_question,
             "next_steps": "Ready for next question or would you like to practice this question again?"
         }
 

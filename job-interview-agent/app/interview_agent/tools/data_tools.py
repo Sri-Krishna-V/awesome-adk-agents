@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 from ..utils import load_session_data, save_session_data, calculate_interview_score
 
 
-def generate_interview_report(session_id: str, include_full_transcript: bool = False) -> Dict[str, Any]:
+def generate_interview_report(session_id: str, include_full_transcript: bool = True) -> Dict[str, Any]:
     """
     Generate a comprehensive interview performance report.
 
@@ -19,7 +19,7 @@ def generate_interview_report(session_id: str, include_full_transcript: bool = F
         include_full_transcript: Whether to include full question/answer transcript
 
     Returns:
-        Dictionary with detailed interview report
+        Dictionary with detailed interview report including performance metrics, strengths, areas for improvement, and recommendations.
     """
     try:
         # Load session data
@@ -138,37 +138,48 @@ def generate_interview_report(session_id: str, include_full_transcript: bool = F
         if include_full_transcript:
             report["full_transcript"] = True
 
-        # Format report text
+        # Format report text with more professional styling
         report_text = f"""
-# Interview Performance Report
+# Interview Performance Assessment Report
 
-## Session Overview
-- **Session ID:** {session_id}
-- **Interview Type:** {session_summary['interview_type'].title()}
-- **Role:** {session_summary['role']}
-- **Company:** {session_summary['company'] or 'Generic'}
-- **Date:** {session_summary['start_time']}
-- **Questions Asked:** {session_summary['questions_asked']}
-- **Completion Rate:** {session_summary['completion_rate']:.1f}%
+## Executive Summary
+**{session_summary['role']} Interview - {performance_analysis['performance_level']} Performance**
 
-## Performance Summary
-**Overall Score: {performance_analysis['overall_score']:.1f}/10** ({performance_analysis['performance_level']})
+* **Overall Score:** {performance_analysis['overall_score']:.1f}/10
+* **Interview Type:** {session_summary['interview_type'].title()}
+* **Date Conducted:** {session_summary['start_time']}
+* **Assessment ID:** {session_id}
 
-### Category Breakdown:
-{chr(10).join([f"• {cat.replace('_', ' ').title()}: {score:.1f}/10" for cat, score in performance_analysis['category_breakdown'].items()])}
+## Interview Session Details
+| Parameter | Value |
+|---|---|
+| Position | {session_summary['role']} |
+| Organization | {session_summary['company'] or 'Not specified'} |
+| Difficulty Level | {session_summary['difficulty_level'].title() if session_summary['difficulty_level'] else 'Standard'} |
+| Questions Administered | {session_summary['questions_asked']} |
+| Response Rate | {session_summary['completion_rate']:.1f}% |
+| Focus Areas | {', '.join(session_summary['focus_areas']) if session_summary['focus_areas'] else 'General Assessment'} |
 
-## Key Strengths
-{chr(10).join([f"✅ {strength}" for strength in strengths]) if strengths else "• Areas of strength to be developed through practice"}
+## Performance Assessment
 
-## Areas for Improvement  
-{chr(10).join([f"🔄 {area}" for area in areas_for_improvement]) if areas_for_improvement else "• Continue building on current strong performance"}
+### Competency Ratings
+{chr(10).join([f"* **{cat.replace('_', ' ').title()}:** {score:.1f}/10" for cat, score in performance_analysis['category_breakdown'].items()])}
 
-## Recommendations
-{chr(10).join([f"💡 {rec}" for rec in recommendations])}
+### Demonstrated Strengths
+{chr(10).join([f"* {strength}" for strength in strengths]) if strengths else "* Candidate shows potential but needs to develop stronger examples through additional practice"}
+
+### Development Opportunities
+{chr(10).join([f"* {area}" for area in areas_for_improvement]) if areas_for_improvement else "* Continue to build on current performance with increased complexity in responses"}
+
+## Professional Development Recommendations
+{chr(10).join([f"* {rec}" for rec in recommendations])}
+
+## Next Steps
+We recommend reviewing this assessment thoroughly and implementing the suggested recommendations. For additional support or to schedule a follow-up coaching session, please contact your assigned career development advisor.
 
 ---
-*This report was generated automatically. For personalized coaching, consider booking a follow-up session.*
-        """
+*This report is generated based on objective assessment criteria. The insights provided are designed to support professional development and interview preparation.*
+"""
 
         report["formatted_report"] = report_text
 
@@ -182,9 +193,9 @@ def generate_interview_report(session_id: str, include_full_transcript: bool = F
 
 
 def get_question_bank(
-    question_type: str = "all",
-    category: str = "all",
-    difficulty: str = "all"
+    question_type: str,
+    category: str,
+    difficulty: str
 ) -> Dict[str, Any]:
     """
     Retrieve questions from the question bank with optional filtering.
@@ -195,7 +206,7 @@ def get_question_bank(
         difficulty: Difficulty level (easy, medium, hard, all)
 
     Returns:
-        Dictionary with filtered question bank
+        Dictionary with filtered question bank 
     """
     try:
         # Load question bank
@@ -282,21 +293,20 @@ def get_question_bank(
             "message": f"Error retrieving question bank: {str(e)}"
         }
 
-
 def save_interview_progress(
     session_id: str,
-    notes: str = "",
-    bookmark: str = "",
-    custom_data: Optional[Dict[str, Any]] = None
-) -> Dict[str, Any]:
+    notes: str,
+    bookmark: str,
+    custom_data: Optional[Dict[str, Any]]
+    ) -> Dict[str, Any]:
     """
     Save additional progress and notes for an interview session.
 
     Args:
         session_id: Session identifier
-        notes: Additional notes about the session
-        bookmark: Bookmark for resuming later
-        custom_data: Any additional custom data
+        notes: Additional notes about the session. Pass an empty string "" if no notes are needed.
+        bookmark: Bookmark for resuming later. Pass an empty string "" if no bookmark is needed.
+        custom_data: Any additional custom data. Pass None or empty dict {} if no custom data is needed.
 
     Returns:
         Dictionary with save result
@@ -314,7 +324,7 @@ def save_interview_progress(
             "saved_at": datetime.now().isoformat(),
             "notes": notes,
             "bookmark": bookmark,
-            "custom_data": custom_data or {}
+            "custom_data": custom_data if custom_data is not None else {}
         }
 
         session_data.setdefault("progress_saves", []).append(progress_data)

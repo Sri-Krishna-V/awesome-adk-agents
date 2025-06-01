@@ -6,7 +6,7 @@ import json
 import os
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any, List, Union
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -111,9 +111,9 @@ def format_event_details(event: Dict[str, Any]) -> str:
     
     result = f"📅 {title}\n🕒 {time_str}"
     if location:
-        result += f"\n📍 {location}"
+        result += f"\nLocation: {location}"
     if description:
-        result += f"\n📝 {description[:100]}{'...' if len(description) > 100 else ''}"
+        result += f"\nDescription: {description[:100]}{'...' if len(description) > 100 else ''}"
     
     return result
 
@@ -121,8 +121,8 @@ def format_event_details(event: Dict[str, Any]) -> str:
 def create_interview_description(
     interview_type: str,
     role: str,
-    company: str = "",
-    focus_areas: List[str] = None,
+    company: str,
+    focus_areas: Optional[List[str]] = None,
     preparation_notes: str = ""
 ) -> str:
     """
@@ -139,31 +139,31 @@ def create_interview_description(
         Formatted description string
     """
     description_parts = [
-        f"🎯 Interview Type: {interview_type.title()}",
-        f"💼 Role: {role}",
+        f"Interview Type: {interview_type.title()}",
+        f"Role: {role}",
     ]
     
     if company:
-        description_parts.append(f"🏢 Company: {company}")
-    
+        description_parts.append(f"Company: {company}")
+
     if focus_areas:
-        description_parts.append(f"📋 Focus Areas: {', '.join(focus_areas)}")
-    
+        description_parts.append(f"Focus Areas: {', '.join(focus_areas)}")
+
     description_parts.extend([
         "",
-        "📚 Preparation Tips:",
+        "Preparation Tips:",
         "• Review the job description and company background",
         "• Prepare STAR method examples for behavioral questions",
         "• Practice technical concepts relevant to the role",
         "• Prepare thoughtful questions about the role and company",
         "",
-        "🎭 This is a practice interview session with AI roleplay",
+        "This is a practice interview session with AI roleplay",
     ])
     
     if preparation_notes:
         description_parts.extend([
             "",
-            "📝 Additional Notes:",
+            "Additional Notes:",
             preparation_notes
         ])
     

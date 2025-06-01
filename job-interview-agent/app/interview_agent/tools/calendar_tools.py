@@ -2,7 +2,7 @@
 Calendar tools for interview scheduling and management.
 """
 
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any
 from datetime import datetime, timedelta
 
 from ..utils.calendar_utils import (
@@ -384,13 +384,13 @@ def update_interview(
                 # Update focus areas in description
                 focus_list = [area.strip()
                               for area in new_focus_areas.split(",")]
-                focus_section = f"📋 Focus Areas: {', '.join(focus_list)}"
+                focus_section = f"Focus Areas: {', '.join(focus_list)}"
 
                 # Replace existing focus areas or add new section
-                if "📋 Focus Areas:" in current_description:
+                if "Focus Areas:" in current_description:
                     lines = current_description.split("\n")
                     for i, line in enumerate(lines):
-                        if "📋 Focus Areas:" in line:
+                        if "Focus Areas:" in line:
                             lines[i] = focus_section
                             break
                     current_description = "\n".join(lines)
@@ -398,7 +398,7 @@ def update_interview(
                     current_description += f"\n{focus_section}"
 
             if additional_notes:
-                current_description += f"\n\n📝 Updated Notes:\n{additional_notes}"
+                current_description += f"\n\n Updated Notes:\n{additional_notes}"
 
             event["description"] = current_description
 
