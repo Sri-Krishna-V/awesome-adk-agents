@@ -19,14 +19,11 @@ The most valuable contribution is adding new, well-documented agent implementati
    agent-name/
    ├── README.md                 # Description, usage, examples
    ├── agent_name/               # Main agent code
-   │   ├── __init__.py
-   │   ├── agent.py              # Core agent definition
-   │   ├── tools/                # Custom tools
-   │   ├── sub_agents/           # (If applicable)
-   │   └── shared_libraries/     # Utilities and shared code
-   ├── deployment/               # Deployment configurations
-   ├── tests/                    # Unit and integration tests
-   └── eval/                     # Evaluation datasets and metrics
+      ├── __init__.py
+      ├── agent.py              # Core agent definition
+      ├── tools/                # Custom tools
+      ├── sub_agents/           # (If applicable)
+      └── shared_libraries/     # Utilities and shared code
    ```
 
 3. **Create thorough documentation** including:
@@ -44,6 +41,7 @@ If you'd like to enhance an existing agent:
 2. **Add features** - Expand the agent's capabilities
 3. **Improve performance** - Optimize the agent's operation
 4. **Enhance documentation** - Make the agent easier to understand and use
+5. **Add Callbacks** - Add before and after callbacks to the agent's lifecycle for better control
 
 ### Documentation Contributions
 
@@ -94,9 +92,8 @@ When submitting a pull request, please:
 
 1. **Explain your changes** - Describe what your agent does and why it's valuable
 2. **Reference issues** - Link to any related issues
-3. **Follow coding standards** - Match the style of the existing codebase
-4. **Include tests** - Add tests that verify your agent works correctly
-5. **Update documentation** - Ensure documentation reflects your changes
+3. **Follow coding standards** - Match the style of the existing codebase(atleast try to)
+4. **Update documentation** - Ensure documentation reflects your changes
 
 ## Style Guidelines
 

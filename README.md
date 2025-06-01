@@ -1,7 +1,7 @@
 # 🤖 Awesome ADK Agents
 
 <p align="center">
-  <img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="400px" alt="Agent Development Kit">
+  <img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
 </p>
 
 <p align="center">
@@ -27,22 +27,7 @@ ADK allows you to create, deploy, and orchestrate agent architectures ranging fr
 - 🔄 **Flexible orchestration** - Define complex workflows with sequential, parallel, and loop agents
 - 🧪 **Integrated developer tooling** - Debug and visualize agent interactions with the dev UI
 - 📡 **Native streaming support** - Create real-time, interactive experiences
-- 📊 **Built-in agent evaluation** - Assess and improve agent performance systematically
-
-## 🧭 Table of Contents
-
-- [Overview](#-overview)
-- [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Agent Categories](#-agent-categories)
-- [Use Cases](#-use-cases)
-- [Agent Structure](#-agent-structure)
-- [How to Contribute](#-how-to-contribute)
-- [Roadmap](#-roadmap)
-- [License](#-license)
-- [Credits](#-credits)
+- 📊 **Built-in agent evaluation** - Assess and improve agent performance systematically  
 
 ## 🔍 Overview
 
