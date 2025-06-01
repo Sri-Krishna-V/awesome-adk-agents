@@ -8,11 +8,10 @@
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
     <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
 
-> A curated collection of AI agents built with Google's Agent Development Kit (ADK), featuring both custom production-ready agents and educational examples from the community.
+> A curated collection of AI agents built with Google's Agent Development Kit (ADK) for various domains, applications and use-cases.
 
 ## 📖 Table of Contents
 
-- [Overview](#overview)
 - [What is Google's Agent Development Kit (ADK)?](#what-is-googles-agent-development-kit-adk)
 - [✨ Agent Showcase](#-agent-showcase)
   - [My ADK Agents](#my-adk-agents)
@@ -26,9 +25,9 @@
 - [🙏 Credits and Acknowledgements](#-credits-and-acknowledgements)
 - [⭐ Call to Action](#-call-to-action)
 
-## Overview
+##
 
->Welcome to **Awesome ADK Agents**👋 
+>Welcome to **Awesome ADK Agents**👋👋
 
 From simple helpers to complex multi-agent systems, this repository will serve as a comprehensive resource for anyone interested in building AI agents using Google's Agent Development Kit (ADK).
 
@@ -51,11 +50,9 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 - **Code-First Development**: Define agent logic, tools, and orchestration
   directly in Python for ultimate flexibility, testability, and versioning.
 
-- **Modular Multi-Agent Systems**: Design scalable applications by composing
-  multiple specialized agents into flexible hierarchies.
+- **Modular Multi-Agent Systems**: Design scalable applications by composing multiple specialized agents into flexible hierarchies.
 
-- **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or
-  scale seamlessly with Vertex AI Agent Engine.
+- **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
 
 ## ✨ Agent Showcase
 
@@ -66,6 +63,7 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 | [Job Interview Agent](./job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback |
 | [Project Manager Agent](./project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
 | [Local RAG Agent (WIP)](./my_custom_agents/advanced_rag_agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization |
+
 
 ### Examples from Google Agent Garden
 
@@ -168,11 +166,21 @@ cd awesome-adk-agents
 3. **Common Commands of ADK**:
 
    ```bash
-   # Standard ADK execution
-   adk web
-   
-   # Python script execution
-   python main.py
+    Usage: adk [OPTIONS] COMMAND [ARGS]...
+
+    Agent Development Kit CLI tools.
+
+    Options:
+        --help  Show this message and exit.
+
+        Commands:
+        web         Starts a FastAPI server with Web UI for agents(Mostly used)
+        api_server  Starts a FastAPI server for agents
+        create      Creates a new app in the current folder with prepopulated agent...
+        deploy      Deploys agent to hosted environments
+        eval        Evaluates an agent given the eval sets
+        run         Runs an interactive CLI for a certain agent
+        
    ```
 
 ### Tips for Success

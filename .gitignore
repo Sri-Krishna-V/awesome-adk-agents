@@ -45,3 +45,5 @@ logs/
 config.local.py
 
 changelog.md
+
+.github/
