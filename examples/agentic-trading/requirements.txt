@@ -1,0 +1,7 @@
+# Service-specific requirements
+-r alphabot/requirements.txt
+-r riskguard/requirements.txt
+-r simulator/requirements.txt
+
+# Development/Testing requirements
+-r requirements-dev.txt

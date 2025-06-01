@@ -1,0 +1,203 @@
+/* Styles for the Agentic Trading Simulator UI */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+}
+
+h1 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background-color: #fdfdfd;
+  padding: 0 20px 20px 20px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  height: fit-content;
+}
+
+.sidebar label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.sidebar input[type="range"] {
+  width: calc(100% - 50px);
+  vertical-align: middle;
+}
+.sidebar output {
+  display: inline-block;
+  width: 40px;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.sidebar input[type="number"],
+.sidebar input[type="text"] {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.sidebar button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  padding: 12px 20px;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+
+.sidebar button:hover {
+  background-color: #2980b9;
+}
+.sidebar button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.info-note {
+  font-size: 0.85em;
+  color: #7f8c8d;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.main-content {
+  flex: 3;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.status-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #eaf4ff;
+  border: 1px solid #c1d9f4;
+  color: #31708f;
+}
+
+.status-message.error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.metric {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.metric h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.metric p {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0;
+  color: #2c3e50;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.plotly-graph-div {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #666;
+  padding: 10px 0;
+}
+
+footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer-message {
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #8a6d3b;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95em;
+}

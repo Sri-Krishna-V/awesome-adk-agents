@@ -1,0 +1,4 @@
+google-adk==1.0.0
+httpx==0.28.1
+pandas==2.2.3
+a2a-sdk==0.2.3
