@@ -1,47 +1,56 @@
-# Cymbal Home & Garden Customer Service Agent
-
-This project implements an AI-powered customer service agent for Cymbal Home & Garden, a big-box retailer specializing in home improvement, gardening, and related supplies. The agent is designed to provide excellent customer service, assist customers with product selection, manage orders, schedule services, and offer personalized recommendations.
+# 🛒 Cymbal Home & Garden Customer Service Agent
 
 ## Overview
 
-The Cymbal Home & Garden Customer Service Agent is designed to provide a seamless and personalized shopping experience for customers. It leverages Gemini to understand customer needs, offer tailored product recommendations, manage orders, and schedule services. The agent is designed to be friendly, empathetic, and highly efficient, ensuring that customers receive the best possible service.
+A cutting-edge AI-powered customer service solution designed specifically for Cymbal Home & Garden, your one-stop destination for home improvement and gardening excellence! This intelligent agent revolutionizes the customer experience by providing personalized assistance, expert product recommendations, and seamless order management.
+
+**What it does:**
+
+- 🎯 **Personalized Service**: Greets returning customers by name with full purchase history awareness  
+- 🌱 **Plant Identification**: Advanced AI-powered plant recognition even from vague descriptions
+- 🛍️ **Smart Recommendations**: Tailored product suggestions based on customer needs and location
+- 📦 **Order Management**: Complete order processing, tracking, and modification capabilities
+- 📅 **Service Scheduling**: Seamless appointment booking for delivery and installation services
+- 🎥 **Multimodal Support**: Accepts text and video inputs for rich, interactive customer experiences
+
+Perfect for big-box retailers looking to deliver exceptional customer service with AI-powered automation and personalized shopping experiences!
 
 ## Agent Details
 
-The key features of the Customer Service Agent include:
+| Feature | Description |
+| --- | --- |
+| **Interaction Type** | Conversational |
+| **Complexity** | Advanced |
+| **Agent Type** | Single Agent |
+| **Components** | Tools, Multimodal Support, Live Streaming, Session Management |
+| **Vertical** | Retail / Home & Garden |
 
-| Feature            | Description             |
-| ------------------ | ----------------------- |
-| _Interaction Type_ | Conversational          |
-| _Complexity_       | Intermediate            |
-| _Agent Type_       | Single Agent            |
-| _Components_       | Tools, Multimodal, Live |
-| _Vertical_         | Retail                  |
-
-### Agent Architecture
+### 🏗️ Agent Architecture
 
 ![Customer Service Agent Workflow](customer_service_workflow.png)
 
-The agent is built using a multi-modal architecture, combining text and video inputs to provide a rich and interactive experience. It mocks interactions with various tools and services, including a product catalog, inventory management, order processing, and appointment scheduling systems. The agent also utilizes a session management system to maintain context across interactions and personalize the customer experience.
+*Note: This agent uses mocked tools for demonstration. For production deployment, you'll need to integrate with actual backend systems by editing [customer_service/tools.py](./customer_service/tools/tools.py)*
 
-It is important to notice that this agent is not integrated to an actual backend and the behaviour is based on mocked tools. If you would like to implement this agent with actual backend integration you will need to edit [customer_service/tools.py](./customer_service/tools/tools.py)
+### ✨ Key Features
 
-Because the tools are mocked you might notice that some requested changes will not be applied. For instance newly added item to cart will not show if later a user asks the agent to list all items.
+#### 🤝 **Personalized Customer Experience**
 
-### Key Features
+- **Customer Recognition**: Greets returning customers by name with full purchase history
+- **Empathetic Communication**: Maintains friendly, helpful, and understanding tone
+- **Context Awareness**: Remembers conversation history for seamless interactions
 
-- **Personalized Customer Assistance:**
-  - Greets returning customers by name and acknowledges their purchase history.
-  - Maintains a friendly, empathetic, and helpful tone.
-- **Product Identification and Recommendation:**
-  - Assists customers in identifying plants, even from vague descriptions.
-  - Requests and utilizes visual aids (video) to accurately identify plants.
-  - Provides tailored product recommendations based on identified plants, customer needs, and location (e.g., Las Vegas, NV).
-  - Offers alternatives to items in the customer's cart if better options exist.
-- **Order Management:**
-  - Accesses and displays the contents of a customer's shopping cart.
-  - Modifies the cart by adding and removing items based on recommendations and customer approval.
-  - Informs customers about relevant sales and promotions.
+#### 🌱 **Smart Product Assistance**  
+
+- **Plant Identification**: Advanced AI recognition from descriptions or visual inputs
+- **Visual Analysis**: Utilizes video inputs for accurate plant and product identification
+- **Location-Based Recommendations**: Tailored suggestions for specific regions (e.g., Las Vegas, NV)
+- **Alternative Suggestions**: Offers better options when available
+
+#### 📦 **Complete Order Management**
+
+- Accesses and displays the contents of a customer's shopping cart.
+- Modifies the cart by adding and removing items based on recommendations and customer approval.
+- Informs customers about relevant sales and promotions.
 - **Upselling and Service Promotion:**
   - Suggests relevant services, such as professional planting services.
   - Handles inquiries about pricing and discounts, including competitor offers.
@@ -92,22 +101,26 @@ The agent has access to the following tools:
 - Google Cloud Project (for Vertex AI Gemini integration)
 
 ### Installation
-1.  **Prerequisites:**
+
+1. **Prerequisites:**
 
     For the Agent Engine deployment steps, you will need
     a Google Cloud Project. Once you have created your project,
     [install the Google Cloud SDK](https://cloud.google.com/sdk/docs/install).
     Then run the following command to authenticate with your project:
+
     ```bash
     gcloud auth login
     ```
+
     You also need to enable certain APIs. Run the following command to enable
     the required APIs:
+
     ```bash
     gcloud services enable aiplatform.googleapis.com
     ```
 
-1.  Clone the repository:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/google/adk-samples.git
@@ -116,7 +129,7 @@ The agent has access to the following tools:
 
     For the rest of this tutorial **ensure you remain in the `agents/customer-service` directory**.
 
-2.  Install dependencies using Poetry:
+2. Install dependencies using Poetry:
 
 - if you have not installed poetry before then run `pip install poetry` first. then you can create your virtual environment and install all dependencies using:
 
@@ -130,7 +143,7 @@ The agent has access to the following tools:
   poetry env activate
   ```
 
-3.  Set up Google Cloud credentials:
+3. Set up Google Cloud credentials:
 
     - Ensure you have a Google Cloud project.
     - Make sure you have the Vertex AI API enabled in your project.
@@ -147,16 +160,18 @@ The agent has access to the following tools:
 You can run the agent using the ADK commant in your terminal.
 from the root project directory:
 
-1.  Run agent in CLI:
+1. Run agent in CLI:
 
     ```bash
     adk run customer_service
     ```
 
-2.  Run agent with ADK Web UI:
+2. Run agent with ADK Web UI:
+
     ```bash
     adk web
     ```
+
     Select the customer_service from the dropdown
 
 ### Example Interaction
@@ -205,7 +220,7 @@ Evaluation tests assess the overall performance and capabilities of the agent in
 
 **Steps:**
 
-1.  **Run Evaluation Tests:**
+1. **Run Evaluation Tests:**
 
     ```bash
     pytest eval
@@ -219,7 +234,7 @@ Unit tests focus on testing individual units or components of the code in isolat
 
 **Steps:**
 
-1.  **Run Unit Tests:**
+1. **Run Unit Tests:**
 
     ```bash
     pytest tests/unit
@@ -235,13 +250,13 @@ You can find further configuration parameters in [customer_service/config.py](./
 
 In order to inherit all dependencies of your agent you can build the wheel file of the agent and run the deployment.
 
-1.  **Build Customer Service Agent WHL file**
+1. **Build Customer Service Agent WHL file**
 
     ```bash
     poetry build --format=wheel --output=deployment
     ```
 
-1.  **Deploy the agent to agents engine**
+1. **Deploy the agent to agents engine**
     It is important to run deploy.py from within deployment folder so paths are correct
 
     ```bash

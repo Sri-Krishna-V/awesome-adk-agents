@@ -1,312 +1,286 @@
-#  FOMC Research Agent
-
-The FOMC Research Agent uses a multi-agent, multi-modal architecture, combined
-with tool use, live web access and external database integration to generate a
-detailed analysis report on the latest meeting of the Federal Open Market
-Committee. This agent showcases a multi-stage, non-conversational agentic
-workflow as opposed to a conversational user interaction.
+# 🏛️ FOMC Research Agent
 
 ## Overview
 
-The Federal Open Market Committee (FOMC) is the body of the United States
-government responsible for setting interest rate policy. Statements and
-press releases from the FOMC meetings are closely watched and thoroughly
-analyzed by financial market participants around the world.
+The FOMC Research Agent is a sophisticated multi-agent system designed to automate the generation of comprehensive research reports on Federal Open Market Committee (FOMC) meetings. It provides deep insights into monetary policy decisions, leveraging data from official Federal Reserve sources and financial markets. This agent is particularly useful for financial institutions, analysts, and traders who require rapid and thorough analysis of Fed policy decisions.
 
-This agent shows how a multi-agent architecture might be used to generate
-detailed analysis reports on financial market events such as Fed meetings. The
-FOMC Research Agent is slightly different from other agents in that it is
-largely non-conversational -- most of the agent's work takes place through
-back-and-forth interactions between individual sub-agents. When necessary,
-it asks the user for a key piece of information, but in general it functions
-without human interaction.
+The Federal Open Market Committee (FOMC) plays a crucial role in setting U.S. interest rate policy, making its statements highly influential in global financial markets.
 
-This is the high-level workflow the agent follows to generate its analysis (note
-that step 3, "Review press conference video", is still in development).
-![FOMC Research agent workflow](<FOMC_Research_Agent_Workflow.png>)
+### Agent Workflow
+
+The agent follows a structured workflow to generate its analysis:
+
+1. Retrieves FOMC meeting data (statements, press releases).
+2. Integrates market data for a comprehensive view.
+3. Analyzes the collected information using specialized sub-agents.
+4. Generates a detailed report on the FOMC meeting and its market impact.
+
+![FOMC Research Agent Workflow](FOMC_Research_Agent_Workflow.png)
+
+*Note: Press conference video analysis (step 3 in the diagram) is a feature currently under development.*
 
 ## Agent Details
-The key features of the FOMC Research Agent include:
 
-| Feature | Description |
-| --- | --- |
-| *Interaction Type* | Workflow |
-| *Complexity* | Advanced |
-| *Agent Type* | Multi Agent |
-| *Components* | Tools, Multimodal, AgentTools |
-| *Vertical* | Financial Services |
+| Feature              | Description                                                                                                |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Interaction Type** | Workflow (Primarily non-conversational, focused on autonomous report generation)                           |
+| **Complexity**       | Advanced                                                                                                   |
+| **Agent Type**       | Multi-Agent System                                                                                         |
+| **Components**       | Live Web Access, Database Integration (BigQuery), Multi-modal Analysis (text, potential for video), Report Generation |
+| **Vertical**         | Financial Services                                                                                         |
+| **Framework**        | Google Agent Development Kit (ADK)                                                                         |
 
-### Agent Architecture
+## Architecture
 
-This diagram shows the detailed architecture of the agents and tools used
-to implement this workflow.
+The FOMC Research Agent employs a multi-agent architecture where specialized sub-agents collaborate to produce the final analysis.
+
 ![FOMC Research agent architecture](<fomc-research.svg>)
 
-### Key Features
+### Key Architectural Components
 
-##### Agents
-* **root_agent:** Entry point for the agent workflow. Coordinates the activity of the other agents.
-* **research_agent:** Coordinates the retrieval of individual research components.
-* **analysis_agent:** Takes in the output of the `research_agent` and generates the analysis report.
-* **retrieve_meeting_data_agent:** Fetches FOMC meeting data from the web.
-* **extract_page_data_agent:** Extracts specific data from an HTML page.
-* **summarize_meeting_agent:** Reads the meeting transcript and generates a summary.
+* **Root Agent (`root_agent`):** Serves as the entry point and orchestrator for the entire workflow, coordinating the activities of other specialized agents.
+* **Research Agent (`research_agent`):** Manages the retrieval of individual research components necessary for the analysis.
+* **Analysis Agent (`analysis_agent`):** Processes the information gathered by the `research_agent` to generate the final analytical report.
+* **Data Retrieval Agents:**
+  * `retrieve_meeting_data_agent`: Fetches FOMC meeting data from web sources.
+  * `extract_page_data_agent`: Extracts specific data points from HTML content.
+  * `summarize_meeting_agent`: Reads meeting transcripts and generates concise summaries.
+* **Core Tools:**
+  * `fetch_page_tool`: Handles HTTP requests for retrieving web page content.
+  * `store_state_tool`: Manages state information within the ToolContext.
+  * `analyze_video_tool`: (Future capability) Processes and analyzes video content (e.g., press conferences).
+  * `compute_probability_tool`: Calculates the probability of interest rate changes based on Fed Futures pricing data.
+  * `compare_statements_tool`: Compares current and previous FOMC statements to identify key changes.
+  * `fetch_transcript_tool`: Retrieves FOMC meeting transcripts.
+* **Callbacks:**
+  * `rate_limit_callback`: Implements request rate limiting to prevent API overuse and errors like `429: Resource Exhausted`.
 
-##### Tools
-* **fetch_page_tool**: Encapsulates an HTTP request for retrieving a web page.
-* **store_state_tool**: Stores specific information in the ToolContext.
-* **analyze_video_tool**: Processes and analyzes a YouTube video.
-* **compute_probability_tool**: Computes the probability of rate changes from Fed Futures pricing.
-* **compare_statements**: Compares the current and previous FOMC statements.
-* **fetch_transcript**: Retrieves the FOMC meeting transcript.
+## Key Features
 
-##### Callbacks
-* **rate_limit_callback**: Implements request rate limiting to minimize `429: Resource Exhausted` errors.
+* **Autonomous Operation:** Designed for a largely non-conversational workflow, requiring minimal human intervention once initiated.
+* **Multi-Agent Collaboration:** Utilizes specialized sub-agents that work in concert to deliver comprehensive and nuanced analysis.
+* **Real-time Data Integration:** Leverages live web access to fetch data from official Federal Reserve sources and external financial databases.
+* **Institutional-Quality Reporting:** Aims to produce detailed analytical reports comparable to those from professional financial research services.
+* **Rapid Analysis:** Engineered for quick turnaround from the conclusion of an FOMC meeting to the delivery of a comprehensive report.
+* **Market-Focused Insights:** Specifically tailored for financial market participants who depend on timely and accurate interpretations of Fed policy.
 
 ## Setup and Installation
-1.  **Prerequisites:**
 
-    **Google Cloud SDK and GCP Project:**
+### Prerequisites
 
-    For the BigQuery setup and the Agent Engine deployment steps, you will need
-    a Google Cloud Project. Once you have created your project,
-    [install the Google Cloud SDK](https://cloud.google.com/sdk/docs/install).
-    Then run the following command to authenticate with your project:
-    ```bash
-    gcloud auth login
-    ```
-    You also need to enable certain APIs. Run the following command to enable
-    the required APIs:
-    ```bash
-    gcloud services enable aiplatform.googleapis.com
-    gcloud services enable bigquery.googleapis.com
-    ```
+1. **Google Cloud SDK and GCP Project:**
+   * A Google Cloud Project is required for BigQuery setup and Agent Engine deployment.
+   * Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install).
+   * Authenticate with your project:
 
-2.  **Installation:**
+     ```bash
+     gcloud auth login
+     ```
 
-    Clone this repository and change to the repo directory:
-    ```
-    git clone https://github.com/google/adk-samples.git
-    cd adk-samples/python/agents/fomc-research
-    ```
+   * Enable necessary APIs:
 
-    Install [Poetry](https://python-poetry.org)
+     ```bash
+     gcloud services enable aiplatform.googleapis.com
+     gcloud services enable bigquery.googleapis.com
+     ```
 
-    If you have not installed poetry before, you can do so by running:
-    ```bash
-    pip install poetry
-    ```
+2. **Python and Poetry:**
+   * Ensure you have Python installed.
+   * Install [Poetry](https://python-poetry.org) for managing dependencies:
 
-    Install the FOMC Research agent requirements:
-    ```bash
-    poetry install
-    ```
+     ```bash
+     pip install poetry
+     ```
 
-    This will also install the released version of 'google-adk', the Google Agent Development Kit.
+### Installation Steps
 
-3.  **Configuration:**
+1. **Clone the Repository:**
 
-    **Environment:**
+   ```bash
+   git clone https://github.com/google/adk-samples.git
+   cd adk-samples/python/agents/fomc-research
+   ```
 
-    There is a `.env-example` file included in the repository. Update this file
-    with the values appropriate to your project, and save it as `.env`. The values
-    in this file will be read into the environment of your application.
+2. **Install Dependencies:**
+   Use Poetry to install the required packages, including the Google Agent Development Kit (`google-adk`):
 
-    Once you have created your `.env` file, if you're using the `bash` shell,
-    run the following command to export the variables from the `.env` file into your
-    local shell environment:
-    ```bash
-    set -o allexport
-    . .env
-    set +o allexport
-    ```
-    If you aren't using `bash`, you may need to export the variables manually.
+   ```bash
+   poetry install
+   ```
 
-    **BigQuery Setup:**
+### Configuration
 
-    You need to create a BigQuery table containing the Fed Futures pricing data.
+1. **Environment Variables:**
+   * Copy the `.env-example` file to `.env`.
+   * Update the `.env` file with your project-specific values (e.g., `GOOGLE_CLOUD_PROJECT`, `GOOGLE_CLOUD_BQ_DATASET`, `GOOGLE_CLOUD_LOCATION`).
+   * Export these variables into your shell environment. For `bash`:
 
-    The FOMC Research Agent repo contains a sample data file
-    (`sample_timeseries_data.csv`) with data covering the FOMC meetings on Jan
-    29 and Mar 19 2025. If you want to run the agent for other FOMC meetings you
-    will need to get additional data.
+     ```bash
+     set -o allexport
+     source .env
+     set +o allexport
+     ```
 
-    To install this data file in a BigQuery table in your project, run the following
-    commands in the `fomc-research/deployment` directory:
-    ```bash
-    python bigquery_setup.py --project_id=$GOOGLE_CLOUD_PROJECT \
-        --dataset_id=$GOOGLE_CLOUD_BQ_DATASET \
-        --location=$GOOGLE_CLOUD_LOCATION \
-        --data_file=sample_timeseries_data.csv
-    ```
+     (Adapt for other shells if necessary).
+
+2. **BigQuery Setup:**
+   * A BigQuery table containing Fed Futures pricing data is needed. A sample data file (`sample_timeseries_data.csv`) is provided for the FOMC meetings on Jan 29 and Mar 19, 2025. For other dates, you'll need to source additional data.
+   * To load the sample data into BigQuery, navigate to the `fomc-research/deployment` directory and run:
+
+     ```bash
+     python bigquery_setup.py --project_id=$GOOGLE_CLOUD_PROJECT \
+         --dataset_id=$GOOGLE_CLOUD_BQ_DATASET \
+         --location=$GOOGLE_CLOUD_LOCATION \
+         --data_file=sample_timeseries_data.csv
+     ```
 
 ## Running the Agent
 
-**Using the ADK command line:**
+You can run the FOMC Research Agent using the ADK command-line interface or the ADK Dev UI.
 
-From the `fomc-research` directory, run this command:
-```bash
-adk run fomc_research
-```
-The initial output will include a command you can use to tail the agent log
-file. The command will be something like this:
-```bash
-tail -F /tmp/agents_log/agent.latest.log
-```
+### Using the ADK Command Line
 
-**Using the ADK Dev UI:**
+1. Navigate to the `fomc-research` directory.
+2. Execute the agent:
 
-From the `fomc-research` directory, run this command:
-```bash
-adk web .
-```
-It will display a URL for the demo UI. Point your browser to that URL.
+   ```bash
+   adk run fomc_research
+   ```
 
-The UI will be blank initially. In the dropdown at the top left, choose `fomc_research`
-to load the agent.
+3. The agent will output a command to tail its log file, e.g.:
 
-The logs from the agent will display on the console in real time as it runs. However,
-if you want to store a log of the interaction and also tail the interaction in real
-time, use the following commands:
+   ```bash
+   tail -F /tmp/agents_log/agent.latest.log
+   ```
 
-```bash
-adk web . > fomc_research_log.txt 2>&1 &
-tail -f fomc_research_log.txt
-```
+### Using the ADK Dev UI
+
+1. Navigate to the `fomc-research` directory.
+2. Start the ADK web UI:
+
+   ```bash
+   adk web .
+   ```
+
+3. Open the displayed URL in your browser.
+4. In the UI, select `fomc_research` from the dropdown to load the agent.
+5. To save logs and tail them simultaneously:
+
+   ```bash
+   adk web . > fomc_research_log.txt 2>&1 &
+   tail -f fomc_research_log.txt
+   ```
 
 ### Example Interaction
 
-Begin the interaction by typing "Hello. What can you do for me?". After
-the first prompt, give the date: "2025-01-29".
+1. Initiate the interaction:
 
-The interaction will look something like this:
-```
-$ adk run .
-Log setup complete: /tmp/agents_log/agent.20250405_140937.log
-To access latest log: tail -F /tmp/agents_log/agent.latest.log
-Running agent root_agent, type exit to exit.
-user: Hello. What can you do for me?
-[root_agent]: I can help you analyze past Fed Open Market Committee (FOMC) meetings and provide you with a thorough analysis report. To start, please provide the date of the meeting you would like to analyze. If you have already provided it, please confirm the date. I need the date in ISO format (YYYY-MM-DD).
+   ```text
+   user: Hello. What can you do for me?
+   ```
 
-user: 2025-01-29
-[analysis_agent]: Here is a summary and analysis of the January 29, 2025 FOMC meeting, based on the available information:
-...
-```
-If the agent stops before completing the analysis, try asking it to continue.
+   The agent will respond:
+
+   ```text
+   [root_agent]: I can help you analyze past Fed Open Market Committee (FOMC) meetings and provide you with a thorough analysis report. To start, please provide the date of the meeting you would like to analyze. If you have already provided it, please confirm the date. I need the date in ISO format (YYYY-MM-DD).
+   ```
+
+2. Provide the meeting date:
+
+   ```text
+   user: 2025-01-29
+   ```
+
+   The agent will then proceed with the analysis and generate a report:
+
+   ```text
+   [analysis_agent]: Here is a summary and analysis of the January 29, 2025 FOMC meeting, based on the available information:
+   ... (report details) ...
+   ```
+
+*If the agent seems to pause during its workflow, a simple prompt like "continue" might be sufficient to resume its operation.*
 
 ## Deployment on Vertex AI Agent Engine
 
-To deploy the agent to Google Agent Engine, first follow
-[these steps](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up)
-to set up your Google Cloud project for Agent Engine.
+### Prerequisites for Deployment
 
-You also need to give BigQuery User and BigQuery Data Viewer permissions to the
-Reasoning Engine Service Agent. Run the following commands to grant the required
-permissions:
-```bash
-export RE_SA="service-${GOOGLE_CLOUD_PROJECT_NUMBER}@gcp-sa-aiplatform-re.iam.gserviceaccount.com"
-gcloud projects add-iam-policy-binding ${GOOGLE_CLOUD_PROJECT} \
-    --member="serviceAccount:${RE_SA}" \
-    --condition=None \
-    --role="roles/bigquery.user"
-gcloud projects add-iam-policy-binding ${GOOGLE_CLOUD_PROJECT} \
-    --member="serviceAccount:${RE_SA}" \
-    --condition=None \
-    --role="roles/bigquery.dataViewer"
-```
-Next, you need to create a `.whl` file for your agent. From the `fomc-research`
-directory, run this command:
-```bash
-poetry build --format=wheel --output=deployment
-```
-This will create a file named `fomc_research-0.1-py3-none-any.whl` in the
-`deployment` directory.
+1. **Set up GCP for Agent Engine:** Follow the [official documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up) to configure your Google Cloud project for Agent Engine.
+2. **Grant Permissions:** The Reasoning Engine Service Agent needs BigQuery User and BigQuery Data Viewer roles.
 
-Then run the following command:
-```bash
-cd deployment
-python3 deploy.py --create
-```
-When this command returns, if it succeeds it will print an AgentEngine resource
-name that looks something like this:
-```
-projects/************/locations/us-central1/reasoningEngines/7737333693403889664
-```
-The last sequence of digits is the AgentEngine resource ID.
+   ```bash
+   export RE_SA="service-${GOOGLE_CLOUD_PROJECT_NUMBER}@gcp-sa-aiplatform-re.iam.gserviceaccount.com"
+   gcloud projects add-iam-policy-binding ${GOOGLE_CLOUD_PROJECT} \
+       --member="serviceAccount:${RE_SA}" \
+       --condition=None \
+       --role="roles/bigquery.user"
+   gcloud projects add-iam-policy-binding ${GOOGLE_CLOUD_PROJECT} \
+       --member="serviceAccount:${RE_SA}" \
+       --condition=None \
+       --role="roles/bigquery.dataViewer"
+   ```
 
-Once you have successfully deployed your agent, you can interact with it
-using the `test_deployment.py` script in the `deployment` directory. Store the
-agent's resource ID in an environment variable and run the following command:
-```bash
-export RESOURCE_ID=...
-export USER_ID=<any string>
-python test_deployment.py --resource_id=$RESOURCE_ID --user_id=$USER_ID
-```
-The session will look something like this:
-```
-Found agent with resource ID: ...
-Created session for user ID: ...
-Type 'quit' to exit.
-Input: Hello. What can you do for me?
-Response: I can create an analysis report on FOMC meetings. To start, please provide the date of the meeting you want to analyze. I need the date in YYYY-MM-DD format.
+### Deployment Steps
 
-Input: 2025-01-29
-Response: I have stored the date you provided. Now I will retrieve the meeting data.
-...
-```
-Note that this is *not* a full-featured, production-ready CLI; it is just intended to
-show how to use the Agent Engine API to interact with a deployed agent.
+1. **Build the Agent Package:**
+   Navigate to the `fomc-research` directory and build the wheel file:
 
-The main part of the `test_deploy.py` script is approximately this code:
+   ```bash
+   poetry build --format=wheel --output=deployment
+   ```
 
-```python
-from vertexai import agent_engines
-remote_agent = vertexai.agent_engines.get(RESOURCE_ID)
-session = remote_agent.create_session(user_id=USER_ID)
-while True:
-    user_input = input("Input: ")
-    if user_input == "quit":
-      break
+   This creates `fomc_research-0.1-py3-none-any.whl` in the `deployment` directory.
 
-    for event in remote_agent.stream_query(
-        user_id=USER_ID,
-        session_id=session["id"],
-        message=user_input,
-    ):
-        parts = event["content"]["parts"]
-        for part in parts:
-            if "text" in part:
-                text_part = part["text"]
-                print(f"Response: {text_part}")
-```
+2. **Deploy to Agent Engine:**
+   Change to the `deployment` directory and run the deployment script:
 
-To delete the agent, run the following command (using the resource ID returned previously):
+   ```bash
+   cd deployment
+   python3 deploy.py --create
+   ```
+
+   Successful deployment will output an Agent Engine resource name (e.g., `projects/your-project/locations/us-central1/reasoningEngines/your-resource-id`). Note the resource ID.
+
+### Testing the Deployed Agent
+
+1. **Set Environment Variables:**
+
+   ```bash
+   export RESOURCE_ID=<your-agent-engine-resource-id>
+   export USER_ID=<any-string-for-user-identification>
+   ```
+
+2. **Run the Test Script:**
+   In the `deployment` directory:
+
+   ```bash
+   python test_deployment.py --resource_id=$RESOURCE_ID --user_id=$USER_ID
+   ```
+
+   An example interaction:
+
+   ```text
+   Input: Hello. What can you do for me?
+   Response: I can create an analysis report on FOMC meetings. To start, please provide the date of the meeting you want to analyze. I need the date in YYYY-MM-DD format.
+
+   Input: 2025-01-29
+   Response: I have stored the date you provided. Now I will retrieve the meeting data.
+   ...
+   ```
+
+   The `test_deploy.py` script demonstrates basic interaction with the deployed agent using the Agent Engine API.
+
+### Deleting the Agent Deployment
+
+To remove the agent from Agent Engine:
+
 ```bash
 python3 deployment/deploy.py --delete --resource_id=$RESOURCE_ID
 ```
 
 ## Troubleshooting
 
-### "Malformed function call"
-
-Occasionally the agent returns the error "Malformed function call". This is a
-Gemini model error which should be addressed in future model versions. Simply
-restart the UI and the agent will reset.
-
-### Agent stops mid-workflow
-
-Sometimes the agent will stop mid-workflow, after completing one of the
-intermediate steps. When this happens, it frequently works just to tell the agent
-to continue, or another instruction to continue its operation.
-
-
-## Disclaimer
-
-This agent sample is provided for illustrative purposes only and is not intended for production use. It serves as a basic example of an agent and a foundational starting point for individuals or teams to develop their own agents.
-
-This sample has not been rigorously tested, may contain bugs or limitations, and does not include features or optimizations typically required for a production environment (e.g., robust error handling, security measures, scalability, performance considerations, comprehensive logging, or advanced configuration options).
-
-Users are solely responsible for any further development, testing, security hardening, and deployment of agents based on this sample. We recommend thorough review, testing, and the implementation of appropriate safeguards before using any derived agent in a live or critical system.
+* **"Malformed function call" Error:** This is an occasional error from the underlying Gemini model. Restarting the UI or the agent run usually resolves it. Future model versions are expected to address this.
+* **Agent Stops Mid-Workflow:** If the agent pauses, try prompting it to "continue" or providing a similar instruction to resume its operation.
 
 ## Disclaimer
 

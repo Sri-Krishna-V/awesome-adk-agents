@@ -1,42 +1,49 @@
-# Academic Research
-
+# 📚 Academic Research Agent
 
 ## Overview
 
-AI-driven agent designed to facilitate the exploration of the academic landscape surrounding seminal research works. Recognizing the challenge researchers face in navigating the expanding body of literature influenced by foundational studies, this agent offers a streamlined approach. By accepting a seminal paper identified provided as file input, the agent first analyzes the core contributions of the specified work.
+An AI-powered research assistant designed to accelerate academic discovery and streamline literature exploration. This intelligent agent helps researchers navigate the complex landscape of academic publications by analyzing seminal papers and mapping their contemporary influence.
 
-1. It then leverages specialized Agent tools to identify and retrieve via Google Search recent academic publications that cite this seminal paper, mapping its contemporary influence.
-2. Finally, synthesizing the analysis of the original paper with the findings from recent citing literature, and again utilizing specialized analytical tools, the agent proposes potential future research directions.
+**What it does:**
 
-This capability aims to provide researchers with valuable insights into the ongoing impact of seminal research and to highlight promising avenues for novel investigation, thereby accelerating the research discovery process.
+- 📖 **Analyzes core contributions** of foundational research papers provided as input
+- 🔍 **Discovers recent citations** using specialized Google Search tools to identify publications influenced by seminal works  
+- 🚀 **Proposes future research directions** by synthesizing insights from original papers and citing literature
+- 🎯 **Accelerates research discovery** by providing valuable insights into ongoing academic impact
+
+Perfect for researchers looking to understand the broader impact of foundational studies and identify promising avenues for novel investigation!
 
 ## Agent Details
 
-The key features of the Academic Research include:
-
 | Feature | Description |
 | --- | --- |
-| **Interaction Type** | Conversational |
-| **Complexity**  | Easy |
-| **Agent Type**  | Multi Agent |
-| **Components**  | Tools: built-in Google Search |
-| **Vertical**  | Education |
+| **Interaction Type** | Workflow |
+| **Complexity** | Easy |
+| **Agent Type** | Multi Agent |
+| **Components** | Google Search Tools, Agent Tools, Multi-agent Orchestration |
+| **Vertical** | Academia / Education |
 
+### 🏗️ Agent Architecture
 
+This diagram shows the detailed architecture of the agents and tools used to implement this workflow:
 
-### Agent architecture:
+<img src="academic-researcher.png" alt="Academic Research Agent Architecture" width="800"/>
 
-This diagram shows the detailed architecture of the agents and tools used
-to implement this workflow.
-<img src="academic-researcher.png" alt="academic researcher" width="800"/>
+### ✨ Key Features
+
+- **📄 Paper Analysis**: Deep analysis of core contributions from seminal research papers
+- **🔍 Citation Discovery**: Automated identification of recent publications citing foundational works
+- **🗺️ Research Mapping**: Visual mapping of contemporary influence and research evolution
+- **🚀 Future Directions**: AI-generated proposals for promising research avenues
+- **⚡ Streamlined Workflow**: End-to-end research discovery acceleration
 
 ## Setup and Installation
 
-1.  **Prerequisites**
+1. **Prerequisites**
 
-    *   Python 3.11+
-    *   Poetry
-        *   For dependency management and packaging. Please follow the
+    - Python 3.11+
+    - Poetry
+        - For dependency management and packaging. Please follow the
             instructions on the official
             [Poetry website](https://python-poetry.org/docs/) for installation.
 
@@ -44,12 +51,12 @@ to implement this workflow.
         pip install poetry
         ```
 
-    * A project on Google Cloud Platform
-    * Google Cloud CLI
-        *   For installation, please follow the instruction on the official
+    - A project on Google Cloud Platform
+    - Google Cloud CLI
+        - For installation, please follow the instruction on the official
             [Google Cloud website](https://cloud.google.com/sdk/docs/install).
 
-2.  **Installation**
+2. **Installation**
 
     ```bash
     # Clone this repository.
@@ -59,11 +66,11 @@ to implement this workflow.
     poetry install
     ```
 
-3.  **Configuration**
+3. **Configuration**
 
-    *   Set up Google Cloud credentials.
+    - Set up Google Cloud credentials.
 
-        *   You may set the following environment variables in your shell, or in
+        - You may set the following environment variables in your shell, or in
             a `.env` file instead.
 
         ```bash
@@ -73,7 +80,7 @@ to implement this workflow.
         export GOOGLE_CLOUD_STORAGE_BUCKET=<your-storage-bucket>  # Only required for deployment on Agent Engine
         ```
 
-    *   Authenticate your GCloud account.
+    - Authenticate your GCloud account.
 
         ```bash
         gcloud auth application-default login
@@ -355,7 +362,6 @@ is functional. `eval` is a demonstration of how to evaluate the agent, using the
 `AgentEvaluator` in ADK. It sends a couple requests to the agent and expects
 that the agent's responses match a pre-defined response reasonablly well.
 
-
 ## Deployment
 
 The Academic Co-Research can be deployed to Vertex AI Agent Engine using the following
@@ -390,6 +396,7 @@ All remote agents:
 ```
 
 You may interact with the deployed agent using the `test_deployment.py` script
+
 ```bash
 $ export USER_ID=<any string>
 $ python3 deployment/test_deployment.py --resource_id=${AGENT_ENGINE_ID} --user_id=${USER_ID}
@@ -414,8 +421,9 @@ The Academic Research can be customized to better suit your requirements. For ex
 
  1. Integrate Specialized Search Tools: Augment the agent's discovery capabilities by incorporating additional academic search functionalities, such as an ArXiv-specific search tool, to complement or replace the default search mechanism, allowing for more targeted retrieval from specialized databases and preprint archives.
  2. Implement Output Visualization: Enhance the presentation of research findings by adding modules to visualize the network of cited papers or to graphically represent suggested future research topics, thereby offering a more intuitive and interconnected understanding of the academic landscape.
-3. Customize Agent Instructions: Modify the prompts guiding the academic_websearch and academic_newresearch sub-agents. This allows you to direct their analytical focus (e.g., by specifying the depth of citation analysis, emphasizing interdisciplinary connections for future research, or ensuring adherence to particular academic writing conventions) or to refine the structure and detail of their outputs.
-4. Download the seminal paper via DOI or URL:  Augment the agent's capabilities by enabling direct download of seminal papers. This feature would allow the agent to:
+ 3. Customize Agent Instructions: Modify the prompts guiding the academic_websearch and academic_newresearch sub-agents. This allows you to direct their analytical focus (e.g., by specifying the depth of citation analysis, emphasizing interdisciplinary connections for future research, or ensuring adherence to particular academic writing conventions) or to refine the structure and detail of their outputs.
+ 4. Download the seminal paper via DOI or URL:  Augment the agent's capabilities by enabling direct download of seminal papers. This feature would allow the agent to:
+
 * Resolve DOI to PDF: Given a Digital Object Identifier (DOI), the agent could leverage APIs or web scraping techniques to locate and download the corresponding PDF of the paper. This streamlines the process of accessing primary sources, especially when the DOI is already known.
-* Download from URL: If a direct URL to the paper's PDF or an academic repository page is provided, the agent could be configured to navigate to that URL and initiate the download. This would be particularly useful for papers available on institutional repositories, personal academic websites, or preprint servers that might not have a readily resolvable DOI.
-* Integration with Reference Managers: The downloaded papers could then be automatically imported into a specified reference manager (e.g., Zotero, Mendeley, EndNote), along with their metadata, facilitating seamless organization and citation management for the user's research library. This integration would significantly enhance the efficiency of literature review and research compilation.
+- Download from URL: If a direct URL to the paper's PDF or an academic repository page is provided, the agent could be configured to navigate to that URL and initiate the download. This would be particularly useful for papers available on institutional repositories, personal academic websites, or preprint servers that might not have a readily resolvable DOI.
+- Integration with Reference Managers: The downloaded papers could then be automatically imported into a specified reference manager (e.g., Zotero, Mendeley, EndNote), along with their metadata, facilitating seamless organization and citation management for the user's research library. This integration would significantly enhance the efficiency of literature review and research compilation.

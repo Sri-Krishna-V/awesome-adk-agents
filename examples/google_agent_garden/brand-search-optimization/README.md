@@ -1,75 +1,92 @@
-# Brand Search Optimization - Web Browser Agent for Search Optimization
+# 🔍 Brand Search Optimization Agent
 
 ## Overview
 
-This agent is designed to enhance product data for retail websites. It generates keywords based on product data such as title, description, and attributes. It then visits a website, searches, and analyzes top results to provide suggestions for enriching product titles. This helps address issues like "Null & low recovery" or "Zero Results" searches by identifying gaps in product data. The agent can be extended to support enriching descriptions and attributes. Key tools it uses are: computer use and bigquery data connection.
+A powerful AI-driven solution designed to enhance e-commerce product data and boost search performance! This intelligent agent tackles the common retail challenges of "Null & low recovery" and "Zero Results" searches by analyzing and enriching product information through competitive intelligence.
+
+**What it does:**
+
+- 🎯 **Keyword Generation**: Creates targeted keywords based on product titles, descriptions, and attributes
+- 🌐 **Competitive Analysis**: Visits competitor websites and analyzes top search results
+- 💡 **Data Enrichment**: Provides smart suggestions for improving product titles, descriptions, and attributes
+- 📊 **Gap Identification**: Identifies missing data elements that impact search performance
+- 🤖 **Web Automation**: Uses computer vision and web crawling for real-time competitive intelligence
+
+Perfect for e-commerce retailers looking to optimize product discoverability and reduce search abandonment!
 
 ## Agent Details
 
-This agent showcases Multi Agent setup with tool calling and web crawling
-
-| Attribute | Detail |
+| Feature | Description |
 |---|---|
-|   Interaction Type |   Workflow |
-|   Complexity |   Advanced |
-|   Agent Type |   Multi Agent |
-|   Multi Agent Design Pattern: |   Router Agent |
-|   Components |   BigQuery Connection, Computer use, Tools, Evaluation |
-|   Vertical |   Retail |
+| **Interaction Type** | Workflow |
+| **Complexity** | Advanced |
+| **Agent Type** | Multi Agent |
+| **Multi Agent Design Pattern** | Router Agent |
+| **Components** | BigQuery Connection, Computer Use, Web Crawling, Tools, Evaluation |
+| **Vertical** | Retail / E-commerce |
 
-### Agent Architecture
+### 🏗️ Agent Architecture
 
-![Brand Search Optimization](./brand_search_optimization.png)
+![Brand Search Optimization Architecture](./brand_search_optimization.png)
 
-### Key Features
+### ✨ Key Features
 
-* **Tools:**
+#### 🛠️ Core Tools
 
-  * `function_calling`:  Gets data from the product catalog i.e. BigQuery table based on user provided brand.  It takes a brand string as input and returns a list of database records.
+- **`function_calling`**: Intelligent data retrieval from product catalogs via BigQuery based on brand parameters
+- **`load_artifacts_tool`**: Advanced web page analysis for actionable insights like search button interactions
+- **`computer_use`**: Automated web browsing and competitive analysis
+- **`bigquery_connector`**: Real-time product data access and enrichment
 
-  * `load_artifacts_tool`: Load web page source data as an artifact to analyze the components to take action such as clicking on the search button.
+#### 🚀 Capabilities
 
-  * `Website crawling`: Achieved through several individual tools such as `go_to_url`,`take_screenshot`,`find_element_with_text`, `click_element_with_text`,`enter_text_into_element`, `scroll_down_screen`,`get_page_source`,`analyze_webpage_and_determine_action`
+- **Smart Keyword Generation**: AI-powered keyword creation from product attributes
+- **Competitive Intelligence**: Real-time analysis of competitor search results  
+- **Data Gap Analysis**: Identifies missing product information affecting discoverability
+- **Automated Enrichment**: Suggests improvements for titles, descriptions, and attributes
 
-* **Evaluation:** The agent uses OOTB evaluation provided by the ADK and it can be run using `sh deployment/eval.sh` script.
+  - `Website crawling`: Achieved through several individual tools such as `go_to_url`,`take_screenshot`,`find_element_with_text`, `click_element_with_text`,`enter_text_into_element`, `scroll_down_screen`,`get_page_source`,`analyze_webpage_and_determine_action`
+
+- **Evaluation:** The agent uses OOTB evaluation provided by the ADK and it can be run using `sh deployment/eval.sh` script.
 
 ## Setup and Installation
 
 1. **Prerequisites:**
-    * Python 3.11+
-    * Poetry
-        * For dependency management and packaging. Please follow the instructions on the official [Poetry website](https://python-poetry.org/docs/) for installation.
-    * A project on Google Cloud Platform
-    * Get your API key from [here](https://aistudio.google.com).(Not needed if you want to use Gemini from Vertex AI)
+    - Python 3.11+
+    - Poetry
+        - For dependency management and packaging. Please follow the instructions on the official [Poetry website](https://python-poetry.org/docs/) for installation.
+    - A project on Google Cloud Platform
+    - Get your API key from [here](https://aistudio.google.com).(Not needed if you want to use Gemini from Vertex AI)
 
 2. **Configuration:**
-    * Env file setup
-        * Copy example env file `cp env.example .env`
-        * Set `DISABLE_WEB_DRIVER=1`
-        * Add values for following variables in the `.env` file
-            * `GOOGLE_CLOUD_PROJECT=<YOUR_PROJECT>`
-            * `GOOGLE_CLOUD_LOCATION=<YOUR_LOCATION>`
+    - Env file setup
+        - Copy example env file `cp env.example .env`
+        - Set `DISABLE_WEB_DRIVER=1`
+        - Add values for following variables in the `.env` file
+            - `GOOGLE_CLOUD_PROJECT=<YOUR_PROJECT>`
+            - `GOOGLE_CLOUD_LOCATION=<YOUR_LOCATION>`
 
-    * **API Keys:**
-        * Your API key should be added under `.env` in `GOOGLE_API_KEY` variable
-        * You don't need both Google API key and the Vertex AI setup. Either set up will work.
-    * **BigQuery Setup**
-        * BigQuery DATASET_ID should be under `.env` in `DATASET_ID`
-        * BigQuery TABLE_ID should be under `.env` in `TABLE_ID`
-        * BigQuery table setup can be done using automatically following the `sh deployment/run.sh` below or manually by following steps in `BigQuery Setup` section.
+    - **API Keys:**
+        - Your API key should be added under `.env` in `GOOGLE_API_KEY` variable
+        - You don't need both Google API key and the Vertex AI setup. Either set up will work.
+    - **BigQuery Setup**
+        - BigQuery DATASET_ID should be under `.env` in `DATASET_ID`
+        - BigQuery TABLE_ID should be under `.env` in `TABLE_ID`
+        - BigQuery table setup can be done using automatically following the `sh deployment/run.sh` below or manually by following steps in `BigQuery Setup` section.
 
-    * **Other Configuration:**
-        * You can change Gemini Model by changing `MODEL` under `.env`
-        * `DISABLE_WEB_DRIVER` when set to `1`, will enable you to run unit tests. See `Unit Tests` section below for details. **NOTE** keep this flag to 0 by default when not testing.
+    - **Other Configuration:**
+        - You can change Gemini Model by changing `MODEL` under `.env`
+        - `DISABLE_WEB_DRIVER` when set to `1`, will enable you to run unit tests. See `Unit Tests` section below for details. **NOTE** keep this flag to 0 by default when not testing.
 
-3.  **Authenticate with your Google Cloud account:**
+3. **Authenticate with your Google Cloud account:**
+
     ```bash
     gcloud auth application-default login
     ```
 
 4. **Installation:**
 
-    * Install dependencies and populate database using  `deployment/run.sh`
+    - Install dependencies and populate database using  `deployment/run.sh`
 
         `````bash
         # Clone this repository.
@@ -83,7 +100,7 @@ This agent showcases Multi Agent setup with tool calling and web crawling
         sh deployment/run.sh
         `````
 
-    * Set `DISABLE_WEB_DRIVER=0`
+    - Set `DISABLE_WEB_DRIVER=0`
 
 ## Running the Agent
 
@@ -99,15 +116,15 @@ Select "brand-search-optimization" from the drop-down menu.
 
 ### Brand Name
 
-* If you ran the `deployment/run.sh` script. The agent will be pre-configured for the brand `BSOAgentTestBrand`. When the agent asks for a brand name, please provide `BSOAgentTestBrand` as your brand name.
-* For custom data, please modify the brand name.
-* The agent flow triggers when you provide a brand name.
+- If you ran the `deployment/run.sh` script. The agent will be pre-configured for the brand `BSOAgentTestBrand`. When the agent asks for a brand name, please provide `BSOAgentTestBrand` as your brand name.
+- For custom data, please modify the brand name.
+- The agent flow triggers when you provide a brand name.
 
 > **NOTE**
 >
-> * Don't close the extra chrome window opened by the agent.
-> * After the agent provides a list of keywords, ask the agent to search a website. e.g. "Can you search website?", "Can you search of keywords on website?", "Help me search for keywords on website" etc.
-> * While visiting Google Shopping website, you'll need to complete the captcha for the first run. After completing the captcha, the agent should run in the subsequent runs.
+> - Don't close the extra chrome window opened by the agent.
+> - After the agent provides a list of keywords, ask the agent to search a website. e.g. "Can you search website?", "Can you search of keywords on website?", "Help me search for keywords on website" etc.
+> - While visiting Google Shopping website, you'll need to complete the captcha for the first run. After completing the captcha, the agent should run in the subsequent runs.
 
 ### Example Interaction
 
@@ -154,9 +171,9 @@ You may also modify the deployment script for your use cases.
 
 How to customize
 
-* **Modifying the Conversation Flow:** To ask the agent to compare descriptions instead of titles, you can change the prompt in `brand_search_optimization/sub_agents/search_results/prompt.py` specifically, `<Gather Information>` section under `SEARCH_RESULT_AGENT_PROMPT` can be changed.
-* **Changing the Data Sources:** BigQuery table can be configured to point to a table by changing values inside `.env` file
-* **Changing website:** Example website here is Google Shopping, please replace with your own, and modify any code accordingly.
+- **Modifying the Conversation Flow:** To ask the agent to compare descriptions instead of titles, you can change the prompt in `brand_search_optimization/sub_agents/search_results/prompt.py` specifically, `<Gather Information>` section under `SEARCH_RESULT_AGENT_PROMPT` can be changed.
+- **Changing the Data Sources:** BigQuery table can be configured to point to a table by changing values inside `.env` file
+- **Changing website:** Example website here is Google Shopping, please replace with your own, and modify any code accordingly.
 
 ### BigQuery Setup
 
@@ -208,10 +225,9 @@ rm -rf /tmp/selenium
 
 #### Known Issues
 
-* Agent doesn't run reliably when website enforces checks for bots and when the search element is hidden.
-* Agent doesn't suggest next step - This happens after keyword finding stage. Ask the agent to search for the top keyword in this case. e.g. "can you search for keyword?" or more explicitly "transfer me to web browser agent"
-* Agent asks for the keyword again - e.g. `Okay, I will go to XYZ.com. What keyword do you want to search for on XYZ?`. Please provide the keyword again.
-
+- Agent doesn't run reliably when website enforces checks for bots and when the search element is hidden.
+- Agent doesn't suggest next step - This happens after keyword finding stage. Ask the agent to search for the top keyword in this case. e.g. "can you search for keyword?" or more explicitly "transfer me to web browser agent"
+- Agent asks for the keyword again - e.g. `Okay, I will go to XYZ.com. What keyword do you want to search for on XYZ?`. Please provide the keyword again.
 
 ## Disclaimer
 
