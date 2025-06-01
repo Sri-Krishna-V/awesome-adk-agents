@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  interview-agent:
+    build: .
+    container_name: job-interview-agent
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+      - ./credentials.json:/app/credentials.json
+      - ./token.pickle:/app/token.pickle
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    
+  # Optional: Redis for session storage (if using Redis instead of JSON)
+  redis:
+    image: redis:7-alpine
+    container_name: interview-agent-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    profiles:
+      - redis
+      
+  # Optional: PostgreSQL for advanced data storage
+  postgres:
+    image: postgres:15-alpine
+    container_name: interview-agent-db
+    environment:
+      POSTGRES_DB: interview_agent
+      POSTGRES_USER: interview_user
+      POSTGRES_PASSWORD: interview_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    profiles:
+      - postgres
+
+volumes:
+  redis_data:
+  postgres_data:
+
+# Usage:
+# Basic setup: docker-compose up
+# With Redis: docker-compose --profile redis up
+# With PostgreSQL: docker-compose --profile postgres up
+# With both: docker-compose --profile redis --profile postgres up

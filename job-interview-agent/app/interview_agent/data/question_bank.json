@@ -1,0 +1,220 @@
+{
+  "behavioral_questions": {
+    "leadership": [
+      {
+        "question": "Tell me about a time when you had to lead a team through a difficult project or challenge.",
+        "follow_ups": [
+          "What made the project difficult?",
+          "How did you motivate your team?",
+          "What would you do differently next time?"
+        ],
+        "key_points": ["Leadership style", "Problem-solving", "Team motivation", "Results achieved"]
+      },
+      {
+        "question": "Describe a situation where you had to make a difficult decision as a leader.",
+        "follow_ups": [
+          "What factors did you consider?",
+          "How did you communicate your decision?",
+          "What was the outcome?"
+        ],
+        "key_points": ["Decision-making process", "Stakeholder management", "Communication", "Accountability"]
+      }
+    ],
+    "teamwork": [
+      {
+        "question": "Tell me about a time when you had to work with a difficult team member.",
+        "follow_ups": [
+          "What made them difficult to work with?",
+          "How did you approach the situation?",
+          "What was the result?"
+        ],
+        "key_points": ["Conflict resolution", "Communication skills", "Empathy", "Professional maturity"]
+      },
+      {
+        "question": "Describe a time when your team failed to meet a deadline or goal. What happened?",
+        "follow_ups": [
+          "What caused the failure?",
+          "How did you respond?",
+          "What did you learn from this experience?"
+        ],
+        "key_points": ["Accountability", "Problem analysis", "Recovery strategies", "Learning mindset"]
+      }
+    ],
+    "problem_solving": [
+      {
+        "question": "Tell me about a complex problem you solved at work. Walk me through your approach.",
+        "follow_ups": [
+          "How did you identify the root cause?",
+          "What alternatives did you consider?",
+          "How did you measure success?"
+        ],
+        "key_points": ["Analytical thinking", "Systematic approach", "Creativity", "Results measurement"]
+      },
+      {
+        "question": "Describe a time when you had to solve a problem with limited resources or information.",
+        "follow_ups": [
+          "How did you gather the information you needed?",
+          "What assumptions did you make?",
+          "How did you validate your solution?"
+        ],
+        "key_points": ["Resourcefulness", "Risk assessment", "Decision-making under uncertainty", "Adaptability"]
+      }
+    ],
+    "communication": [
+      {
+        "question": "Tell me about a time when you had to explain a complex technical concept to non-technical stakeholders.",
+        "follow_ups": [
+          "How did you tailor your communication?",
+          "What challenges did you face?",
+          "How did you ensure they understood?"
+        ],
+        "key_points": ["Simplification skills", "Audience awareness", "Clear communication", "Patience"]
+      },
+      {
+        "question": "Describe a situation where you had to deliver bad news to a client or stakeholder.",
+        "follow_ups": [
+          "How did you prepare for the conversation?",
+          "What was their reaction?",
+          "How did you handle their concerns?"
+        ],
+        "key_points": ["Difficult conversations", "Empathy", "Transparency", "Solution-oriented thinking"]
+      }
+    ],
+    "adaptability": [
+      {
+        "question": "Tell me about a time when you had to quickly adapt to a significant change at work.",
+        "follow_ups": [
+          "What was your initial reaction?",
+          "How did you adjust your approach?",
+          "What did you learn from the experience?"
+        ],
+        "key_points": ["Change management", "Flexibility", "Learning agility", "Resilience"]
+      },
+      {
+        "question": "Describe a time when you had to learn a new skill or technology quickly to complete a project.",
+        "follow_ups": [
+          "How did you approach the learning process?",
+          "What resources did you use?",
+          "How did you apply what you learned?"
+        ],
+        "key_points": ["Learning agility", "Self-motivation", "Resource utilization", "Application skills"]
+      }
+    ]
+  },
+  "technical_questions": {
+    "software_engineering": [
+      {
+        "question": "Explain the difference between a stack and a queue, and give real-world examples of when you'd use each.",
+        "difficulty": "easy",
+        "key_points": ["Data structure understanding", "LIFO vs FIFO", "Practical applications"],
+        "follow_ups": [
+          "How would you implement a stack using an array?",
+          "What are the time complexities for stack and queue operations?"
+        ]
+      },
+      {
+        "question": "Design a URL shortener like bit.ly. What are the key components and considerations?",
+        "difficulty": "medium",
+        "key_points": ["System design", "Scalability", "Database design", "Caching"],
+        "follow_ups": [
+          "How would you handle millions of requests per day?",
+          "How would you ensure the shortened URLs are unique?",
+          "What metrics would you track?"
+        ]
+      },
+      {
+        "question": "Implement a function to detect if a linked list has a cycle.",
+        "difficulty": "medium",
+        "key_points": ["Algorithm design", "Time/space complexity", "Edge cases"],
+        "follow_ups": [
+          "What's the time and space complexity of your solution?",
+          "Can you do it with constant space?",
+          "How would you find the start of the cycle?"
+        ]
+      }
+    ],
+    "data_science": [
+      {
+        "question": "Explain the bias-variance tradeoff and how it affects model performance.",
+        "difficulty": "medium",
+        "key_points": ["ML fundamentals", "Model evaluation", "Overfitting/underfitting"],
+        "follow_ups": [
+          "How would you detect high bias vs high variance?",
+          "What techniques can you use to reduce each?",
+          "Give an example of a high-bias and high-variance model."
+        ]
+      },
+      {
+        "question": "You notice your model performs well on training data but poorly on test data. What could be the issues and how would you address them?",
+        "difficulty": "easy",
+        "key_points": ["Overfitting diagnosis", "Model validation", "Practical ML"],
+        "follow_ups": [
+          "What validation techniques would you use?",
+          "How would you adjust your model?",
+          "What other data issues might cause this?"
+        ]
+      }
+    ],
+    "product_management": [
+      {
+        "question": "How would you prioritize features for a mobile app with limited development resources?",
+        "difficulty": "medium",
+        "key_points": ["Prioritization frameworks", "Stakeholder management", "Resource allocation"],
+        "follow_ups": [
+          "What framework would you use for prioritization?",
+          "How would you gather and validate requirements?",
+          "How would you communicate decisions to stakeholders?"
+        ]
+      },
+      {
+        "question": "A key metric for your product has suddenly dropped by 20%. Walk me through how you would investigate and respond.",
+        "difficulty": "medium",
+        "key_points": ["Data analysis", "Root cause analysis", "Crisis response"],
+        "follow_ups": [
+          "What data would you look at first?",
+          "How would you determine if it's a real issue or measurement error?",
+          "What stakeholders would you involve?"
+        ]
+      }
+    ]
+  },
+  "case_study_questions": {
+    "business_strategy": [
+      {
+        "question": "A ride-sharing company is losing market share to competitors. How would you develop a strategy to regain market leadership?",
+        "time_limit": 30,
+        "key_areas": ["Market analysis", "Competitive positioning", "Strategic planning", "Implementation"],
+        "evaluation_criteria": [
+          "Structured thinking",
+          "Market understanding",
+          "Creative solutions",
+          "Feasibility assessment"
+        ]
+      },
+      {
+        "question": "You're the product manager for a social media platform. User engagement has been declining among teenagers. What would you do?",
+        "time_limit": 25,
+        "key_areas": ["User research", "Product strategy", "Feature development", "Metrics"],
+        "evaluation_criteria": [
+          "User-centric thinking",
+          "Data-driven approach",
+          "Innovation",
+          "Measurement plan"
+        ]
+      }
+    ],
+    "consulting": [
+      {
+        "question": "A traditional retail bank wants to compete with fintech startups. What should their digital transformation strategy be?",
+        "time_limit": 35,
+        "key_areas": ["Digital transformation", "Competitive analysis", "Technology strategy", "Change management"],
+        "evaluation_criteria": [
+          "Industry knowledge",
+          "Strategic thinking",
+          "Implementation planning",
+          "Risk assessment"
+        ]
+      }
+    ]
+  }
+}

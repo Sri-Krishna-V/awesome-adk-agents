@@ -1,0 +1,148 @@
+{
+  "interview_types": {
+    "behavioral": {
+      "description": "Behavioral interviews focus on past experiences and how you handled various work situations",
+      "typical_duration": 45,
+      "question_format": "STAR method (Situation, Task, Action, Result)",
+      "preparation_tips": [
+        "Prepare 5-7 detailed STAR examples covering different competencies",
+        "Focus on specific, measurable results",
+        "Practice telling stories concisely (2-3 minutes each)",
+        "Be honest about challenges and what you learned"
+      ]
+    },
+    "technical": {
+      "description": "Technical interviews assess your technical knowledge, problem-solving abilities, and coding skills",
+      "typical_duration": 60,
+      "question_format": "Coding problems, system design, technical concepts",
+      "preparation_tips": [
+        "Practice coding problems on platforms like LeetCode",
+        "Review fundamental data structures and algorithms",
+        "Be ready to explain your thought process out loud",
+        "Ask clarifying questions before starting to code"
+      ]
+    },
+    "system_design": {
+      "description": "System design interviews evaluate your ability to architect large-scale distributed systems",
+      "typical_duration": 60,
+      "question_format": "Design a system like Twitter, Uber, or Netflix",
+      "preparation_tips": [
+        "Learn about scalability patterns and trade-offs",
+        "Practice drawing system architectures",
+        "Understand load balancing, caching, and database design",
+        "Think about both high-level design and detailed components"
+      ]
+    },
+    "case_study": {
+      "description": "Case study interviews test analytical thinking and business acumen through real-world scenarios",
+      "typical_duration": 45,
+      "question_format": "Business problem-solving scenarios",
+      "preparation_tips": [
+        "Practice structuring your approach to problems",
+        "Learn common business frameworks (SWOT, Porter's 5 Forces, etc.)",
+        "Think out loud and engage the interviewer",
+        "Consider multiple perspectives and trade-offs"
+      ]
+    },
+    "panel": {
+      "description": "Panel interviews involve multiple interviewers and may combine different interview types",
+      "typical_duration": 90,
+      "question_format": "Mixed format with multiple interviewers",
+      "preparation_tips": [
+        "Make eye contact with all panel members",
+        "Address questions to the person who asked, but include others",
+        "Be prepared for different styles and perspectives",
+        "Stay calm and confident with multiple personalities"
+      ]
+    }
+  },
+  "job_roles": {
+    "software_engineer": {
+      "common_focus_areas": ["Algorithms", "Data structures", "System design", "Coding skills", "Debugging"],
+      "typical_interview_rounds": ["Phone screen", "Technical coding", "System design", "Behavioral", "Team fit"],
+      "key_competencies": ["Problem-solving", "Code quality", "Communication", "Collaboration", "Learning agility"]
+    },
+    "product_manager": {
+      "common_focus_areas": ["Product strategy", "User empathy", "Data analysis", "Stakeholder management", "Technical understanding"],
+      "typical_interview_rounds": ["Phone screen", "Product case study", "Analytics", "Behavioral", "Exec presentation"],
+      "key_competencies": ["Strategic thinking", "User focus", "Data-driven decisions", "Leadership", "Communication"]
+    },
+    "data_scientist": {
+      "common_focus_areas": ["Statistics", "Machine learning", "Data analysis", "Programming", "Business impact"],
+      "typical_interview_rounds": ["Phone screen", "Technical assessment", "Case study", "Behavioral", "Presentation"],
+      "key_competencies": ["Analytical thinking", "Technical skills", "Business acumen", "Communication", "Curiosity"]
+    },
+    "marketing_manager": {
+      "common_focus_areas": ["Campaign strategy", "Brand management", "Analytics", "Customer insights", "Digital marketing"],
+      "typical_interview_rounds": ["Phone screen", "Portfolio review", "Case study", "Behavioral", "Presentation"],
+      "key_competencies": ["Creative thinking", "Analytical skills", "Communication", "Project management", "Customer focus"]
+    },
+    "sales_representative": {
+      "common_focus_areas": ["Sales process", "Relationship building", "Negotiation", "Product knowledge", "Goal achievement"],
+      "typical_interview_rounds": ["Phone screen", "Role play", "Case study", "Behavioral", "Meet the team"],
+      "key_competencies": ["Persuasion", "Relationship building", "Resilience", "Goal orientation", "Communication"]
+    },
+    "consultant": {
+      "common_focus_areas": ["Problem-solving", "Client management", "Industry knowledge", "Communication", "Analytical thinking"],
+      "typical_interview_rounds": ["Phone screen", "Case interview", "Behavioral", "Partner interview", "Final round"],
+      "key_competencies": ["Structured thinking", "Client focus", "Adaptability", "Leadership", "Intellectual curiosity"]
+    }
+  },
+  "feedback_criteria": {
+    "content_quality": {
+      "weight": 0.3,
+      "description": "Relevance, depth, and accuracy of the answer content",
+      "scoring_guidelines": {
+        "1-2": "Vague, irrelevant, or inaccurate information",
+        "3-4": "Basic understanding with some relevant points",
+        "5-6": "Good understanding with mostly relevant and accurate content",
+        "7-8": "Strong understanding with detailed, relevant, and accurate content",
+        "9-10": "Exceptional understanding with comprehensive, insightful content"
+      }
+    },
+    "structure_clarity": {
+      "weight": 0.25,
+      "description": "Organization, logical flow, and clarity of communication",
+      "scoring_guidelines": {
+        "1-2": "Disorganized, hard to follow, unclear communication",
+        "3-4": "Some structure but lacks clarity in places",
+        "5-6": "Generally well-organized with clear main points",
+        "7-8": "Well-structured, logical flow, easy to follow",
+        "9-10": "Exceptionally clear structure, compelling narrative flow"
+      }
+    },
+    "specificity": {
+      "weight": 0.2,
+      "description": "Use of specific examples, metrics, and concrete details",
+      "scoring_guidelines": {
+        "1-2": "Vague generalities without specific examples",
+        "3-4": "Some specific details but mostly general statements",
+        "5-6": "Good use of specific examples and details",
+        "7-8": "Strong specificity with concrete examples and metrics",
+        "9-10": "Exceptional specificity with compelling, detailed examples"
+      }
+    },
+    "impact_results": {
+      "weight": 0.15,
+      "description": "Demonstration of meaningful impact and measurable results",
+      "scoring_guidelines": {
+        "1-2": "No clear impact or results mentioned",
+        "3-4": "Some impact mentioned but not well-defined",
+        "5-6": "Clear impact with some measurable results",
+        "7-8": "Strong impact with well-defined, measurable results",
+        "9-10": "Exceptional impact with compelling, quantified results"
+      }
+    },
+    "self_awareness": {
+      "weight": 0.1,
+      "description": "Reflection, learning, and honest self-assessment",
+      "scoring_guidelines": {
+        "1-2": "No reflection or self-awareness demonstrated",
+        "3-4": "Limited self-reflection or learning mentioned",
+        "5-6": "Some self-awareness and learning demonstrated",
+        "7-8": "Good self-reflection with clear learning takeaways",
+        "9-10": "Exceptional self-awareness with deep insights and growth"
+      }
+    }
+  }
+}

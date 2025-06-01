@@ -1,0 +1,29 @@
+# Job Interview Roleplay Agent Dependencies
+# Core ADK framework
+google-adk==1.0.0
+
+# Web framework for frontend integration
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Google Calendar API integration
+google-api-python-client>=2.169.0
+google-auth>=2.40.1
+google-auth-oauthlib>=1.2.2
+google-auth-httplib2>=0.2.0
+
+# Core dependencies
+python-dotenv>=1.1.0
+asyncio-mqtt>=0.13.0
+pydantic>=2.11.0
+python-dateutil>=2.9.0
+
+# Database and session management
+SQLAlchemy>=2.0.40
+
+# Utilities
+requests>=2.32.3
+typing-extensions>=4.13.0
+pathlib2>=2.3.7
+
+
