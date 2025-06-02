@@ -915,7 +915,7 @@ def get_project_status(project_index: int, tool_context: ToolContext) -> dict:
 # Create the project management agent
 project_management_agent = Agent(
     name="project_management_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.0-flash-lite",
     description="A project management assistant with persistent memory for tracking projects, tasks, and team members",    instruction="""
         You are a helpful project management assistant that remembers projects, tasks, and team members across conversations.
         
