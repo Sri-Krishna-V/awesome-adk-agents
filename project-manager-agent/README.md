@@ -1,6 +1,7 @@
-# 📋 Project Manager Agent
+# 📋 Project Manager Agent - Dwight K. Schrute
 
-> 🚀 **Smart project management made simple!** An AI-powered assistant that helps you organize projects, track tasks, and manage teams - with everything automatically saved between sessions.
+> 🚀 **Smart project management made simple!** An AI-powered assistant with the personality of Dwight K. Schrute from "The Office" that helps you organize projects, track tasks, and manage teams - with everything automatically saved between sessions. 
+>>FACT: Bears eat beets. Bears. Beets. Battlestar Galactica. And bears would also eat poorly managed projects.
 
 ## 🤖 What is ADK?
 
@@ -51,6 +52,17 @@ GOOGLE_API_KEY=your_api_key_here
 python main.py
 ```
 
+### 4. (Optional) API Server Configuration
+
+```bash
+# Start just the API server without the UI
+adk api_server --agent-module project_management_agent.agent:project_management_agent
+# Start the API server with a custom port
+adk api_server --agent-module project_management_agent.agent:project_management_agent --port 8080
+```
+
+This exposes REST endpoints at <http://localhost:8080> that you can call from any application.
+
 That's it! Your Project Manager Agent is ready to help you stay organized! 🎊
 
 ## 📚 What You'll Learn
@@ -77,6 +89,8 @@ Unlike simple demos, this agent shows you how to build **real-world applications
 - **✏️ Update Projects**: Modify project information as requirements change
 - **🗑️ Delete Projects**: Remove projects that are no longer needed
 - **📊 Status Tracking**: Monitor completion percentages and task distribution
+- **🔍 Search Projects**: Find projects by name or description
+- **📋 Project Status**: Get detailed status reports including completion percentages and deadline information
 
 **🛠️ Agent Tools Concept**: Each capability is implemented as a "tool" in ADK - specialized functions that the agent can call to perform specific actions!
 
@@ -87,6 +101,8 @@ Unlike simple demos, this agent shows you how to build **real-world applications
 - **🔄 Track Status**: Monitor if tasks are "not started," "in progress," or "completed"
 - **⏰ Set Deadlines**: Manage timelines for individual task completion  
 - **🔍 Cross-Project Search**: Find tasks across all projects based on keywords
+- **📊 Task Status Filtering**: Find tasks by status ("not started", "in progress", "completed")
+- **🔎 Task Name Search**: Find specific tasks by name within a project or across all projects
 
 ### 👥 Team Member Management
 
@@ -104,46 +120,56 @@ Unlike simple demos, this agent shows you how to build **real-world applications
 
 ## 💬 Example Interactions & Commands
 
-Ready to see what this agent can do? Here are some fun interactions to try! Just talk to your agent naturally - it understands what you mean! 🗣️
+Ready to see what this agent can do? Here are some fun interactions to try! Just talk to your agent naturally - it understands what you mean and responds with the efficiency of a German machine and the personality of Dwight K. Schrute! 🗣️
 
-### 🆔 Getting Started
+### Initial Setup & Name Recognition
 
-- My name is {Your Name}, I am a student at {University Name}
+- Hi, I'm Alex and I'm a CS student 
 
-### 📁 Academic Projects and Tasks
+### Academic Project Management
 
-- Create a new project called 'Operating Systems Assignment' due on 2025-06-10
-- Create another project called 'Final Year Capstone' due on 2025-12-15
-- Add a task to Operating Systems Assignment: 'Implement round-robin scheduler' due 2025-06-03
-- Add another task to Operating Systems Assignment: 'Write report and documentation' due 2025-06-08
+- Add a project called 'Data Structures Assignment' about implementing AVL trees, due 2025-06-15"
 
-### 👥 Group Work and Collaboration
+- Create a project 'Machine Learning Course Project' for building a recommendation system, due 2025-07-20
 
-- Add Alice as a team member for Capstone, role: Backend Developer, email <alice@university.edu>
-- Add Raj as a team member, role: Research Lead, email <raj@university.edu>
-- Add a task to Final Year Capstone: 'Design project architecture' due 2025-07-01, assigned to Alice
-- Add a task to Final Year Capstone: 'Conduct literature review' due 2025-06-20, assigned to Raj
+- Add project 'Web Development Portfolio' to showcase my frontend skills, due 2025-08-01
 
-### ✅ Task and Role Updates
+- Show me all my academic projects
 
-- Update the task 'Conduct literature review' to in progress
-- Change Raj’s role to AI Research Lead
-- Mark the task 'Implement round-robin scheduler' as completed
-- Add another task to Capstone: 'Build prototype API' due 2025-08-10, assigned to Alice
+### Course-Specific Tasks
 
-### 📦 Project and Task Cleanup
+- Add task 'Implement AVL insertion' to Data Structures Assignment, assign to myself, due 2025-06-10
 
-- Rename the project 'Operating Systems Assignment' to 'OS Scheduler Assignment'
-- Delete the task 'Write report and documentation' from OS Scheduler Assignment
-- Remove Alice from the Final Year Capstone team
+- Create task 'Literature review on collaborative filtering' for ML project, status not started
 
-### 📊 Progress Review and Tracking
+- Add task 'Design database schema' to Web Development Portfolio
 
-- What is the current status of the OS Scheduler Assignment project?
-- Show me all tasks still in progress
-- List all tasks assigned to Raj
-- List all completed tasks across my projects
-- Show me a summary of all my active projects and deadlines
+- Update task 1 in project 1 to completed status
+
+### Study Group & Team Management
+
+- Add team member Sneha Patel as Study Partner with email sneha@student.amrita.edu
+
+- Add Arjun Kumar as Project Teammate, email arjun.kumar@student.amrita.edu
+
+- Show me all my study group members
+
+### Search & Find Operations
+- Search for projects containing 'machine learning'
+
+- Find all tasks with 'implement' in the name"
+
+- Show me all completed assignments"
+
+- Search for the Data Structures project"
+
+### Complex Academic Scenarios
+
+- I want to update the ML project but forgot which number it is
+
+- Show me status of the project about data structures
+
+- Add a task to the second project called 'Model evaluation' assigned to the first team member
 
 **🧠 Pro Tip**: The agent understands natural language, so feel free to phrase things your own way! It's designed to understand your intent, not just specific commands.
 
