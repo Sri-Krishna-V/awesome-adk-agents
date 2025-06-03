@@ -31,7 +31,7 @@ from .utils import get_current_time
 
 root_agent = Agent(
     name="job_interview_agent",
-    model="gemini-2.0-flash-exp",
+    model="gemini-2.0-flash-live-001",
     description="Comprehensive job interview roleplay agent with calendar integration and multi-scenario support.",
     global_instruction=GLOBAL_INSTRUCTION,
     instruction=MAIN_INSTRUCTION.format(current_time=get_current_time()),

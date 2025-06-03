@@ -25,6 +25,13 @@
 - Custom question banks and scoring criteria
 - Session history and improvement recommendations
 
+## How It Works
+
+The following diagram illustrates the workflow of the Job Interview Agent:
+
+<img src="workflow_image.png" alt="Job Interview Agent Workflow" width="300">
+<img src="agent.png" alt="Job Interview Agent Tool" width="300">
+
 ## Quick Start
 
 ### Prerequisites
@@ -108,7 +115,9 @@ uvicorn main:app --reload --host
 
 ### 5. Start Practicing 🎙️
 
-Open your browser and go to: **`http://localhost:8000`**
+<img src="Website.png" alt="Job Interview Agent Tool" width="800">
+
+Open your browser and go to: **<http://localhost:8000>**
 
 Click the microphone icon and say:
 > **"Hi, I'd like to practice for a software engineer interview"**

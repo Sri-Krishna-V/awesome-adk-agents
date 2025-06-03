@@ -49,7 +49,7 @@ async def start_agent_session(session_id, is_audio=False):
     # Create speech config with voice settings
     speech_config = types.SpeechConfig(
         voice_config=types.VoiceConfig(
-            # Using a professional voice for interview coaching
+            # Puck, Charon, Kore, Fenrir, Aoede, Leda, Orus, and Zephyr
             prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Aoede")
         )
     )

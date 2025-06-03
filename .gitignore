@@ -47,3 +47,6 @@ config.local.py
 changelog.md
 
 .github/
+
+examples/
+prds/
