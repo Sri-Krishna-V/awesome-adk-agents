@@ -65,48 +65,45 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 | [Project Manager Agent](./project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
 | [Local RAG Agent (WIP)](./my_custom_agents/advanced_rag_agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization |
 
+### Courses on ADK
 
-### Examples from Google Agent Garden
+- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
+  - A fabulous curation for beginners covering the fundamentals of ADK, from basic agent creation to advanced workflows and multi-agent systems.
+
+- 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple)
+  - From basics to A2A integration, this course explores real world applications 
+
 
 #### 🔬 Research & Analysis
 
-- 📚 [Academic Research Agent](./examples/google_agent_garden/academic-research/): Comprehensive research assistant for academic papers and citations
-- 📊 [Data Science Agent](./examples/google_agent_garden/data-science/): Automated data analysis and visualization workflows
-- 📈 [Time Series Forecasting](./examples/google_agent_garden/time-series-forecasting/): Advanced predictive analytics for time-based data
-- 🏛️ [FOMC Research Agent](./examples/google_agent_garden/fomc-research/): Federal Reserve meeting analysis and insights
+- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research): Comprehensive research assistant for academic papers and citations
+- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science): Automated data analysis and visualization workflows
+- 📈 [Time Series Forecasting Agent](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting): Advanced predictive analytics for time-based data
+- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research): Federal Reserve meeting analysis and insights
 
 #### 💼 Business & Customer Service
 
-- 🛡️ [Auto Insurance Agent](./examples/google_agent_garden/auto-insurance-agent/): Automated insurance claim processing and customer support
-- 🎯 [Brand Search Optimization](./examples/google_agent_garden/brand-search-optimization/): SEO and brand visibility enhancement
-- 📞 [Customer Service Agent](./examples/google_agent_garden/customer-service/): Multi-channel customer support automation
-- 💰 [Financial Advisor](./examples/google_agent_garden/financial-advisor/): Personalized financial planning and investment advice
-
-#### 💹 Trading & Finance
-
-- 📈 [Agentic Trading Simulator](./examples/agentic-trading/): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
+- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent): Automated insurance claim processing and customer support
+- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization): SEO and brand visibility enhancement for products in retail websites
+- 📞 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service): Multi-channel customer support automation
+- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor): Personalized financial planning and investment advice
 
 #### 🛍️ E-commerce & Marketing
 
-- 🛒 [Personalized Shopping](./examples/google_agent_garden/personalized-shopping/): AI-driven product recommendations and shopping assistance
-- 📱 [Marketing Agency](./examples/google_agent_garden/marketing-agency/): Comprehensive digital marketing campaign management
-- ✈️ [Travel Concierge](./examples/google_agent_garden/travel-concierge/): Intelligent travel planning and booking assistance
+- 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping): AI-driven product recommendations and shopping assistance
+- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency): Comprehensive digital marketing campaign management
+- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge): Intelligent travel planning and booking assistance
 
 #### 🔧 Development & Technical
 
-- 🐛 [Software Bug Assistant](./examples/google_agent_garden/software-bug-assistant/): Automated bug detection and resolution suggestions
-- 🔍 [LLM Auditor](./examples/google_agent_garden/llm-auditor/): Model performance evaluation and optimization
-- 📚 [RAG Systems](./examples/google_agent_garden/RAG/): Advanced Retrieval-Augmented Generation implementations
+- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant): Automated bug detection and resolution suggestions to help IT Support and SDE
+- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor)Model performance evaluation and optimization
+- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG): Advanced Retrieval-Augmented Generation implementations
 
-### Examples from aiwithbrandon Collection
+---
 
-#### 🎓 ADK Crash Course Series
+#### 🎓 [ADK Crash Course Series by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
 
-- 🚀 [Basic Agent Implementation](./examples/_aiwithbrandon/_adk-crash-course/1-basic-agent/): Fundamental ADK agent patterns
-- 🛠️ [Tool Integration Agent](./examples/_aiwithbrandon/_adk-crash-course/2-tool-agent/): External tool and API integration
-- 🔄 [Sequential Workflow Agent](./examples/_aiwithbrandon/_adk-crash-course/10-sequential-agent/): Step-by-step task execution
-- ⚡ [Parallel Processing Agent](./examples/_aiwithbrandon/_adk-crash-course/11-parallel-agent/): Concurrent task handling
-- 🔁 [Loop-based Agent](./examples/_aiwithbrandon/_adk-crash-course/12-loop-agent/): Iterative processing workflows
 
 #### 🧠 Advanced Techniques
 
@@ -115,12 +112,11 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 - 🔌 [MCP Integration Tutorial](./examples/_aiwithbrandon/adk-mcp-tutorial/): Model Context Protocol with ADK
 - 🎨 [YouTube Thumbnail Agent](./examples/_aiwithbrandon/youtube-thumbnail-agent/): Automated thumbnail generation and optimization
 
-#### 💾 State Management & Storage
 
-- 💾 [Sessions and State Management](./examples/_aiwithbrandon/_adk-crash-course/5-sessions-and-state/): Maintaining conversation context
-- 🗄️ [Persistent Storage Patterns](./examples/_aiwithbrandon/_adk-crash-course/6-persistent-storage/): Data persistence strategies
-- 🤝 [Multi-Agent Coordination](./examples/_aiwithbrandon/_adk-crash-course/7-multi-agent/): Agent-to-agent communication
-- 📞 [Callbacks and Webhooks](./examples/_aiwithbrandon/_adk-crash-course/9-callbacks/): Event-driven agent responses
+### 💹 Trading & Finance
+
+- 📈 [Agentic Trading Simulator](https://github.com/kweinmeister/agentic-trading): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
+
 
 ## 🚀 Getting Started / Installation
 
