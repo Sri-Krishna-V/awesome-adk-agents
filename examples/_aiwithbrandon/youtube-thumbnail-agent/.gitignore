@@ -1,7 +1,0 @@
-.env
-images/
-__pycache__/
-.venv/
-*.png
-*.jpg
-*.jpeg

@@ -1,2 +1,0 @@
-google-adk==1.0.0
-a2a-sdk==0.2.3

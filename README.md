@@ -71,8 +71,10 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
   - A fabulous curation for beginners covering the fundamentals of ADK, from basic agent creation to advanced workflows and multi-agent systems.
 
 - 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple)
-  - From basics to A2A integration, this course explores real world applications 
+  - From basics to A2A integration, this course explores real world applications and projects
 
+- 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos)
+  - A collection of practical demos showcasing various ADK features and capabilities
 
 #### 🔬 Research & Analysis
 
@@ -102,15 +104,15 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 ---
 
-#### 🎓 [ADK Crash Course Series by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
-
-
 #### 🧠 Advanced Techniques
 
-- 📖 [RAG Agent Tutorial](./examples/_aiwithbrandon/adk-rag-agent/): Complete RAG implementation with ADK
-- 🎤 [Voice-Enabled Agent](./examples/_aiwithbrandon/adk-voice-agent/): Speech-to-text and voice interaction capabilities
-- 🔌 [MCP Integration Tutorial](./examples/_aiwithbrandon/adk-mcp-tutorial/): Model Context Protocol with ADK
-- 🎨 [YouTube Thumbnail Agent](./examples/_aiwithbrandon/youtube-thumbnail-agent/): Automated thumbnail generation and optimization
+- 📖 [RAG Agent Tutorial](https://github.com/bhancockio/adk-rag-agent): Complete RAG implementation with ADK and Vertex AI
+
+- 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
+
+- 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
+
+- 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
 
 
 ### 💹 Trading & Finance

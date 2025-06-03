@@ -1,4 +1,0 @@
-httpx-sse==0.4.0
-fastapi[standard]==0.115.12
-pandas==2.2.3
-plotly==6.1.1
