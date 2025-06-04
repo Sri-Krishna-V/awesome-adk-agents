@@ -159,9 +159,9 @@ cd awesome-adk-agents
     - Creating a Python virtual environment
 
         ```bash
-        python -m venv venv
-        source venv/bin/activate  # macOS/Linux
-        venv\Scripts\activate  # Windows
+        python -m venv .venv
+        source .venv/bin/activate  # macOS/Linux
+        .venv\Scripts\activate  # Windows
         ```
 
     - Installing dependencies

@@ -1,0 +1,15 @@
+{
+    "name": "groq_research_agent",
+    "description": "A research agent powered by Groq's compound AI system with built-in web search and code execution",
+    "version": "1.0.0",
+    "capabilities": [
+      "web_search",
+      "code_execution",
+      "research",
+      "analysis",
+      "calculations"
+    ],
+    "author": "ADK Developer",
+    "license": "Apache-2.0"
+  }
+  
