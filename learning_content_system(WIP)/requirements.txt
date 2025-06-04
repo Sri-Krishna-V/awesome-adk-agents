@@ -1,0 +1,11 @@
+# Requirements for Learning Content Creation System
+google-adk==1.0.0
+mcp>=1.0.0
+pydantic>=2.0.0
+gradio-client>=0.20.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+asyncio
+json
+typing
+dataclasses
