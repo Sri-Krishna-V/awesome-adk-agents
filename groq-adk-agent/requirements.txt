@@ -1,7 +1,0 @@
-google-adk
-litellm
-groq
-python-dotenv
-fastapi
-uvicorn
-pydantic
