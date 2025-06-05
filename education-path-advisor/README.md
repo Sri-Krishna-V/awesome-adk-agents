@@ -98,19 +98,11 @@ All agent outputs are tracked using state keys for transparency and traceability
    ```
 
 3. **Configure Environment**
-   - Set environment variables (in shell or .env):
+   - Rename `.env.example` to `.env` and fill in your Google API key:
 
      ```bash
-     export GOOGLE_GENAI_USE_VERTEXAI=true
-     export GOOGLE_CLOUD_PROJECT=<your-project-id>
-     export GOOGLE_CLOUD_LOCATION=<your-project-location>
-     ```
-
-   - Authenticate:
-
-     ```bash
-     gcloud auth application-default login
-     gcloud auth application-default set-quota-project $GOOGLE_CLOUD_PROJECT
+     GOOGLE_API_KEY=<your-google-api-key>
+     GOOGLE_GENAI_USE_VERTEXAI=FALSE
      ```
 
 4. **Run the Agent**
