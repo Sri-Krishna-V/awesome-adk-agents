@@ -31,67 +31,78 @@ No more confusion—just clear, actionable advice tailored to your unique situat
 
 ## ✨ Why You'll Love It
 
-- **Personalized Pathways:** Get recommendations based on your interests, reservation category, and region
-- **All Major Exams Covered:** JEE, NEET, CUET, state CETs, and more
-- **Stepwise Action Plans:** Never miss a deadline or document
-- **Risk & Backup Analysis:** Know your options if things don't go as planned
-- **Privacy First:** No personal data stored—your queries are safe
+- **Personalized Pathways:** Recommendations based on your interests, aptitude, timeline, location, and reservation category.
+- **Covers All Major Exams:** JEE, NEET, CUET, state CETs, and more.
+- **Stepwise Action Plans:** Never miss a deadline or document.
+- **Risk & Backup Analysis:** Know your options if things don't go as planned.
+- **Region & Language Aware:** Considers vernacular preferences, state quotas, and local institutions.
+- **Privacy First:** No personal data stored—your queries are safe.
 
 ---
 
-## 🧠 How It Works
+## 🧠 How It Works (Agent Prompts)
 
-The system is powered by a team of specialized AI agents:
+### 1. Education Data Analyst
 
-- **Education Data Analyst:** Finds the latest info on exams, colleges, and policies
-- **Pathway Analyst:** Maps your profile to the best-fit education and career routes
-- **Implementation Analyst:** Breaks down every step—prep, apply, document, succeed
-- **Risk Analyst:** Flags risks and suggests backup plans
-- **Coordinator:** Orchestrates everything for a seamless experience
+- **Role:** Generates a comprehensive, source-based educational landscape analysis for a chosen field in India using only Google Search.
+- **Output:** `education_data_analysis_output` — A structured report covering institutions, entrance exams, reservation, career prospects, alternative pathways, and key sources.
 
-All agent outputs are tracked using state keys for transparency and traceability.
+### 2. Pathway Analyst
 
----
+- **Role:** Develops at least five distinct, actionable pathway strategies based on your aptitude, timeline, location, and the data analyst’s report.
+- **Output:** `proposed_pathway_strategies_output` — Each strategy details target institutions, exams, costs, career outcomes, and a comparative analysis.
 
-## 🖥️ Example: See It in Action
+### 3. Implementation Analyst
 
-**1. "I'm a 12th standard student interested in engineering. What are my options?"**
+- **Role:** Creates a detailed, stepwise implementation plan for your selected pathway, including preparation, documentation, financial planning, logistics, and milestones.
+- **Output:** `implementation_plan_output` — A plan tailored to Indian realities, with timelines, resources, and contingency routes.
 
-- Get a list of top exams (JEE Main, CETs), eligibility, reservation details, and college pathways (IITs, NITs, state colleges).
+### 4. Risk Analyst
 
-**2. "How do I prepare for NEET with a focus on OBC reservation?"**
-
-- Receive a stepwise NEET prep plan, key dates, resources, and OBC documentation checklist.
-
-**3. "Suggest a backup plan if I don't clear JEE Main."**
-
-- Explore state exams, private universities, diploma-to-degree options, and risk/benefit analysis for each.
-
-**4. "What documents do I need for admission under EWS quota?"**
-
-- Get a clear list: EWS certificate, income proof, domicile, and tips for timely application.
-
-**5. "Assess the risks if I take a gap year for exam preparation."**
-
-- See academic, financial, and psychological risks, plus mitigation strategies and impact on future admissions.
+- **Role:** Evaluates academic, financial, institutional, career, geographic, and psychological risks for your chosen pathway and plan, and proposes mitigation strategies.
+- **Output:** `final_risk_assessment_output` — A comprehensive risk report with actionable advice and alignment summary.
 
 ---
 
-## 🚀 Get Started in Minutes
+## 🖥️ Example Interactions
+
+### 1. Engineering Aspirant
+
+**User:** I’m in 12th grade, interested in engineering. I want to get into a top college.
+**Agent:** Collects education_interest, analyzes and summarizes top exams, eligibility, and college pathways. Then, generates 5 pathway strategies (IIT, NIT, state colleges, private, diploma routes), and provides a timeline-aligned plan and risk report.
+
+### 2. NEET with OBC Focus
+
+**User:** How do I prepare for NEET with a focus on OBC reservation?
+**Agent:** Provides a stepwise NEET prep plan, key dates, resources, and OBC documentation checklist. Highlights reservation-aware strategies and backup options.
+
+### 3. Budget-Constrained Aspirant
+
+**User:** I’m good at science but can’t afford coaching. I live in a small town.
+**Agent:** Identifies low-cost government/open learning options, recommends scholarships and online coaching, and flags digital divide risks.
+
+### 4. Vernacular Preference
+
+**User:** I want to study law but only in Hindi medium and only in UP or MP.
+**Agent:** Focuses on institutions offering law in Hindi in your preferred states, outlines logistics, and addresses regional job scope.
+
+### 5. Gap Year Risk Assessment
+
+**User:** Assess the risks if I take a gap year for exam preparation.
+**Agent:** Returns academic, financial, and psychological risk analysis, with mitigation strategies and impact on future admissions.
+
+---
+
+## 🚀 Get Started
 
 1. **Install Prerequisites**
    - Python 3.11+
-   - [Poetry](https://python-poetry.org/docs/):
-
-     ```bash
-     pip install poetry
-     ```
-
+   - [Poetry](https://python-poetry.org/docs/)
    - Google Cloud Project & Google Cloud CLI ([Install Guide](https://cloud.google.com/sdk/docs/install))
 
 2. **Clone & Install**
 
-   ```bash
+   ```powershell
    git clone <this-repo-url>
    cd education-path-advisor
    poetry install
@@ -100,21 +111,21 @@ All agent outputs are tracked using state keys for transparency and traceability
 3. **Configure Environment**
    - Rename `.env.example` to `.env` and fill in your Google API key:
 
-     ```bash
-     GOOGLE_API_KEY=<your-google-api-key>
-     GOOGLE_GENAI_USE_VERTEXAI=FALSE
+     ```powershell
+     $env:GOOGLE_API_KEY="<your-google-api-key>"
+     $env:GOOGLE_GENAI_USE_VERTEXAI="FALSE"
      ```
 
 4. **Run the Agent**
    - CLI:
 
-     ```bash
+     ```powershell
      poetry run adk run education_path_advisor
      ```
 
    - Web UI:
 
-     ```bash
+     ```powershell
      poetry run adk web
      ```
 
@@ -124,13 +135,13 @@ All agent outputs are tracked using state keys for transparency and traceability
 
 Install dev dependencies:
 
-```bash
+```powershell
 poetry install --with dev
 ```
 
 Run tests:
 
-```bash
+```powershell
 python3 -m pytest tests
 ```
 

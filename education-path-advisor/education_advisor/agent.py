@@ -16,12 +16,12 @@ education_coordinator = LlmAgent(
     name="education_coordinator",
     model=MODEL,
     description=('Coordinator agent for the Education Path Advisor, helping users navigate their educational journey.'),
-    instruction=prompt.EDUCATION_COORDINATOR_PROMPT,
+    instruction=prompt.EDUCATION_COORDINATOR_SYSTEM_PROMPT,
     output_key="education_coordinator_output",
     tools=[
         AgentTool(agent=data_analyst_agent),
-        AgentTool(agent=pathway_analyst_agent),
         AgentTool(agent=implementation_analyst_agent),
+        AgentTool(agent=pathway_analyst_agent),
         AgentTool(agent=risk_analyst_agent),
     ],
 )
