@@ -70,7 +70,7 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 ### Courses on ADK
 
 - 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
-  - A fabulous curation for beginners covering the fundamentals of ADK, from basic agent creation to advanced workflows and multi-agent systems.
+  - A fabulous curation for beginners covering the fundamentals of ADK, from basics to advanced workflows and multi-agent systems.
 
 - 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple)
   - From basics to A2A integration, this course explores real world applications and projects
@@ -132,8 +132,6 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 - 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
 
 - 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
-
-
 
 ---
 
@@ -206,16 +204,6 @@ cd awesome-adk-agents
 - **Environment Variables**: Many agents require specific environment variables for API keys
 - **Test in Development**: Always test agents in a safe environment before production use
 
-## 🗺️ Roadmap
-
-Our future plans for this repository include:
-
-- 🧠 **Advanced Custom Agents**: More sophisticated agents for specialized domains (healthcare, legal, scientific research)
-- 📚 **Comprehensive Tutorials**: Step-by-step guides for building agents from scratch
-- 🔄 **ADK Feature Showcases**: Examples highlighting new ADK capabilities as they're released
-- 🎯 **Domain-Specific Collections**: Curated agent collections for specific industries
-- 🤖 **Multi-Modal Agents**: Agents that work with text, image, audio, and video
-
 ## 🤝 How to Contribute
 
 We welcome contributions from the community! Here's how you can help:
@@ -233,6 +221,16 @@ We welcome contributions from the community! Here's how you can help:
 - 🐛 **Bug Reports**: Found an issue with an existing agent?
 - 💡 **Feature Requests**: Have ideas for new agents or improvements?
 - 📚 **Documentation**: Spotted unclear or missing documentation?
+
+## 🗺️ Roadmap
+
+Our future plans for this repository include:
+
+- 🧠 **Advanced Custom Agents**: More sophisticated agents for specialized domains (healthcare, legal, scientific research)
+- 📚 **Comprehensive Tutorials**: Step-by-step guides for building agents from scratch
+- 🔄 **ADK Feature Showcases**: Examples highlighting new ADK capabilities as they're released
+- 🎯 **Domain-Specific Collections**: Curated agent collections for specific industries
+- 🤖 **Multi-Modal Agents**: Agents that work with text, image, audio, and video
 
 ### Contribution Guidelines
 
