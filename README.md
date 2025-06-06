@@ -56,14 +56,14 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 ## ✨ Agent Showcase
 
-### My ADK Agents
+### [My ADK Agents](./my-adk-agents/)
 
 | Agent Name | Category/Domain | Short Description |
 |------------|----------------|-------------------|
-| [Job Interview Agent](./job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback |
-| [Project Manager Agent](./project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
-| [Education Path Advisor for India](./education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance |
-| [Local RAG Agent (WIP)](./my_custom_agents/advanced_rag_agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL |
+| [Job Interview Agent](./my-adk-agents/job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback |
+| [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
+| [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance |
+| [Local RAG Agent (WIP)](./my-adk-agents/local-rag-agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL |
 
 ---
 
