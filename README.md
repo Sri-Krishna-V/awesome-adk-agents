@@ -16,13 +16,12 @@
 - [🚀 Getting Started](#-getting-started--installation)
 - [✨ Agent Showcase](#-agent-showcase)
   - [My ADK Agents](#my-adk-agents)
-  - [Examples from Google Agent Garden](#examples-from-google-agent-garden)
-  - [Examples from aiwithbrandon Collection](#examples-from-aiwithbrandon-collection)
+  - [Courses](#courses-on-adk)
+  - [Use Cases](#use-cases)
 - [🚀 Getting Started / Installation](#-getting-started--installation)
 - [🛠️ Usage](#️-usage)
 - [🗺️ Roadmap](#️-roadmap)
 - [🤝 How to Contribute](#-how-to-contribute)
-- [❓ How to Get Help / Report Issues](#-how-to-get-help--report-issues)
 - [🙏 Credits and Acknowledgements](#-credits-and-acknowledgements)
 - [⭐ Call to Action](#-call-to-action)
 
@@ -63,7 +62,10 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 |------------|----------------|-------------------|
 | [Job Interview Agent](./job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback |
 | [Project Manager Agent](./project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
-| [Local RAG Agent (WIP)](./my_custom_agents/advanced_rag_agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization |
+| [Education Path Advisor for India](./education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance |
+| [Local RAG Agent (WIP)](./my_custom_agents/advanced_rag_agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL |
+
+---
 
 ### Courses on ADK
 
@@ -75,6 +77,10 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 - 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos)
   - A collection of practical demos showcasing various ADK features and capabilities
+
+---
+
+### Use Cases
 
 #### 🔬 Research & Analysis
 
@@ -99,30 +105,39 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 #### 🔧 Development & Technical
 
 - 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant): Automated bug detection and resolution suggestions to help IT Support and SDE
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor)Model performance evaluation and optimization
+- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor): Model performance evaluation and optimization
 - 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG): Advanced Retrieval-Augmented Generation implementations
-
----
-
-#### 🧠 Advanced Techniques
-
 - 📖 [RAG Agent Tutorial](https://github.com/bhancockio/adk-rag-agent): Complete RAG implementation with ADK and Vertex AI
-
-- 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
-
-- 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
-
-- 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
-
 
 ### 💹 Trading & Finance
 
 - 📈 [Agentic Trading Simulator](https://github.com/kweinmeister/agentic-trading): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
 
+### Media & Content Creation
+
+- 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
+- 📊 [AI Trends Analysis Pipeline](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/analyzer_agent): A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends using Exa Search, Tavily Search, Firecrawl and Nebius AI.
+
+### 🏫 Education & Learning
+
+- 📚 [Education Path Advisor for India](./education-path-advisor/): Personalized education and career guidance for Indian students
+
+### Miscellaneous
+
+- 📁 [Job Finder Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/jobfinder_agent): Sequential Agent using Mistral OCR, Linkup API and Nebius AI
+- 📧 [Email ADK Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/email_adk_agent): Email management and automation agent using Resend API
+
+#### 🧠 Advanced Techniques
+
+- 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
+
+- 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
+
+
+
+---
 
 ## 🚀 Getting Started / Installation
-
-👋 **New to ADK agents?** Check out our comprehensive [**Getting Started Guide**](./GETTING_STARTED.md) for step-by-step instructions!
 
 ### Quick Start
 
@@ -144,12 +159,6 @@ cd awesome-adk-agents
    ```bash
    # For custom agents
    cd job-interview-agent/
-   
-   # For Google Agent Garden examples
-   cd examples/google_agent_garden/academic-research/
-   
-   # For aiwithbrandon examples
-   cd examples/_aiwithbrandon/adk-rag-agent/
    ```
 
 2. **Follow Agent-Specific Instructions**: Each agent has its own `README.md` with detailed setup and usage instructions.
@@ -230,19 +239,6 @@ We welcome contributions from the community! Here's how you can help:
 For detailed contribution guidelines, coding standards, and submission requirements, please see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 **Remember**: All contributions should follow Google ADK best practices and include appropriate documentation.
-
-## ❓ How to Get Help / Report Issues
-
-Need assistance or found a problem? We're here to help!
-
-**For issues, questions, or suggestions, please [open an issue](https://github.com/[YOUR_USERNAME]/awesome-adk-agents/issues) on this repository.**
-
-When reporting issues, please include:
-
-- Agent name and directory path
-- Steps to reproduce the problem
-- Error messages or unexpected behavior
-- Your environment details (Python version, ADK version, OS)
 
 For general ADK questions, you may also want to check:
 
