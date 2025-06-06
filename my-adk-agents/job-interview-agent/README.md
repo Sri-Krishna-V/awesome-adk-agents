@@ -38,8 +38,11 @@ AI-powered interview coaching platform with **natural voice conversations** and 
 
 The following diagram illustrates the comprehensive workflow of the Job Interview Agent:
 
+<img src="agent.png" alt="Job Interview Agent Tool" width="700">
+
+## Session Workflow
+
 <img src="workflow_image.png" alt="Job Interview Agent Workflow" width="350">
-<img src="agent.png" alt="Job Interview Agent Tool" width="350">
 
 ## 🚀 Quick Start Guide
 
