@@ -91,6 +91,7 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 #### 💼 Business & Customer Service
 
+- 📊 [CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent): Multi-agentic system with Advanced RAG with NL2SQL over Salesforce Data.
 - 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent): Automated insurance claim processing and customer support
 - 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization): SEO and brand visibility enhancement for products in retail websites
 - 📞 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service): Multi-channel customer support automation
@@ -126,6 +127,7 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 - 📁 [Job Finder Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/jobfinder_agent): Sequential Agent using Mistral OCR, Linkup API and Nebius AI
 - 📧 [Email ADK Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/email_adk_agent): Email management and automation agent using Resend API
+- 📦 [MCP Gemma 3 Agent](https://github.com/arjunprabhulal/adk-mcp-gemma3): Gemma 3 leveraged by Ollama, MCP Youtube Search
 
 #### 🧠 Advanced Techniques
 
