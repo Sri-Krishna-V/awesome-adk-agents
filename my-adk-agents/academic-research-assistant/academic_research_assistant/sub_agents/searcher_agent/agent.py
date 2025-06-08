@@ -24,7 +24,7 @@ from PIL import Image
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-from .. import constants
+from ...shared_libraries import constants
 from . import prompt
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -52,11 +52,13 @@ async def take_screenshot(tool_context: ToolContext) -> dict:
     print(f"📸 Taking screenshot and saving as: {filename}")
     driver.save_screenshot(filename)
 
-    image = Image.open(filename)
+    # Open the file in binary mode and read the bytes directly
+    with open(filename, "rb") as f:
+        image_bytes = f.read()
 
     await tool_context.save_artifact(
         filename,
-        types.Part.from_bytes(data=image.tobytes(), mime_type="image/png"),
+        types.Part.from_bytes(data=image_bytes, mime_type="image/png"),
     )
 
     return {"status": "ok", "filename": filename}
@@ -184,9 +186,9 @@ def analyze_webpage_and_determine_action(
     return analysis_prompt
 
 
-academic_search_agent = Agent(
+searcher_agent = Agent(
     model=constants.MODEL,
-    name="academic_search_agent",
+    name="searcher_agent",
     description="Searches academic databases for relevant papers using web browsing.",
     instruction=prompt.ACADEMIC_SEARCH_PROMPT,
     tools=[

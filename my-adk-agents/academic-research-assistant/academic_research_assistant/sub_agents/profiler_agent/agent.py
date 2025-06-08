@@ -1,9 +1,8 @@
 from google.adk.agents.llm_agent import Agent
 
+from ...shared_libraries import constants
 from . import prompt
-from .. import constants
 from ...tools import profile_scraper
-
 profiler_agent = Agent(
     model=constants.MODEL,
     name="profiler_agent",

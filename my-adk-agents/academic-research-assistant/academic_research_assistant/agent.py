@@ -17,20 +17,20 @@
 from google.adk.agents.llm_agent import Agent
 
 from . import constants
-from . import prompt
+from . import prompts
 
-from .sub_agents.profiler.agent import profiler_agent
-from .sub_agents.searcher.agent import academic_search_agent
-from .sub_agents.comparison.agent import comparison_root_agent
+from .sub_agents.profiler_agent.agent import profiler_agent
+from .sub_agents.searcher_agent.agent import searcher_agent
+from .sub_agents.comparison_root_agent.agent import comparison_root_agent
 
 root_agent = Agent(
     model=constants.MODEL,
     name="academic_research_assistant",
     description="An AI assistant to accelerate academic literature reviews.",
-    instruction=prompt.ROOT_PROMPT,
+    instruction=prompts.ROOT_PROMPT,
     sub_agents=[
         profiler_agent,
-        academic_search_agent,
+        searcher_agent,
         comparison_root_agent,
     ],
 )

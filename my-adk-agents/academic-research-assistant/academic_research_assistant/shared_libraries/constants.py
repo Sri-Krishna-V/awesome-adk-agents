@@ -1,6 +1,7 @@
-# Defines constants for the Academic Research Assistant Agent.
+"""Defines constants."""
 
 import os
+
 import dotenv
 
 dotenv.load_dotenv()

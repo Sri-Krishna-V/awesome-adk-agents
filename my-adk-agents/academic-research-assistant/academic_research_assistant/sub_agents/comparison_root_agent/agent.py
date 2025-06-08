@@ -1,6 +1,6 @@
 from google.adk.agents.llm_agent import Agent
 
-from .. import constants
+from ...shared_libraries import constants
 from . import prompt
 
 
