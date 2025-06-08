@@ -1,3 +1,19 @@
+"""Tools for scraping and processing academic researcher profiles.
+
+This module provides tools for the Academic Research Assistant Agent to extract
+information from researcher profiles on academic websites. It uses web scraping
+techniques to obtain text content from public profile pages.
+
+The module contains functions for:
+- Scraping researcher profiles from URLs
+- Processing and cleaning the extracted text content
+- Handling errors and edge cases in web requests
+
+Dependencies:
+    - requests: For making HTTP requests to profile URLs
+    - BeautifulSoup: For parsing and extracting text from HTML content
+"""
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -6,11 +22,25 @@ def scrape_profile(url: str) -> str:
     """
     Scrapes a researcher's profile URL to extract the text content.
 
+    This function retrieves the HTML content from a researcher's public profile page,
+    removes HTML tags and scripts, and extracts the plain text content. It handles
+    various error cases and limits the text length to avoid exceeding model context limits.
+
     Args:
-        url: The URL of the researcher's public profile (e.g., Google Scholar).
+        url (str): The URL of the researcher's public profile (e.g., Google Scholar,
+                  ORCID, ResearchGate, or institutional pages).
 
     Returns:
-        The text content of the page, stripped of HTML, or an error message.
+        str: The cleaned text content of the profile page, stripped of HTML and
+             limited to 15,000 characters. If an error occurs during retrieval or
+             processing, returns an error message string instead.
+
+    Raises:
+        No exceptions are raised as errors are caught and returned as strings.
+
+    Example:
+        >>> profile_text = scrape_profile("https://scholar.google.com/citations?user=...")
+        >>> keywords = extract_keywords_from_profile(profile_text)
     """
     try:
         response = requests.get(url, timeout=10)

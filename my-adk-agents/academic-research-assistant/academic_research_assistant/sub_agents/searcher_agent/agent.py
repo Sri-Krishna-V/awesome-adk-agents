@@ -1,16 +1,21 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+"""Searcher Agent for finding relevant academic papers.
+
+This module defines the Searcher Agent, which is responsible for finding relevant
+academic papers based on a research topic and keywords. It uses web browsing
+capabilities to search academic databases and extract paper information.
+
+The agent serves as the second step in the Academic Research Assistant workflow,
+taking inputs from the Profiler Agent and providing results to the Comparison Agent.
+
+Key components:
+- Web browsing tools for navigating academic search engines
+- Screenshot capabilities for visual inspection of search results
+- Page analysis tools to determine next actions in the search process
+- Text extraction and processing for obtaining paper information
+
+The agent is designed to handle various academic search interfaces and adapt its
+behavior based on the content it encounters.
+"""
 
 import time
 import warnings
@@ -39,14 +44,39 @@ if not constants.DISABLE_WEB_DRIVER:
 
 
 def go_to_url(url: str) -> str:
-    """Navigates the browser to the given URL."""
+    """Navigates the browser to the given URL.
+
+    Args:
+        url (str): The complete URL to navigate to, including protocol (http/https).
+
+    Returns:
+        str: Confirmation message that navigation was attempted.
+
+    Note:
+        This function uses the global Selenium driver instance to navigate to the URL.
+        The function prints a log message to the console for debugging purposes.
+    """
     print(f"🌐 Navigating to URL: {url}")  # Added print statement
     driver.get(url.strip())
     return f"Navigated to URL: {url}"
 
 
 async def take_screenshot(tool_context: ToolContext) -> dict:
-    """Takes a screenshot and saves it with the given filename. called 'load artifacts' after to load the image"""
+    """Takes a screenshot of the current browser view and saves it as an artifact.
+
+    This function captures the current state of the browser window, saves it as a PNG file,
+    and registers it as an artifact that can be referenced later in the conversation.
+
+    Args:
+        tool_context (ToolContext): Context object providing access to artifact storage.
+
+    Returns:
+        dict: A dictionary containing status information and the filename of the saved screenshot.
+
+    Note:
+        The screenshot is saved with a timestamped filename to ensure uniqueness.
+        This function requires an async context as it interacts with the artifact storage system.
+    """
     timestamp = time.strftime("%Y%m%d-%H%M%S")
     filename = f"screenshot_{timestamp}.png"
     print(f"📸 Taking screenshot and saving as: {filename}")
@@ -65,13 +95,39 @@ async def take_screenshot(tool_context: ToolContext) -> dict:
 
 
 def click_at_coordinates(x: int, y: int) -> str:
-    """Clicks at the specified coordinates on the screen."""
+    """Clicks at the specified coordinates on the screen.
+
+    Args:
+        x (int): The x-coordinate (horizontal position) to click at.
+        y (int): The y-coordinate (vertical position) to click at.
+
+    Returns:
+        None: This function does not return a value.
+
+    Note:
+        This function first scrolls to the specified coordinates to ensure
+        the target area is visible before attempting the click.
+    """
     driver.execute_script(f"window.scrollTo({x}, {y});")
     driver.find_element(By.TAG_NAME, "body").click()
 
 
 def find_element_with_text(text: str) -> str:
-    """Finds an element on the page with the given text."""
+    """Finds an element on the page with the given text.
+
+    This function searches the current page for any element containing the exact
+    text specified and returns information about whether it was found.
+
+    Args:
+        text (str): The exact text to search for in the page elements.
+
+    Returns:
+        str: A message indicating whether the element was found.
+
+    Note:
+        This function uses XPath to locate elements by their exact text content.
+        It handles common Selenium exceptions and returns appropriate messages.
+    """
     print(f"🔍 Finding element with text: '{text}'")  # Added print statement
 
     try:
@@ -87,7 +143,21 @@ def find_element_with_text(text: str) -> str:
 
 
 def click_element_with_text(text: str) -> str:
-    """Clicks on an element on the page with the given text."""
+    """Clicks on an element on the page with the given text.
+
+    This function searches for and attempts to click on any element containing
+    the exact text specified.
+
+    Args:
+        text (str): The exact text of the element to click.
+
+    Returns:
+        str: A message indicating the result of the click attempt.
+
+    Note:
+        This function handles various Selenium exceptions that might occur during
+        the click operation and returns appropriate error messages.
+    """
     print(f"🖱️ Clicking element with text: '{text}'")  # Added print statement
 
     try:
@@ -103,7 +173,22 @@ def click_element_with_text(text: str) -> str:
 
 
 def enter_text_into_element(text_to_enter: str, element_id: str) -> str:
-    """Enters text into an element with the given ID."""
+    """Enters text into an element with the given ID.
+
+    This function locates an input element by its ID attribute and enters
+    the specified text into it.
+
+    Args:
+        text_to_enter (str): The text to type into the input element.
+        element_id (str): The HTML ID attribute of the target input element.
+
+    Returns:
+        str: A message indicating the result of the text entry operation.
+
+    Note:
+        This function handles common Selenium exceptions related to finding
+        and interacting with elements, returning appropriate error messages.
+    """
     print(
         f"📝 Entering text '{text_to_enter}' into element with ID: {element_id}"
     )  # Added print statement
@@ -121,15 +206,37 @@ def enter_text_into_element(text_to_enter: str, element_id: str) -> str:
 
 
 def scroll_down_screen() -> str:
-    """Scrolls down the screen by a moderate amount."""
+    """Scrolls down the screen by a moderate amount.
+
+    This function scrolls the current browser view downward by a fixed amount
+    (500 pixels) to reveal more content.
+
+    Returns:
+        str: A confirmation message that scrolling was performed.
+
+    Note:
+        The scroll amount is fixed at 500 pixels, which is typically enough
+        to reveal new content without skipping too much of the page.
+    """
     print("⬇️ scroll the screen")  # Added print statement
     driver.execute_script("window.scrollBy(0, 500)")
     return "Scrolled down the screen."
 
 
 def get_page_source() -> str:
+    """Returns the current page source HTML.
+
+    This function retrieves the HTML source code of the current page, limited
+    to a maximum size to prevent overwhelming the model.
+
+    Returns:
+        str: The HTML source code of the current page, truncated if necessary.
+
+    Note:
+        The function limits the returned HTML to 1,000,000 characters to avoid
+        exceeding context limits when processing the source.
+    """
     LIMIT = 1000000
-    """Returns the current page source."""
     print("📄 Getting page source...")  # Added print statement
     return driver.page_source[0:LIMIT]
 
@@ -137,7 +244,26 @@ def get_page_source() -> str:
 def analyze_webpage_and_determine_action(
     page_source: str, user_task: str, tool_context: ToolContext
 ) -> str:
-    """Analyzes the webpage and determines the next action (scroll, click, etc.)."""
+    """Analyzes the webpage and determines the next action to take.
+
+    This function generates a prompt for the LLM to analyze the current webpage
+    and determine what action to take next (scroll, click, etc.) based on the
+    user's task and the page content.
+
+    Args:
+        page_source (str): The HTML source of the current webpage.
+        user_task (str): Description of what the user is trying to accomplish.
+        tool_context (ToolContext): Context object for the tool execution.
+
+    Returns:
+        str: A prompt for the LLM to analyze the page and determine next actions.
+
+    Note:
+        This function doesn't perform the analysis itself; it constructs a detailed
+        prompt for the LLM to perform the analysis and return an action plan.
+        The returned prompt includes instructions for choosing from a set of
+        predefined actions like scrolling, clicking, or entering text.
+    """
     print(
         "🤔 Analyzing webpage and determining next action..."
     )  # Added print statement

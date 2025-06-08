@@ -12,7 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Defines the Academic Research Assistant Agent"""
+"""Defines the Academic Research Assistant Agent.
+
+This module implements the root agent for the Academic Research Assistant system,
+which helps users accelerate academic literature reviews by orchestrating specialized
+sub-agents in a sequential workflow.
+
+The agent architecture follows a hierarchical structure with:
+1. A root agent that coordinates the overall workflow
+2. Three specialized sub-agents that handle different aspects of the research process:
+   - Profiler agent: Analyzes researcher profiles to extract relevant keywords
+   - Searcher agent: Finds relevant academic papers based on topic and keywords
+   - Comparison agent: Analyzes and compares papers to generate insights
+
+Typical usage:
+    from academic_research_assistant.agent import root_agent
+    root_agent.start()
+"""
 
 from google.adk.agents.llm_agent import Agent
 

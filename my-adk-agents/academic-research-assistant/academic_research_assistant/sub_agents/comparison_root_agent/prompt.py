@@ -1,16 +1,28 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+"""Defines prompts for the Comparison Root Agent and its sub-agents.
+
+This module contains the instruction prompts for the Comparison Root Agent system,
+which is responsible for analyzing academic papers in relation to a researcher's
+profile and generating insightful comparisons and recommendations.
+
+The module defines three main prompts:
+
+1. ANALYSIS_GENERATOR_PROMPT: Guides the generator agent in creating detailed
+   relevance notes for each paper, explaining how they connect to the researcher's
+   work through thematic overlaps, methodological innovations, supporting evidence,
+   or contradictory findings.
+
+2. ANALYSIS_CRITIC_PROMPT: Guides the critic agent in evaluating the quality of
+   the generated analysis, ensuring it provides specific, clear, and valuable
+   insights for the researcher.
+
+3. COMPARISON_ROOT_PROMPT: Guides the root agent in orchestrating the workflow
+   between the generator and critic agents, implementing a feedback loop until
+   a satisfactory analysis is produced.
+
+These prompts are designed to ensure the final report provides personalized,
+actionable insights that help researchers understand how new papers relate to
+their existing work.
+"""
 
 ANALYSIS_GENERATOR_PROMPT = """
     You are an expert academic research analyst with a talent for synthesis.

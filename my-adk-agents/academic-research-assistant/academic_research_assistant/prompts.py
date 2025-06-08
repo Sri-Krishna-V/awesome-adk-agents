@@ -1,18 +1,22 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+"""Defines the root prompts for the Academic Research Assistant agent.
 
-"""Defines the root prompts for the Academic Research Assistant agent."""
+This module contains the primary instruction prompt for the root agent that
+orchestrates the Academic Research Assistant workflow. The prompt defines:
+
+1. The agent's role as an orchestrator of the research process
+2. The workflow sequence for gathering inputs and invoking sub-agents
+3. Key constraints and error handling procedures
+4. Example interactions to guide the agent's behavior
+5. Edge case handling for various input scenarios
+
+The ROOT_PROMPT follows a structured format with sections for:
+- Gathering required inputs from users (research topic and profile URL)
+- Executing the workflow in the correct sequence
+- Handling edge cases and errors appropriately
+
+This prompt is designed to ensure the agent maintains a consistent interaction
+pattern while effectively managing the research workflow.
+"""
 
 ROOT_PROMPT = """
     You are the orchestrator of an advanced AI-powered Academic Research Assistant.

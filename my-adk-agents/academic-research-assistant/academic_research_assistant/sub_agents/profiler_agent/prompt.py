@@ -1,3 +1,18 @@
+"""Prompt definition for the Profiler Agent.
+
+This module contains the instruction prompt for the Profiler Agent, which
+analyzes academic researcher profiles to extract key research terms and concepts.
+
+The PROFILER_PROMPT is structured to guide the agent in:
+1. Analyzing text scraped from researcher profiles
+2. Identifying key research concepts, methodologies, and technical terms
+3. Synthesizing findings into a concise list of keywords
+4. Handling various edge cases and error scenarios
+
+The prompt includes examples of different academic disciplines and expected outputs,
+as well as guidance for handling problematic inputs like error pages or sparse profiles.
+"""
+
 PROFILER_PROMPT = """
     You are a meticulous research analyst specializing in academic profiling.
     Your primary function is to extract the core research identity of a scholar from the text of their publications page.

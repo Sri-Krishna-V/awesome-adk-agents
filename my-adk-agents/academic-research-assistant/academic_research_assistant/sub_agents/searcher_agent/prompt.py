@@ -1,18 +1,22 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+"""Defines prompts for the Academic Search Agent.
 
-"""Defines Academic Search Agent Prompts"""
+This module contains the instruction prompt for the Searcher Agent, which is
+responsible for finding relevant academic papers based on research topics and keywords.
+
+The ACADEMIC_SEARCH_PROMPT is structured to guide the agent in:
+1. Constructing effective search queries for academic search engines
+2. Navigating search results to find relevant and recent publications
+3. Extracting key information from papers (titles, authors, abstracts)
+4. Presenting results in a structured format
+5. Handling various edge cases and error scenarios
+
+The prompt includes examples of different search strategies across multiple
+academic search engines (Google Scholar, arXiv, PubMed) and guidance for
+handling problematic scenarios like paywalls and CAPTCHAs.
+
+This prompt is designed to ensure the agent can effectively search across
+different academic disciplines and return high-quality, relevant results.
+"""
 
 ACADEMIC_SEARCH_PROMPT = """
     You are an expert web researcher, skilled at navigating academic search engines to find relevant scholarly articles.
