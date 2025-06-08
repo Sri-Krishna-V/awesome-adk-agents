@@ -8,7 +8,7 @@
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
     <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
 
-> A curated collection of AI agents built with Google's Agent Development Kit (ADK) for various domains, applications and use-cases.
+_A curated resource for building, deploying, and scaling AI agents using [Google’s Agent Development Kit (ADK)](https://google.github.io/adk-docs/). Includes templates, best practices, and production-ready examples for research, business, automation, education, content creation, and more._
 
 ## 📖 Table of Contents
 
@@ -21,13 +21,12 @@
 - [🚀 Getting Started / Installation](#-getting-started--installation)
 - [🛠️ Usage](#️-usage)
 - [🗺️ Roadmap](#️-roadmap)
-- [🤝 How to Contribute](#-how-to-contribute)
 - [🙏 Credits and Acknowledgements](#-credits-and-acknowledgements)
 - [⭐ Call to Action](#-call-to-action)
 
 ##
 
->Welcome to **Awesome ADK Agents**👋👋
+> Welcome to **Awesome ADK Agents**👋👋
 
 From simple helpers to complex multi-agent systems, this repository will serve as a comprehensive resource for anyone interested in building AI agents using Google's Agent Development Kit (ADK).
 
@@ -205,18 +204,6 @@ cd awesome-adk-agents
 - **Check Dependencies**: Install agent-specific requirements before running
 - **Environment Variables**: Many agents require specific environment variables for API keys
 - **Test in Development**: Always test agents in a safe environment before production use
-
-## 🤝 How to Contribute
-
-We welcome contributions from the community! Here's how you can help:
-
-### Contributing Your Own Agents
-
-1. **Fork this repository**
-2. **Create a feature branch**: `git checkout -b feature/your-agent-name`
-3. **Add your agent**: Place it in the appropriate directory with comprehensive documentation
-4. **Update the README**: Add your agent to the relevant showcase section
-5. **Submit a Pull Request**: Include a clear description of your agent's functionality
 
 ### Reporting Issues or Suggestions
 
