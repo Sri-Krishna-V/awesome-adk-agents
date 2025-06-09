@@ -20,5 +20,8 @@ profiler_agent = Agent(
     name="profiler_agent",
     description="An agent to extract keywords from a researcher's profile.",
     instruction=prompt.PROFILER_PROMPT,
-    tools=[profile_scraper.scrape_profile],
+    tools=[
+        profile_scraper.scrape_profile,
+        profile_scraper.extract_keywords_manually,
+    ],
 )

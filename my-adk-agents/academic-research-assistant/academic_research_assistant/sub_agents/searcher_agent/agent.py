@@ -1,14 +1,15 @@
 """Searcher Agent for finding relevant academic papers.
 
 This module defines the Searcher Agent, which is responsible for finding relevant
-academic papers based on a research topic and keywords. It uses web browsing
-capabilities to search academic databases and extract paper information.
+academic papers based on a research topic and keywords. It uses both SerpAPI and
+web browsing capabilities to search academic databases and extract paper information.
 
 The agent serves as the second step in the Academic Research Assistant workflow,
 taking inputs from the Profiler Agent and providing results to the Comparison Agent.
 
 Key components:
-- Web browsing tools for navigating academic search engines
+- SerpAPI integration for reliable Google Scholar access
+- Web browsing tools as fallback for navigating academic search engines
 - Screenshot capabilities for visual inspection of search results
 - Page analysis tools to determine next actions in the search process
 - Text extraction and processing for obtaining paper information
@@ -19,6 +20,8 @@ behavior based on the content it encounters.
 
 import time
 import warnings
+import random
+from typing import Optional
 
 import selenium
 from google.adk.agents.llm_agent import Agent
@@ -30,6 +33,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 from ...shared_libraries import constants
+from ...tools import serpapi_tools
 from . import prompt
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -39,6 +43,15 @@ if not constants.DISABLE_WEB_DRIVER:
     options.add_argument("--window-size=1920x1080")
     options.add_argument("--verbose")
     options.add_argument("user-data-dir=/tmp/selenium")
+
+    # Add user agent to avoid detection
+    user_agents = [
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15',
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0'
+    ]
+    options.add_argument(f"user-agent={random.choice(user_agents)}")
 
     driver = selenium.webdriver.Chrome(options=options)
 
@@ -57,8 +70,27 @@ def go_to_url(url: str) -> str:
         The function prints a log message to the console for debugging purposes.
     """
     print(f"🌐 Navigating to URL: {url}")  # Added print statement
-    driver.get(url.strip())
-    return f"Navigated to URL: {url}"
+
+    # Maximum number of retry attempts
+    max_retries = 3
+    retry_count = 0
+
+    while retry_count < max_retries:
+        try:
+            # Add a delay between requests to avoid rate limiting
+            if retry_count > 0:
+                # Random delay between 2-5 seconds
+                time.sleep(2 + random.random() * 3)
+
+            driver.get(url.strip())
+            return f"Navigated to URL: {url}"
+
+        except Exception as e:
+            retry_count += 1
+            if retry_count >= max_retries:
+                return f"Error: Could not navigate to URL after {max_retries} attempts. {e}"
+            # Wait before retrying
+            time.sleep(2 + random.random() * 3)
 
 
 async def take_screenshot(tool_context: ToolContext) -> dict:
@@ -312,12 +344,60 @@ def analyze_webpage_and_determine_action(
     return analysis_prompt
 
 
+def search_papers(
+    query: str, keywords: Optional[str]=None, year_from: Optional[int]=None
+) -> str:
+    """
+    Searches for academic papers using SerpAPI or falls back to web browsing.
+
+    This function serves as a unified interface for paper searches. It first tries
+    to use SerpAPI if an API key is available, and falls back to web browsing
+    instructions if not.
+
+    Args:
+        query (str): The main research topic to search for.
+        keywords (str, optional): Comma-separated keywords to refine the search.
+        year_from (int, optional): The earliest publication year to include.
+
+    Returns:
+        str: Search results or instructions for web-based searching.
+    """
+    print(f"🔍 Searching for papers on: {query}")
+
+    # If SerpAPI key is available, use it
+    if constants.SERPAPI_KEY:
+        # Convert comma-separated keywords string to list if provided
+        keyword_list = None
+        if keywords:
+            keyword_list = [k.strip() for k in keywords.split(',')]
+
+        # Use SerpAPI to search
+        return serpapi_tools.search_scholar_papers(query, keyword_list, year_from)
+
+    # Otherwise, provide instructions for web-based searching
+    else:
+        return """
+        No SerpAPI key found. Please use the web browsing tools to search for papers:
+        
+        1. Use `go_to_url` to navigate to Google Scholar: https://scholar.google.com/
+        2. Use `enter_text_into_element` to search for your topic
+        3. Use `click_element_with_text` to navigate through results
+        4. Use `get_page_source` to extract paper information
+        
+        Follow the web browsing workflow to collect paper information.
+        """
+
+
 searcher_agent = Agent(
     model=constants.MODEL,
     name="searcher_agent",
     description="Searches academic databases for relevant papers using web browsing.",
     instruction=prompt.ACADEMIC_SEARCH_PROMPT,
     tools=[
+        # SerpAPI-based search (preferred when API key is available)
+        search_papers,
+
+        # Web browsing fallback tools
         go_to_url,
         take_screenshot,
         find_element_with_text,

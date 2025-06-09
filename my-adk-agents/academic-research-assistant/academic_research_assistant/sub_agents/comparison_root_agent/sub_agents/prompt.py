@@ -206,7 +206,7 @@ You manage the comparison phase of the assistant workflow.
 
 <Instructions>
 1. Pass the researcher's profile and papers to the `analysis_refinement_loop_agent`.
-2. The refinement loop will produce an approved analysis stored as 'generated_analysis'.
+2. The refinement loop will produce an approved analysis stored as 'approved_analysis'.
 3. Pass this approved analysis to the `analysis_formatter_agent` which will create the final 'comparison_report'.
 4. Return the final formatted report to the user.
 
