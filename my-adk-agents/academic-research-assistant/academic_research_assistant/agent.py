@@ -39,14 +39,16 @@ from .sub_agents.profiler_agent.agent import profiler_agent
 from .sub_agents.searcher_agent.agent import searcher_agent
 from .sub_agents.comparison_root_agent.agent import comparison_root_agent
 
-root_agent = Agent(
+academic_research_assistant = Agent(
     model=constants.MODEL,
     name="academic_research_assistant",
     description="An AI assistant to accelerate academic literature reviews.",
     instruction=prompts.ROOT_PROMPT,
     sub_agents=[
-        profiler_agent,
-        searcher_agent,
         comparison_root_agent,
+        profiler_agent,
+        searcher_agent,  
     ],
 )
+
+root_agent = academic_research_assistant

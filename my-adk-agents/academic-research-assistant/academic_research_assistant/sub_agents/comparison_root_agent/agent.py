@@ -15,21 +15,22 @@ This module serves as the final step in the Academic Research Assistant workflow
 taking inputs from previous agents and producing the final report for the user.
 """
 
-from google.adk.agents import SequentialAgent
+from google.adk.agents import SequentialAgent, LoopAgent
 
-from ...shared_libraries import constants
-from .sub_agents import prompt
-from .sub_agents.analysis_refinement_loop_agent import analysis_refinement_loop_agent
-from .sub_agents.analysis_formatter_agent import analysis_formatter_agent
+from .sub_agents import *
+
+analysis_refinement_loop_agent = LoopAgent(
+    name="analysis_refinement_loop_agent",
+    description="Manages the iterative refinement process between analysis generation and critique.",
+    max_iterations=5,
+    sub_agents=[analysis_generator_agent, analysis_critic_agent],
+)
 
 # Create the root Sequential Agent that:
 # 1. Refines the analysis through a loop until approved
 # 2. Formats the final approved analysis for presentation
 comparison_root_agent = SequentialAgent(
-    model=constants.MODEL,
     name="comparison_root_agent",
     description="Orchestrates the analysis, critique, and presentation of academic papers.",
-    instruction=prompt.COMPARISON_ROOT_PROMPT,
     sub_agents=[analysis_refinement_loop_agent, analysis_formatter_agent],
-    output_key="comparison_report",
 )

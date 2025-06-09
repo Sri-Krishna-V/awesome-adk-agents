@@ -1,8 +1,8 @@
-"""Comparison Root Agent for analyzing and comparing academic papers.
+"""Comparison Root Agent package.
 
-This module exports the Comparison Root Agent, which is responsible for analyzing
-academic papers in relation to a researcher's profile and generating insightful
-comparisons and recommendations.
+This package contains the comparison root agent and its sub-agents, responsible
+for analyzing academic papers in relation to a researcher's profile and generating
+insightful comparisons and recommendations.
 
 The agent serves as the final step in the Academic Research Assistant workflow,
 taking inputs from previous agents and producing the final report for the user.
