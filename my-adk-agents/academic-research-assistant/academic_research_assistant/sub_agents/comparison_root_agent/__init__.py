@@ -19,3 +19,5 @@ Exported components:
 """
 
 from .agent import comparison_root_agent
+
+__all__ = ["comparison_root_agent"]

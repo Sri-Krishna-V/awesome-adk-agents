@@ -18,9 +18,9 @@ taking inputs from previous agents and producing the final report for the user.
 from google.adk.agents import SequentialAgent
 
 from ...shared_libraries import constants
-from . import prompt
-from .analysis_refinement_loop_agent import analysis_refinement_loop_agent
-from .analysis_formatter_agent import analysis_formatter_agent
+from .sub_agents import prompt
+from .sub_agents.analysis_refinement_loop_agent import analysis_refinement_loop_agent
+from .sub_agents.analysis_formatter_agent import analysis_formatter_agent
 
 # Create the root Sequential Agent that:
 # 1. Refines the analysis through a loop until approved
@@ -31,4 +31,5 @@ comparison_root_agent = SequentialAgent(
     description="Orchestrates the analysis, critique, and presentation of academic papers.",
     instruction=prompt.COMPARISON_ROOT_PROMPT,
     sub_agents=[analysis_refinement_loop_agent, analysis_formatter_agent],
+    output_key="comparison_report",
 )

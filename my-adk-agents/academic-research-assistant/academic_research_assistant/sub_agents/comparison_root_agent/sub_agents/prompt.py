@@ -1,10 +1,11 @@
 """Defines prompts for the Comparison Root Agent and its sub-agents.
 
-This module contains the instruction prompts for the Comparison Root Agent system,
-which is responsible for analyzing academic papers in relation to a researcher's
-profile and generating insightful comparisons and recommendations.
+This module contains the instruction prompts for the sub-agents used in the 
+Comparison Root Agent system, which is responsible for analyzing academic papers 
+in relation to a researcher's profile and generating insightful comparisons and 
+recommendations.
 
-The module defines five main prompts:
+The module defines the following prompts:
 
 1. ANALYSIS_GENERATOR_PROMPT: Guides the generator agent in creating detailed
    relevance notes for each paper, explaining how they connect to the researcher's
@@ -22,9 +23,6 @@ The module defines five main prompts:
 4. ANALYSIS_FORMATTER_PROMPT: Guides the formatter agent in preparing the final
    approved analysis for presentation to the user, ensuring it is well-structured
    and visually appealing.
-
-5. COMPARISON_ROOT_PROMPT: Guides the root sequential agent in orchestrating the
-   entire workflow, from refinement to final formatting.
 
 These prompts are designed to ensure the final report provides personalized,
 actionable insights that help researchers understand how new papers relate to
@@ -44,6 +42,12 @@ ANALYSIS_GENERATOR_PROMPT = """
         - **Supporting Evidence**: "Its findings on 'A' provide strong support for your previous conclusions about 'B'."
         - **Contradictory Evidence**: "This paper's results challenge your work on 'C' by showing 'D', suggesting a new direction for investigation."
     4.  Format the output as an annotated bibliography in markdown. Each entry requires the paper's details and your detailed "Relevance Note".
+
+    **Important Loop Control Instructions:**
+    1. Check if there is any critique from the critic agent in the state.
+    2. If the critique contains the exact phrase "The analysis is satisfactory.", this means your analysis is approved.
+    3. When your analysis is approved, call the exit_analysis tool to exit the refinement loop.
+    4. If the critique contains feedback for improvement, incorporate this feedback into your new analysis.
 
     <Examples>
     **Example 1: Strong Methodological Link**
@@ -94,6 +98,8 @@ ANALYSIS_GENERATOR_PROMPT = """
     4.  **Tangential Link**: If the link is weak, describe it honestly. E.g., "This paper has a tangential link to your work..."
     5.  **Profiler/Searcher Error**: If the input from a previous agent is an error message (e.g., `PROFILING_ERROR` or `SEARCH_ERROR`), you must not proceed. Output the error message as is.
     </Edge Cases>
+
+    Your analysis will be stored as 'generated_analysis' for the critic agent to review.
 """
 
 ANALYSIS_CRITIC_PROMPT = """
@@ -138,6 +144,8 @@ ANALYSIS_CRITIC_PROMPT = """
     4.  **Note is too long/verbose**: If a note is rambling, critique it for conciseness. "Critique for Note 2: The analysis is correct but too verbose. Condense the note to its core point."
     5.  **Generator ignored instructions**: If the generator did not follow the required format, state this. "Critique: The generator failed to follow the required markdown format. It must be regenerated."
     </Edge Cases>
+
+    You will be reviewing the 'generated_analysis' from the generator agent, and your critique will be stored as 'critique_result'.
 """
 
 ANALYSIS_REFINEMENT_LOOP_PROMPT = """
@@ -148,14 +156,22 @@ ANALYSIS_REFINEMENT_LOOP_PROMPT = """
 You manage the iterative refinement phase of the comparison workflow.
 
 <Instructions>
-1. Provide profile keywords + new papers to `analysis_generator_agent`.
-2. Pass output to `analysis_critic_agent`.
-3. If the critic approves (`The analysis is satisfactory.`), return it as the approved report.
-4. If the critic requests changes, send both the original input AND the critic's feedback back to the generator.
-5. Repeat this loop until an approved report is achieved.
+1. Review the researcher's profile (keywords) and the list of new papers.
+2. Send this information to the `analysis_generator_agent` which will produce an initial analysis (stored as 'generated_analysis').
+3. Pass the generated analysis to the `analysis_critic_agent` (stored as 'critique_result').
+4. Check the critic's response:
+   - If it contains the exact phrase `The analysis is satisfactory.`, the analysis is approved.
+   - Otherwise, the critic has provided feedback for improvement.
+5. If approved:
+   - Call the `exit_analysis` tool to exit the loop
+   - Store the approved analysis as 'approved_analysis'
+6. If not approved:
+   - Pass the original input AND the critic's feedback back to the generator
+   - Continue the loop
+7. Maximum iterations: 7 (to prevent infinite loops)
 
 <Final Output>
-Return only the approved report to be passed to the formatter agent.
+Only the approved analysis will be passed to the formatter agent as 'approved_analysis'.
 """
 
 ANALYSIS_FORMATTER_PROMPT = """
@@ -166,7 +182,7 @@ ANALYSIS_FORMATTER_PROMPT = """
 You are responsible for preparing the final report to be presented to the researcher.
 
 <Instructions>
-1. You will receive an approved analysis from the refinement loop.
+1. You will receive an approved analysis from the refinement loop stored as 'generated_analysis'.
 2. Format it into a polished, professional report with:
    - A clear title that indicates this is a personalized research comparison
    - A brief introduction explaining the purpose of the report
@@ -178,6 +194,7 @@ You are responsible for preparing the final report to be presented to the resear
 
 <Final Output>
 A complete, well-formatted markdown report ready for presentation to the researcher.
+This will be stored as 'formatted_analysis' for the comparison_root_agent to return.
 """
 
 COMPARISON_ROOT_PROMPT = """
@@ -189,8 +206,9 @@ You manage the comparison phase of the assistant workflow.
 
 <Instructions>
 1. Pass the researcher's profile and papers to the `analysis_refinement_loop_agent`.
-2. Once an approved analysis is received, pass it to the `analysis_formatter_agent`.
-3. Return the final formatted report to the user.
+2. The refinement loop will produce an approved analysis stored as 'generated_analysis'.
+3. Pass this approved analysis to the `analysis_formatter_agent` which will create a 'formatted_analysis'.
+4. Return the final formatted report (from 'formatted_analysis') to the user as 'comparison_report'.
 
 <Final Output>
 Return only the fully formatted, high-quality report.

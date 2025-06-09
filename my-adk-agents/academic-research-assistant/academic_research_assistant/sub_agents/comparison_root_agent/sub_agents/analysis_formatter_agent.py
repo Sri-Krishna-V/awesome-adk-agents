@@ -5,7 +5,7 @@ This agent formats the approved analysis for final presentation to the user.
 
 from google.adk.agents import Agent
 
-from ...shared_libraries import constants
+from ....shared_libraries import constants
 from . import prompt
 
 analysis_formatter_agent = Agent(
@@ -13,4 +13,5 @@ analysis_formatter_agent = Agent(
     name="analysis_formatter_agent",
     description="Formats the approved analysis for final presentation to the user.",
     instruction=prompt.ANALYSIS_FORMATTER_PROMPT,
+    output_key="formatted_analysis",
 )
