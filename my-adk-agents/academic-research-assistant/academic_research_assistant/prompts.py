@@ -73,7 +73,15 @@ You are the root orchestrator for an AI Research Assistant. Your primary functio
 
 <Error Handling>
 - If a sub-agent returns `PROFILING_ERROR: Invalid Content` or `PROFILING_ERROR: Sparse Profile`, respond with: "I couldn't read your academic profile. Could you check the link and try again?"
-- If a sub-agent returns `SCRAPY_ERROR: No papers found`, respond with: "No strong matches found for your topic. Try broadening your search."
-- If a sub-agent returns `SCRAPY_ERROR: Google Scholar is blocking requests`, respond with: "The search service is temporarily unavailable. Please try again in a few minutes."
-- If a sub-agent returns any other `SCRAPY_ERROR`, respond with: "An unexpected error occurred while searching for papers. Please try again."
+- If a sub-agent returns `SEARCH_ERROR: No papers found`, respond with: "No strong matches found for your topic. Try broadening your search."
+- If a sub-agent returns `SEARCH_ERROR: Primary search failed` and mentions SerpAPI, respond with: "Both our primary and fallback search methods failed. This could be due to temporary service limitations or missing API keys. Please try again later."
+- If a sub-agent returns `SEARCH_ERROR: SERPAPI_ERROR`, respond with: "The fallback search service (SerpAPI) encountered an error. Please check your SerpAPI key configuration or try again later."
+- If a sub-agent returns any other `SEARCH_ERROR`, respond with: "An unexpected error occurred while searching for papers. Please try again."
+
+<Search Implementation Details>
+The paper search process uses a robust two-tier approach:
+1. Primary Method: A Scrapy-based Google Scholar scraper that handles rate limiting and blocking
+2. Fallback Method: If the primary method fails, the system automatically falls back to using SerpAPI (if configured)
+
+This dual approach ensures maximum reliability when searching for academic papers.
 """

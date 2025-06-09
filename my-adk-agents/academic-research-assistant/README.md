@@ -17,6 +17,7 @@ AI-powered literature review assistant that finds, analyzes, and synthesizes aca
 - **Intelligent Query Construction** based on your research profile
 - **Recent Publications Filter** for cutting-edge research
 - **Adaptive Search Refinement** based on initial results
+- **Robust Search Implementation** with automatic SerpAPI fallback for reliability
 
 ### 🧠 Research Synthesis & Analysis
 
@@ -68,7 +69,7 @@ Root Agent
 cd my-adk-agents/academic-research-assistant
 
 # Install required packages
-pip install requests beautifulsoup4 selenium python-dotenv
+pip install -r requirements.txt
 ```
 
 ### 2. Setup Gemini API Key
@@ -81,6 +82,10 @@ pip install requests beautifulsoup4 selenium python-dotenv
 GOOGLE_API_KEY=your_gemini_api_key_here
 MODEL=gemini-2.0-flash
 DISABLE_WEB_DRIVER=0
+
+# Optional: SerpAPI key for fallback search mechanism
+# Get a key from: https://serpapi.com/
+SERPAPI_KEY=your_serpapi_key_here
 ```
 
 ### 3. Start the Agent
@@ -154,6 +159,9 @@ DISABLE_WEB_DRIVER=0  # 0=enabled, 1=disabled
 
 # Change model for different capabilities
 MODEL=gemini-2.0-pro  # For more sophisticated analysis
+
+# SerpAPI Configuration (optional fallback mechanism)
+SERPAPI_KEY=your_serpapi_key_here  # Only used when primary search fails
 ```
 
 ### 📊 Analysis Customization
@@ -178,6 +186,7 @@ You can modify the prompts in `academic_research_assistant/sub_agents/comparison
     - `searcher_agent/` — Web search agent
     - `comparison_root_agent/` — Analysis orchestration agent
   - `tools/` — Utility functions for web scraping and processing
+    - `scholar_scraper.py` — Robust Google Scholar scraper with SerpAPI fallback
   - `shared_libraries/` — Constants and shared utilities
 
 ## Troubleshooting
@@ -186,6 +195,7 @@ You can modify the prompts in `academic_research_assistant/sub_agents/comparison
 **Web Search Errors**: Check if `DISABLE_WEB_DRIVER=0` and selenium is properly installed
 **API Quota**: Monitor your Gemini API usage in Google Cloud Console
 **Browser Driver**: Update to the latest Chrome version if encountering web driver issues
+**SerpAPI Fallback**: If search fails and you see "SERPAPI_ERROR", check that your SerpAPI key is correctly set in the .env file
 
 ## Support
 
