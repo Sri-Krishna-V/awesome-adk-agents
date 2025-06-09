@@ -17,7 +17,9 @@ taking inputs from previous agents and producing the final report for the user.
 
 from google.adk.agents import SequentialAgent, LoopAgent
 
-from .sub_agents import *
+from .sub_agents.analysis_generator_agent import analysis_generator_agent
+from .sub_agents.analysis_critic_agent import analysis_critic_agent
+from .sub_agents.analysis_formatter_agent import analysis_formatter_agent
 
 analysis_refinement_loop_agent = LoopAgent(
     name="analysis_refinement_loop_agent",
