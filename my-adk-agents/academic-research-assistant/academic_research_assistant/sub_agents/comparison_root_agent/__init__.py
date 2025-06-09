@@ -8,9 +8,11 @@ The agent serves as the final step in the Academic Research Assistant workflow,
 taking inputs from previous agents and producing the final report for the user.
 
 The agent uses a hierarchical structure with:
-1. A root comparison agent that orchestrates the analysis process
-2. An analysis generator agent that produces detailed paper comparisons
-3. An analysis critic agent that reviews and refines the generated analysis
+1. A root sequential agent that orchestrates the entire process
+2. A loop agent that iterates between:
+   a. An analysis generator agent that produces detailed paper comparisons
+   b. An analysis critic agent that reviews and refines the generated analysis
+3. A final formatter agent that prepares the approved analysis for presentation
 
 Exported components:
     comparison_root_agent: The agent instance that can be used by the root agent

@@ -4,7 +4,7 @@ This module contains the instruction prompts for the Comparison Root Agent syste
 which is responsible for analyzing academic papers in relation to a researcher's
 profile and generating insightful comparisons and recommendations.
 
-The module defines three main prompts:
+The module defines five main prompts:
 
 1. ANALYSIS_GENERATOR_PROMPT: Guides the generator agent in creating detailed
    relevance notes for each paper, explaining how they connect to the researcher's
@@ -15,9 +15,16 @@ The module defines three main prompts:
    the generated analysis, ensuring it provides specific, clear, and valuable
    insights for the researcher.
 
-3. COMPARISON_ROOT_PROMPT: Guides the root agent in orchestrating the workflow
-   between the generator and critic agents, implementing a feedback loop until
-   a satisfactory analysis is produced.
+3. ANALYSIS_REFINEMENT_LOOP_PROMPT: Guides the refinement loop agent in orchestrating
+   the workflow between the generator and critic agents, implementing a feedback loop
+   until a satisfactory analysis is produced.
+
+4. ANALYSIS_FORMATTER_PROMPT: Guides the formatter agent in preparing the final
+   approved analysis for presentation to the user, ensuring it is well-structured
+   and visually appealing.
+
+5. COMPARISON_ROOT_PROMPT: Guides the root sequential agent in orchestrating the
+   entire workflow, from refinement to final formatting.
 
 These prompts are designed to ensure the final report provides personalized,
 actionable insights that help researchers understand how new papers relate to
@@ -133,15 +140,58 @@ ANALYSIS_CRITIC_PROMPT = """
     </Edge Cases>
 """
 
-COMPARISON_ROOT_PROMPT = """
-    You are a master agent orchestrating a research analysis workflow.
-    Your goal is to produce a high-quality, annotated bibliography for a user by managing a generator and a critic agent.
+ANALYSIS_REFINEMENT_LOOP_PROMPT = """
+# Agent: analysis_refinement_loop_agent
+# Role: Iterate between generator and critic until quality is met
+# UX: Silent process, feedback shown via orchestrator
 
-    **Instructions:**
-    1.  Call the `analysis_generator_agent` to generate the initial comparison report.
-    2.  Call the `analysis_critic_agent` with the generated report to get feedback.
-    3.  Analyze the critic's feedback.
-    4.  If the critic responds with "The analysis is satisfactory.", the process is complete. Relay the final, approved report to the user.
-    5.  If the critic provides suggestions for improvement, loop back to the `analysis_generator_agent`. Provide it with the original data *and* the critic's feedback, and ask it to regenerate the report.
-    6.  Continue this generation-critique loop until the critic is satisfied.
+You manage the iterative refinement phase of the comparison workflow.
+
+<Instructions>
+1. Provide profile keywords + new papers to `analysis_generator_agent`.
+2. Pass output to `analysis_critic_agent`.
+3. If the critic approves (`The analysis is satisfactory.`), return it as the approved report.
+4. If the critic requests changes, send both the original input AND the critic's feedback back to the generator.
+5. Repeat this loop until an approved report is achieved.
+
+<Final Output>
+Return only the approved report to be passed to the formatter agent.
+"""
+
+ANALYSIS_FORMATTER_PROMPT = """
+# Agent: analysis_formatter_agent
+# Role: Format the approved analysis for final presentation
+# UX: Create a well-structured, visually appealing final report
+
+You are responsible for preparing the final report to be presented to the researcher.
+
+<Instructions>
+1. You will receive an approved analysis from the refinement loop.
+2. Format it into a polished, professional report with:
+   - A clear title that indicates this is a personalized research comparison
+   - A brief introduction explaining the purpose of the report
+   - The main annotated bibliography section with all the paper analyses
+   - A conclusion or summary section if appropriate
+3. Ensure the markdown formatting is clean and consistent throughout
+4. Add any visual enhancements that would improve readability (e.g., section dividers)
+5. Ensure that all links between papers and the researcher's work are prominently highlighted
+
+<Final Output>
+A complete, well-formatted markdown report ready for presentation to the researcher.
+"""
+
+COMPARISON_ROOT_PROMPT = """
+# Agent: comparison_root_agent
+# Role: Orchestrate the entire comparison workflow
+# UX: Silent process, outputs final report
+
+You manage the comparison phase of the assistant workflow.
+
+<Instructions>
+1. Pass the researcher's profile and papers to the `analysis_refinement_loop_agent`.
+2. Once an approved analysis is received, pass it to the `analysis_formatter_agent`.
+3. Return the final formatted report to the user.
+
+<Final Output>
+Return only the fully formatted, high-quality report.
 """
