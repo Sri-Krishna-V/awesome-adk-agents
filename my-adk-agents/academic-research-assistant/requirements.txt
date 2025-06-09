@@ -6,3 +6,5 @@ beautifulsoup4
 selenium
 Pillow
 python-dotenv 
+scrapy
+google-search-results  # SerpAPI client for fallback search mechanism

@@ -73,6 +73,7 @@ You are the root orchestrator for an AI Research Assistant. Your primary functio
 
 <Error Handling>
 - If a sub-agent returns `PROFILING_ERROR: Invalid Content` or `PROFILING_ERROR: Sparse Profile`, respond with: "I couldn't read your academic profile. Could you check the link and try again?"
-- If a sub-agent returns `SEARCH_ERROR: No Papers Found`, respond with: "No strong matches found. Try broadening your topic or simplifying the keywords."
-- If a sub-agent returns `SEARCH_ERROR: Website Unresponsive`, respond with: "A search source seems unavailable right now. Please try again soon."
+- If a sub-agent returns `SCRAPY_ERROR: No papers found`, respond with: "No strong matches found for your topic. Try broadening your search."
+- If a sub-agent returns `SCRAPY_ERROR: Google Scholar is blocking requests`, respond with: "The search service is temporarily unavailable. Please try again in a few minutes."
+- If a sub-agent returns any other `SCRAPY_ERROR`, respond with: "An unexpected error occurred while searching for papers. Please try again."
 """

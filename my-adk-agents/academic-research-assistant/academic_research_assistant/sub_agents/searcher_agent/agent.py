@@ -1,21 +1,20 @@
 """Searcher Agent for finding relevant academic papers.
 
 This module defines the Searcher Agent, which is responsible for finding relevant
-academic papers based on a research topic and keywords. It uses both SerpAPI and
-web browsing capabilities to search academic databases and extract paper information.
+academic papers based on a research topic and keywords. It uses a robust Scrapy-based
+Google Scholar scraper with automatic SerpAPI fallback when needed.
 
 The agent serves as the second step in the Academic Research Assistant workflow,
 taking inputs from the Profiler Agent and providing results to the Comparison Agent.
 
 Key components:
-- SerpAPI integration for reliable Google Scholar access
-- Web browsing tools as fallback for navigating academic search engines
-- Screenshot capabilities for visual inspection of search results
-- Page analysis tools to determine next actions in the search process
-- Text extraction and processing for obtaining paper information
+- Primary search using a robust Scrapy-based Google Scholar scraper
+- Automatic SerpAPI fallback when the primary search method fails
+- Comprehensive error handling and logging
+- Thread-safe implementation to avoid event loop conflicts
 
-The agent is designed to handle various academic search interfaces and adapt its
-behavior based on the content it encounters.
+The agent is designed to handle various academic search scenarios and automatically
+switch between search methods as needed to ensure reliable results.
 """
 
 import time
@@ -33,7 +32,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 from ...shared_libraries import constants
-from ...tools import serpapi_tools
+from ...tools import scholar_scraper
 from . import prompt
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -345,14 +344,15 @@ def analyze_webpage_and_determine_action(
 
 
 def search_papers(
-    query: str, keywords: Optional[str]=None, year_from: Optional[int]=None
+    query: str, keywords: Optional[str] = None, year_from: Optional[int] = None
 ) -> str:
     """
-    Searches for academic papers using SerpAPI or falls back to web browsing.
+    Searches for academic papers using the robust search implementation.
 
-    This function serves as a unified interface for paper searches. It first tries
-    to use SerpAPI if an API key is available, and falls back to web browsing
-    instructions if not.
+    This function serves as a unified interface for paper searches. It uses the
+    production-grade search implementation that includes:
+    1. Primary search using a robust Scrapy-based Google Scholar scraper
+    2. Automatic fallback to SerpAPI if the primary method fails
 
     Args:
         query (str): The main research topic to search for.
@@ -360,52 +360,29 @@ def search_papers(
         year_from (int, optional): The earliest publication year to include.
 
     Returns:
-        str: Search results or instructions for web-based searching.
+        str: Formatted search results or error message.
     """
-    print(f"🔍 Searching for papers on: {query}")
+    # If keywords are provided, incorporate them into the query
+    search_query = query
+    if keywords:
+        # Convert comma-separated keywords to space-separated for better search
+        keyword_terms = " ".join([k.strip() for k in keywords.split(',')])
+        search_query = f"{query} {keyword_terms}"
 
-    # If SerpAPI key is available, use it
-    if constants.SERPAPI_KEY:
-        # Convert comma-separated keywords string to list if provided
-        keyword_list = None
-        if keywords:
-            keyword_list = [k.strip() for k in keywords.split(',')]
+    # Use the year_from parameter if provided, otherwise default to 5 years ago
+    year = year_from if year_from is not None else (
+        time.localtime().tm_year - 5)
 
-        # Use SerpAPI to search
-        return serpapi_tools.search_scholar_papers(query, keyword_list, year_from)
-
-    # Otherwise, provide instructions for web-based searching
-    else:
-        return """
-        No SerpAPI key found. Please use the web browsing tools to search for papers:
-        
-        1. Use `go_to_url` to navigate to Google Scholar: https://scholar.google.com/
-        2. Use `enter_text_into_element` to search for your topic
-        3. Use `click_element_with_text` to navigate through results
-        4. Use `get_page_source` to extract paper information
-        
-        Follow the web browsing workflow to collect paper information.
-        """
+    # Use the search_scholar_with_scrapy tool which has built-in SerpAPI fallback
+    return scholar_scraper.search_scholar_with_scrapy(search_query, year)
 
 
 searcher_agent = Agent(
     model=constants.MODEL,
     name="searcher_agent",
-    description="Searches academic databases for relevant papers using web browsing.",
+    description="An agent to find academic papers using a robust scraper with SerpAPI fallback.",
     instruction=prompt.ACADEMIC_SEARCH_PROMPT,
     tools=[
-        # SerpAPI-based search (preferred when API key is available)
-        search_papers,
-
-        # Web browsing fallback tools
-        go_to_url,
-        take_screenshot,
-        find_element_with_text,
-        click_element_with_text,
-        enter_text_into_element,
-        scroll_down_screen,
-        get_page_source,
-        load_artifacts_tool,
-        analyze_webpage_and_determine_action,
+        scholar_scraper.search_scholar_with_scrapy,
     ],
 )
