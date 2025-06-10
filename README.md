@@ -118,6 +118,7 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 - 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
 - 📊 [AI Trends Analysis Pipeline](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/analyzer_agent): A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends using Exa Search, Tavily Search, Firecrawl and Nebius AI.
+- 🎞️ [rasheedonnet/VideoGenAI](https://github.com/rasheedonnet/VideoGenAI): A youtube shorts agent which handles Script writing -> Img gen -> Audio gen -> BGM gen -> video producer. 
 
 ### 🏫 Education & Learning
 
