@@ -80,6 +80,13 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 ---
 
+### Examples
+
+- 📚 [heiko-hotz/project-horizon](https://github.com/heiko-hotz/project-horizon)
+  - A sample application with self contained examples to demonstrate practical design patterns for building AI Applications
+
+---
+
 ### Use Cases
 
 #### 🔬 Research & Analysis
