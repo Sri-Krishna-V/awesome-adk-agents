@@ -1,26 +1,36 @@
-# 🤖 Awesome ADK Agents
+<div align="center">
+  <h1>
+    Awesome ADK Agents 
+    <a href="https://awesome.re">
+      <img src="https://awesome.re/badge.svg" alt="Awesome">
+    </a>
+  </h1>
+</div>
 
-<p align="center"><img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
+
+<p align="center"><img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="150px" alt="Agent Development Kit">
 </p>
+
 <p align="center">
+  <img src="https://img.shields.io/github/stars/sri-krishna-v/awesome-adk-agents?style=flat-square" alt="Stars">
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
-    <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
+  <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
+</p>
 
 _A curated resource for building, deploying, and scaling AI agents using [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/). Includes templates, best practices, and production-ready examples for research, business, automation, education, content creation, and more._
 
 ## 📖 Table of Contents
 
+- [🎯 What This List Solves](#-what-this-list-solves)
 - [What is Google's Agent Development Kit (ADK)?](#what-is-googles-agent-development-kit-adk)
-- [🚀 Getting Started](#-getting-started--installation)
-- [✨ Agent Showcase](#-agent-showcase)
-  - [My ADK Agents](#my-adk-agents)
-  - [Courses](#courses-on-adk)
-  - [Use Cases](#use-cases)
+- [🏆 Featured Projects](#-featured-projects)
+- [🚀 Templates & Starters](#-templates--starters)
+- [🌟 Community Excellence](#-community-excellence)
+- [📚 Learning Resources](#-learning-resources)
+- [🎯 Official Examples](#-official-examples)
 - [🚀 Getting Started / Installation](#-getting-started--installation)
-- [🛠️ Usage](#️-usage)
-- [🗺️ Roadmap](#️-roadmap)
 - [🙏 Credits and Acknowledgements](#-credits-and-acknowledgements)
 - [⭐ Call to Action](#-call-to-action)
 
@@ -30,11 +40,26 @@ _A curated resource for building, deploying, and scaling AI agents using [Google
 
 From simple helpers to complex multi-agent systems, this repository will serve as a comprehensive resource for anyone interested in building AI agents using Google's Agent Development Kit (ADK).
 
-### Who is this for?
+## 🎯 What This List Solves
 
->- Peeps looking to build AI agents with Google's ADK
->- Peeps who want templates and examples to kickstart their projects
->- Peeps who want to build production-ready agents with best practices
+Building production-ready AI agents with Google's ADK shouldn't require starting from scratch or piecing together fragmented tutorials. This curated collection addresses three critical challenges that slow down agent development:
+
+### 1. **Template Discovery & Quality Gap**
+
+- **Problem**: Most developers waste weeks searching for reliable starting points and end up with toy examples that don't scale
+- **Solution**: Curated, battle-tested templates and real-world implementations you can actually build upon
+
+### 2. **Production Readiness Barrier**
+
+- **Problem**: Tutorials teach basics, but deploying robust, scalable agents requires understanding integration patterns, error handling, and deployment strategies
+- **Solution**: Production-ready examples with complete implementation details, from development to deployment
+
+### 3. **Implementation Learning Curve**
+
+- **Problem**: The jump from "Hello World" tutorials to building meaningful solutions feels overwhelming
+- **Solution**: Progressive examples that bridge theory and practice, showing how real developers solve actual problems
+
+**Whether you're a beginner looking for solid foundations or an experienced developer seeking proven patterns, this repository eliminates the trial-and-error phase and accelerates your path to production-ready agents.**
 
 ## What is Google's Agent Development Kit (ADK)?
 
@@ -53,93 +78,137 @@ Agent Development Kit (ADK) is a flexible and modular framework for developing a
 
 - **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
 
-## ✨ Agent Showcase
+## 🏆 Featured Projects
 
-### [My ADK Agents](./my-adk-agents/)
+_My showcase agents demonstrating production-ready ADK implementations_
 
-| Agent Name | Category/Domain | Short Description |
-|------------|----------------|-------------------|
-| [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) | Research/Academia | Multi-agent literature review assistant with profile analysis, robust paper search (with SerpAPI fallback), and personalized research synthesis |
-| [Job Interview Agent](./my-adk-agents/job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback |
-| [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring |
-| [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance |
-| [Local RAG Agent (WIP)](./my-adk-agents/local-rag-agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL |
+| Agent Name | Category/Domain | Short Description | Badges |
+|------------|----------------|-------------------|---------|
+| [Job Interview Agent](./my-adk-agents/job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback | ⭐🏭🟡 |
+| [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance | ⭐🟡 |
+| [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) | Research/Academia | Multi-agent literature review assistant with profile analysis, robust paper search (with SerpAPI fallback), and personalized research synthesis | 🟡 |
+| [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring | 🟡 |
+| [Learning Content System (WIP)](./my-adk-agents/local-rag-agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL | 🚧🟡 |
 
----
+**Badge Legend:**
 
-### Courses on ADK
-
-- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
-  - A fabulous curation for beginners covering the fundamentals of ADK, from basics to advanced workflows and multi-agent systems.
-
-- 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple)
-  - From basics to A2A integration, this course explores real world applications and projects
-
-- 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos)
-  - A collection of practical demos showcasing various ADK features and capabilities
+- ⭐ **My Showcase** - Featured portfolio projects
+- 🏭 **Production-Ready** - Has deployment code and infrastructure
+- 🔥 **Community Pick** - Outstanding community contributions
+- 🚧 **In Development** - Work in progress
+- 📚 **Learning Resource** - Educational/tutorial content (official examples are demo/educational only)
+- 🟢🟡🔴 **Difficulty**: Beginner, Intermediate, Advanced
 
 ---
 
-### Use Cases
+## 🚀 Templates & Starters
 
-#### 🔬 Research & Analysis
+_Ready-to-use templates to kickstart your ADK projects_
 
-- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research): Comprehensive research assistant for academic papers and citations
-- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science): Automated data analysis and visualization workflows
-- 📈 [Time Series Forecasting Agent](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting): Advanced predictive analytics for time-based data
-- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research): Federal Reserve meeting analysis and insights
+- 🚀 [GoogleCloudPlatform/agent-starter-pack](https://github.com/GoogleCloudPlatform/agent-starter-pack) 🏭🟢 - Production-ready Generative AI Agent templates for Google Cloud with ADK samples, comprehensive deployment infrastructure
+- � [Gemini Fullstack ADK Quickstart](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🏭🟡⭐ - **The gold standard**: Complete fullstack research agent with React frontend, human-in-the-loop workflows, autonomous research pipelines, and Cloud Run deployment
+- �📱 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭🟢 - LINE Bot template with Docker, Cloud Run deployment, and security configurations  
+- 🌐 [phamvuhoang/google-adk-nextjs-starter](https://github.com/phamvuhoang/google-adk-nextjs-starter) 🟢 - Next.js starter template for Google ADK projects with Angular frontend
+- 🎨 [abhishekkumar35/google-adk-nocode](https://github.com/abhishekkumar35/google-adk-nocode) 🟢 - Visual, no-code interface for creating AI agents (supports cloud and local Ollama models)
 
-#### 💼 Business & Customer Service
+---
 
-- 📊 [CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent): Multi-agentic system with Advanced RAG with NL2SQL over Salesforce Data.
-- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent): Automated insurance claim processing and customer support
-- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization): SEO and brand visibility enhancement for products in retail websites
-- 📞 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service): Multi-channel customer support automation
-- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor): Personalized financial planning and investment advice
+## 🌟 Community Excellence
 
-#### 🛍️ E-commerce & Marketing
+_Outstanding community projects showcasing ADK capabilities_
 
-- 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping): AI-driven product recommendations and shopping assistance
-- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency): Comprehensive digital marketing campaign management
-- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge): Intelligent travel planning and booking assistance
+### Multi-Agent Systems
 
-#### 🔧 Development & Technical
+- 🔥 [Parth0248/Forkcast](https://github.com/Parth0248/Forkcast) 🏭🟡 - Multi-agent AI system for collaborative dining decisions with deployed webapp, technical reports, and Cloud Run deployment
+- 🚀 [kweinmeister/agentic-trading](https://github.com/kweinmeister/agentic-trading) 🏭🔴 - Multi-agent trading system with risk management, featuring AlphaBot and RiskGuard agents with complete A2A protocol implementation and production deployment
+- 📊 [vladkol/CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent) 🏭🔴 - Multi-agentic system with Advanced RAG and NL2SQL over Salesforce Data, "Run on Google Cloud" deployment
 
-- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant): Automated bug detection and resolution suggestions to help IT Support and SDE
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor): Model performance evaluation and optimization
-- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG): Advanced Retrieval-Augmented Generation implementations
-- 📖 [RAG Agent Tutorial](https://github.com/bhancockio/adk-rag-agent): Complete RAG implementation with ADK and Vertex AI
+### Integration & Advanced Patterns
 
-### 💹 Trading & Finance
+- 🔌 [RubensZimbres/A2A_ADK_MCP](https://github.com/RubensZimbres/A2A_ADK_MCP) 🔴 - Multi-Agent Systems using Google's ADK + A2A + MCP
+- 🎤 [bhancockio/Voice-Enabled-Agent](https://github.com/bhancockio/adk-voice-agent) 🟡 - Speech-to-text and voice interaction capabilities with G-Calendar integration and comprehensive setup documentation
+- 🔗 [serkanyasr/mcp-agent-tool-adapter](https://github.com/serkanyasr/mcp-agent-tool-adapter) 🟡 - Converts MCP tools into Google ADK or LangGraph agents with streaming FastAPI/CLI
 
-- 📈 [Agentic Trading Simulator](https://github.com/kweinmeister/agentic-trading): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
+### Domain-Specific Applications
 
-### Media & Content Creation
+- 💰 [mtwn105/zerodha-mcp](https://github.com/mtwn105/zerodha-mcp) 🟡 - Zerodha MCP Server & Client integrating Google ADK for financial applications
+- ✈️ [AashiDutt/Google-Agent-Development-Kit-Demo](https://github.com/AashiDutt/Google-Agent-Development-Kit-Demo) 🟢 - ADK-powered travel planner
+- 📊 [jenyss/google-adk-data-visualization-agent](https://github.com/jenyss/google-adk-data-visualization-agent) 🟡 - Data visualization agent built with Google ADK
+- 🧠 [IhateCreatingUserNames2/Cognisphere](https://github.com/IhateCreatingUserNames2/Cognisphere) 🔴 - AI agent development framework built on Google's ADK
+- 🎨 [bhancockio/YouTube-Thumbnail-Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent) 🟢 - Automated thumbnail generation and optimization
+- 📊 [AI Trends Analysis Pipeline](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/analyzer_agent) 🟡🔥 - Comprehensive AI analysis pipeline using Exa Search, Tavily Search, Firecrawl and Nebius AI
+- 📁 [Job Finder Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/jobfinder_agent) 🟡 - Sequential Agent using Mistral OCR, Linkup API and Nebius AI
+- 📧 [Email ADK Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/email_adk_agent) 🟢 - Email management and automation agent using Resend API
+- 📦 [arjunprabhulal/MCP-Gemma-3-Agent](https://github.com/arjunprabhulal/adk-mcp-gemma3) 🟡 - Gemma 3 leveraged by Ollama, MCP Youtube Search
 
-- 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
-- 📊 [AI Trends Analysis Pipeline](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/analyzer_agent): A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends using Exa Search, Tavily Search, Firecrawl and Nebius AI.
+---
 
-### 🏫 Education & Learning
+## 📚 Learning Resources
 
-- 📚 [Education Path Advisor for India](./education-path-advisor/): Personalized education and career guidance for Indian students
+_Comprehensive guides, tutorials, and educational content_
 
-### Miscellaneous
+### 🚀 Quickstart Courses
 
-- 📁 [Job Finder Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/jobfinder_agent): Sequential Agent using Mistral OCR, Linkup API and Nebius AI
-- 📧 [Email ADK Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/email_adk_agent): Email management and automation agent using Resend API
-- 📦 [MCP Gemma 3 Agent](https://github.com/arjunprabhulal/adk-mcp-gemma3): Gemma 3 leveraged by Ollama, MCP Youtube Search
+- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course) 🟢📚 - Fundamentals of ADK, from basics to advanced workflows and multi-agent systems
+- 📚 [A2A Crash Course by Brandon Hancock](https://github.com/bhancockio/agent2agent) 🟡📚 - Comprehensive guide to building agent-to-agent (A2A) communication using ADK
+- 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple) 🟢📚 - From basics to A2A integration with real world applications and projects
+- 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos) 🟢📚 - Collection of practical demos showcasing various ADK features
 
-#### 🧠 Advanced Techniques
+### 📖 Tutorials & Walkthroughs
 
-- 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
+- 📖 [meteatamel/adk-demos](https://github.com/meteatamel/adk-demos/) 🟢📖 - Collection of demos and tutorials for Google's Agent Development Kit
+- 📖 [sokart/adk-walkthrough](https://github.com/sokart/adk-walkthrough) 🟡📖 - Step-by-step guides and examples using the open-source Python ADK framework
+- 📖 [bhancockio/RAG-Agent-Tutorial](https://github.com/bhancockio/adk-rag-agent) 🟡📖 - Complete RAG implementation with ADK and Vertex AI
 
-- 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
+### 📝 Articles & Best Practices
+
+- 📝 [From Zero to Multi-Agents: A Beginner's Guide to Google ADK](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861) 🟢📝 - Step-by-step beginner guide by Dr Sokratis Kartakis
+- 📝 [Getting Started with ADK + AWS Bedrock](https://medium.com/@ankitsharma61016/getting-started-with-agent-development-kit-adk-with-aws-bedrock-2a4cc91fbd21) 🟡📝💡 - Step-by-step guide to run Bedrock models in ADK via LiteLLM
+- 📝 [Getting started with ADK — Function tools](https://medium.com/google-cloud/getting-started-with-agent-development-kit-function-tools-3f038ee646ea) 🟢📝💡 - Glen Yu's walkthrough of ADK function-tool patterns
+
+### 🎥 Video Content
+
+- 🎥 [Introducing Agent Development Kit (ADK)](https://www.youtube.com/watch?v=zgrOwow_uTQ) 🟢🎥 - 3-minute product overview shown at launch  
+- 🎥 [Getting started with ADK](https://www.youtube.com/watch?v=44C8u0CDtSo) 🟢🎥 - 12-minute "hello-world" coding session from pip install to first agent
+- 🎥 [Google Launches an Agent SDK – ADK Deep Dive](https://www.youtube.com/watch?v=G9wnpfW6lZY) 🟡🎥 - Independent review comparing ADK to other agent SDKs
+
+---
+
+## 🎯 Official Examples
+
+_Google ADK samples repository - educational and demonstration purposes only_
+
+> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK samples disclaimer](https://github.com/google/adk-samples).
+
+### 🔬 Research & Analysis
+
+- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research) 🟡📚 - Comprehensive research assistant for academic papers and citations
+- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Automated data analysis and visualization workflows  
+- 📈 [Time Series Forecasting Agent](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting) 🔴📚 - Advanced predictive analytics for time-based data
+- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🟡📚 - Federal Reserve meeting analysis and insights
+
+### 💼 Business & Customer Service
+
+- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent) 🟡📚 - Automated insurance claim processing and customer support
+- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - SEO and brand visibility enhancement for products in retail websites
+- 📞 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟡📚 - Multi-channel customer support automation
+- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Personalized financial planning and investment advice
+
+### 🛍️ E-commerce & Marketing
+
+- 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping) 🟡📚 - AI-driven product recommendations and shopping assistance
+- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency) 🟡📚 - Comprehensive digital marketing campaign management
+- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Intelligent travel planning and booking assistance
+
+### 🔧 Development & Technical
+
+- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Automated bug detection and resolution suggestions to help IT Support and SDE
+- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🔴📚 - Model performance evaluation and optimization
+- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🟡📚 - Advanced Retrieval-Augmented Generation implementations
 
 ---
 
 ## 🚀 Getting Started / Installation
-
-### Quick Start
 
 Follow these steps to set up the repository and start working with ADK agents:
 
@@ -150,54 +219,51 @@ git clone https://github.com/[YOUR_USERNAME]/awesome-adk-agents.git
 cd awesome-adk-agents
 ```
 
-## 🛠️ Usage
-
 ### General Workflow
 
 1. **Navigate to an Agent Directory**: Choose either a custom agent or an example:
 
-   ```bash
-   # For custom agents
-   cd job-interview-agent/
-   ```
+```bash
+# For custom agents
+cd my-adk-agents/job-interview-agent/
+```
 
-2. **Follow Agent-Specific Instructions**: Each agent has its own `README.md` with detailed setup and usage instructions.
+1. **Follow Agent-Specific Instructions**: Each agent has its own `README.md` with detailed setup and usage instructions.
 
-    Generally, the setup involves:
+Generally, the setup involves:
 
-    - Creating a Python virtual environment
+- Creating a Python virtual environment
 
-        ```bash
-        python -m venv .venv
-        source .venv/bin/activate  # macOS/Linux
-        .venv\Scripts\activate  # Windows
-        ```
+```bash
+python -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate  # Windows
+```
 
-    - Installing dependencies
+- Installing dependencies
 
-        ```bash
-        pip install -r requirements.txt
-        ```
+```bash
+pip install -r requirements.txt
+```
 
-3. **Common Commands of ADK**:
+1. **Common Commands of ADK**:
 
-   ```bash
-    Usage: adk [OPTIONS] COMMAND [ARGS]...
+```bash
+Usage: adk [OPTIONS] COMMAND [ARGS]...
 
-    Agent Development Kit CLI tools.
+Agent Development Kit CLI tools.
 
-    Options:
-        --help  Show this message and exit.
+Options:
+    --help  Show this message and exit.
 
-        Commands:
-        web         Starts a FastAPI server with Web UI for agents(Mostly used)
-        api_server  Starts a FastAPI server for agents
-        create      Creates a new app in the current folder with prepopulated agent...
-        deploy      Deploys agent to hosted environments
-        eval        Evaluates an agent given the eval sets
-        run         Runs an interactive CLI for a certain agent
-        
-   ```
+    Commands:
+    web         Starts a FastAPI server with Web UI for agents(Mostly used)
+    api_server  Starts a FastAPI server for agents
+    create      Creates a new app in the current folder with prepopulated agent...
+    deploy      Deploys agent to hosted environments
+    eval        Evaluates an agent given the eval sets
+    run         Runs an interactive CLI for a certain agent
+```
 
 ### Tips for Success
 
@@ -206,21 +272,13 @@ cd awesome-adk-agents
 - **Environment Variables**: Many agents require specific environment variables for API keys
 - **Test in Development**: Always test agents in a safe environment before production use
 
+---
+
 ### Reporting Issues or Suggestions
 
 - 🐛 **Bug Reports**: Found an issue with an existing agent?
 - 💡 **Feature Requests**: Have ideas for new agents or improvements?
 - 📚 **Documentation**: Spotted unclear or missing documentation?
-
-## 🗺️ Roadmap
-
-Our future plans for this repository include:
-
-- 🧠 **Advanced Custom Agents**: More sophisticated agents for specialized domains (healthcare, legal, scientific research)
-- 📚 **Comprehensive Tutorials**: Step-by-step guides for building agents from scratch
-- 🔄 **ADK Feature Showcases**: Examples highlighting new ADK capabilities as they're released
-- 🎯 **Domain-Specific Collections**: Curated agent collections for specific industries
-- 🤖 **Multi-Modal Agents**: Agents that work with text, image, audio, and video
 
 ### Contribution Guidelines
 
@@ -256,4 +314,4 @@ Together, we can build an amazing collection of AI agents that showcase the powe
 
 ---
 
-*Happy agent building! 🤖✨*
+_Happy agent building!_ 🤖✨
