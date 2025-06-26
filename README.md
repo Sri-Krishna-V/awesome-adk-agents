@@ -149,38 +149,20 @@ _Comprehensive guides, tutorials, and educational content_
 
 ### 🚀 Quickstart Courses
 
-- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course) 🟢📚 - Fundamentals of ADK, from basics to advanced workflows and multi-agent systems
-- 📚 [A2A Crash Course by Brandon Hancock](https://github.com/bhancockio/agent2agent) 🟡📚 - Comprehensive guide to building agent-to-agent (A2A) communication using ADK
-- 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple) 🟢📚 - From basics to A2A integration with real world applications and projects
-- 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos) 🟢📚 - Collection of practical demos showcasing various ADK features
+- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course)
+  - A fabulous curation for beginners covering the fundamentals of ADK, from basics to advanced workflows and multi-agent systems.
 
-### 📖 Tutorials & Walkthroughs
+- 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple)
+  - From basics to A2A integration, this course explores real world applications and projects
 
-- 📖 [meteatamel/adk-demos](https://github.com/meteatamel/adk-demos/) 🟢📖 - Collection of demos and tutorials for Google's Agent Development Kit
-- 📖 [sokart/adk-walkthrough](https://github.com/sokart/adk-walkthrough) 🟡📖 - Step-by-step guides and examples using the open-source Python ADK framework
-- 📖 [bhancockio/RAG-Agent-Tutorial](https://github.com/bhancockio/adk-rag-agent) 🟡📖 - Complete RAG implementation with ADK and Vertex AI
-
-### 📝 Articles & Best Practices
-
-- 📝 [From Zero to Multi-Agents: A Beginner's Guide to Google ADK](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861) 🟢📝 - Step-by-step beginner guide by Dr Sokratis Kartakis
-- 📝 [Getting Started with ADK + AWS Bedrock](https://medium.com/@ankitsharma61016/getting-started-with-agent-development-kit-adk-with-aws-bedrock-2a4cc91fbd21) 🟡📝💡 - Step-by-step guide to run Bedrock models in ADK via LiteLLM
-- 📝 [Getting started with ADK — Function tools](https://medium.com/google-cloud/getting-started-with-agent-development-kit-function-tools-3f038ee646ea) 🟢📝💡 - Glen Yu's walkthrough of ADK function-tool patterns
-
-### 🎥 Video Content
-
-- 🎥 [Introducing Agent Development Kit (ADK)](https://www.youtube.com/watch?v=zgrOwow_uTQ) 🟢🎥 - 3-minute product overview shown at launch  
-- 🎥 [Getting started with ADK](https://www.youtube.com/watch?v=44C8u0CDtSo) 🟢🎥 - 12-minute "hello-world" coding session from pip install to first agent
-- 🎥 [Google Launches an Agent SDK – ADK Deep Dive](https://www.youtube.com/watch?v=G9wnpfW6lZY) 🟡🎥 - Independent review comparing ADK to other agent SDKs
+- 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos)
+  - A collection of practical demos showcasing various ADK features and capabilities
 
 ---
 
-## 🎯 Official Examples
+### Use Cases
 
-_Google ADK samples repository - educational and demonstration purposes only_
-
-> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK samples disclaimer](https://github.com/google/adk-samples).
-
-### 🔬 Research & Analysis
+#### 🔬 Research & Analysis
 
 - 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research) 🟡📚 - Comprehensive research assistant for academic papers and citations
 - 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Automated data analysis and visualization workflows  
@@ -202,9 +184,35 @@ _Google ADK samples repository - educational and demonstration purposes only_
 
 ### 🔧 Development & Technical
 
-- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Automated bug detection and resolution suggestions to help IT Support and SDE
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🔴📚 - Model performance evaluation and optimization
-- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🟡📚 - Advanced Retrieval-Augmented Generation implementations
+- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant): Automated bug detection and resolution suggestions to help IT Support and SDE
+- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor): Model performance evaluation and optimization
+- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG): Advanced Retrieval-Augmented Generation implementations
+- 📖 [RAG Agent Tutorial](https://github.com/bhancockio/adk-rag-agent): Complete RAG implementation with ADK and Vertex AI
+
+### 💹 Trading & Finance
+
+- 📈 [Agentic Trading Simulator](https://github.com/kweinmeister/agentic-trading): Multi-agent trading system with risk management, featuring AlphaBot (SMA strategy) and RiskGuard agents communicating via A2A protocol
+
+### Media & Content Creation
+
+- 🎨 [YouTube Thumbnail Agent](https://github.com/bhancockio/adk-youtube-thumbnail-agent): Automated thumbnail generation and optimization
+- 📊 [AI Trends Analysis Pipeline](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/analyzer_agent): A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends using Exa Search, Tavily Search, Firecrawl and Nebius AI.
+
+### 🏫 Education & Learning
+
+- 📚 [Education Path Advisor for India](./education-path-advisor/): Personalized education and career guidance for Indian students
+
+### Miscellaneous
+
+- 📁 [Job Finder Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/jobfinder_agent): Sequential Agent using Mistral OCR, Linkup API and Nebius AI
+- 📧 [Email ADK Agent](https://github.com/Astrodevil/ADK-Agent-Examples/tree/main/email_adk_agent): Email management and automation agent using Resend API
+- 📦 [MCP Gemma 3 Agent](https://github.com/arjunprabhulal/adk-mcp-gemma3): Gemma 3 leveraged by Ollama, MCP Youtube Search
+
+#### 🧠 Advanced Techniques
+
+- 🎤 [Voice-Enabled Agent](https://github.com/bhancockio/adk-voice-agent): Speech-to-text and voice interaction capabilities with G-Calendar integration
+
+- 🔌 [MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial): Model Context Protocol (Both local and remote) with ADK
 
 ---
 
