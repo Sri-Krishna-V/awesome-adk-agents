@@ -7,18 +7,15 @@
   </h1>
 </div>
 
-
-<p align="center"><img- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Automated bug detection and resolution suggestions to help IT Support and SDE
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🔴📚 - Model performance evaluation and optimization
-- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🟡📚 - Advanced Retrieval-Augmented Generation implementationsc="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="150px" alt="Agent Development Kit">
+<p align="center"><img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/sri-krishna-v/awesome-adk-agents?style=flat-square" alt="Stars">
-  <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
   <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
+  <a href="https://deepwiki.com/google/adk-python"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
 _A curated resource for building, deploying, and scaling AI agents using [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/). Includes templates, best practices, and production-ready examples for research, business, automation, education, content creation, and more._
@@ -151,13 +148,18 @@ _Comprehensive guides, tutorials, and educational content_
 
 ### 🚀 Quickstart Courses
 
-- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course) 🟢📚 - Fundamentals of ADK, from basics to advanced workflows and multi-agent systems
+- 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course) 🟢📚 - Fundamentals of ADK, from basics to advanced workflows and multi-agent systems with [Youtube]() tutorial
 - 📚 [A2A Crash Course by Brandon Hancock](https://github.com/bhancockio/agent2agent) 🟡📚 - Comprehensive guide to building agent-to-agent (A2A) communication using ADK
 - 📚 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple) 🟢📚 - From basics to A2A integration with real world applications and projects
 - 📚 [theailifestyle/google-adk-demos](https://github.com/theailifestyle/google-adk-demos) 🟢📚 - Collection of practical demos showcasing various ADK features
 
+### 🧪 Official Hands-on Learning
+
+- 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) ⭐📚 - Interactive, guided tutorials with hands-on coding exercises from Google
+
 ### 📖 Tutorials & Walkthroughs
 
+- 📖 [chongdashu/adk-mcp-a2a-crash-course](https://github.com/chongdashu/adk-mcp-a2a-crash-course) 🟡📖🔥 - Complete multi-agent system with ADK + A2A + MCP integration, featuring Notion and ElevenLabs with full architecture, testing, and [YouTube](https://www.youtube.com/watch?v=s6-Ofu-uu2k) tutorial
 - 📖 [meteatamel/adk-demos](https://github.com/meteatamel/adk-demos/) 🟢📖 - Collection of demos and tutorials for Google's Agent Development Kit
 - 📖 [sokart/adk-walkthrough](https://github.com/sokart/adk-walkthrough) 🟡📖 - Step-by-step guides and examples using the open-source Python ADK framework
 - 📖 [bhancockio/RAG-Agent-Tutorial](https://github.com/bhancockio/adk-rag-agent) 🟡📖 - Complete RAG implementation with ADK and Vertex AI
@@ -166,8 +168,10 @@ _Comprehensive guides, tutorials, and educational content_
 ### 📝 Articles & Best Practices
 
 - 📝 [From Zero to Multi-Agents: A Beginner's Guide to Google ADK](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861) 🟢📝 - Step-by-step beginner guide by Dr Sokratis Kartakis
-- 📝 [Getting Started with ADK + AWS Bedrock](https://medium.com/@ankitsharma61016/getting-started-with-agent-development-kit-adk-with-aws-bedrock-2a4cc91fbd21) 🟡📝💡 - Step-by-step guide to run Bedrock models in ADK via LiteLLM
+- 📝 [Choosing the Right Deployment Path for Your Google ADK Agents](https://medium.com/google-cloud/choosing-the-right-deployment-path-for-your-google-adk-agents-86c89c251ab5) 🟡📝🏭 - Official Google Cloud guide comparing deployment strategies (Cloud Run vs Vertex AI vs GKE) for production ADK agents
+- 📝 [MCP Toolbox for Databases Guide](http://googleapis.github.io/genai-toolbox/getting-started/) 🟡📝 - Official Google Cloud guide on multi-agent architectures and patterns
 - 📝 [Getting started with ADK — Function tools](https://medium.com/google-cloud/getting-started-with-agent-development-kit-function-tools-3f038ee646ea) 🟢📝💡 - Glen Yu's walkthrough of ADK function-tool patterns
+
 
 ### 🎥 Video Content
 
