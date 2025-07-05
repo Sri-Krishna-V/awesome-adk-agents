@@ -127,6 +127,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔌 [RubensZimbres/A2A_ADK_MCP](https://github.com/RubensZimbres/A2A_ADK_MCP) 🔴 - Multi-Agent Systems using Google's ADK + A2A + MCP
 - 🎤 [bhancockio/Voice-Enabled-Agent](https://github.com/bhancockio/adk-voice-agent) 🟡 - Speech-to-text and voice interaction capabilities with G-Calendar integration and comprehensive setup documentation
 - 🔗 [serkanyasr/mcp-agent-tool-adapter](https://github.com/serkanyasr/mcp-agent-tool-adapter) 🟡 - Converts MCP tools into Google ADK or LangGraph agents with streaming FastAPI/CLI
+- 🔧 [codeninja/Mongoose Migration Agent System](https://gist.github.com/codeninja/a6e117a3480de8d32dd9ef01b519cdae) 🔴🔥 - Sophisticated multi-agent system for automated Mongoose database migration (v6→v8) with specialized TypeScript/JavaScript agents, MCP filesystem integration, and sequential workflow orchestration
 
 ### Domain-Specific Applications
 
