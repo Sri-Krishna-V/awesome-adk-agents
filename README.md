@@ -121,6 +121,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔥 [Parth0248/Forkcast](https://github.com/Parth0248/Forkcast) 🏭🟡 - Multi-agent AI system for collaborative dining decisions with deployed webapp, technical reports, and Cloud Run deployment
 - 🚀 [kweinmeister/agentic-trading](https://github.com/kweinmeister/agentic-trading) 🏭🔴 - Multi-agent trading system with risk management, featuring AlphaBot and RiskGuard agents with complete A2A protocol implementation and production deployment
 - 📊 [vladkol/CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent) 🏭🔴 - Multi-agentic system with Advanced RAG and NL2SQL over Salesforce Data, "Run on Google Cloud" deployment
+- 🏙️ [M-JULIANI/nyc-monitor](https://github.com/M-JULIANI/nyc-monitor) 🟡🏭🔥 - AI-powered urban intelligence system for real-time NYC event analysis and reporting with multi-agent architecture and automated Google Slides reports
 
 ### Integration & Advanced Patterns
 
