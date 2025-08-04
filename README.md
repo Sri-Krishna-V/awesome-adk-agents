@@ -18,7 +18,7 @@
   <a href="https://deepwiki.com/google/adk-python"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
-_A curated resource for building, deploying, and scaling AI agents using [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/). Includes templates, best practices, and production-ready examples for research, business, automation, education, content creation, and more._
+_The most comprehensive curated collection for Google's Agent Development Kit (ADK) - featuring **90+ production-ready agents, templates, and resources** from hackathon winners, industry experts, and the vibrant ADK community. From beginner tutorials to enterprise-grade multi-agent systems, discover battle-tested solutions for research, business automation, education, content creation, and specialized domains._
 
 ## 📖 Table of Contents
 
@@ -63,20 +63,14 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 
 ## What is Google's Agent Development Kit (ADK)?
 
-Agent Development Kit (ADK) is a flexible and modular framework for developing and deploying AI agents. While optimized for Gemini and the Google ecosystem, ADK is model-agnostic, deployment-agnostic, and is built for compatibility with other frameworks. ADK was designed to make agent development feel more like software development, to make it easier for developers to create, deploy, and orchestrate agentic architectures that range from simple tasks to complex workflows.
+**Google's Agent Development Kit (ADK)** is a Python framework that makes building AI agents feel like software development. Model-agnostic and deployment-flexible, ADK simplifies creating everything from single-purpose tools to complex multi-agent systems.
 
 ### 🗝️ Key Features
 
-- **Rich Tool Ecosystem**: Utilize pre-built tools, custom functions,
-  OpenAPI specs, or integrate existing tools to give agents diverse
-  capabilities, all for tight integration with the Google ecosystem.
-
-- **Code-First Development**: Define agent logic, tools, and orchestration
-  directly in Python for ultimate flexibility, testability, and versioning.
-
-- **Modular Multi-Agent Systems**: Design scalable applications by composing multiple specialized agents into flexible hierarchies.
-
-- **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
+- **🛠️ Rich Tool Ecosystem**: Pre-built tools, custom functions, OpenAPI specs, and Google ecosystem integration
+- **💻 Code-First Development**: Define agents in Python with full testability and version control
+- **🔗 Multi-Agent Orchestration**: Compose specialized agents into scalable hierarchies
+- **🚀 Deploy Anywhere**: Cloud Run, Vertex AI Agent Engine, or any containerized environment
 
 ## 🏆 Featured Projects
 

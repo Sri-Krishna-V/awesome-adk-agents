@@ -53,3 +53,5 @@ examples/
 prds/
 
 gemini-fullstack/
+
+.gitignore
