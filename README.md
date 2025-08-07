@@ -143,7 +143,7 @@ _Outstanding projects from the Agent Development Kit Hackathon with Google Cloud
 _Ready-to-use templates to kickstart your ADK projects_
 
 - 🚀 [GoogleCloudPlatform/agent-starter-pack](https://github.com/GoogleCloudPlatform/agent-starter-pack) 🏭🟢 - Production-ready Generative AI Agent templates for Google Cloud with ADK samples, comprehensive deployment infrastructure
-- 🔥 [Gemini Fullstack ADK Quickstart](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🏭🟡⭐ - **The gold standard**: Complete fullstack research agent with React frontend, human-in-the-loop workflows, autonomous research pipelines, and Cloud Run deployment
+- 🔥 [Gemini Fullstack ADK Quickstart](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🏭�⭐ - **The gold standard**: Complete fullstack research agent with React frontend, human-in-the-loop workflows, autonomous research pipelines, and Cloud Run deployment
 - 🧪 [Yash-Kavaiya/google-adk-test-automation](https://github.com/Yash-Kavaiya/google-adk-test-automation) 🏭🟡 - Comprehensive ADK testing framework with automated conversation flows, session management, and detailed CSV reporting
 - 📱 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭🟢 - LINE Bot template with Docker, Cloud Run deployment, and security configurations  
 - 🌐 [phamvuhoang/google-adk-nextjs-starter](https://github.com/phamvuhoang/google-adk-nextjs-starter) 🟢 - Next.js starter template for Google ADK projects with Angular frontend
@@ -238,29 +238,35 @@ _Google ADK samples repository - educational and demonstration purposes only_
 
 ### 🔬 Research & Analysis
 
-- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research) 🟡📚 - Comprehensive research assistant for academic papers and citations
-- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Automated data analysis and visualization workflows  
-- 📈 [Time Series Forecasting Agent](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting) 🔴📚 - Advanced predictive analytics for time-based data
-- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🟡📚 - Federal Reserve meeting analysis and insights
+- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research) 🟡📚 - Assists researchers in identifying recent publications and discovering emerging research areas
+- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Multi-agent system for sophisticated data analysis with NL2SQL and structured data processing
+- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🔴📚 - Federal Reserve meeting analysis and market event insights
+- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🟢📚 - Chatbot response verification and content auditing with Google Search integration
 
 ### 💼 Business & Customer Service
 
-- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent) 🟡📚 - Automated insurance claim processing and customer support
-- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - SEO and brand visibility enhancement for products in retail websites
-- 📞 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟡📚 - Multi-channel customer support automation
-- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Personalized financial planning and investment advice
+- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent) 🟡📚 - Auto insurance management for members, claims, rewards and roadside assistance with Apigee integration
+- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - E-commerce product data enrichment analyzing top search results with BigQuery integration
+- 🏠 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟢📚 - Home & garden customer service with product selection, order management, and live streaming support
+- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Educational content assistant for financial advisors covering finance and investment topics
 
 ### 🛍️ E-commerce & Marketing
 
 - 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping) 🟡📚 - AI-driven product recommendations and shopping assistance
-- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency) 🟡📚 - Comprehensive digital marketing campaign management
-- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Intelligent travel planning and booking assistance
+- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency) 🟡📚 - Website and product launch automation with domain optimization, content generation, and brand asset design
+- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Multi-agent travel planning and digital task assistance with dynamic instructions
 
 ### 🔧 Development & Technical
 
-- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Automated bug detection and resolution suggestions to help IT Support and SDE
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🔴📚 - Model performance evaluation and optimization
-- 📚 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🔴📚 - Advanced Retrieval-Augmented Generation implementations
+- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant) 🟡📚 - Bug resolution assistant with RAG, MCP, and external knowledge sources (GitHub, StackOverflow)
+- 🤖 [Machine Learning Engineering](https://github.com/google/adk-samples/tree/main/python/agents/machine-learning-engineering) 🔴📚 - Autonomous ML model building and training for state-of-the-art performance on diverse ML tasks
+- 🧩 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🔴📚 - Vertex AI RAG Engine powered document Q&A with citations
+
+### 🎨 Specialized Applications
+
+- 🎨 [Image Scoring Agent](https://github.com/google/adk-samples/tree/main/python/agents/image-scoring) 🟢📚 - Image generation and policy compliance scoring with Imagen integration
+- 🐪 [CAMEL Integration](https://github.com/google/adk-samples/tree/main/python/agents/camel) 🔴📚 - Multi-agent communication framework integration with CAMEL
+- 🔥 [Gemini Fullstack](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🔴📚⭐ - **Complete fullstack research agent** with React frontend, FastAPI backend, and Human-in-the-Loop workflows
 
 ---
 
