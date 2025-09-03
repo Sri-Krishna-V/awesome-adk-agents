@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png)](https://mseep.ai/app/sri-krishna-v-awesome-adk-agents)
+
 <div align="center">
   <h1>
     Awesome ADK Agents 
