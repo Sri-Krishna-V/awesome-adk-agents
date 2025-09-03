@@ -1,5 +1,3 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png)](https://mseep.ai/app/sri-krishna-v-awesome-adk-agents)
-
 <div align="center">
   <h1>
     Awesome ADK Agents 
@@ -342,6 +340,8 @@ This repository serves **2,500+ developers** building production AI agents. Help
 - ⭐ **Star** if this helps your development
 - 🔗 **Share** with your network
 - 🤝 **Contribute** your expertise
+
+- [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png)](https://mseep.ai/app/sri-krishna-v-awesome-adk-agents)
 
 ---
 
