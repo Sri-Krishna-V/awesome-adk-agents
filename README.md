@@ -342,6 +342,8 @@ This repository serves **2,500+ developers** building production AI agents. Help
 - 🔗 **Share** with your network
 - 🤝 **Contribute** your expertise
 
+- [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png)](https://mseep.ai/app/sri-krishna-v-awesome-adk-agents)
+
 ---
 
 <div align="center">
