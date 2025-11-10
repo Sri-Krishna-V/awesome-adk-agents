@@ -196,6 +196,10 @@ _Outstanding community projects showcasing ADK capabilities_
 
 _Comprehensive guides, tutorials, and educational content_
 
+### ⭐ Featured Training Platform
+
+- 🏆 **[Google ADK Training Hub](https://raphaelmansuy.github.io/adk_training/)** 🟢🟡🔴📚🔥 - **The most comprehensive ADK training platform**: 35+ hands-on tutorials, production deployment patterns, multi-agent architectures, Cloud Run/Vertex AI deployment, React/Next.js integration, and enterprise-grade best practices. Progressive learning paths from beginner to advanced with copy-paste ready code and working implementations.
+
 ### 🚀 Quickstart Courses
 
 - 📚 [ADK Crash Course by Brandon Hancock](https://github.com/bhancockio/agent-development-kit-crash-course) 🟢📚 - Fundamentals of ADK, from basics to advanced workflows and multi-agent systems with [Youtube](https://www.youtube.com/watch?v=P4VFL9nIaIA&t=2659s) tutorial
@@ -238,6 +242,7 @@ _Comprehensive guides, tutorials, and educational content_
 - 🎥 [Getting started with ADK](https://www.youtube.com/watch?v=44C8u0CDtSo) 🟢🎥 - 12-minute "hello-world" coding session from pip install to first agent
 - 🎥 [Google Launches an Agent SDK – ADK Deep Dive](https://www.youtube.com/watch?v=G9wnpfW6lZY) 🟡🎥 - Independent review comparing ADK to other agent SDKs
 - 🎥 [Agent Factory: AI Agents for Data Engineering and Data Science](https://cloud.google.com/blog/topics/developers-practitioners/agent-factory-recap-ai-agents-for-data-engineering-and-data-science) 🟡🎥 - Episode recap featuring BigQuery Data Engineering Agent, Data Science Agent in Colab Enterprise, and creative ADK application with Spanner graph database
+- 🎥 [ADK Tutorial Playlist](https://www.youtube.com/playlist?list=PL6tW9BrhiPTAZts0W5nQS9dbW6VMnLKab) 🟢🎥 - Comprehensive video tutorial series covering ADK fundamentals and advanced topics
 
 ---
 
