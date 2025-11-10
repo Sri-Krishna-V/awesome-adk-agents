@@ -206,6 +206,7 @@ _Comprehensive guides, tutorials, and educational content_
 ### 🧪 Official Hands-on Learning
 
 - 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) ⭐📚 - Interactive, guided tutorials with hands-on coding exercises from Google
+- 🧪 [Build Your First ADK Agent Workforce](https://cloud.google.com/blog/topics/developers-practitioners/build-your-first-adk-agent-workforce) ⭐🟢📚 - Complete learning path with 3 official codelabs: building autonomous agents, empowering agents with tools, and orchestrating multi-agent systems
 - 🎓 [5-Day Agents Course on Kaggle](https://www.kaggle.com/learn-guide/5-day-agents) ⭐📚 - Comprehensive 5-day online course crafted by Google's ML researchers and engineers exploring foundations and practical applications of AI agents, covering core components (models, tools, orchestration, memory, and evaluation) and production-ready systems
 - 📖 [Introduction to Agents Whitepaper](https://www.kaggle.com/whitepaper-introduction-to-agents) ⭐📚 - Comprehensive whitepaper by Google's AI researchers explaining the paradigm shift from passive AI models to autonomous problem-solving agents, covering agent architecture, capabilities, and real-world applications
 
@@ -222,6 +223,7 @@ _Comprehensive guides, tutorials, and educational content_
 ### 📝 Articles & Best Practices
 
 - 📝 [More Ways to Build, Scale, and Govern AI Agents with Vertex AI Agent Builder](https://cloud.google.com/blog/products/ai-machine-learning/more-ways-to-build-and-scale-ai-agents-with-vertex-ai-agent-builder) ⭐🟡📝🏭 - Official Google Cloud announcement of ADK updates including observability, evaluation, agent identities, and production scaling features with real customer case studies
+- 📝 [ADK Architecture: When to Use Sub-Agents versus Agents as Tools](https://cloud.google.com/blog/topics/developers-practitioners/where-to-use-sub-agents-versus-agents-as-tools) ⭐🟡📝 - Essential architectural guide with decision matrix for choosing between sub-agents and agent tools, featuring real-world use cases (data agents, travel planners) and best practices for multi-agent systems
 - 📝 [From Zero to Multi-Agents: A Beginner's Guide to Google ADK](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861) 🟢📝 - Step-by-step beginner guide by Dr Sokratis Kartakis
 - 📝 [Choosing the Right Deployment Path for Your Google ADK Agents](https://medium.com/google-cloud/choosing-the-right-deployment-path-for-your-google-adk-agents-86c89c251ab5) 🟡📝🏭 - Official Google Cloud guide comparing deployment strategies (Cloud Run vs Vertex AI vs GKE) for production ADK agents
 - 📝 [Announcing a Datastore-Backed Session Service for the ADK](https://medium.com/google-cloud/announcing-a-new-datastore-backed-session-service-for-the-adk-d14596ae28df) 🟡📝🏭 - Google Cloud solution for persistent agent sessions in serverless environments using Cloud Datastore instead of SQLite
@@ -234,6 +236,7 @@ _Comprehensive guides, tutorials, and educational content_
 - 🎥 [Introducing Agent Development Kit (ADK)](https://www.youtube.com/watch?v=zgrOwow_uTQ) 🟢🎥 - 3-minute product overview shown at launch  
 - 🎥 [Getting started with ADK](https://www.youtube.com/watch?v=44C8u0CDtSo) 🟢🎥 - 12-minute "hello-world" coding session from pip install to first agent
 - 🎥 [Google Launches an Agent SDK – ADK Deep Dive](https://www.youtube.com/watch?v=G9wnpfW6lZY) 🟡🎥 - Independent review comparing ADK to other agent SDKs
+- 🎥 [Agent Factory: AI Agents for Data Engineering and Data Science](https://cloud.google.com/blog/topics/developers-practitioners/agent-factory-recap-ai-agents-for-data-engineering-and-data-science) 🟡🎥 - Episode recap featuring BigQuery Data Engineering Agent, Data Science Agent in Colab Enterprise, and creative ADK application with Spanner graph database
 
 ---
 
