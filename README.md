@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-    Awesome ADK Agents 
+    Awesome ADK Agents
     <a href="https://awesome.re">
       <img src="https://awesome.re/badge.svg" alt="Awesome">
     </a>
@@ -100,7 +100,7 @@ _My showcase agents demonstrating production-ready ADK implementations_
 _Outstanding projects from the Agent Development Kit Hackathon with Google Cloud (May 12 - June 23, 2025)_
 
 > **🎉 $50,000 in prizes awarded** | **476 submissions** | **10,432 participants worldwide**
-> 
+>
 > [View all submissions](https://googlecloudmultiagents.devpost.com/project-gallery) | [Hackathon details](https://googlecloudmultiagents.devpost.com/)
 
 ### 🥇 Grand Prize Winner ($15,000)
@@ -130,6 +130,7 @@ _Outstanding projects from the Agent Development Kit Hackathon with Google Cloud
 - 📊 [Vendo AI](https://devpost.com/software/vendo-ai) 🏭🟡🔥 - Analytics co-pilot connecting to data and helping teams make faster, smarter decisions
 
 **Hackathon Highlights:**
+
 - **476 total submissions** from global developers
 - **Multi-agent focus**: All projects showcase collaborative AI systems
 - **Categories**: Automation, Data Analysis, Customer Service, Content Creation
@@ -220,6 +221,7 @@ _Comprehensive guides, tutorials, and educational content_
 
 - 📝 [From Zero to Multi-Agents: A Beginner's Guide to Google ADK](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861) 🟢📝 - Step-by-step beginner guide by Dr Sokratis Kartakis
 - 📝 [Choosing the Right Deployment Path for Your Google ADK Agents](https://medium.com/google-cloud/choosing-the-right-deployment-path-for-your-google-adk-agents-86c89c251ab5) 🟡📝🏭 - Official Google Cloud guide comparing deployment strategies (Cloud Run vs Vertex AI vs GKE) for production ADK agents
+- 📝 [Announcing a Datastore-Backed Session Service for the ADK](https://medium.com/google-cloud/announcing-a-new-datastore-backed-session-service-for-the-adk-d14596ae28df) 🟡📝🏭 - Google Cloud solution for persistent agent sessions in serverless environments using Cloud Datastore instead of SQLite
 - 📝 [Build a Python AI Agent in 15 Minutes with Google ADK and MongoDB Atlas Vector Search](https://medium.com/google-cloud/build-a-python-ai-agent-in-15-minutes-with-google-adk-and-mongodb-atlas-vector-search-groceries-b6c4af017629) 🟡📝💡 - Practical tutorial building a grocery shopping agent with ADK, MongoDB Vector Search, and Gemini 2.0 Flash
 - 📝 [Building Next-Gen AI Agents with Google ADK, MCP, RAG and Ollama](https://medium.com/@tam.tamanna18/building-next-gen-ai-agents-with-google-adk-mcp-rag-and-ollama-ca3c1e5002da) 🟡📝💡 - Comprehensive tutorial on building multi-agent chatbots integrating ADK + MCP + RAG + Ollama with step-by-step code and architecture diagrams
 - 📝 [Building a Knowledge Base from Your Codebase using Google ADK](https://medium.com/gitconnected/building-a-knowledge-base-from-your-codebase-using-google-adk-7508e845bdc1) 🟡📝🔥 - Complete guide to building multi-agent documentation systems that automatically analyze codebases and generate structured knowledge bases using ADK's planner and writer agents
@@ -251,24 +253,36 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - E-commerce product data enrichment analyzing top search results with BigQuery integration
 - 🏠 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟢📚 - Home & garden customer service with product selection, order management, and live streaming support
 - 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Educational content assistant for financial advisors covering finance and investment topics
+- 🚨 [Incident Management](https://github.com/google/adk-samples/tree/main/python/agents/incident-management) 🟢📚 - ServiceNow integration with Application Integration Connectors and dynamic identity propagation
+- 📦 [Order Processing](https://github.com/google/adk-samples/tree/main/python/agents/order-processing) 🟢📚 - Automated order workflows with human-in-the-loop using Application Integration Connectors
 
 ### 🛍️ E-commerce & Marketing
 
 - 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping) 🟡📚 - AI-driven product recommendations and shopping assistance
 - 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency) 🟡📚 - Website and product launch automation with domain optimization, content generation, and brand asset design
 - ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Multi-agent travel planning and digital task assistance with dynamic instructions
+- 📈 [Google Trends Agent](https://github.com/google/adk-samples/tree/main/python/agents/google-trends-agent) 🟡📚 - BigQuery-powered trending search terms analysis by region and time period
+- 📺 [Product Catalog Ad Generation](https://github.com/google/adk-samples/tree/main/python/agents/product-catalog-ad-generation) 🟡📚 - Automated advertising content generation from product catalogs
 
 ### 🔧 Development & Technical
 
 - 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant) 🟡📚 - Bug resolution assistant with RAG, MCP, and external knowledge sources (GitHub, StackOverflow)
 - 🤖 [Machine Learning Engineering](https://github.com/google/adk-samples/tree/main/python/agents/machine-learning-engineering) 🔴📚 - Autonomous ML model building and training for state-of-the-art performance on diverse ML tasks
-- 🧩 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🔴📚 - Vertex AI RAG Engine powered document Q&A with citations
+- 🧩 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) �📚 - Vertex AI RAG Engine powered document Q&A with citations
+- 📊 [Data Engineering Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-engineering) 🔴📚 - BigQuery and Dataform pipeline builder for ELT workflows and analytics engineering
 
 ### 🎨 Specialized Applications
 
 - 🎨 [Image Scoring Agent](https://github.com/google/adk-samples/tree/main/python/agents/image-scoring) 🟢📚 - Image generation and policy compliance scoring with Imagen integration
 - 🐪 [CAMEL Integration](https://github.com/google/adk-samples/tree/main/python/agents/camel) 🔴📚 - Multi-agent communication framework integration with CAMEL
 - 🔥 [Gemini Fullstack](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🔴📚⭐ - **Complete fullstack research agent** with React frontend, FastAPI backend, and Human-in-the-Loop workflows
+- 🏥 [Medical Pre-Authorization](https://github.com/google/adk-samples/tree/main/python/agents/medical-pre-authorization) 🟡📚 - Healthcare pre-authorization automation analyzing medical records and policies for coverage determination
+- 🎬 [Short Movie Agents](https://github.com/google/adk-samples/tree/main/python/agents/short-movie-agents) 🟡📚 - End-to-end video construction based on user intent with multi-agent coordination
+- 🎙️ [Podcast Transcript Agent](https://github.com/google/adk-samples/tree/main/python/agents/podcast_transcript_agent) 🟡📚 - Podcast transcription and analysis agent
+- ✍️ [Blog Writer](https://github.com/google/adk-samples/tree/main/python/agents/blog-writer) 🟡📚 - Automated blog content generation and writing assistant
+- 🛡️ [Safety Guardrail Plugins](https://github.com/google/adk-samples/tree/main/python/agents/safety-plugins) 🟡📚 - Security filters using Gemini-as-judge and Model Armor for jailbreak protection
+- 💳 [Antom Payment](https://github.com/google/adk-samples/tree/main/python/agents/antom-payment) 🟡📚 - Ant International payment and refund integration via MCP tools
+- 💬 [Realtime Conversational Agent](https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent) 🟡📚 - Live streaming conversational agent with real-time interaction capabilities
 
 ---
 
@@ -330,6 +344,7 @@ We welcome high-quality contributions that advance the ADK ecosystem. See [CONTR
 ## 🙏 Acknowledgements
 
 **Core Contributors:**
+
 - Google ADK Team - Framework development
 - Brandon Hancock - Educational content and tutorials  
 - Community Contributors - Featured projects and improvements
