@@ -206,6 +206,7 @@ _Comprehensive guides, tutorials, and educational content_
 ### 🧪 Official Hands-on Learning
 
 - 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) ⭐📚 - Interactive, guided tutorials with hands-on coding exercises from Google
+- 🎓 [5-Day Agents Course on Kaggle](https://www.kaggle.com/learn-guide/5-day-agents) ⭐📚 - Comprehensive 5-day online course crafted by Google's ML researchers and engineers exploring foundations and practical applications of AI agents, covering core components (models, tools, orchestration, memory, and evaluation) and production-ready systems
 
 ### 📖 Tutorials & Walkthroughs
 
