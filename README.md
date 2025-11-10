@@ -329,7 +329,8 @@ adk deploy      # Deploy to cloud platforms
 ### Resources
 
 - 📖 [Official ADK Documentation](https://google.github.io/adk-docs/)
-- 💬 [Community Discussions](https://github.com/google/adk-python/discussions)
+- � [Third-Party Tools for ADK](https://google.github.io/adk-docs/tools/third-party/) - Official catalog of integrated third-party tools including Browserbase, Exa, Firecrawl, GitHub, Hugging Face, Notion, Tavily, and more
+- �💬 [Community Discussions](https://github.com/google/adk-python/discussions)
 - 🎓 [Learning Path](#-learning-resources)
 
 ---
