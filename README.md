@@ -144,7 +144,7 @@ _Outstanding projects from the Agent Development Kit Hackathon with Google Cloud
 _Ready-to-use templates to kickstart your ADK projects_
 
 - 🚀 [GoogleCloudPlatform/agent-starter-pack](https://github.com/GoogleCloudPlatform/agent-starter-pack) 🏭🟢 - Production-ready Generative AI Agent templates for Google Cloud with ADK samples, comprehensive deployment infrastructure
-- 🔥 [Gemini Fullstack ADK Quickstart](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🏭🔴⭐ - **The gold standard**: Complete fullstack research agent with React frontend, human-in-the-loop workflows, autonomous research pipelines, and Cloud Run deployment
+- 🔥 [Deep Search ADK Quickstart](https://github.com/google/adk-samples/tree/main/python/agents/deep-search) 🏭🔴⭐ - **The gold standard**: Complete fullstack research agent (formerly Gemini Fullstack) with React frontend, human-in-the-loop workflows, autonomous research pipelines, and Cloud Run deployment
 - 🧪 [Yash-Kavaiya/google-adk-test-automation](https://github.com/Yash-Kavaiya/google-adk-test-automation) 🏭🟡 - Comprehensive ADK testing framework with automated conversation flows, session management, and detailed CSV reporting
 - 📱 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭🟢 - LINE Bot template with Docker, Cloud Run deployment, and security configurations  
 - 🌐 [phamvuhoang/google-adk-nextjs-starter](https://github.com/phamvuhoang/google-adk-nextjs-starter) 🟢 - Next.js starter template for Google ADK projects with Angular frontend
@@ -288,7 +288,7 @@ _Google ADK samples repository - educational and demonstration purposes only_
 
 - 🎨 [Image Scoring Agent](https://github.com/google/adk-samples/tree/main/python/agents/image-scoring) 🟢📚 - Image generation and policy compliance scoring with Imagen integration
 - 🐪 [CAMEL Integration](https://github.com/google/adk-samples/tree/main/python/agents/camel) 🔴📚 - Multi-agent communication framework integration with CAMEL
-- 🔥 [Gemini Fullstack](https://github.com/google/adk-samples/tree/main/python/agents/gemini-fullstack) 🔴📚⭐ - **Complete fullstack research agent** with React frontend, FastAPI backend, and Human-in-the-Loop workflows
+- 🔥 [Deep Search](https://github.com/google/adk-samples/tree/main/python/agents/deep-search) 🔴📚⭐ - **Complete fullstack research agent** (formerly Gemini Fullstack) with React frontend, FastAPI backend, and Human-in-the-Loop workflows
 - 🏥 [Medical Pre-Authorization](https://github.com/google/adk-samples/tree/main/python/agents/medical-pre-authorization) 🟡📚 - Healthcare pre-authorization automation analyzing medical records and policies for coverage determination
 - 🎬 [Short Movie Agents](https://github.com/google/adk-samples/tree/main/python/agents/short-movie-agents) 🟡📚 - End-to-end video construction based on user intent with multi-agent coordination
 - 🎙️ [Podcast Transcript Agent](https://github.com/google/adk-samples/tree/main/python/agents/podcast_transcript_agent) 🟡📚 - Podcast transcription and analysis agent
@@ -296,6 +296,7 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🛡️ [Safety Guardrail Plugins](https://github.com/google/adk-samples/tree/main/python/agents/safety-plugins) 🟡📚 - Security filters using Gemini-as-judge and Model Armor for jailbreak protection
 - 💳 [Antom Payment](https://github.com/google/adk-samples/tree/main/python/agents/antom-payment) 🟡📚 - Ant International payment and refund integration via MCP tools
 - 💬 [Realtime Conversational Agent](https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent) 🟡📚 - Live streaming conversational agent with real-time interaction capabilities
+- ⚡ [ADK Bidi-streaming Demo](https://github.com/google/adk-samples/tree/main/python/agents/bidi-demo) 🟡📚 - Real-time bidirectional streaming demo with WebSocket communication, multimodal support (audio/video/text), and concurrent task handling
 
 ---
 
