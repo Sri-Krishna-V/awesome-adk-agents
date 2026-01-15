@@ -219,6 +219,7 @@ _Comprehensive guides, tutorials, and educational content_
 
 - 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) ⭐📚 - Interactive, guided tutorials with hands-on coding exercises from Google
 - 🧪 [Build Your First ADK Agent Workforce](https://cloud.google.com/blog/topics/developers-practitioners/build-your-first-adk-agent-workforce) ⭐🟢📚 - Complete learning path with 3 official codelabs: building autonomous agents, empowering agents with tools, and orchestrating multi-agent systems
+- 🧪 [Building GraphRAG Agents with ADK and Neo4j](https://codelabs.developers.google.com/neo4j-adk-graphrag-agents) ⭐🟡📚💡 - Official 65-minute codelab building multi-agent investment research system with Neo4j graph database, MCP Toolbox integration, and GraphRAG patterns for complex relationship traversal and multi-hop reasoning
 - 🎓 [5-Day Agents Course on Kaggle](https://www.kaggle.com/learn-guide/5-day-agents) ⭐📚 - Comprehensive 5-day online course crafted by Google's ML researchers and engineers exploring foundations and practical applications of AI agents, covering core components (models, tools, orchestration, memory, and evaluation) and production-ready systems
 - 📖 [Introduction to Agents Whitepaper](https://www.kaggle.com/whitepaper-introduction-to-agents) ⭐📚 - Comprehensive whitepaper by Google's AI researchers explaining the paradigm shift from passive AI models to autonomous problem-solving agents, covering agent architecture, capabilities, and real-world applications
 
