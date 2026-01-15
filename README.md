@@ -165,6 +165,7 @@ _Outstanding community projects showcasing ADK capabilities_
 
 ### Multi-Agent Systems
 
+- 🤖 [derailed-dash/rickbot-adk](https://github.com/derailed-dash/rickbot-adk) 🏭🟡 - Multi-personality chatbot with FastAPI backend, Next.js UI, OAuth, and multi-agent RAG/search architecture
 - 🔥 [Parth0248/Forkcast](https://github.com/Parth0248/Forkcast) 🏭🟡 - Multi-agent AI system for collaborative dining decisions with deployed webapp, technical reports, and Cloud Run deployment
 - 🚀 [kweinmeister/agentic-trading](https://github.com/kweinmeister/agentic-trading) 🏭🔴 - Multi-agent trading system with risk management, featuring AlphaBot and RiskGuard agents with complete A2A protocol implementation and production deployment
 - 📊 [vladkol/CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent) 🏭🔴 - Multi-agentic system with Advanced RAG and NL2SQL over Salesforce Data, "Run on Google Cloud" deployment
