@@ -334,6 +334,9 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🤖 [Machine Learning Engineering](https://github.com/google/adk-samples/tree/main/python/agents/machine-learning-engineering) 🔴📚 - Autonomous ML model building and training for state-of-the-art performance on diverse ML tasks
 - 🧩 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🟡📚 - Vertex AI RAG Engine powered document Q&A with citations
 - 📊 [Data Engineering Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-engineering) 🔴📚 - BigQuery and Dataform pipeline builder for ELT workflows and analytics engineering
+- 🔧 [Plumber Data Engineering Assistant](https://github.com/google/adk-samples/tree/main/python/agents/plumber-data-engineering-assistant) 🔴📚 - Big data pipeline creator for Apache Spark, Apache Beam, and dBT on GCP
+- 🧪 [SWE Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/swe-benchmark-agent) 🔴📚 - Software engineering benchmark testing and evaluation agent
+- 🧪 [Tau2 Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/tau2-benchmark-agent) 🔴📚 - Tau2 benchmark agent for advanced evaluation tasks
 
 ### 🎨 Specialized Applications
 
@@ -348,6 +351,13 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 💳 [Antom Payment](https://github.com/google/adk-samples/tree/main/python/agents/antom-payment) 🟡📚 - Ant International payment and refund integration via MCP tools
 - 💬 [Realtime Conversational Agent](https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent) 🟡📚 - Live streaming conversational agent with real-time interaction capabilities
 - ⚡ [ADK Bidi-streaming Demo](https://github.com/google/adk-samples/tree/main/python/agents/bidi-demo) 🟡📚 - Real-time bidirectional streaming demo with WebSocket communication, multimodal support (audio/video/text), and concurrent task handling
+- 🛡️ [AI Security Agent](https://github.com/google/adk-samples/tree/main/python/agents/ai-security-agent) 🔴📚 - LLM red team agent for comprehensive security testing and vulnerability assessment
+- 💰 [Currency Agent](https://github.com/google/adk-samples/tree/main/python/agents/currency-agent) 🟡📚 - Currency exchange rate lookups and conversions with A2A and MCP integration
+- 📈 [Google Trends Agent](https://github.com/google/adk-samples/tree/main/python/agents/google-trends-agent) 🟡📚 - Trending search terms analysis with BigQuery dataset by region and time period
+- 🏗️ [Hierarchical Workflow Automation](https://github.com/google/adk-samples/tree/main/python/agents/hierarchical-workflow-automation) 🔴📚 - Structured multi-system transaction orchestration with multi-agent architecture
+- 🔀 [Parallel Task Decomposition Execution](https://github.com/google/adk-samples/tree/main/python/agents/parallel_task_decomposition_execution) 🔴📚 - Design pattern for parallel task decomposition and execution with ADK agents
+- 🔐 [Policy-as-Code Agent](https://github.com/google/adk-samples/tree/main/python/agents/policy-as-code) 🟡📚 - Data governance agent implementing policy-as-code patterns for compliance
+- 🏪 [Retail AI Location Strategy](https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy) 🟡📚 - Retail location optimization and market analysis with multi-agent system
 
 ---
 
