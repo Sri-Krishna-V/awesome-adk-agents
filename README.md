@@ -331,11 +331,13 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Multi-agent system for sophisticated data analysis with NL2SQL and structured data processing
 - 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🔴📚 - Federal Reserve meeting analysis and market event insights
 - 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🟢📚 - Chatbot response verification and content auditing with Google Search integration
+- 📺 [YouTube Analyst](https://github.com/google/adk-samples/tree/main/python/agents/youtube-analyst) 🟡📚 - YouTube channel performance and audience engagement analysis using YouTube Data API with interactive Plotly visualizations via a dedicated visualization sub-agent
 
 ### 💼 Business & Customer Service
 
 - 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent) 🟡📚 - Auto insurance management for members, claims, rewards and roadside assistance with Apigee integration
 - 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - E-commerce product data enrichment analyzing top search results with BigQuery integration
+- 🎨 [Brand Aligner Agent](https://github.com/google/adk-samples/tree/main/python/agents/brand-aligner) 🔴📚 - End-to-end visual asset (images/videos) evaluation against brand guidelines using Gecko on Vertex AI Eval Service, with sequential multi-agent orchestration and GCS artifact storage
 - 🏠 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟢📚 - Home & garden customer service with product selection, order management, and live streaming support
 - 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Educational content assistant for financial advisors covering finance and investment topics
 - 🚨 [Incident Management](https://github.com/google/adk-samples/tree/main/python/agents/incident-management) 🟢📚 - ServiceNow integration with Application Integration Connectors and dynamic identity propagation
@@ -368,17 +370,37 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🎬 [Short Movie Agents](https://github.com/google/adk-samples/tree/main/python/agents/short-movie-agents) 🟡📚 - End-to-end video construction based on user intent with multi-agent coordination
 - 🎙️ [Podcast Transcript Agent](https://github.com/google/adk-samples/tree/main/python/agents/podcast_transcript_agent) 🟡📚 - Podcast transcription and analysis agent
 - ✍️ [Blog Writer](https://github.com/google/adk-samples/tree/main/python/agents/blog-writer) 🟡📚 - Automated blog content generation and writing assistant
+- 📖 [Story Teller](https://github.com/google/adk-samples/tree/main/python/agents/story_teller) 🟡📚 - Multi-agent collaborative story writer with a PromptEnhancer, Parallel Writers (creative + focused temperature), Critique Agent, and final Editor — showcases Sequential, Parallel, and Loop agent composition
 - 🛡️ [Safety Guardrail Plugins](https://github.com/google/adk-samples/tree/main/python/agents/safety-plugins) 🟡📚 - Security filters using Gemini-as-judge and Model Armor for jailbreak protection
 - 💳 [Antom Payment](https://github.com/google/adk-samples/tree/main/python/agents/antom-payment) 🟡📚 - Ant International payment and refund integration via MCP tools
 - 💬 [Realtime Conversational Agent](https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent) 🟡📚 - Live streaming conversational agent with real-time interaction capabilities
 - ⚡ [ADK Bidi-streaming Demo](https://github.com/google/adk-samples/tree/main/python/agents/bidi-demo) 🟡📚 - Real-time bidirectional streaming demo with WebSocket communication, multimodal support (audio/video/text), and concurrent task handling
 - 🛡️ [AI Security Agent](https://github.com/google/adk-samples/tree/main/python/agents/ai-security-agent) 🔴📚 - LLM red team agent for comprehensive security testing and vulnerability assessment
 - 💰 [Currency Agent](https://github.com/google/adk-samples/tree/main/python/agents/currency-agent) 🟡📚 - Currency exchange rate lookups and conversions with A2A and MCP integration
-- 📈 [Google Trends Agent](https://github.com/google/adk-samples/tree/main/python/agents/google-trends-agent) 🟡📚 - Trending search terms analysis with BigQuery dataset by region and time period
 - 🏗️ [Hierarchical Workflow Automation](https://github.com/google/adk-samples/tree/main/python/agents/hierarchical-workflow-automation) 🔴📚 - Structured multi-system transaction orchestration with multi-agent architecture
 - 🔀 [Parallel Task Decomposition Execution](https://github.com/google/adk-samples/tree/main/python/agents/parallel_task_decomposition_execution) 🔴📚 - Design pattern for parallel task decomposition and execution with ADK agents
 - 🔐 [Policy-as-Code Agent](https://github.com/google/adk-samples/tree/main/python/agents/policy-as-code) 🟡📚 - Data governance agent implementing policy-as-code patterns for compliance
 - 🏪 [Retail AI Location Strategy](https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy) 🟡📚 - Retail location optimization and market analysis with multi-agent system
+
+### 🌐 Other Language Samples
+
+_Official ADK samples in TypeScript, Java, and Go_
+
+**TypeScript**
+
+- 🏠 [Customer Service Agent (TypeScript)](https://github.com/google/adk-samples/tree/main/typescript/agents/customer_service) 🟢📚 - TypeScript port of the customer service agent for home & garden retail with product selection and order management
+
+**Java**
+
+- 🐛 [Software Bug Assistant (Java)](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Java port of the bug resolution assistant using ADK Java with RAG and external knowledge integration
+- 📈 [Time Series Forecasting (Java)](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting) 🔴📚 - ADK Java agent using MCP Toolbox + BigQuery `AI.FORECAST` for natural language time series forecasting over public datasets, deployable to Cloud Run
+
+**Go**
+
+- 🔍 [LLM Auditor (Go)](https://github.com/google/adk-samples/tree/main/go/agents/llm-auditor) 🟢📚 - Go port of the LLM response auditor for chatbot verification and content auditing
+- ⛵ [Boat Agent (Go)](https://github.com/google/adk-samples/tree/main/go/agents/boat-agent) 🟢📚 - Go ADK sample agent for sailing/boating assistance
+- 📋 [Naval List (Go)](https://github.com/google/adk-samples/tree/main/go/agents/navallist) 🟢📚 - Go ADK sample demonstrating list management with a naval theme
+- 🔭 [Sail Researcher (Go)](https://github.com/google/adk-samples/tree/main/go/agents/sail-researcher) 🟡📚 - Go ADK research agent for sailing-domain information retrieval
 
 ---
 
