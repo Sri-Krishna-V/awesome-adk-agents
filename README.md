@@ -73,6 +73,7 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 - **Active Innovation**: 202 contributors, community hackathons with $50K prizes, and rapid feature development
 - **Growing Ecosystem**: Official samples, third-party integrations (MongoDB, MCP, A2A protocol), and strong community momentum
 
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested AI agent system prompts for multi-agent orchestration. Compatible patterns for agent coordination. MIT licensed.
 ### 🗝️ Key Features
 
 - **🛠️ Rich Tool Ecosystem**: Pre-built tools, custom functions, OpenAPI specs, and Google ecosystem integration
