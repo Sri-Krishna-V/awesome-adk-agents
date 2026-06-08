@@ -184,6 +184,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🛡️ [imran-siddique/agent-os](https://github.com/imran-siddique/agent-os) 🏭🔴🔥 - Kernel-level governance for AI agents with policy enforcement, action interception, and OWASP Agentic Top 10 coverage — works with Google ADK, LangChain, CrewAI, AutoGen, and more
 - 🔐 [Idun-Group/idun-agent-platform](https://github.com/Idun-Group/idun-agent-platform) 🏭🔴🔥 - Open-source Agent Governance Platform that turns any LangGraph or ADK agent into a production-ready service with AG-UI, OpenTelemetry, MCP, memory, guardrails, SSO, and RBAC
 
+- [TWZRD Agent Intel](https://intel.twzrd.xyz) - Trust scoring MCP for verifying AI agent wallet identity and autonomy on Solana before x402 micropayments. Pairs well with ADK multi-agent workflows. Free: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
 ### Agent Development & Engineering Platforms
 
 - 🛠️ [VidyutChakrabarti/AgentFlux](https://github.com/VidyutChakrabarti/AgentFlux) 🏭🔴🔥 - Agent engineering platform with interactive playgrounds, graph visualization, automated refinement loops, and fine-tuned models for prompt optimization
