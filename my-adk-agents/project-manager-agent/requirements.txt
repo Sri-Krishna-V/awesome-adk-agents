@@ -3,4 +3,4 @@ yfinance==0.2.56
 psutil==5.9.5
 litellm==1.83.0
 google-generativeai==0.8.5
-python-dotenv==1.1.0
+python-dotenv==1.2.2
