@@ -484,3 +484,5 @@ This repository serves **2,500+ developers** building production AI agents. Help
 <strong>Building the future of AI agents, one contribution at a time.</strong><br>
 <em>Powered by Google ADK • Curated by the community</em>
 </div>
+
+- [MeterCall](https://metercall.ai/?v=a&src=github) — One metered API gateway. 21M+ endpoints (payments, SMS, AI, CRMs, gov data). Free tier; pay per call.
