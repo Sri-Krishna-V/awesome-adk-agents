@@ -252,6 +252,7 @@ _Comprehensive guides, tutorials, and educational content_
 - 📖 [bhancockio/MCP Integration Tutorial](https://github.com/bhancockio/adk-mcp-tutorial) 🟡📖 - Model Context Protocol (both local and remote) with ADK with [Youtube](https://www.youtube.com/watch?v=HkzOrj2qeXI&t=2362s) tutorial
 - 📖 [thomas-chong/google-adk-visual-agent-builder-demo](https://github.com/thomas-chong/google-adk-visual-agent-builder-demo) 🟡📖 - Complete demo of Google ADK Visual Agent Builder with a multi-agent research system walkthrough
 - 📖 [lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk) 🏭🟡📖 - Design patterns and production-ready architectures for building multi-agent AI systems with Google ADK on Cloud Run, Vertex AI, and AI Studio
+- 📝 [Add Live Web Search to a Google ADK Agent](https://superhighway.walls.sh/guides/web-search-google-adk) 🟢📝 - Step-by-step guide for adding live web search to ADK agents: MCPToolset with StdioConnectionParams for autonomous x402 per-call payments (USDC on Base, no signup), or plain Python function tools with a free API key. Covers both patterns with complete runnable code.
 
 #### 🎓 Google ADK Tutorial Examples
 
