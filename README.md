@@ -16,6 +16,7 @@
   <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
   <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
   <a href="https://deepwiki.com/google/adk-python"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+  <a href="https://mseep.ai/app/sri-krishna-v-awesome-adk-agents"><img src="https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png" alt="MseeP.ai Security Assessment Badge" height="20"></a>
 </p>
 
 _The most comprehensive curated collection for Google's Agent Development Kit (ADK) - featuring **90+ production-ready agents, learning resources, and deployment templates** from hackathon winners ($50K prize pool, 476 submissions), Google's official samples (70+ examples), and a growing community of 20K+ GitHub stars. From beginner tutorials to enterprise-grade multi-agent systems, discover battle-tested solutions for research, business automation, education, and specialized domains._
@@ -263,6 +264,14 @@ _Comprehensive guides, tutorials, and educational content_
 
 _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) demonstrating ADK patterns and capabilities_
 
+**Fundamentals:**
+
+- 📖 [Starter Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/1_starter_agent) 🟢📖 - Your first ADK agent: basic agent creation, the ADK workflow, and simple text processing
+- 📖 [Model-Agnostic Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/2_model_agnostic_agent) 🟢📖 - Running ADK with non-Gemini models, with OpenAI and Anthropic Claude integration sub-examples
+- 📖 [Memory Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/5_memory_agent) 🟢📖 - Memory and session management with in-memory conversation handling and persistent SQLite storage
+- 📖 [Simple Multi-Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/8_simple_multi_agent) 🟢📖 - Multi-agent orchestration via a researcher pipeline of specialized agents in a sequential workflow
+- 📖 [ADK YAML Examples](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/adk_yaml_examples) 🟢📖 - Config-driven agent definitions using ADK's YAML format
+
 **Structured Output Agents:**
 
 - 📖 [Customer Support Ticket Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/3_structured_output_agent/3_1_customer_support_ticket_agent) 🟢📖 - Generates structured support tickets with Pydantic schemas
@@ -298,6 +307,14 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 - 📖 [AI Home Renovation Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) 🟡📖 - Home improvement planning with multi-agent coordination
 - 📖 [AI SEO Audit Team](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_seo_audit_team) 🟡📖 - Website SEO analysis with specialized agent teams
 - 📖 [Multimodal UI/UX Feedback Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_uiux_feedback_agent_team) 🟡📖 - Design review system with multimodal capabilities
+- 📖 [AI Negotiation Battle Simulator](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/ai_negotiation_battle_simulator) 🟡📖 - Buyer, seller, and orchestrator agents simulate negotiations with an AG-UI frontend (ag_ui_adk)
+- 📖 [AI Sales Intelligence Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_sales_intelligence_agent_team) 🟡📖 - Sequential research agents that generate competitive battle cards and comparison charts
+- 📖 [AI VC Due Diligence Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/multi_agent_apps/agent_teams/ai_vc_due_diligence_agent_team) 🟡📖 - Sequential agents producing HTML reports, infographics, and financial charts for VC due diligence
+
+**Single-Agent Applications:**
+
+- 📖 [Earnings Call Analyst Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent) 🟡📖 - Ingests and analyzes earnings calls with transcription, research, and analyst agents
+- 📖 [AI Consultant Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/single_agent_apps/ai_consultant_agent) 🟡📖 - Business consulting agent using Google Search grounding and session management
 
 ### 📝 Articles & Best Practices
 
@@ -353,6 +370,8 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🧾 [Invoice Processing](https://github.com/google/adk-samples/tree/main/python/agents/invoice-processing) 🟡📚 - Document-processing agent combining an end-to-end inference pipeline with an interactive learning loop for continuous improvement
 - 🏥 [Health Claim Adjudication Agent](https://github.com/google/adk-samples/tree/main/python/agents/claim-adjudication-agent) 🔴📚 - Multi-agent cashless health-insurance claim workflow: GCS document discovery, admissibility checks, financial adjudication, and report synthesis
 - 🔗 [Supply Chain Agent](https://github.com/google/adk-samples/tree/main/python/agents/supply-chain) 🔴📚 - Multi-agent system analyzing real-time market dynamics and weather conditions for supply-chain decisions
+- 💸 [Ambient Expense Agent](https://github.com/google/adk-samples/tree/main/python/agents/ambient-expense-agent) 🔴📚 - Ambient agent processing expense reports via Pub/Sub through an ADK 2.0 graph workflow — auto-approving low-value items and routing high-value ones through LLM risk review
+- 🏦 [Small Business Loan Agent](https://github.com/google/adk-samples/tree/main/python/agents/small-business-loan-agent) 🔴📚 - Multi-agent loan processing with sequential orchestration, human-in-the-loop approval, LLM-as-Judge validation, and Firestore-backed repair & resume
 
 ### 🛍️ E-commerce & Marketing
 
@@ -363,6 +382,7 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 📺 [Product Catalog Ad Generation](https://github.com/google/adk-samples/tree/main/python/agents/product-catalog-ad-generation) 🟡📚 - Automated advertising content generation from product catalogs
 - 🛍️ [GenMedia for Commerce](https://github.com/google/adk-samples/tree/main/python/agents/genmedia-for-commerce) 🔴📚 - Full-stack agent for commerce media generation including virtual try-on (image & video)
 - 🗺️ [Grounded Travel Agent (Maps MCP)](https://github.com/google/adk-samples/tree/main/python/agents/travel-planner-google-maps-mcp) 🟡📚 - Travel planner grounded in the Google Maps Platform MCP server for real-time places, weather, and routes, with a modular SKILL.md architecture
+- 📑 [Brand-Aligned Presentations](https://github.com/google/adk-samples/tree/main/python/agents/brand-aligned-presentations) 🔴📚 - Multi-agent system on Vertex AI that generates presentations aligned to brand guidelines
 
 ### 🔧 Development & Technical
 
@@ -378,6 +398,16 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🧩 [Multi-format Hybrid RAG](https://github.com/google/adk-samples/tree/main/python/agents/multiformat-hybrid-rag) 🔴📚 - Production RAG on GCP with contextual chunking, Vector Search 2.0 hybrid search, a REST API, and an MCP server from a single Cloud Run service
 - 📊 [Agent Observability (BigQuery)](https://github.com/google/adk-samples/tree/main/python/agents/agent-observability-bq) 🟡📚 - BigQuery-connected agent demonstrating the BigQueryAgentAnalyticsPlugin for centralized logging, debugging, and auditing
 - 🛡️ [Cyber Guardian Agent](https://github.com/google/adk-samples/tree/main/python/agents/cyber-guardian-agent) 🔴📚 - Hierarchical multi-agent security workflow with conditional routing and four specialized sub-agents
+- 🔑 [Agent Runtime + OAuth (Drive Reader)](https://github.com/google/adk-samples/tree/main/python/agents/adk-ae-oauth) 🔴📚 - Production ADK agent on Agent Runtime with OAuth 2.0 to read Google Drive files on behalf of authenticated users, locally via ADK Web UI and in production via Gemini Enterprise
+- 🌀 [Airflow Version Upgrade Agent](https://github.com/google/adk-samples/tree/main/python/agents/airflow_version_upgrade_agent) 🔴📚 - Two-stage agentic system that migrates Apache Airflow DAGs across versions using Gemini, Vertex AI Search RAG, and a BigQuery knowledge base
+- 📄 [High-Volume Document Analyzer](https://github.com/google/adk-samples/tree/main/python/agents/high-volume-document-analyzer) 🔴📚 - Reads, summarizes, and answers questions over massive collections of unstructured documents in a chunked, iterative manner with Vertex AI and Gemini
+- 📋 [SDLC: Task Planner](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-task-planner) 🟡📚 - Software Development Life Cycle agent that breaks work into actionable tasks (part of the SDLC agent workflow)
+- 🏛️ [SDLC: Technical Designer](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-technical-designer) 🟡📚 - SDLC agent that produces technical designs from requirements (part of the SDLC agent workflow)
+- 📝 [SDLC: User Story Refiner](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-user-story-refiner) 🟡📚 - SDLC agent that refines and structures user stories (part of the SDLC agent workflow)
+- 🔀 [Workflow: Concurrent Research Writer](https://github.com/google/adk-samples/tree/main/python/agents/workflow-concurrent_research_writer) 🔴📚 - Nested WorkflowAgents that research a topic, generate a blog post, and publish it to the most appropriate platform
+- ⏰ [Workflow: Morning Email Debrief](https://github.com/google/adk-samples/tree/main/python/agents/workflow-morning_email_debrief) 🟡📚 - Timed-trigger WorkflowAgent that retrieves and summarizes emails on a daily schedule
+- 🙋 [Workflow: HITL Concierge](https://github.com/google/adk-samples/tree/main/python/agents/workflows-HITL_concierge) 🟡📚 - Human-in-the-loop WorkflowAgent that pauses for user input while building an itinerary
+- ➡️ [Workflow: Sequential](https://github.com/google/adk-samples/tree/main/python/agents/workflows-sequential) 🟢📚 - Minimal sequential WorkflowAgent demonstrating a linear, non-branching execution path
 
 ### 🎨 Specialized Applications
 
@@ -401,6 +431,10 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🏪 [Retail AI Location Strategy](https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy) 🟡📚 - Retail location optimization and market analysis with multi-agent system
 - 🌍 [Earth Engine Geospatial Agent](https://github.com/google/adk-samples/tree/main/python/agents/earth-engine-geospatial) 🟡📚 - Geospatial chatbot using Google Earth Engine and the AlphaEarth Satellite Embeddings dataset to compute land-change area for user-supplied GeoJSON geometries
 - 🍽️ [Gemma Food Tour Guide](https://github.com/google/adk-samples/tree/main/python/agents/gemma-food-tour-guide) 🟡📚 - Personalized culinary tour builder using Gemma 4 31B and the Google Maps MCP server
+- 🎉 [Fun Facts Agent](https://github.com/google/adk-samples/tree/main/python/agents/fun-facts) 🟢📚 - Minimal starter agent using Gemini and Google Search grounding to serve fun facts — a gentle intro to ADK tools, Agent Runtime, and Gemini Enterprise
+- 🩺 [NexShift](https://github.com/google/adk-samples/tree/main/python/agents/nexshift-agent) 🔴📚 - AI nurse rostering agent that generates, validates, and manages optimal schedules, balancing regulatory constraints and fairness via OR-Tools constraint programming
+- 🏥 [Nurse Handover Agent](https://github.com/google/adk-samples/tree/main/python/agents/nurse-handover) 🟡📚 - Generates concise, structured shift-handover summaries from raw medical logs in the standardized ISBAR format
+- 🎨 [On-Brand GenMedia Agent](https://github.com/google/adk-samples/tree/main/python/agents/on-brand-genmedia) 🟡📚 - Generates and evaluates images against brand guidelines, iteratively improving them until policy and quality requirements are met
 
 ### 🌐 Other Language Samples
 
@@ -500,7 +534,9 @@ This repository is trusted by a growing community of developers building product
 - 🔗 **Share** with your network
 - 🤝 **Contribute** your expertise
 
-- [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png)](https://mseep.ai/app/sri-krishna-v-awesome-adk-agents)
+## 💚 Sponsors
+
+- [MeterCall](https://metercall.ai/?v=a&src=github) — One metered API gateway. 21M+ endpoints (payments, SMS, AI, CRMs, gov data). Free tier; pay per call.
 
 ---
 
@@ -508,5 +544,3 @@ This repository is trusted by a growing community of developers building product
 <strong>Building the future of AI agents, one contribution at a time.</strong><br>
 <em>Powered by Google ADK • Curated by the community</em>
 </div>
-
-- [MeterCall](https://metercall.ai/?v=a&src=github) — One metered API gateway. 21M+ endpoints (payments, SMS, AI, CRMs, gov data). Free tier; pay per call.
