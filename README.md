@@ -18,7 +18,7 @@
   <a href="https://deepwiki.com/google/adk-python"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
-_The most comprehensive curated collection for Google's Agent Development Kit (ADK) - featuring **80+ production-ready agents, learning resources, and deployment templates** from hackathon winners ($50K prize pool, 476 submissions), Google's official samples (35+ examples), and a growing community of 15.6K+ GitHub stars. From beginner tutorials to enterprise-grade multi-agent systems, discover battle-tested solutions for research, business automation, education, and specialized domains._
+_The most comprehensive curated collection for Google's Agent Development Kit (ADK) - featuring **90+ production-ready agents, learning resources, and deployment templates** from hackathon winners ($50K prize pool, 476 submissions), Google's official samples (70+ examples), and a growing community of 20K+ GitHub stars. From beginner tutorials to enterprise-grade multi-agent systems, discover battle-tested solutions for research, business automation, education, and specialized domains._
 
 ## 📖 Table of Contents
 
@@ -38,7 +38,7 @@ _The most comprehensive curated collection for Google's Agent Development Kit (A
 
 > Welcome to **Awesome ADK Agents**👋👋
 
-A comprehensive ecosystem resource for Google's Agent Development Kit - the fastest-growing agentic AI framework with 15.6K stars, 2.5K forks, and 2.8K dependent projects. Whether you're exploring AI agents for the first time or deploying production multi-agent systems, this collection provides vetted implementations, learning paths, and deployment patterns from Google's official team and a vibrant global community.
+A comprehensive ecosystem resource for Google's Agent Development Kit - one of the fastest-growing agentic AI frameworks, with 20K+ stars, 3.6K+ forks, and thousands of dependent projects. Whether you're exploring AI agents for the first time or deploying production multi-agent systems, this collection provides vetted implementations, learning paths, and deployment patterns from Google's official team and a vibrant global community.
 
 ## 🎯 What This List Solves
 
@@ -63,14 +63,14 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 
 ## What is Google's Agent Development Kit (ADK)?
 
-**Google's Agent Development Kit (ADK)** is Google's open-source, code-first Python framework for building production AI agents - backed by Google Cloud with tight Gemini integration while remaining fully model-agnostic (supports Claude, Ollama, LiteLLM). Launched in 2024, ADK has rapidly gained traction with 15.6K GitHub stars, bi-weekly releases (currently v1.19.0), and adoption by 2.8K projects, positioning itself as a serious alternative to established frameworks like LangChain and CrewAI.
+**Google's Agent Development Kit (ADK)** is Google's open-source, code-first Python framework for building production AI agents - backed by Google Cloud with tight Gemini integration while remaining fully model-agnostic (supports Claude, Ollama, LiteLLM). Launched in 2025, ADK has rapidly gained traction with 20K+ GitHub stars, frequent releases (currently v2.x, with the major ADK 2.0 milestone shipped), and adoption by thousands of projects, positioning itself as a serious alternative to established frameworks like LangChain and CrewAI. ADK is now available in Python, Go, Java, and TypeScript.
 
-**Why ADK Matters in 2025:**
+**Why ADK Matters:**
 
 - **Google's Strategic Bet**: Deep integration with Vertex AI, Cloud Run, BigQuery, and Google's AI ecosystem
 - **Production-First Design**: Built for enterprise deployment from day one, not research experiments  
-- **Model Flexibility**: While optimized for Gemini 2.5, supports Anthropic Claude, Ollama, and any LLM via adapters
-- **Active Innovation**: 202 contributors, community hackathons with $50K prizes, and rapid feature development
+- **Model Flexibility**: While optimized for the latest Gemini models, supports Anthropic Claude, Ollama, and any LLM via adapters
+- **Active Innovation**: 200+ contributors, community hackathons with $50K prizes, and rapid feature development
 - **Growing Ecosystem**: Official samples, third-party integrations (MongoDB, MCP, A2A protocol), and strong community momentum
 
 ### 🗝️ Key Features
@@ -170,7 +170,6 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔥 [Parth0248/Forkcast](https://github.com/Parth0248/Forkcast) 🏭🟡 - Multi-agent AI system for collaborative dining decisions with deployed webapp, technical reports, and Cloud Run deployment
 - 🚀 [kweinmeister/agentic-trading](https://github.com/kweinmeister/agentic-trading) 🏭🔴 - Multi-agent trading system with risk management, featuring AlphaBot and RiskGuard agents with complete A2A protocol implementation and production deployment
 - 📊 [vladkol/CRM Data Q&A Agent](https://github.com/vladkol/crm-data-agent) 🏭🔴 - Multi-agentic system with Advanced RAG and NL2SQL over Salesforce Data, "Run on Google Cloud" deployment
-- 🏙️ [M-JULIANI/nyc-monitor](https://github.com/M-JULIANI/nyc-monitor) 🟡🏭🔥 - AI-powered urban intelligence system for real-time NYC event analysis and reporting with multi-agent architecture and automated Google Slides reports
 - 🏛️ [intent-solutions-io/iam-bobs-brain](https://github.com/intent-solutions-io/iam-bobs-brain) 🏭🔴 - General-purpose enterprise orchestrator on Google ADK + Vertex AI Agent Engine with risk tiers (R0-R4), policy gates, evidence bundles, and Mission Spec v1 workflows
 - 🌐 [seehiong/adk-web-multi-agent](https://github.com/seehiong/adk-web-multi-agent) 🟡 - Multi-agent system with Google ADK and OpenRouter models coordinating specialist agents to query PostgreSQL (via MCP Toolbox) and Data Commons
 
@@ -181,8 +180,10 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔗 [serkanyasr/mcp-agent-tool-adapter](https://github.com/serkanyasr/mcp-agent-tool-adapter) 🟡 - Converts MCP tools into Google ADK or LangGraph agents with streaming FastAPI/CLI
 - 🔧 [codeninja/Mongoose Migration Agent System](https://gist.github.com/codeninja/a6e117a3480de8d32dd9ef01b519cdae) 🔴🔥 - Multi-agent system for automated Mongoose database migration (v6→v8) with specialized agents and MCP integration
 - 🖥️ [trendmicro/adk-agui-middleware](https://github.com/trendmicro/adk-agui-middleware) 🏭🟡 - Python middleware bridging Google ADK agents with the AG-UI protocol via Server-Sent Events for real-time agent interactions in frontend applications
-- 🛡️ [imran-siddique/agent-os](https://github.com/imran-siddique/agent-os) 🏭🔴🔥 - Kernel-level governance for AI agents with policy enforcement, action interception, and OWASP Agentic Top 10 coverage — works with Google ADK, LangChain, CrewAI, AutoGen, and more
+- 🛡️ [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) 🏭🔴🔥 - Governance toolkit for AI agents (now maintained by Microsoft, formerly `agent-os`) with policy enforcement, zero-trust identity, execution sandboxing, and full OWASP Agentic Top 10 coverage — works with Google ADK, LangChain, CrewAI, AutoGen, and more
 - 🔐 [Idun-Group/idun-agent-platform](https://github.com/Idun-Group/idun-agent-platform) 🏭🔴🔥 - Open-source Agent Governance Platform that turns any LangGraph or ADK agent into a production-ready service with AG-UI, OpenTelemetry, MCP, memory, guardrails, SSO, and RBAC
+- ⚡ [lemony-ai/cascadeflow](https://github.com/lemony-ai/cascadeflow) 🏭🔴🔥 - Cascading runtime that optimizes cost, latency, quality, and policy decisions inside the agent loop, with support for Google ADK and 20+ model providers
+- 🚦 [ThreeMoonsLab/agents-shipgate](https://github.com/ThreeMoonsLab/agents-shipgate) 🏭🟡 - Deterministic merge gate performing local-first, static Tool-Use Readiness review for MCP, OpenAPI, and SDK tool surfaces (CLI + GitHub Action)
 
 ### Agent Development & Engineering Platforms
 
@@ -190,6 +191,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🏗️ [antiv/mate](https://github.com/antiv/mate) 🏭🔴🔥 - Production-ready multi-agent orchestration engine built on Google ADK with database-driven agent config, 50+ LLM providers, MCP protocol, persistent memory, web dashboard, and RBAC
 - 🗄️ [edu010101/adk-extra-services](https://github.com/edu010101/adk-extra-services) 🏭🟡 - Python package providing additional service backends for Google ADK (S3, Redis, MongoDB, Azure, Supabase) to replace default in-memory storage
 - 🧠 [serkanh/adk-with-memorybank](https://github.com/serkanh/adk-with-memorybank) 🏭🟡 - ADK agents integrated with Vertex AI Memory Bank for persistent cross-session memory and context management
+- 🦀 [vllora/vllora](https://github.com/vllora/vllora) 🟡 - Rust-based AI gateway and debugger for agents with tracing and routing across Google ADK, LangChain, and 20+ providers
 
 ### Domain-Specific Applications
 
@@ -212,6 +214,9 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔬 [emansarahafi/Research-Assistant-Agent](https://github.com/emansarahafi/Research-Assistant-Agent) 🟡 - Multi-agent research assistant with Researcher, Analyst, and Formatter sub-agents using ArXiv search, deployable locally (Flask) or on Vertex AI
 - 📚 [Anubhob435/Ai-Agents-EditorHouse](https://github.com/Anubhob435/Ai-Agents-EditorHouse) 🟡 - Multi-agent book creation system using Google ADK that plans, writes, edits, illustrates, and compiles complete books from a single topic prompt with MongoDB metadata tracking
 - 💬 [B4K2/WhatsApp-agent](https://github.com/B4K2/WhatsApp-agent) 🟡 - Intelligent WhatsApp agent built with MCP + Google ADK for conversational automation
+- 🔬 [K-Dense-AI/k-dense-byok](https://github.com/K-Dense-AI/k-dense-byok) 🔴🔥 - Desktop AI co-scientist powered by scientific agent skills for bioinformatics and drug discovery (BYOK, local-first, runs on Google ADK)
+- 📚 [Beever-AI/beever-atlas](https://github.com/Beever-AI/beever-atlas) 🟡 - Conversational wiki knowledge base with Slack/Teams/Discord bots, RAG, and MCP integration built on Google ADK
+- 🌐 [anxuanzi/bua](https://github.com/anxuanzi/bua) 🟡 - AI-powered browser automation for Go — describe tasks in plain English and let the ADK-powered agent handle the clicks via vision-language models
 
 ---
 
@@ -333,6 +338,7 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🔴📚 - Federal Reserve meeting analysis and market event insights
 - 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🟢📚 - Chatbot response verification and content auditing with Google Search integration
 - 📺 [YouTube Analyst](https://github.com/google/adk-samples/tree/main/python/agents/youtube-analyst) 🟡📚 - YouTube channel performance and audience engagement analysis using YouTube Data API with interactive Plotly visualizations via a dedicated visualization sub-agent
+- 🧠 [Economic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/economic-research-agent) 🔴📚 - Multi-agent regional economic analysis and site selection grounded in live public APIs (FRED, BLS, Census, HUD, EIA) with an auditor judge for zero-hallucination verification (ADK 2.0)
 
 ### 💼 Business & Customer Service
 
@@ -343,6 +349,10 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Educational content assistant for financial advisors covering finance and investment topics
 - 🚨 [Incident Management](https://github.com/google/adk-samples/tree/main/python/agents/incident-management) 🟢📚 - ServiceNow integration with Application Integration Connectors and dynamic identity propagation
 - 📦 [Order Processing](https://github.com/google/adk-samples/tree/main/python/agents/order-processing) 🟢📚 - Automated order workflows with human-in-the-loop using Application Integration Connectors
+- 🪪 [Global KYC / Compliance Agent](https://github.com/google/adk-samples/tree/main/python/agents/global-kyc-agent) 🔴📚 - Conversational agent handling KYC and compliance queries for both UK and US companies
+- 🧾 [Invoice Processing](https://github.com/google/adk-samples/tree/main/python/agents/invoice-processing) 🟡📚 - Document-processing agent combining an end-to-end inference pipeline with an interactive learning loop for continuous improvement
+- 🏥 [Health Claim Adjudication Agent](https://github.com/google/adk-samples/tree/main/python/agents/claim-adjudication-agent) 🔴📚 - Multi-agent cashless health-insurance claim workflow: GCS document discovery, admissibility checks, financial adjudication, and report synthesis
+- 🔗 [Supply Chain Agent](https://github.com/google/adk-samples/tree/main/python/agents/supply-chain) 🔴📚 - Multi-agent system analyzing real-time market dynamics and weather conditions for supply-chain decisions
 
 ### 🛍️ E-commerce & Marketing
 
@@ -351,6 +361,8 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Multi-agent travel planning and digital task assistance with dynamic instructions
 - 📈 [Google Trends Agent](https://github.com/google/adk-samples/tree/main/python/agents/google-trends-agent) 🟡📚 - BigQuery-powered trending search terms analysis by region and time period
 - 📺 [Product Catalog Ad Generation](https://github.com/google/adk-samples/tree/main/python/agents/product-catalog-ad-generation) 🟡📚 - Automated advertising content generation from product catalogs
+- 🛍️ [GenMedia for Commerce](https://github.com/google/adk-samples/tree/main/python/agents/genmedia-for-commerce) 🔴📚 - Full-stack agent for commerce media generation including virtual try-on (image & video)
+- 🗺️ [Grounded Travel Agent (Maps MCP)](https://github.com/google/adk-samples/tree/main/python/agents/travel-planner-google-maps-mcp) 🟡📚 - Travel planner grounded in the Google Maps Platform MCP server for real-time places, weather, and routes, with a modular SKILL.md architecture
 
 ### 🔧 Development & Technical
 
@@ -361,6 +373,11 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🔧 [Plumber Data Engineering Assistant](https://github.com/google/adk-samples/tree/main/python/agents/plumber-data-engineering-assistant) 🔴📚 - Big data pipeline creator for Apache Spark, Apache Beam, and dBT on GCP
 - 🧪 [SWE Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/swe-benchmark-agent) 🔴📚 - Software engineering benchmark testing and evaluation agent
 - 🧪 [Tau2 Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/tau2-benchmark-agent) 🔴📚 - Tau2 benchmark agent for advanced evaluation tasks
+- 🎓 [Agent Skills Tutorial](https://github.com/google/adk-samples/tree/main/python/agents/agent-skills-tutorial) 🟢📚 - Demonstrates four ADK skill patterns: inline, file-based, external, and meta
+- 🧠 [Memory Bank Agent](https://github.com/google/adk-samples/tree/main/python/agents/memory-bank) 🟡📚 - ADK agent with Vertex AI Memory Bank integration that remembers user preferences and facts across sessions, deployable to Agent Runtime or Cloud Run
+- 🧩 [Multi-format Hybrid RAG](https://github.com/google/adk-samples/tree/main/python/agents/multiformat-hybrid-rag) 🔴📚 - Production RAG on GCP with contextual chunking, Vector Search 2.0 hybrid search, a REST API, and an MCP server from a single Cloud Run service
+- 📊 [Agent Observability (BigQuery)](https://github.com/google/adk-samples/tree/main/python/agents/agent-observability-bq) 🟡📚 - BigQuery-connected agent demonstrating the BigQueryAgentAnalyticsPlugin for centralized logging, debugging, and auditing
+- 🛡️ [Cyber Guardian Agent](https://github.com/google/adk-samples/tree/main/python/agents/cyber-guardian-agent) 🔴📚 - Hierarchical multi-agent security workflow with conditional routing and four specialized sub-agents
 
 ### 🎨 Specialized Applications
 
@@ -382,6 +399,8 @@ _Google ADK samples repository - educational and demonstration purposes only_
 - 🔀 [Parallel Task Decomposition Execution](https://github.com/google/adk-samples/tree/main/python/agents/parallel_task_decomposition_execution) 🔴📚 - Design pattern for parallel task decomposition and execution with ADK agents
 - 🔐 [Policy-as-Code Agent](https://github.com/google/adk-samples/tree/main/python/agents/policy-as-code) 🟡📚 - Data governance agent implementing policy-as-code patterns for compliance
 - 🏪 [Retail AI Location Strategy](https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy) 🟡📚 - Retail location optimization and market analysis with multi-agent system
+- 🌍 [Earth Engine Geospatial Agent](https://github.com/google/adk-samples/tree/main/python/agents/earth-engine-geospatial) 🟡📚 - Geospatial chatbot using Google Earth Engine and the AlphaEarth Satellite Embeddings dataset to compute land-change area for user-supplied GeoJSON geometries
+- 🍽️ [Gemma Food Tour Guide](https://github.com/google/adk-samples/tree/main/python/agents/gemma-food-tour-guide) 🟡📚 - Personalized culinary tour builder using Gemma 4 31B and the Google Maps MCP server
 
 ### 🌐 Other Language Samples
 
@@ -441,8 +460,8 @@ adk deploy      # Deploy to cloud platforms
 ### Resources
 
 - 📖 [Official ADK Documentation](https://google.github.io/adk-docs/)
-- � [Third-Party Tools for ADK](https://google.github.io/adk-docs/tools/third-party/) - Official catalog of integrated third-party tools including Browserbase, Exa, Firecrawl, GitHub, Hugging Face, Notion, Tavily, and more
-- �💬 [Community Discussions](https://github.com/google/adk-python/discussions)
+- 🛠️ [Third-Party Tools for ADK](https://google.github.io/adk-docs/tools/third-party/) - Official catalog of integrated third-party tools including Browserbase, Exa, Firecrawl, GitHub, Hugging Face, Notion, Tavily, and more
+- 💬 [Community Discussions](https://github.com/google/adk-python/discussions)
 - 🎓 [Learning Path](#-learning-resources)
 
 ---
@@ -469,9 +488,13 @@ We welcome high-quality contributions that advance the ADK ecosystem. See [CONTR
 - Brandon Hancock - Educational content and tutorials  
 - Community Contributors - Featured projects and improvements
 
+**Related Lists:**
+
+- [tsubasakong/awesome-google-adk](https://github.com/tsubasakong/awesome-google-adk) - Another community-curated list of Google ADK resources
+
 ## ⭐ Impact
 
-This repository serves **2,500+ developers** building production AI agents. Help us grow:
+This repository is trusted by a growing community of developers building production AI agents. Help us grow:
 
 - ⭐ **Star** if this helps your development
 - 🔗 **Share** with your network
