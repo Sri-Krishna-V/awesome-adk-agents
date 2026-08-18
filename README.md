@@ -185,6 +185,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🔐 [Idun-Group/idun-agent-platform](https://github.com/Idun-Group/idun-agent-platform) 🏭🔴🔥 - Open-source Agent Governance Platform that turns any LangGraph or ADK agent into a production-ready service with AG-UI, OpenTelemetry, MCP, memory, guardrails, SSO, and RBAC
 - ⚡ [lemony-ai/cascadeflow](https://github.com/lemony-ai/cascadeflow) 🏭🔴🔥 - Cascading runtime that optimizes cost, latency, quality, and policy decisions inside the agent loop, with support for Google ADK and 20+ model providers
 - 🚦 [ThreeMoonsLab/agents-shipgate](https://github.com/ThreeMoonsLab/agents-shipgate) 🏭🟡 - Deterministic merge gate performing local-first, static Tool-Use Readiness review for MCP, OpenAPI, and SDK tool surfaces (CLI + GitHub Action)
+- ✅ [ceodaradigu/proofline-agent](https://github.com/ceodaradigu/proofline-agent) 🏭🟡 - Evidence-first Google ADK agent that blocks external action until fresh authoritative evidence passes a deterministic four-state gate and explicit human approval, with Cloud Run deployment and unit tests
 
 ### Agent Development & Engineering Platforms
 
