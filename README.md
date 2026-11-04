@@ -187,6 +187,7 @@ _Outstanding community projects showcasing ADK capabilities_
 - 🚦 [ThreeMoonsLab/agents-shipgate](https://github.com/ThreeMoonsLab/agents-shipgate) 🏭🟡 - Deterministic merge gate performing local-first, static Tool-Use Readiness review for MCP, OpenAPI, and SDK tool surfaces (CLI + GitHub Action)
 - ✅ [ceodaradigu/proofline-agent](https://github.com/ceodaradigu/proofline-agent) 🏭🟡 - Evidence-first Google ADK agent that blocks external action until fresh authoritative evidence passes a deterministic four-state gate and explicit human approval, with Cloud Run deployment and unit tests
 - 🚦 [vulnify/vulnify-examples: google-adk](https://github.com/vulnify/vulnify-examples/tree/main/google-adk) 🟢 - `before_tool_callback` that checks each tool call with Vulnify before it runs: ALLOW runs the tool, REVIEW holds it until a person approves, BLOCK refuses it. Runs offline in mock mode (no API or model key) with pytest tests
+- 🧾 [Cygnux-Labs/Tracekit](https://github.com/Cygnux-Labs/Tracekit) 🟡 - ADK plugin that sends every tool call of every agent a Runner runs, sub-agents included, to a separate signer that allows, denies or holds it for a person, and records each call and result in a signed, hash-chained log that verifies offline
 
 ### Agent Development & Engineering Platforms
 
