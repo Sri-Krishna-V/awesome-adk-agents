@@ -91,7 +91,8 @@ _My showcase agents demonstrating production-ready ADK implementations_
 | [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance | ⭐🟡 |
 | [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) | Research/Academia | Multi-agent literature review assistant with profile analysis, robust paper search (with SerpAPI fallback), and personalized research synthesis | 🟡 |
 | [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring | 🟡 |
-| [Learning Content System (WIP)](./my-adk-agents/local-rag-agent/) | Information Retrieval | Enhanced RAG implementation with vector search and context optimization using pgvector and PostgreSQL | 🚧🟡 |
+| [Learning Content System (WIP)](./my-adk-agents/learning-content-system%28WIP%29/) | Education/Content Creation | Multi-agent system that turns source material into lessons with visuals, audio, and slides, using Sequential, Parallel, and Loop agents, MCP tools, and a quality-check loop | 🚧🟡 |
+| [Local Code Assistant (WIP)](./my-adk-agents/data-analyst/) | Software Development | Single agent that runs a local model (Ollama `qwen3:8b` via LiteLLM) with code execution and suggests React, Vue, Next.js, and Node.js code | 🚧🟢 |
 
 **Badge Legend:**
 
