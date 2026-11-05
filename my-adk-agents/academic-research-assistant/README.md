@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ```bash
 GOOGLE_API_KEY=your_gemini_api_key_here
-MODEL=gemini-2.0-flash
+MODEL=gemini-flash-latest
 DISABLE_WEB_DRIVER=0
 
 # Optional: SerpAPI key for fallback search mechanism
@@ -158,7 +158,7 @@ Edit `.env` file to customize search behavior:
 DISABLE_WEB_DRIVER=0  # 0=enabled, 1=disabled
 
 # Change model for different capabilities
-MODEL=gemini-2.0-pro  # For more sophisticated analysis
+MODEL=gemini-3.1-pro-preview  # Stronger reasoning (preview model)
 
 # SerpAPI Configuration (optional fallback mechanism)
 SERPAPI_KEY=your_serpapi_key_here  # Only used when primary search fails
