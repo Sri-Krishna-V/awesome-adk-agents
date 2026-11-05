@@ -137,16 +137,14 @@ _Projects that people outside Google publish and that use ADK_
 
 ### Maintainer's Agents
 
-_My showcase agents demonstrating production-ready ADK implementations_
+_Agents built by the maintainer of this list._
 
-| Agent Name | Category/Domain | Short Description | Badges |
-|------------|----------------|-------------------|---------|
-| [Job Interview Agent](./my-adk-agents/job-interview-agent/) | HR/Recruitment | AI-powered interview assistant with calendar integration and real-time feedback | ⭐🏭🟡 |
-| [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) | Education/Career Guidance | Multi-agent AI advisor for Indian students/parents: personalized pathways, stepwise plans, risk analysis, and region/reservation-aware guidance | ⭐🟡 |
-| [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) | Research/Academia | Multi-agent literature review assistant with profile analysis, robust paper search (with SerpAPI fallback), and personalized research synthesis | 🟡 |
-| [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring | 🟡 |
-| [Learning Content System (WIP)](./my-adk-agents/learning-content-system%28WIP%29/) | Education/Content Creation | Multi-agent system that turns source material into lessons with visuals, audio, and slides, using Sequential, Parallel, and Loop agents, MCP tools, and a quality-check loop | 🚧🟡 |
-| [Local Code Assistant (WIP)](./my-adk-agents/data-analyst/) | Software Development | Single agent that runs a local model (Ollama `qwen3:8b` via LiteLLM) and suggests React, Vue, Next.js, and Node.js code | 🚧🟢 |
+- 🟡 [Job Interview Agent](./my-adk-agents/job-interview-agent/) 🏭 - HR interview assistant with calendar integration and real-time feedback.
+- 🟡 [Education Path Advisor for India](./my-adk-agents/education-path-advisor/) - Multi-agent career advisor for Indian students and parents: personalized pathways, stepwise plans, risk analysis, and region- and reservation-aware guidance.
+- 🟡 [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) - Multi-agent literature review assistant with profile analysis, paper search with a SerpAPI fallback, and personalized research synthesis.
+- 🟡 [Project Manager Agent](./my-adk-agents/project-manager-agent/) - Automated project management with task tracking and progress monitoring.
+- 🟡 [Learning Content System (WIP)](./my-adk-agents/learning-content-system%28WIP%29/) - Multi-agent system that turns source material into lessons with visuals, audio and slides, using Sequential, Parallel and Loop agents, MCP tools and a quality-check loop.
+- 🟢 [Local Code Assistant (WIP)](./my-adk-agents/data-analyst/) - Single agent that runs a local model (Ollama `qwen3:8b` via LiteLLM) and suggests React, Vue, Next.js and Node.js code.
 
 ### Multi-Agent Systems
 
