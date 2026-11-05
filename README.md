@@ -360,117 +360,65 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 
 ## 🎯 Official Examples
 
-_Google ADK samples repository - educational and demonstration purposes only_
+_Google ADK recipes repository (formerly adk-samples) - educational and demonstration purposes only_
 
-> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK samples disclaimer](https://github.com/google/adk-samples).
+> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK recipes repository](https://github.com/google/adk-recipes). Deep Search is listed under [Templates & Starters](#-templates--starters).
 
-### 🔬 Research & Analysis
+- 🧪 [ADK Python contributing samples](https://github.com/google/adk-python/tree/main/contributing/samples) 📚 - Small feature-focused samples inside the ADK repo, grouped by topic (workflows, A2A, plugins, evaluation, live, MCP, memory and more)
 
-- 📚 [Academic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/academic-research) 🟡📚 - Assists researchers in identifying recent publications and discovering emerging research areas
-- 📊 [Data Science Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-science) 🟡📚 - Multi-agent system for sophisticated data analysis with NL2SQL and structured data processing
-- 🏛️ [FOMC Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/fomc-research) 🔴📚 - Federal Reserve meeting analysis and market event insights
-- 🔍 [LLM Auditor](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor) 🟢📚 - Chatbot response verification and content auditing with Google Search integration
-- 📺 [YouTube Analyst](https://github.com/google/adk-samples/tree/main/python/agents/youtube-analyst) 🟡📚 - YouTube channel performance and audience engagement analysis using YouTube Data API with interactive Plotly visualizations via a dedicated visualization sub-agent
-- 🧠 [Economic Research Agent](https://github.com/google/adk-samples/tree/main/python/agents/economic-research-agent) 🔴📚 - Multi-agent regional economic analysis and site selection grounded in live public APIs (FRED, BLS, Census, HUD, EIA) with an auditor judge for zero-hallucination verification (ADK 2.0)
+### 🧱 Core Recipes
 
-### 💼 Business & Customer Service
+- 💸 [Ambient Expense Agent](https://github.com/google/adk-recipes/tree/main/core/python/ambient-expense-agent) 🟡📚 - Ambient agent processing expense reports via Pub/Sub through an ADK 2.0 graph workflow, auto-approving low-value items and routing high-value ones through LLM risk review and human approval
+- 🛍️ [GenMedia for Commerce](https://github.com/google/adk-recipes/tree/main/core/python/genmedia-for-commerce) 🔴📚 - Studio agent and Gemini workflows for retail media: photo and video virtual try-on, 360° product spins, and judge-model quality checks, usable as a web app or inside Gemini Enterprise
+- 🛡️ [Safety Guardrail Plugins](https://github.com/google/adk-recipes/tree/main/core/python/safety-plugins) 🟡📚 - Security filters using Gemini-as-judge and Model Armor plugins for jailbreak protection
+- 🧠 [Cross-Session Memory](https://github.com/google/adk-recipes/tree/main/core/python/cross-session-memory) 🟡📚 - ADK agent with Vertex AI Memory Bank that remembers user preferences and facts across sessions, deployable to Agent Runtime or Cloud Run
+- 🔑 [OAuth User Consent Flow (Drive Reader)](https://github.com/google/adk-recipes/tree/main/core/python/oauth-user-consent-flow) 🔴📚 - ADK agent on Agent Runtime using OAuth 2.0 to read Google Drive files on behalf of authenticated users, locally via ADK Web UI and in production via Gemini Enterprise
+- 🔎 [RAG Agent: Agent Platform Search](https://github.com/google/adk-recipes/tree/main/core/python/rag-agent-search) 🟡📚 - Starter RAG agent grounded on Agent Platform Search (Discovery Engine) with a GCS data connector and Terraform setup
+- 🧩 [RAG Agent: Vector Search](https://github.com/google/adk-recipes/tree/main/core/python/rag-vector-search) 🟡📚 - Starter RAG agent grounded on Vector Search 2.0 with a Kubeflow Pipelines ingestion pipeline that loads, chunks, and imports documents
+- 🎙️ [ADK Voice Agent](https://github.com/google/adk-recipes/tree/main/core/python/adk-voice-agent) 🔴📚 - Gemini Live voice agent that stays responsive while coding agents work in the background on a per-user cloud computer, with approval gates and Google Workspace and GitHub access
+- 📡 [Ambient Quality Agent (AQuA)](https://github.com/google/adk-recipes/tree/main/core/python/ambient-quality-agent) 🔴📚 - ADK agent that runs beside a production agent, evaluates its conversations in BigQuery, and tracks recurring defects as insights
+- 🔭 [Long Horizon Harness](https://github.com/google/adk-recipes/tree/main/core/python/long-horizon-harness) 🔴📚 - Reference agent harness with cross-session memory, per-user sandbox, tool guardrails, sub-agents, and a self-improvement loop
 
-- 🛡️ [Auto Insurance Agent](https://github.com/google/adk-samples/tree/main/python/agents/auto-insurance-agent) 🟡📚 - Auto insurance management for members, claims, rewards and roadside assistance with Apigee integration
-- 🎯 [Brand Search Optimization](https://github.com/google/adk-samples/tree/main/python/agents/brand-search-optimization) 🟡📚 - E-commerce product data enrichment analyzing top search results with BigQuery integration
-- 🎨 [Brand Aligner Agent](https://github.com/google/adk-samples/tree/main/python/agents/brand-aligner) 🔴📚 - End-to-end visual asset (images/videos) evaluation against brand guidelines using Gecko on Vertex AI Eval Service, with sequential multi-agent orchestration and GCS artifact storage
-- 🏠 [Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service) 🟢📚 - Home & garden customer service with product selection, order management, and live streaming support
-- 💰 [Financial Advisor](https://github.com/google/adk-samples/tree/main/python/agents/financial-advisor) 🟡📚 - Educational content assistant for financial advisors covering finance and investment topics
-- 🚨 [Incident Management](https://github.com/google/adk-samples/tree/main/python/agents/incident-management) 🟢📚 - ServiceNow integration with Application Integration Connectors and dynamic identity propagation
-- 📦 [Order Processing](https://github.com/google/adk-samples/tree/main/python/agents/order-processing) 🟢📚 - Automated order workflows with human-in-the-loop using Application Integration Connectors
-- 🪪 [Global KYC / Compliance Agent](https://github.com/google/adk-samples/tree/main/python/agents/global-kyc-agent) 🔴📚 - Conversational agent handling KYC and compliance queries for both UK and US companies
-- 🧾 [Invoice Processing](https://github.com/google/adk-samples/tree/main/python/agents/invoice-processing) 🟡📚 - Document-processing agent combining an end-to-end inference pipeline with an interactive learning loop for continuous improvement
-- 🏥 [Health Claim Adjudication Agent](https://github.com/google/adk-samples/tree/main/python/agents/claim-adjudication-agent) 🔴📚 - Multi-agent cashless health-insurance claim workflow: GCS document discovery, admissibility checks, financial adjudication, and report synthesis
-- 🔗 [Supply Chain Agent](https://github.com/google/adk-samples/tree/main/python/agents/supply-chain) 🔴📚 - Multi-agent system analyzing real-time market dynamics and weather conditions for supply-chain decisions
-- 💸 [Ambient Expense Agent](https://github.com/google/adk-samples/tree/main/python/agents/ambient-expense-agent) 🔴📚 - Ambient agent processing expense reports via Pub/Sub through an ADK 2.0 graph workflow — auto-approving low-value items and routing high-value ones through LLM risk review
-- 🏦 [Small Business Loan Agent](https://github.com/google/adk-samples/tree/main/python/agents/small-business-loan-agent) 🔴📚 - Multi-agent loan processing with sequential orchestration, human-in-the-loop approval, LLM-as-Judge validation, and Firestore-backed repair & resume
+### 🏢 Contributed & Vertical Agents
 
-### 🛍️ E-commerce & Marketing
+- 🔍 [LLM Auditor](https://github.com/google/adk-recipes/tree/main/contrib/python/llm-auditor) 🟢📚 - Chatbot response verification and content auditing with Google Search integration
+- 💰 [Financial Advisor](https://github.com/google/adk-recipes/tree/main/contrib/python/financial-advisor) 🟡📚 - Multi-agent stock analysis that proposes trading strategies, an execution plan, and a risk assessment using Google Search
+- 🎯 [Brand Search Optimization](https://github.com/google/adk-recipes/tree/main/contrib/python/brand-search-optimization) 🟡📚 - Multi-agent workflow that mines BigQuery catalog keywords and uses Gemini Computer Use to study competitor listings, then recommends scored, search-optimized product titles
+- 📑 [Brand-Aligned Presentations](https://github.com/google/adk-recipes/tree/main/contrib/python/brand-aligned-presentations) 🔴📚 - Multi-agent system on Vertex AI that generates presentations aligned to brand guidelines, with a pause-and-review step before slide generation
+- 🏦 [Small Business Loan Agent](https://github.com/google/adk-recipes/tree/main/contrib/python/small-business-loan-agent) 🔴📚 - Multi-agent loan processing with sequential orchestration, human-in-the-loop approval, LLM-as-Judge validation, and Firestore-backed repair & resume
+- 📄 [High-Volume Document Analyzer](https://github.com/google/adk-recipes/tree/main/contrib/python/high-volume-document-analyzer) 🔴📚 - Reads, summarizes, and answers questions over massive collections of unstructured documents in a chunked, iterative manner with Vertex AI and Gemini
+- 🧩 [Multi-format Hybrid RAG](https://github.com/google/adk-recipes/tree/main/contrib/python/multiformat-hybrid-rag) 🟡📚 - Production RAG on GCP with contextual chunking, Vector Search 2.0 hybrid search, a REST API, and an MCP server from a single Cloud Run service
+- 🎨 [On-Brand GenMedia Agent](https://github.com/google/adk-recipes/tree/main/contrib/python/on-brand-genmedia) 🟡📚 - Generates and evaluates images against brand guidelines, iteratively improving them until policy and quality requirements are met
+- 🎓 [Agent Skills Tutorial](https://github.com/google/adk-recipes/tree/main/contrib/python/agent-skills-tutorial) 🟢📚 - Demonstrates four ADK skill patterns: inline, file-based, external, and meta (marked inactive upstream)
+- 🛒 [Retail Product Search](https://github.com/google/adk-recipes/tree/main/contrib/python/retail-product-search) 🟡📚 - Semantic product search agent using Vector Search 2.0 and BigQuery, deployable to Agent Runtime, Gemini Enterprise, or Cloud Run
+- 👗 [Retail Virtual Try-On](https://github.com/google/adk-recipes/tree/main/contrib/python/retail-virtual-tryon) 🟡📚 - Virtual try-on agent producing still images with Gemini image models and 8-second catwalk videos with Veo
+- 🪟 [Staged UI Widgets](https://github.com/google/adk-recipes/tree/main/contrib/python/staged-ui-widgets) 🟡📚 - Shopping agent that renders A2UI widgets (product cards, comparison tables, timelines, charts) by staging payloads in session state and emitting them in one after-agent callback
 
-- 🛒 [Personalized Shopping](https://github.com/google/adk-samples/tree/main/python/agents/personalized-shopping) 🟡📚 - AI-driven product recommendations and shopping assistance
-- 📱 [Marketing Agency](https://github.com/google/adk-samples/tree/main/python/agents/marketing-agency) 🟡📚 - Website and product launch automation with domain optimization, content generation, and brand asset design
-- ✈️ [Travel Concierge](https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge) 🟡📚 - Multi-agent travel planning and digital task assistance with dynamic instructions
-- 📈 [Google Trends Agent](https://github.com/google/adk-samples/tree/main/python/agents/google-trends-agent) 🟡📚 - BigQuery-powered trending search terms analysis by region and time period
-- 📺 [Product Catalog Ad Generation](https://github.com/google/adk-samples/tree/main/python/agents/product-catalog-ad-generation) 🟡📚 - Automated advertising content generation from product catalogs
-- 🛍️ [GenMedia for Commerce](https://github.com/google/adk-samples/tree/main/python/agents/genmedia-for-commerce) 🔴📚 - Full-stack agent for commerce media generation including virtual try-on (image & video)
-- 🗺️ [Grounded Travel Agent (Maps MCP)](https://github.com/google/adk-samples/tree/main/python/agents/travel-planner-google-maps-mcp) 🟡📚 - Travel planner grounded in the Google Maps Platform MCP server for real-time places, weather, and routes, with a modular SKILL.md architecture
-- 📑 [Brand-Aligned Presentations](https://github.com/google/adk-samples/tree/main/python/agents/brand-aligned-presentations) 🔴📚 - Multi-agent system on Vertex AI that generates presentations aligned to brand guidelines
+### 🌐 Other Language Recipes
 
-### 🔧 Development & Technical
-
-- 🐛 [Software Bug Assistant](https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant) 🟡📚 - Bug resolution assistant with RAG, MCP, and external knowledge sources (GitHub, StackOverflow)
-- 🤖 [Machine Learning Engineering](https://github.com/google/adk-samples/tree/main/python/agents/machine-learning-engineering) 🔴📚 - Autonomous ML model building and training for state-of-the-art performance on diverse ML tasks
-- 🧩 [RAG Systems](https://github.com/google/adk-samples/tree/main/python/agents/RAG) 🟡📚 - Vertex AI RAG Engine powered document Q&A with citations
-- 📊 [Data Engineering Agent](https://github.com/google/adk-samples/tree/main/python/agents/data-engineering) 🔴📚 - BigQuery and Dataform pipeline builder for ELT workflows and analytics engineering
-- 🔧 [Plumber Data Engineering Assistant](https://github.com/google/adk-samples/tree/main/python/agents/plumber-data-engineering-assistant) 🔴📚 - Big data pipeline creator for Apache Spark, Apache Beam, and dBT on GCP
-- 🧪 [SWE Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/swe-benchmark-agent) 🔴📚 - Software engineering benchmark testing and evaluation agent
-- 🧪 [Tau2 Benchmark Agent](https://github.com/google/adk-samples/tree/main/python/agents/tau2-benchmark-agent) 🔴📚 - Tau2 benchmark agent for advanced evaluation tasks
-- 🎓 [Agent Skills Tutorial](https://github.com/google/adk-samples/tree/main/python/agents/agent-skills-tutorial) 🟢📚 - Demonstrates four ADK skill patterns: inline, file-based, external, and meta
-- 🧠 [Memory Bank Agent](https://github.com/google/adk-samples/tree/main/python/agents/memory-bank) 🟡📚 - ADK agent with Vertex AI Memory Bank integration that remembers user preferences and facts across sessions, deployable to Agent Runtime or Cloud Run
-- 🧩 [Multi-format Hybrid RAG](https://github.com/google/adk-samples/tree/main/python/agents/multiformat-hybrid-rag) 🔴📚 - Production RAG on GCP with contextual chunking, Vector Search 2.0 hybrid search, a REST API, and an MCP server from a single Cloud Run service
-- 📊 [Agent Observability (BigQuery)](https://github.com/google/adk-samples/tree/main/python/agents/agent-observability-bq) 🟡📚 - BigQuery-connected agent demonstrating the BigQueryAgentAnalyticsPlugin for centralized logging, debugging, and auditing
-- 🛡️ [Cyber Guardian Agent](https://github.com/google/adk-samples/tree/main/python/agents/cyber-guardian-agent) 🔴📚 - Hierarchical multi-agent security workflow with conditional routing and four specialized sub-agents
-- 🔑 [Agent Runtime + OAuth (Drive Reader)](https://github.com/google/adk-samples/tree/main/python/agents/adk-ae-oauth) 🔴📚 - Production ADK agent on Agent Runtime with OAuth 2.0 to read Google Drive files on behalf of authenticated users, locally via ADK Web UI and in production via Gemini Enterprise
-- 🌀 [Airflow Version Upgrade Agent](https://github.com/google/adk-samples/tree/main/python/agents/airflow_version_upgrade_agent) 🔴📚 - Two-stage agentic system that migrates Apache Airflow DAGs across versions using Gemini, Vertex AI Search RAG, and a BigQuery knowledge base
-- 📄 [High-Volume Document Analyzer](https://github.com/google/adk-samples/tree/main/python/agents/high-volume-document-analyzer) 🔴📚 - Reads, summarizes, and answers questions over massive collections of unstructured documents in a chunked, iterative manner with Vertex AI and Gemini
-- 📋 [SDLC: Task Planner](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-task-planner) 🟡📚 - Software Development Life Cycle agent that breaks work into actionable tasks (part of the SDLC agent workflow)
-- 🏛️ [SDLC: Technical Designer](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-technical-designer) 🟡📚 - SDLC agent that produces technical designs from requirements (part of the SDLC agent workflow)
-- 📝 [SDLC: User Story Refiner](https://github.com/google/adk-samples/tree/main/python/agents/sdlc-user-story-refiner) 🟡📚 - SDLC agent that refines and structures user stories (part of the SDLC agent workflow)
-- 🔀 [Workflow: Concurrent Research Writer](https://github.com/google/adk-samples/tree/main/python/agents/workflow-concurrent_research_writer) 🔴📚 - Nested WorkflowAgents that research a topic, generate a blog post, and publish it to the most appropriate platform
-- ⏰ [Workflow: Morning Email Debrief](https://github.com/google/adk-samples/tree/main/python/agents/workflow-morning_email_debrief) 🟡📚 - Timed-trigger WorkflowAgent that retrieves and summarizes emails on a daily schedule
-- 🙋 [Workflow: HITL Concierge](https://github.com/google/adk-samples/tree/main/python/agents/workflows-HITL_concierge) 🟡📚 - Human-in-the-loop WorkflowAgent that pauses for user input while building an itinerary
-- ➡️ [Workflow: Sequential](https://github.com/google/adk-samples/tree/main/python/agents/workflows-sequential) 🟢📚 - Minimal sequential WorkflowAgent demonstrating a linear, non-branching execution path
-
-### 🎨 Specialized Applications
-
-- 🎨 [Image Scoring Agent](https://github.com/google/adk-samples/tree/main/python/agents/image-scoring) 🟢📚 - Image generation and policy compliance scoring with Imagen integration
-- 🐪 [CAMEL Integration](https://github.com/google/adk-samples/tree/main/python/agents/camel) 🔴📚 - Multi-agent communication framework integration with CAMEL
-- 🔥 [Deep Search](https://github.com/google/adk-samples/tree/main/python/agents/deep-search) 🔴📚⭐ - **Complete fullstack research agent** (formerly Gemini Fullstack) with React frontend, FastAPI backend, and Human-in-the-Loop workflows
-- 🏥 [Medical Pre-Authorization](https://github.com/google/adk-samples/tree/main/python/agents/medical-pre-authorization) 🟡📚 - Healthcare pre-authorization automation analyzing medical records and policies for coverage determination
-- 🎬 [Short Movie Agents](https://github.com/google/adk-samples/tree/main/python/agents/short-movie-agents) 🟡📚 - End-to-end video construction based on user intent with multi-agent coordination
-- 🎙️ [Podcast Transcript Agent](https://github.com/google/adk-samples/tree/main/python/agents/podcast_transcript_agent) 🟡📚 - Podcast transcription and analysis agent
-- ✍️ [Blog Writer](https://github.com/google/adk-samples/tree/main/python/agents/blog-writer) 🟡📚 - Automated blog content generation and writing assistant
-- 📖 [Story Teller](https://github.com/google/adk-samples/tree/main/python/agents/story_teller) 🟡📚 - Multi-agent collaborative story writer with a PromptEnhancer, Parallel Writers (creative + focused temperature), Critique Agent, and final Editor — showcases Sequential, Parallel, and Loop agent composition
-- 🛡️ [Safety Guardrail Plugins](https://github.com/google/adk-samples/tree/main/python/agents/safety-plugins) 🟡📚 - Security filters using Gemini-as-judge and Model Armor for jailbreak protection
-- 💳 [Antom Payment](https://github.com/google/adk-samples/tree/main/python/agents/antom-payment) 🟡📚 - Ant International payment and refund integration via MCP tools
-- 💬 [Realtime Conversational Agent](https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent) 🟡📚 - Live streaming conversational agent with real-time interaction capabilities
-- ⚡ [ADK Bidi-streaming Demo](https://github.com/google/adk-samples/tree/main/python/agents/bidi-demo) 🟡📚 - Real-time bidirectional streaming demo with WebSocket communication, multimodal support (audio/video/text), and concurrent task handling
-- 🛡️ [AI Security Agent](https://github.com/google/adk-samples/tree/main/python/agents/ai-security-agent) 🔴📚 - LLM red team agent for comprehensive security testing and vulnerability assessment
-- 💰 [Currency Agent](https://github.com/google/adk-samples/tree/main/python/agents/currency-agent) 🟡📚 - Currency exchange rate lookups and conversions with A2A and MCP integration
-- 🏗️ [Hierarchical Workflow Automation](https://github.com/google/adk-samples/tree/main/python/agents/hierarchical-workflow-automation) 🔴📚 - Structured multi-system transaction orchestration with multi-agent architecture
-- 🔀 [Parallel Task Decomposition Execution](https://github.com/google/adk-samples/tree/main/python/agents/parallel_task_decomposition_execution) 🔴📚 - Design pattern for parallel task decomposition and execution with ADK agents
-- 🔐 [Policy-as-Code Agent](https://github.com/google/adk-samples/tree/main/python/agents/policy-as-code) 🟡📚 - Data governance agent implementing policy-as-code patterns for compliance
-- 🏪 [Retail AI Location Strategy](https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy) 🟡📚 - Retail location optimization and market analysis with multi-agent system
-- 🌍 [Earth Engine Geospatial Agent](https://github.com/google/adk-samples/tree/main/python/agents/earth-engine-geospatial) 🟡📚 - Geospatial chatbot using Google Earth Engine and the AlphaEarth Satellite Embeddings dataset to compute land-change area for user-supplied GeoJSON geometries
-- 🍽️ [Gemma Food Tour Guide](https://github.com/google/adk-samples/tree/main/python/agents/gemma-food-tour-guide) 🟡📚 - Personalized culinary tour builder using Gemma 4 31B and the Google Maps MCP server
-- 🎉 [Fun Facts Agent](https://github.com/google/adk-samples/tree/main/python/agents/fun-facts) 🟢📚 - Minimal starter agent using Gemini and Google Search grounding to serve fun facts — a gentle intro to ADK tools, Agent Runtime, and Gemini Enterprise
-- 🩺 [NexShift](https://github.com/google/adk-samples/tree/main/python/agents/nexshift-agent) 🔴📚 - AI nurse rostering agent that generates, validates, and manages optimal schedules, balancing regulatory constraints and fairness via OR-Tools constraint programming
-- 🏥 [Nurse Handover Agent](https://github.com/google/adk-samples/tree/main/python/agents/nurse-handover) 🟡📚 - Generates concise, structured shift-handover summaries from raw medical logs in the standardized ISBAR format
-- 🎨 [On-Brand GenMedia Agent](https://github.com/google/adk-samples/tree/main/python/agents/on-brand-genmedia) 🟡📚 - Generates and evaluates images against brand guidelines, iteratively improving them until policy and quality requirements are met
-
-### 🌐 Other Language Samples
-
-_Official ADK samples in TypeScript, Java, and Go_
-
-**TypeScript**
-
-- 🏠 [Customer Service Agent (TypeScript)](https://github.com/google/adk-samples/tree/main/typescript/agents/customer_service) 🟢📚 - TypeScript port of the customer service agent for home & garden retail with product selection and order management
-
-**Java**
-
-- 🐛 [Software Bug Assistant (Java)](https://github.com/google/adk-samples/tree/main/java/agents/software-bug-assistant) 🟡📚 - Java port of the bug resolution assistant using ADK Java with RAG and external knowledge integration
-- 📈 [Time Series Forecasting (Java)](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting) 🔴📚 - ADK Java agent using MCP Toolbox + BigQuery `AI.FORECAST` for natural language time series forecasting over public datasets, deployable to Cloud Run
+_Official ADK recipes in Go, Java, Kotlin, and TypeScript_
 
 **Go**
 
-- 🔍 [LLM Auditor (Go)](https://github.com/google/adk-samples/tree/main/go/agents/llm-auditor) 🟢📚 - Go port of the LLM response auditor for chatbot verification and content auditing
-- ⛵ [Boat Agent (Go)](https://github.com/google/adk-samples/tree/main/go/agents/boat-agent) 🟢📚 - Go ADK sample agent for sailing/boating assistance
-- 📋 [Naval List (Go)](https://github.com/google/adk-samples/tree/main/go/agents/navallist) 🟢📚 - Go ADK sample demonstrating list management with a naval theme
-- 🔭 [Sail Researcher (Go)](https://github.com/google/adk-samples/tree/main/go/agents/sail-researcher) 🟡📚 - Go ADK research agent for sailing-domain information retrieval
+- 💰 [Financial Advisor (Go)](https://github.com/google/adk-recipes/tree/main/contrib/go/financial-advisor) 🟡📚 - Go port of the multi-agent financial advisor: Google Search ticker analysis, trading strategies, execution plan, and risk assessment
+
+**Java**
+
+- 💰 [Financial Advisor (Java)](https://github.com/google/adk-recipes/tree/main/contrib/java/financial-advisor) 🟡📚 - Java port of the multi-agent financial advisor
+- 📈 [Time Series Forecasting (Java)](https://github.com/google/adk-recipes/tree/main/contrib/java/time-series-forecasting) 🔴📚 - ADK Java agent using MCP Toolbox and BigQuery `AI.FORECAST` for natural language time series forecasting (marked inactive upstream)
+
+**Kotlin**
+
+- 💰 [Financial Advisor (Kotlin)](https://github.com/google/adk-recipes/tree/main/contrib/kotlin/financial-advisor) 🟡📚 - Kotlin port of the multi-agent financial advisor
+- 🔍 [LLM Auditor (Kotlin)](https://github.com/google/adk-recipes/tree/main/contrib/kotlin/llm-auditor) 🟡📚 - Sequential critic and reviser pipeline that fact-checks LLM answers with Google Search
+
+**TypeScript**
+
+- 💰 [Financial Advisor (TypeScript)](https://github.com/google/adk-recipes/tree/main/contrib/typescript/financial-advisor) 🟡📚 - TypeScript port of the multi-agent financial advisor
+
+### 🔌 Agent Skill Plugins
+
+- 🛍️ [Retail AI Plugin](https://github.com/google/adk-recipes/tree/main/plugins/retail) 🟡📚 - Installable retail skills for coding agents: semantic product search over Vector Search 2.0 and BigQuery, plus image and video virtual try-on
 
 ---
 
