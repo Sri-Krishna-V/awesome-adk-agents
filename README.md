@@ -147,6 +147,7 @@ _Agents built by the maintainer of this list._
 - 🔴 [kweinmeister/agentic-trading](https://github.com/kweinmeister/agentic-trading) 🏭 - Trading simulation where an AlphaBot trading agent and a RiskGuard risk agent talk over A2A, with Dockerfiles and Cloud Build configs. Informational only.
 - 🔴 [vladkol/crm-data-agent](https://github.com/vladkol/crm-data-agent) 🏭 - Multi-agent RAG and NL2SQL over Salesforce data with Cloud Run scripts. Reference only: pinned to ADK 1.3 and old Gemini models (June 2025).
 - 🟡 [seehiong/adk-web-multi-agent](https://github.com/seehiong/adk-web-multi-agent) - Multi-agent system with Google ADK and OpenRouter models coordinating specialist agents to query PostgreSQL (via MCP Toolbox) and Data Commons.
+- 🟡 [Self-Improving Agent Skills](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/agent_skills/self-improving-agent-skills) - Three ADK agents execute, analyze and mutate an agent skill in a loop, with a FastAPI backend and Next.js UI.
 
 ### Frameworks & Platforms Built on ADK
 
@@ -165,6 +166,8 @@ _Agents built by the maintainer of this list._
 - 🔴 [Atmosphere/atmosphere](https://github.com/Atmosphere/atmosphere) - Portable JVM agent runtime whose `atmosphere-adk` module bridges ADK Java agent streams to WebSocket, SSE and gRPC clients.
 - 🔴 [Temporal ADK agent samples](https://github.com/temporalio/samples-python/tree/main/google_adk_agents) - Run ADK agents durably inside Temporal workflows; the integration ships as the `temporalio-google-adk` package.
 - 🔴 [lemony-ai/cascadeflow](https://github.com/lemony-ai/cascadeflow) 🏭 - Cascading runtime that optimizes cost, latency, quality, and policy decisions inside the agent loop, with a Google ADK integration and support for 17+ model providers.
+- 🟡 [AI Dashboard Canvas Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/generative_ui_agents/ai-dashboard-canvas-agent) - Canvas dashboard where an ADK agent writes live charts and metrics through AG-UI and CopilotKit in a Next.js app.
+- 🟡 [AI Financial Coach Agent (AG-UI)](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/generative_ui_agents/ai-financial-coach-agent) - Budget, savings and debt coach built from ADK agents, with AG-UI and CopilotKit rendering results as interactive Next.js cards.
 
 ### Observability, Evaluation & Security
 
@@ -194,6 +197,7 @@ _Agents built by the maintainer of this list._
 - 🟡 [Memanto ADK memory service](https://github.com/moorcheh-ai/memanto/tree/main/integrations/google-adk) - Drop-in ADK memory service that extracts typed memories (preferences, facts, decisions) from turns, replacing `InMemoryMemoryService`.
 - 🟡 [achetronic/adk-utils-go](https://github.com/achetronic/adk-utils-go) 🏭 - Go utilities for ADK: OpenAI and Anthropic model clients, Redis sessions, PostgreSQL + pgvector long-term memory, filesystem artifacts and a context-window guard plugin.
 - 🟡 [edu010101/adk-extra-services](https://github.com/edu010101/adk-extra-services) - Python package with extra ADK session (Redis, MongoDB) and artifact (S3, Azure, Supabase, local) backends. Last updated October 2025: lacks `list_artifact_versions` and `get_artifact_version`.
+- 🟡 [ADK Career Coach Agent with Memory](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_llm_apps/llm_apps_with_memory_tutorials/adk_career_coach_agent_memory) - Streamlit career coach where an ADK orchestrator routes to resume, interview, skills and salary sub-agents, with Mem0 and Qdrant memory.
 
 ### Domain-Specific Applications
 
@@ -212,6 +216,10 @@ _Agents built by the maintainer of this list._
 - 🟡 [B4K2/WhatsApp-agent](https://github.com/B4K2/WhatsApp-agent) - Intelligent WhatsApp agent built with MCP + Google ADK for conversational automation.
 - 🟡 [Beever-AI/beever-atlas](https://github.com/Beever-AI/beever-atlas) - Conversational wiki knowledge base with Slack/Teams/Discord bots, RAG, and MCP integration built on Google ADK.
 - 🟡 [anxuanzi/bua](https://github.com/anxuanzi/bua) - AI-powered browser automation for Go — describe tasks in plain English and let the ADK-powered agent handle the clicks via vision-language models.
+- 🔴 [Insurance Claim Live Agent Team](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/voice_ai_agents/insurance_claim_live_agent_team) - Voice and camera insurance claim intake on Gemini Live, with an ADK graph that classifies, validates and packages the claim.
+- 🟡 [Release Radar Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/always_on_agents/release_radar_agent) - Scheduled ADK agent checking requirements.txt or package.json dependencies against GitHub releases for breaking and security changes. Pinned to ADK 1.9.0.
+- 🟡 [Multimodal Agentic RAG](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/rag_tutorials/multimodal_agentic_rag) - ADK coordinator answers questions with citations from text, URL, PDF, image, audio and video sources using Gemini Embedding 2.
+- 🟡 [Always-on Hacker News Briefing Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/always_on_agents/always_on_hn_briefing_agent) - ADK agent that ranks Hacker News AI stories into a daily brief, triggered through FastAPI by Cloud Scheduler or Pub/Sub.
 
 ## 📚 Learning Resources
 
