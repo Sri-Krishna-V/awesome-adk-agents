@@ -46,6 +46,8 @@ Not sure your project meets these rules yet? Post it in [Show your ADK project](
 
 **Before you open the PR:** run `npx awesome-lint@2.3.0 README.md`. It must report no errors.
 
+**Checks on your PR:** the lint check runs awesome-lint, and the entry check tests each line you add: its links must open, and a GitHub repo must not be archived and must have a push in the last 6 months. If a check shows a red ✗, open its details to see what to fix.
+
 **Removal:** maintainers remove entries whose links 404, archived repos, and projects with no commits in 12+ months that are broken or built on pre-1.0 ADK.
 
 ### Adding a New Agent
