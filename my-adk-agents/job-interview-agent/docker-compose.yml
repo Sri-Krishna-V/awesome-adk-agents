@@ -4,11 +4,13 @@ services:
   interview-agent:
     build: .
     container_name: job-interview-agent
+    ports:
+      - "8000:8000"
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs
       - ./.env:/app/.env
-      - ./credentials.json:/app/credentials.json
+      - ./credentials.json:/app/app/credentials.json
       - ./token.pickle:/app/token.pickle
     environment:
       - PYTHONUNBUFFERED=1
