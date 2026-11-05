@@ -90,6 +90,22 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 - **A2A**: expose or consume agents over the Agent2Agent protocol, which reached v1.0 in March 2026
 - **Renames**: the docs moved to [adk.dev](https://adk.dev/); Vertex AI Agent Engine is now Agent Runtime on Gemini Enterprise Agent Platform; `google/adk-samples` is now [google/adk-recipes](https://github.com/google/adk-recipes); Agent Starter Pack is archived in favor of [Agents CLI](https://github.com/google/agents-cli)
 
+## 🧰 Official SDKs & Tools
+
+_Google's official ADK repositories and the protocol ADK builds on_
+
+- 🐍 [google/adk-python](https://github.com/google/adk-python) - The core open-source Python ADK: graph workflows, skills, plugins, evaluation and A2A
+- 🐹 [google/adk-go](https://github.com/google/adk-go) - ADK for Go with graph workflows, human-in-the-loop and A2A (module `google.golang.org/adk/v2`)
+- ☕ [google/adk-java](https://github.com/google/adk-java) - ADK for Java with plugins, event compaction, tool confirmation and A2A
+- 🟦 [google/adk-js](https://github.com/google/adk-js) - ADK for TypeScript and JavaScript (npm `@google/adk`) with graph workflows
+- 🤖 [google/adk-kotlin](https://github.com/google/adk-kotlin) - ADK for Kotlin and Android
+- 🖥️ [google/adk-web](https://github.com/google/adk-web) - The developer UI behind `adk web`: chat, traces, evaluation and the visual builder
+- 📖 [google/adk-docs](https://github.com/google/adk-docs) - Source of the official documentation at [adk.dev](https://adk.dev/)
+- 🍳 [google/adk-recipes](https://github.com/google/adk-recipes) 📚 - Official runnable recipes: core patterns, contributed agents in five languages, and vertical skill plugins (formerly adk-samples)
+- 🧰 [google/agents-cli](https://github.com/google/agents-cli) 🟡 - CLI and skills that let a coding agent scaffold, evaluate, deploy and observe ADK agents on Google Cloud; successor to Agent Starter Pack
+- 🧩 [google/adk-python-community](https://github.com/google/adk-python-community) 🟡 - Community-contributed ADK tools, service integrations and deployment scripts (`pip install google-adk-community`)
+- 🔗 [a2aproject/A2A](https://github.com/a2aproject/A2A) 🟡 - The Agent2Agent open protocol (v1.0) for interoperable agents, supported natively by ADK
+
 ## 🏆 Featured Projects
 
 _My showcase agents demonstrating production-ready ADK implementations_
