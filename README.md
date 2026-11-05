@@ -39,7 +39,7 @@ _The most comprehensive curated collection for Google's Agent Development Kit (A
 
 > Welcome to **Awesome ADK Agents**👋👋
 
-A comprehensive ecosystem resource for Google's Agent Development Kit - one of the fastest-growing agentic AI frameworks, with 20K+ stars, 3.6K+ forks, and thousands of dependent projects. Whether you're exploring AI agents for the first time or deploying production multi-agent systems, this collection provides vetted implementations, learning paths, and deployment patterns from Google's official team and a vibrant global community.
+A comprehensive ecosystem resource for Google's Agent Development Kit - an open-source agent framework with 22K+ GitHub stars, 4.3K+ forks and 400+ contributors on the Python repo alone. Whether you're exploring AI agents for the first time or deploying production multi-agent systems, this collection provides vetted implementations, learning paths, and deployment patterns from Google's official team and a vibrant global community.
 
 ## 🎯 What This List Solves
 
@@ -64,22 +64,31 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 
 ## What is Google's Agent Development Kit (ADK)?
 
-**Google's Agent Development Kit (ADK)** is Google's open-source, code-first Python framework for building production AI agents - backed by Google Cloud with tight Gemini integration while remaining fully model-agnostic (supports Claude, Ollama, LiteLLM). Launched in 2025, ADK has rapidly gained traction with 20K+ GitHub stars, frequent releases (currently v2.x, with the major ADK 2.0 milestone shipped), and adoption by thousands of projects, positioning itself as a serious alternative to established frameworks like LangChain and CrewAI. ADK is now available in Python, Go, Java, and TypeScript.
+**Google's Agent Development Kit (ADK)** is Google's open-source, code-first framework for building, evaluating and deploying AI agents. It is optimized for Gemini but model-agnostic (Gemini, Gemma, Claude, OpenAI, Ollama, vLLM, LiteLLM and more) and deployment-agnostic (any container, Cloud Run, GKE, or Agent Runtime on Google Cloud). Launched in 2025, ADK 2.0 reached general availability for Python on 2026-05-19 and the current Python release is v2.13.0; official SDKs exist for Python, TypeScript, Go, Java and Kotlin.
 
 **Why ADK Matters:**
 
-- **Google's Strategic Bet**: Deep integration with Vertex AI, Cloud Run, BigQuery, and Google's AI ecosystem
-- **Production-First Design**: Built for enterprise deployment from day one, not research experiments  
-- **Model Flexibility**: While optimized for the latest Gemini models, supports Anthropic Claude, Ollama, and any LLM via adapters
-- **Active Innovation**: 200+ contributors, community hackathons with $50K prizes, and rapid feature development
-- **Growing Ecosystem**: Official samples, third-party integrations (MongoDB, MCP, A2A protocol), and strong community momentum
+- **Google's Strategic Bet**: Deep integration with Agent Platform (formerly Vertex AI), Cloud Run, GKE, BigQuery, and Google's AI ecosystem
+- **Production-First Design**: Built for deployment from day one, with evaluation, tracing and managed hosting options
+- **Model Flexibility**: Optimized for Gemini, with adapters for Claude, OpenAI, Gemma, Ollama, vLLM, LiteLLM and more
+- **Active Innovation**: 400+ contributors, frequent releases, and the graph-based Workflow runtime introduced in ADK 2.0
+- **Growing Ecosystem**: Official recipes, third-party integrations (MongoDB, MCP, A2A protocol), and strong community momentum
 
 ### 🗝️ Key Features
 
-- **🛠️ Rich Tool Ecosystem**: Pre-built tools, custom functions, OpenAPI specs, and Google ecosystem integration
-- **💻 Code-First Development**: Define agents in Python with full testability and version control
-- **🔗 Multi-Agent Orchestration**: Compose specialized agents into scalable hierarchies
-- **🚀 Deploy Anywhere**: Cloud Run, Vertex AI Agent Engine, or any containerized environment
+- **🧭 Graph-Based Workflows (ADK 2.0)**: Deterministic, graph-based execution with routing, fan-out/fan-in, loops, retries, state, human-in-the-loop and nested workflows
+- **🛠️ Rich Tool Ecosystem**: Pre-built tools, custom functions, OpenAPI specs, MCP tools, and Google ecosystem integration
+- **💻 Code-First Development**: Define agents in code (Python, TypeScript, Go, Java, Kotlin) with full testability and version control
+- **🔗 Multi-Agent Orchestration**: Compose specialized agents into scalable hierarchies; delegate with the Task API
+- **🚀 Deploy Anywhere**: Agent Runtime, Cloud Run, GKE, or any containerized environment
+
+### 🆕 What's New in ADK 2.x
+
+- **Workflow runtime**: graph-based execution with routing, fan-out/fan-in, loops, retries, human-in-the-loop and nested workflows. `Workflow` replaces the now-deprecated `SequentialAgent`, `ParallelAgent` and `LoopAgent`. See the [ADK 2.0 migration notes](https://adk.dev/2.0/)
+- **Five official SDKs**: Python 2.0 (May 2026), Go 2.0 (June 2026), TypeScript 2.0 (August 2026), Java 1.0 (March 2026) and Kotlin 1.0 (September 2026)
+- **Skills, plugins and evaluation**: `SkillToolset`, a plugin system, a user simulator, and `adk optimize` for prompt optimization
+- **A2A**: expose or consume agents over the Agent2Agent protocol, which reached v1.0 in March 2026
+- **Renames**: the docs moved to [adk.dev](https://adk.dev/); Vertex AI Agent Engine is now Agent Runtime on Gemini Enterprise Agent Platform; `google/adk-samples` is now [google/adk-recipes](https://github.com/google/adk-recipes); Agent Starter Pack is archived in favor of [Agents CLI](https://github.com/google/agents-cli)
 
 ## 🏆 Featured Projects
 
@@ -469,16 +478,24 @@ _Official ADK samples in TypeScript, Java, and Go_
 
 ### Quick Start with Google ADK
 
+Follow the official [Python quickstart](https://adk.dev/get-started/python/) (other languages: [Get Started](https://adk.dev/get-started/)).
+
 ```bash
-# Install ADK framework
+# Python 3.11+ (google-adk 2.x requires it)
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+# Install ADK
 pip install google-adk
 
-# Create your first agent
-adk create my-agent
-cd my-agent
+# Create your first agent (the name must be a valid Python identifier: use my_agent, not my-agent)
+adk create my_agent
 
-# Run with web interface
-adk web
+# Run it in the terminal
+adk run my_agent
+
+# Or open the dev web UI. Run this from the PARENT folder that contains my_agent/
+adk web --port 8000
 ```
 
 ### Using This Repository
@@ -486,23 +503,29 @@ adk web
 This is a **hybrid awesome list** - combining curated resources with featured implementations:
 
 - **Browse & Learn**: Explore categorized projects for inspiration and best practices
-- **Clone & Build**: Featured projects in `/my-adk-agents/` are production-ready starting points
+- **Clone & Build**: Featured projects in `/my-adk-agents/` are working ADK agents you can clone and run
 - **Contribute**: Add your own projects or improve existing ones via [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ### Essential ADK Commands
 
 ```bash
-adk web         # Launch web UI (recommended)
-adk run         # Interactive CLI
-adk create      # Generate new agent template
-adk deploy      # Deploy to cloud platforms
+adk create my_agent      # Scaffold a new agent project
+adk run my_agent         # Interactive CLI
+adk web                  # Dev web UI (run from the folder that contains your agent folders)
+adk api_server           # Serve agents as a FastAPI API server
+adk eval                 # Evaluate an agent against eval sets
+adk deploy cloud_run --project=PROJECT --region=REGION path/to/my_agent      # Cloud Run
+adk deploy agent_engine --project=PROJECT --region=REGION path/to/my_agent   # Agent Runtime (subcommand keeps the old agent_engine name)
+adk deploy gke --project=PROJECT --region=REGION path/to/my_agent            # GKE (also: adk deploy docker)
 ```
 
 ### Resources
 
-- 📖 [Official ADK Documentation](https://google.github.io/adk-docs/)
-- 🛠️ [Third-Party Tools for ADK](https://google.github.io/adk-docs/tools/third-party/) - Official catalog of integrated third-party tools including Browserbase, Exa, Firecrawl, GitHub, Hugging Face, Notion, Tavily, and more
-- 💬 [Community Discussions](https://github.com/google/adk-python/discussions)
+- 📖 [Official ADK Documentation](https://adk.dev/)
+- 🚀 [Python Quickstart](https://adk.dev/get-started/python/)
+- 🆕 [ADK 2.0 Migration Notes](https://adk.dev/2.0/)
+- 🛠️ [Third-Party Tools for ADK](https://adk.dev/tools/third-party/) - Official catalog of integrated third-party tools, and the [integrations catalog](https://adk.dev/integrations/)
+- 💬 [Community Discussions](https://github.com/google/adk-python/discussions) and [ADK community page](https://adk.dev/community/)
 - 🎓 [Learning Path](#-learning-resources)
 
 ---
@@ -531,7 +554,7 @@ We welcome high-quality contributions that advance the ADK ecosystem. See [CONTR
 
 **Related Lists:**
 
-- [tsubasakong/awesome-google-adk](https://github.com/tsubasakong/awesome-google-adk) - Another community-curated list of Google ADK resources
+- [tsubasakong/awesome-google-adk](https://github.com/tsubasakong/awesome-google-adk) - Another community-curated list of Google ADK resources (last updated May 2025)
 
 ## ⭐ Impact
 
