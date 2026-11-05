@@ -248,10 +248,15 @@ _Comprehensive guides, tutorials, and educational content_
 
 ### ⭐ Community Training Platforms
 
+- 🎓 **[mauripsale/doc-adk-training](https://github.com/mauripsale/doc-adk-training)** 🟡📚🔥 - "ADK: From Zero to Hero": 45-module ADK 2.0 curriculum by GDE and Google Cloud trainer Maurizio Ipsale with labs, quizzes, a solution vault and a Codespaces/Cloud Shell setup ([site](https://mauripsale.github.io/doc-adk-training/))
 - 🏆 **[Google ADK Training Hub](https://raphaelmansuy.github.io/adk_training/)** 🟢🟡🔴📚 - Community-run training site with 35 tutorials covering ADK agents, tools, multi-agent patterns, deployment, and React/Next.js integration. Written for ADK 1.x (1.16+); check the [ADK 2.0 migration notes](https://adk.dev/2.0/) before following the code
 
 ### 🎓 Courses & Certifications
 
+- 🎓 [Building Live Voice Agents with Google's ADK (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/building-live-voice-agents-with-googles-adk/) 🟡🎓 - Short course by Google engineers: voice agent, sessions, state and memory, tools, callback guardrails, multi-agent orchestration, and a Gemini TTS podcast capstone
+- 🎓 [A2A: The Agent2Agent Protocol (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/a2a-the-agent2agent-protocol/) 🟡🎓 - Course with Google Cloud and IBM Research: wrap agents built on ADK and other frameworks in A2A servers and orchestrate them in a healthcare multi-agent system
+- 🎓 [Develop Agents with Agent Development Kit (ADK) track (DataCamp x Google Cloud)](https://www.datacamp.com/tracks/develop-agents-with-agent-development-kit-adk) 🟢🎓 - Five Google-created courses: build agents, optimize agent behavior, add tools, and manage memory and state
+- 🎓 [Build Your First Agent with Agent Development Kit (Google Skills)](https://www.skills.google/course_templates/1563) 🟢🎓 - Introductory Google Skills course for building and running an ADK agent in Python and YAML
 - 🎓 [5-Day AI Agents Intensive on Kaggle](https://www.kaggle.com/learn-guide/5-day-agents) 📚🎓 - Free, self-paced Learn Guide from Google and Kaggle's live course (Nov 2025) with whitepapers, podcasts, codelabs and recorded livestreams on agent foundations, tools, memory, evaluation and production; the hands-on codelabs use ADK
 
 ### 🚀 Quickstart Courses
@@ -264,13 +269,21 @@ _Comprehensive guides, tutorials, and educational content_
 ### 🧪 Official Hands-on Learning
 
 - 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) 📚 - Interactive, guided tutorials with hands-on coding exercises from Google
+- 🧪 [ADK 2 Orchestration: Graph, Collaborative & Dynamic Workflows](https://codelabs.developers.google.com/adk2/instructions) 🟡🧪 - About 50-minute Colab codelab teaching ADK 2.0 graph, collaborative (chat, single-turn, task) and dynamic workflows by building a race-day coach, one runnable step at a time
 - 🧪 [Build Your First ADK Agent Workforce](https://cloud.google.com/blog/topics/developers-practitioners/build-your-first-adk-agent-workforce) 🟢🧪 - Learning path with 3 official codelabs: building autonomous agents, empowering agents with tools, and orchestrating multi-agent systems
+- 🧪 [Building ADK Agents with Skills and Tools (Next '26 Developer Keynote)](https://codelabs.developers.google.com/next26/dev-keynote/building-agents-with-skills) 🟡🧪 - Codelab building a marathon-planner agent with a modular prompt, `SkillToolset` and Google Maps MCP tools, tested in `adk web` and deployed to Agent Runtime
+- 🧪 [Building a Multi-Agent System using Gemini and Gemma models](https://codelabs.developers.google.com/next26/multi-agent-system) 🟡🧪 - Researcher, Judge, Content Builder and Orchestrator agents wired with workflow agents, `RemoteA2aAgent` and a Gemma model on a Cloud Run GPU
+- 🧪 [Stateful Data Science Agent on Agent Runtime](https://codelabs.developers.google.com/next26/adk-deploy-scale) 🟡🧪🏭 - Codelab deploying a BigQuery data-science agent with Memory Bank and Cloud Trace to Agent Runtime with `adk deploy`
+- 🧪 [Frontend Experiences with ADK and A2UI](https://codelabs.developers.google.com/next26/adk-a2ui) 🟡🧪 - Short codelab where an ADK agent replies with A2UI JSON that `adk web` renders as cards, lists and buttons
+- 🧪 [Build AI Agents with ADK for Java](https://codelabs.developers.google.com/adk-java-getting-started) 🟢🧪 - Codelab building persona, tool, sub-agent and workflow agents in Java
+- 🧪 [GoogleCloudPlatform/race-condition](https://github.com/GoogleCloudPlatform/race-condition) 🔴📚 - Multi-agent marathon simulation (ADK, Gemini, A2A, Go/Python/Angular) from the Google Cloud Next '26 Developer Keynote
 - 🧪 [Building GraphRAG Agents with ADK and Neo4j](https://codelabs.developers.google.com/neo4j-adk-graphrag-agents) 🟡📚💡 - Official codelab building a multi-agent investment research system with Neo4j, MCP Toolbox, and GraphRAG for multi-hop reasoning (uses `google-adk>=1.21.0` and preview Gemini 3.x models)
 
 ### 📖 Tutorials & Walkthroughs
 
 - 📖 [chongdashu/adk-mcp-a2a-crash-course](https://github.com/chongdashu/adk-mcp-a2a-crash-course) 🟡📖 - Complete multi-agent system with ADK + A2A + MCP integration, featuring Notion and ElevenLabs with full architecture, testing, and [YouTube](https://www.youtube.com/watch?v=s6-Ofu-uu2k) tutorial (pinned to ADK 1.2)
 - 📖 [mongodb-developer/MongoDB-ADK-Agents](https://github.com/mongodb-developer/MongoDB-ADK-Agents) 🟡📖💡 - Official MongoDB grocery shopping agent with Atlas Vector Search, updated for ADK 2.x, with a complete dataset and step-by-step setup ([companion article](https://medium.com/google-cloud/build-a-python-ai-agent-in-15-minutes-with-google-adk-and-mongodb-atlas-vector-search-groceries-b6c4af017629))
+- 📖 [kweinmeister/agent-design-patterns](https://github.com/kweinmeister/agent-design-patterns) 🟡📚 - Executable cookbook of agent architecture patterns using ADK and Gemini, with a published guide
 - 📖 [datascalehq/datascale](https://github.com/datascalehq/datascale/tree/main/cookbook/tutorials/agent_docs) 🟡📖 - Multi-agent documentation builder with planner and writer agents that analyze codebases and generate structured knowledge bases ([companion article](https://medium.com/gitconnected/building-a-knowledge-base-from-your-codebase-using-google-adk-7508e845bdc1))
 - 📖 [meteatamel/adk-demos](https://github.com/meteatamel/adk-demos/) 🟢📖 - Collection of demos and tutorials for Google's Agent Development Kit
 - 📖 [sokart/adk-walkthrough](https://github.com/sokart/adk-walkthrough) 🟡📖 - Step-by-step guides and examples using the open-source Python ADK framework
@@ -339,6 +352,11 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 
 **Official Google posts:**
 
+- 📝 [Announcing ADK for Go 2.0](https://developers.googleblog.com/announcing-adk-go-20) 🟡📝 - Clearest official explanation of the ADK 2.0 model: graph-based workflow engine, human-in-the-loop pause/resume, dynamic nodes, retries, and Chat/Task/SingleTurn agent modes
+- 📝 [Hill-Climbing Agent Quality with Agents CLI Evaluation](https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/) 🟡📝 - Baseline evals, regression checks, model comparison, nightly runs and automated prompt tuning with Agents CLI
+- 📝 [Build Cross-Language Multi-Agent Team with ADK and A2A](https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/) 🟡📝 - Python extraction agent plus Go compliance validator orchestrated over A2A with a manual-review fallback
+- 📝 [Build zero-trust AI agents with Google's Agent Development Kit](https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/) 🔴📝 - Prompt-injection-resistant agent with signed database writes, gVisor sandboxing and deterministic checks in CI
+- 📝 [Building Collaborative AI: A Developer's Guide to Multi-Agent Systems with ADK](https://cloud.google.com/blog/topics/developers-practitioners/building-collaborative-ai-a-developers-guide-to-multi-agent-systems-with-adk) 🟢📝 - LLM, workflow and custom agents, sub-agents vs AgentTool, and state, with companion videos and a sample repo
 - 📝 [ADK Architecture: When to Use Sub-Agents versus Agents as Tools](https://cloud.google.com/blog/topics/developers-practitioners/where-to-use-sub-agents-versus-agents-as-tools) 🟡📝 - Essential architectural guide with decision matrix for choosing between sub-agents and agent tools, featuring real-world use cases (data agents, travel planners) and best practices for multi-agent systems
 
 **Community articles:**
@@ -356,6 +374,8 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 - 🎥 [Introducing Agent Development Kit (ADK)](https://www.youtube.com/watch?v=zgrOwow_uTQ) 🟢🎥 - 3-minute product overview shown at launch
 - 🎥 [Getting started with ADK](https://www.youtube.com/watch?v=44C8u0CDtSo) 🟢🎥 - "Hello-world" coding session from pip install to first agent
 - 🎥 [Google Launches an Agent SDK – ADK Deep Dive](https://www.youtube.com/watch?v=G9wnpfW6lZY) 🟡🎥 - Independent review comparing ADK to other agent SDKs
+- 🎥 [ADK Community Calls playlist](https://www.youtube.com/playlist?list=PLwi6PfxEP7zZbBPmWiZ8QbPcuKyAY5RR3) 🟡🎥 - Official monthly ADK community calls: release news, demos and Q&A (latest: [July 2026 – ADK Go 2.0, Agents CLI GA, Managed Agents](https://www.youtube.com/watch?v=-L8ys-nKCWc))
+- 🎥 [Agent Factory: Agent Evaluation, Practical Tooling, and Multi-Agent Systems](https://cloud.google.com/blog/topics/developers-practitioners/agent-factory-recap-a-deep-dive-into-agent-evaluation-practical-tooling-and-multi-agent-systems) 🟡🎥 - Google Cloud episode recap on four-layer agent evaluation, golden test cases and the Trace tab in `adk web`, with the [full episode](https://youtu.be/vTjlLiFgFno)
 - 🎥 [Google ADK Course (theailanguage playlist)](https://www.youtube.com/playlist?list=PL6tW9BrhiPTAZts0W5nQS9dbW6VMnLKab) 🟢🎥 - Community video course ("End-to-end Course 2026") covering ADK fundamentals and advanced topics
 
 ---
