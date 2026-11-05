@@ -18,7 +18,6 @@ New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [St
 ## 📖 Table of Contents
 
 - [🎯 What This List Solves](#-what-this-list-solves)
-- [What is Google's Agent Development Kit (ADK)?](#what-is-googles-agent-development-kit-adk)
 - [🧰 Official SDKs & Tools](#-official-sdks--tools)
 - [🏆 Featured Projects](#-featured-projects)
 - [🚀 Templates & Starters](#-templates--starters)
@@ -26,6 +25,7 @@ New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [St
 - [🏆 ADK Hackathons & Challenges](#-adk-hackathons--challenges)
 - [📚 Learning Resources](#-learning-resources)
 - [🎯 Official Examples](#-official-examples)
+- [💡 About ADK](#-about-adk)
 - [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
 - [🙏 Acknowledgements](#-acknowledgements)
@@ -50,34 +50,6 @@ Building production-ready AI agents with Google's ADK shouldn't require starting
 - **Solution**: Progressive examples that bridge theory and practice, showing how real developers solve actual problems
 
 **Whether you're a beginner looking for solid foundations or an experienced developer seeking proven patterns, this repository eliminates the trial-and-error phase and accelerates your path to production-ready agents.**
-
-## What is Google's Agent Development Kit (ADK)?
-
-**Google's Agent Development Kit (ADK)** is Google's open-source, code-first framework for building, evaluating and deploying AI agents. It is optimized for Gemini but model-agnostic (Gemini, Gemma, Claude, OpenAI, Ollama, vLLM, LiteLLM and more) and deployment-agnostic (any container, Cloud Run, GKE, or Agent Runtime on Google Cloud). Launched in 2025, ADK 2.0 reached general availability for Python on 2026-05-19 and the current Python release is v2.13.0; official SDKs exist for Python, TypeScript, Go, Java and Kotlin.
-
-**Why ADK Matters:**
-
-- **Google's Strategic Bet**: Deep integration with Agent Platform (formerly Vertex AI), Cloud Run, GKE, BigQuery, and Google's AI ecosystem
-- **Production-First Design**: Built for deployment from day one, with evaluation, tracing and managed hosting options
-- **Model Flexibility**: Optimized for Gemini, with adapters for Claude, OpenAI, Gemma, Ollama, vLLM, LiteLLM and more
-- **Active Innovation**: 400+ contributors, frequent releases, and the graph-based Workflow runtime introduced in ADK 2.0
-- **Growing Ecosystem**: Official recipes, third-party integrations (MongoDB, MCP, A2A protocol), and strong community momentum
-
-### 🗝️ Key Features
-
-- **🧭 Graph-Based Workflows (ADK 2.0)**: Deterministic, graph-based execution with routing, fan-out/fan-in, loops, retries, state, human-in-the-loop and nested workflows
-- **🛠️ Rich Tool Ecosystem**: Pre-built tools, custom functions, OpenAPI specs, MCP tools, and Google ecosystem integration
-- **💻 Code-First Development**: Define agents in code (Python, TypeScript, Go, Java, Kotlin) with full testability and version control
-- **🔗 Multi-Agent Orchestration**: Compose specialized agents into scalable hierarchies; delegate with the Task API
-- **🚀 Deploy Anywhere**: Agent Runtime, Cloud Run, GKE, or any containerized environment
-
-### 🆕 What's New in ADK 2.x
-
-- **Workflow runtime**: graph-based execution with routing, fan-out/fan-in, loops, retries, human-in-the-loop and nested workflows. `Workflow` replaces the now-deprecated `SequentialAgent`, `ParallelAgent` and `LoopAgent`. See the [ADK 2.0 migration notes](https://adk.dev/2.0/)
-- **Five official SDKs**: Python 2.0 (May 2026), Go 2.0 (June 2026), TypeScript 2.0 (August 2026), Java 1.0 (March 2026) and Kotlin 1.0 (September 2026)
-- **Skills, plugins and evaluation**: `SkillToolset`, a plugin system, a user simulator, and `adk optimize` for prompt optimization
-- **A2A**: expose or consume agents over the Agent2Agent protocol, which reached v1.0 in March 2026
-- **Renames**: the docs moved to [adk.dev](https://adk.dev/); Vertex AI Agent Engine is now Agent Runtime on Gemini Enterprise Agent Platform; `google/adk-samples` is now [google/adk-recipes](https://github.com/google/adk-recipes); Agent Starter Pack is archived in favor of [Agents CLI](https://github.com/google/agents-cli)
 
 ## 🧰 Official SDKs & Tools
 
@@ -622,6 +594,39 @@ _Official ADK recipes in Go, Java, Kotlin, and TypeScript_
 - 🛍️ [Retail AI Plugin](https://github.com/google/adk-recipes/tree/main/plugins/retail) 🟡📚 - Installable retail skills for coding agents: semantic product search over Vector Search 2.0 and BigQuery, plus image and video virtual try-on
 
 ---
+
+## 💡 About ADK
+
+<details>
+<summary>What ADK is, its key features, and what's new in ADK 2.x</summary>
+
+**What ADK is**
+
+- Google's open-source, code-first framework for building, evaluating and deploying AI agents, launched in 2025.
+- Optimized for Gemini but model-agnostic: Gemini, Gemma, Claude, OpenAI, Ollama, vLLM, LiteLLM and more.
+- Deployment-agnostic: any container, Cloud Run, GKE, or Agent Runtime on Google Cloud.
+- Built for deployment from day one, with evaluation, tracing and managed hosting options.
+- Integrates deeply with Agent Platform (formerly Vertex AI), Cloud Run, GKE, BigQuery and the wider Google AI ecosystem.
+- Third-party integrations include MongoDB, MCP and the A2A protocol, and the project ships frequent releases.
+- Official SDKs exist for Python, TypeScript, Go, Java and Kotlin. ADK 2.0 reached general availability for Python on 2026-05-19, and the current Python release is v2.13.0.
+
+**Key features**
+
+- Graph-based workflows (ADK 2.0): deterministic execution with routing, fan-out/fan-in, loops, retries, state, human-in-the-loop and nested workflows.
+- Rich tool ecosystem: pre-built tools, custom functions, OpenAPI specs, MCP tools and Google ecosystem integration.
+- Code-first development: agents are defined in code (Python, TypeScript, Go, Java, Kotlin) with full testability and version control.
+- Multi-agent orchestration: specialized agents compose into scalable hierarchies and delegate with the Task API.
+- Deploy anywhere: Agent Runtime, Cloud Run, GKE, or any containerized environment.
+
+**What's new in ADK 2.x**
+
+- Workflow runtime: graph-based execution with routing, fan-out/fan-in, loops, retries, human-in-the-loop and nested workflows. `Workflow` replaces the now-deprecated `SequentialAgent`, `ParallelAgent` and `LoopAgent` (see the migration notes linked at the top of this list).
+- Five official SDKs: Python 2.0 (May 2026), Go 2.0 (June 2026), TypeScript 2.0 (August 2026), Java 1.0 (March 2026) and Kotlin 1.0 (September 2026).
+- Skills, plugins and evaluation: `SkillToolset`, a plugin system, a user simulator, and `adk optimize` for prompt optimization.
+- A2A: agents can expose or consume other agents over the Agent2Agent protocol, which reached v1.0 in March 2026.
+- Renames: the docs moved to adk.dev; Vertex AI Agent Engine is now Agent Runtime on Gemini Enterprise Agent Platform; `google/adk-samples` is now `google/adk-recipes`; Agent Starter Pack is archived in favor of `google/agents-cli`.
+
+</details>
 
 ## 🚀 Getting Started
 
