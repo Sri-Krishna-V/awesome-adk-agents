@@ -244,6 +244,31 @@ _Winners of hackathons where teams built with ADK. Each list comes from the orga
 - 🎖️ **Honorable Mention ($1,000)**: [TradeSage AI](https://devpost.com/software/tradesage-ai) - Multi-agent financial analysis platform for evaluating trading hypotheses with ADK, Agent Engine, Cloud Run and Vertex AI ([source](https://github.com/sudsk/tradesage-mvp))
 - 🎖️ **Honorable Mention ($1,000)**: [Bleach](https://devpost.com/software/bleach-7tqdmo) - Visual AI agent builder for Google ADK: describe agents in plain English, design them visually, and test instantly ([source](https://github.com/vivek100/bleachAgentBuilder))
 
+<details>
+<summary><b>Cloud Run Hackathon</b> · Google Cloud, Oct–Nov 2025 · ADK-only AI Agents category · 3 ADK winners</summary>
+
+_Serverless build contest on Cloud Run with an ADK-only AI Agents category. Source: [winners announcement](https://run.devpost.com/updates/38848-a-big-congrats-to-the-winners)_
+
+- 🥇 **Grand Prize**: [Storytopia](https://devpost.com/software/storytopia-bu917p) - Making screen time less passive - and more creative. ([source](https://github.com/Harpita-P/Storytopia))
+- 🎖️ **Honorable Mentions**: [Piatto](https://devpost.com/software/piatto) - Meet Piatto - the AI chef that designs recipes just for you and cooks along, step by step. ([source](https://github.com/M4RKUS28/Piatto))
+- 🏆 **Best of AI Agents**: [PermitScan AI](https://devpost.com/software/permitflow-ai) - PermitScan Ai automates hazard discovery → permit creation → permit validation → permit refinement for oil & gas Work Orders (WOs). ([source](https://github.com/sagban/permitflowAI))
+
+</details>
+
+<details>
+<summary><b>HackUSF 2026</b> · GDG on Campus USF, March 2026 · Google ADK sponsor track · 6 ADK winners</summary>
+
+_Student hackathon with a Google ADK and A2A sponsor track. Source: [winners announcement](https://hackusf-2026.devpost.com/updates/42587-and-the-winner-is)_
+
+- 🏆 **Best Overall 1st**: [A.N.R (Agentic Nuclear Reactor)](https://devpost.com/software/regenerative-agentic-nuclear-reactor) - Can you imagine having a proper AI being able to help streamline efficiencies, not just in everyday, but in complex tasks such as running a fusion reactor? ([source](https://github.com/morallyearlgrey/demo-fusion-reactor))
+- 🏆 **Most Innovative Hack**: [Guido](https://devpost.com/software/guido-k7f5ei) - Getting where you need to go should never be the hard part. ([source](https://github.com/kwaiidev/guido))
+- 🏆 **Best Design Hack**: [DontCollapse](https://devpost.com/software/dontcollapse) - DontCollapse uses AI to identify high-risk urban zones by analyzing flood, infrastructure, and social data, delivering fragility scores and clear actions to prevent disaster impact. ([source](https://github.com/narcistiq/DontCollapse))
+- 🏆 **Google Cloud: Building a Self-Healing World with Google ADK**: [T.I.T.A.N. - Tampa Intelligent Threat Analysis Network](https://devpost.com/software/t-i-t-a-n-tampa-intelligent-threat-analysis-network) - TITAN is an AI emergency system using parallel agents for floods, roads, and risk. It self-corrects with QA loops and shares real-time updates for faster, equitable disaster response.
+- 🏆 **Google Cloud: Building a Self-Healing World with Google ADK**: [Bowser](https://devpost.com/software/bowser-d0nvh4) - Turning rehab into heroic play ([source](https://github.com/Akhileshreddym/Bowser))
+- 🏆 **[MLH] Best Use of .Tech**: [Crisis-Net](https://devpost.com/software/crisis-net) - Crisis-Net is a real-time disaster response dashboard that utilizes AI agents to detect threats, record severity, map impact, locate shelter, and send targeted alerts when minutes matter. ([source](https://github.com/hackusf-2026-crisis-net/crisis-net))
+
+</details>
+
 ---
 
 ## 📚 Learning Resources
