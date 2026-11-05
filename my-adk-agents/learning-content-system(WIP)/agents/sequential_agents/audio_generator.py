@@ -6,10 +6,10 @@ based on content analysis and learning objectives.
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_tts_mcp_toolset, get_general_tools_mcp_toolset
+from tools.mcp_config import get_tts_mcp_toolset, get_general_tools_mcp_toolset
 
 # Gemini model for audio content generation
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 AUDIO_GENERATOR_PROMPT = """You are an Expert Audio Content Generator Agent specializing in creating educational audio content and narration.
 

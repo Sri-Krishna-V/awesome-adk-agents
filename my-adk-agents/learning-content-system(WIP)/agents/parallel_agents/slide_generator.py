@@ -5,10 +5,10 @@ This agent generates presentation slides simultaneously with other format genera
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_image_generation_mcp_toolset, get_general_tools_mcp_toolset
+from tools.mcp_config import get_image_generation_mcp_toolset, get_general_tools_mcp_toolset
 
 # Gemini model for slide generation
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 SLIDE_GENERATOR_PROMPT = """You are an Expert Slide Deck Generator Agent specializing in creating educational presentation materials.
 

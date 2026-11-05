@@ -9,8 +9,9 @@ import os
 import asyncio
 from google.adk.agents import SequentialAgent, ParallelAgent, LoopAgent
 from google.adk.agents.llm_agent import LlmAgent
-from google.adk.core.session import InMemorySessionService
-from google.adk.core.runner import Runner
+from google.adk.runners import Runner
+from google.adk.sessions import InMemorySessionService
+from google.genai import types
 
 # Import all agents
 from agents.sequential_agents.content_analyzer import content_analyzer_agent
@@ -30,7 +31,7 @@ from agents.loop_agents.quality_assessor import quality_assessor_agent
 from tools.mcp_config import AVAILABLE_MCP_TOOLSETS
 
 # Constants
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 APP_NAME = "learning_content_system"
 USER_ID = "educator_001"
 SESSION_ID = "content_session_001"
@@ -164,25 +165,32 @@ async def create_learning_content(source_content: str, context: dict = None):
 
     # Run the complete system
     try:
-        response = await runner.run_async(
+        new_message = types.Content(
+            role="user", parts=[types.Part(text=input_message)]
+        )
+        final_text = ""
+        async for event in runner.run_async(
             user_id=USER_ID,
             session_id=SESSION_ID,
-            user_message=input_message
-        )
+            new_message=new_message
+        ):
+            if event.is_final_response() and event.content and event.content.parts:
+                final_text = "".join(part.text or "" for part in event.content.parts)
 
         print("✅ Learning content creation completed successfully!")
-        print(f"📝 Response: {response.message}")
+        print(f"📝 Response: {final_text}")
 
         # Get final state with all generated content
-        session_state = await session_service.get_session_state(
+        session = await session_service.get_session(
             app_name=APP_NAME,
             user_id=USER_ID,
             session_id=SESSION_ID
         )
+        session_state = session.state
 
         return {
             "success": True,
-            "response": response.message,
+            "response": final_text,
             "generated_content": {
                 "content_analysis": session_state.get("content_analysis"),
                 "visual_content": session_state.get("visual_content"),

@@ -6,10 +6,10 @@ further refinement iterations are needed.
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_sentiment_analysis_mcp_toolset, get_general_tools_mcp_toolset
+from tools.mcp_config import get_sentiment_analysis_mcp_toolset, get_general_tools_mcp_toolset
 
 # Gemini model for quality assessment
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 QUALITY_ASSESSOR_PROMPT = """You are an Expert Quality Assessment Agent specializing in educational content evaluation and quality control.
 

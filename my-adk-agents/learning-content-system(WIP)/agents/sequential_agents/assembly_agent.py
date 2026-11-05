@@ -6,10 +6,10 @@ structured learning modules and packages.
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_general_tools_mcp_toolset
+from tools.mcp_config import get_general_tools_mcp_toolset
 
 # Gemini model for content assembly
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 ASSEMBLY_AGENT_PROMPT = """You are an Expert Content Assembly Agent specializing in organizing and structuring multi-modal educational content.
 

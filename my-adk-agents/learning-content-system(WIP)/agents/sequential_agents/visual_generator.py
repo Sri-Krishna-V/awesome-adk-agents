@@ -6,10 +6,10 @@ based on content analysis results.
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_image_generation_mcp_toolset, get_general_tools_mcp_toolset
+from tools.mcp_config import get_image_generation_mcp_toolset, get_general_tools_mcp_toolset
 
 # Gemini model for visual content generation
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 VISUAL_GENERATOR_PROMPT = """You are an Expert Visual Content Generator Agent specializing in creating educational visuals, diagrams, and infographics.
 
