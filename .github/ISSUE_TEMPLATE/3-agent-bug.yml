@@ -1,0 +1,97 @@
+name: Bug in one of my agents
+description: Something fails in an agent under my-adk-agents/.
+title: "[agent] "
+labels: ["bug", "my-adk-agents"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for the Maintainer's Agents in `my-adk-agents/` only. A bug in ADK itself goes to
+        [google/adk-python](https://github.com/google/adk-python/issues). A question goes to
+        [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions/new?category=q-a).
+
+        Some older agents still use outdated Gemini model names. If the error is a model-not-found
+        error, include the model name from the code.
+
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent?
+      options:
+        - "academic-research-assistant"
+        - "data-analyst (listed in the README as Local Code Assistant)"
+        - "education-path-advisor"
+        - "job-interview-agent"
+        - "learning-content-system(WIP)"
+        - "project-manager-agent"
+    validations:
+      required: true
+
+  - type: input
+    id: adk_version
+    attributes:
+      label: ADK version
+      description: Output of `pip show google-adk`.
+      placeholder: "2.13.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python_version
+    attributes:
+      label: Python version
+      description: Output of `python -V`.
+      placeholder: "3.11.9"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and how you ran it
+      description: Optional. For example "Windows 11, adk web" or "Docker on Cloud Run".
+
+  - type: dropdown
+    id: credentials
+    attributes:
+      label: Credentials and model provider
+      description: Optional.
+      options:
+        - "Google AI Studio (GOOGLE_API_KEY)"
+        - "Google Cloud (GOOGLE_CLOUD_PROJECT)"
+        - "LiteLLM or another provider"
+        - "Local model (Ollama)"
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A numbered list, starting from a clean checkout.
+      placeholder: |
+        1. cd my-adk-agents/<agent>
+        2. pip install -r requirements.txt
+        3. adk web
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output or logs
+      description: Optional. If nothing errors, say so.
+      render: shell
+
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Before you submit
+      options:
+        - label: "I removed API keys, tokens and personal data from everything I pasted."
+          required: true
