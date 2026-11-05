@@ -12,8 +12,14 @@ Be respectful and constructive in issues, pull requests, and reviews. Please rep
 
 Most contributions add one project, tutorial, or article to `README.md`. Open a PR that adds one line to the matching section:
 
+```text
+- <level> [<label>](<url>) <🏭 if production-ready> - <Description.>
 ```
-- <emoji> [owner/repo](url) <badges> - <one-sentence description>
+
+For example:
+
+```text
+- 🟢 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭 - LINE Bot template with Docker, Cloud Run deployment, and security configurations.
 ```
 
 **Your entry must meet all of these:**
@@ -23,15 +29,18 @@ Most contributions add one project, tutorial, or article to `README.md`. Open a 
 3. Its README has setup steps.
 4. It adds something no existing entry covers.
 
-**Description:** about 15–20 words of technical fact: what it does, key technologies, what sets it apart. Plain wording, no marketing.
+**Label:** `owner/repo` when the link points to a repository's root. Use the project's name for a folder inside a repository, and the title for an article, video or course.
 
-**Badges** (see the legend under "Featured Projects" in the README):
+**Description:** about 15–20 words of technical fact: what it does, key technologies, what sets it apart. Start with a capital letter, end with a period, and do not start with the project's name. Plain wording, no marketing.
 
-- 🟢🟡🔴 difficulty: match the real technical complexity.
-- 🏭 production-ready: only when the project ships deployment code and docs (Dockerfile, Cloud Run, Agent Runtime, Helm).
-- 🔥 community pick: only for projects with clear community traction (stars, forks, active issues).
-- 📚 learning resource: tutorials, courses, and official Google samples.
-- ⭐ is reserved for the maintainer's own projects.
+**Level and marks** (see the legend under "Contents" in the README):
+
+- 🟢 Beginner, 🟡 Intermediate, 🔴 Advanced: one dot at the start of the line, matching the real technical complexity. Official SDK repositories and community spaces have no dot; hackathon winners keep their award emoji.
+- 🏭 Production-ready: after the link, only when the project ships deployment code and docs (Dockerfile, Cloud Run, Agent Runtime, Helm).
+
+**One link, one place:** each URL appears once in the list. If your project is already listed, update its line instead of adding a new one.
+
+**Before you open the PR:** run `npx awesome-lint README.md`. It must report no errors.
 
 **Removal:** maintainers remove entries whose links 404, archived repos, and projects with no commits in 12+ months that are broken or built on pre-1.0 ADK.
 
