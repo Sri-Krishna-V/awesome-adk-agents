@@ -1,5 +1,5 @@
 # Dockerfile for Job Interview Agent
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
@@ -22,7 +22,7 @@ COPY . .
 RUN mkdir -p logs data
 
 # Set environment variables
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app/app
 ENV PYTHONUNBUFFERED=1
 
 # Expose port (if needed for web interface)
@@ -33,5 +33,6 @@ RUN groupadd -r appuser && useradd -r -g appuser appuser
 RUN chown -R appuser:appuser /app
 USER appuser
 
-# Command to run the application
+# Run from app/ so main.py finds static/ and credentials.json
+WORKDIR /app/app
 CMD ["python", "main.py"]

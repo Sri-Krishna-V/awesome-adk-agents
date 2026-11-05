@@ -9,7 +9,7 @@ from .sub_agents.pathway_analyst import pathway_analyst_agent
 from .sub_agents.implementation_analyst import implementation_analyst_agent
 from .sub_agents.risk_analyst import risk_analyst_agent
 
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-flash-latest"
 
 
 education_coordinator = LlmAgent(

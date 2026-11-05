@@ -5,7 +5,7 @@ from google.adk.tools import google_search
 
 from . import prompt
 
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-flash-latest"
 
 data_analyst_agent = Agent(
     model=MODEL,

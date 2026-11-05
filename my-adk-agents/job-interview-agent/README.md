@@ -122,7 +122,7 @@ cd app
 python main.py
 
 # Start hot-reloading server
-uvicorn main:app --reload --host
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ### 5. Start Practicing 🎙️
@@ -342,7 +342,7 @@ Agent: "Great foundation! How would you handle message ordering across distribut
 
 ```bash
 docker build -t job-interview-agent .
-docker run -it --env-file .env job-interview-agent
+docker run -it -p 8000:8000 --env-file .env job-interview-agent
 ```
 
 ## Troubleshooting

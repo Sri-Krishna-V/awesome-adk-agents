@@ -6,10 +6,10 @@ for multi-modal content generation.
 """
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.mcp_config import get_huggingface_mcp_toolset, get_sentiment_analysis_mcp_toolset
+from tools.mcp_config import get_huggingface_mcp_toolset, get_sentiment_analysis_mcp_toolset
 
 # Gemini model for content analysis
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-flash-latest"
 
 CONTENT_ANALYZER_PROMPT = """You are an Expert Content Analysis Agent specializing in educational content evaluation and learning objective extraction.
 

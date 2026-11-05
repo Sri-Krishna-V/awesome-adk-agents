@@ -13,8 +13,18 @@ parts/
 var/
 wheels/
 
-# Virtual Environments
+# Environment files (keep the .env.example templates)
 .env
+.env.*
+!.env.example
+
+# Credentials (Google OAuth client secret and token used by job-interview-agent)
+credentials.json
+token.pickle
+token.json
+client_secret*.json
+
+# Virtual Environments
 .venv/
 env/
 venv/
@@ -46,12 +56,12 @@ config.local.py
 
 changelog.md
 
+# Local AI tooling and working notes (kept off GitHub)
+CLAUDE.md
 .github/
 .cursor/
+research/
 
+# Local-only folders
 examples/
 prds/
-
-gemini-fullstack/
-
-.gitignore
