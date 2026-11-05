@@ -4,9 +4,36 @@ First off, thank you for considering contributing to Awesome ADK Agents! This re
 
 ## Code of Conduct
 
-This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to the repository maintainers.
+Be respectful and constructive in issues, pull requests, and reviews. Please report unacceptable behavior to the repository maintainers.
 
 ## How Can I Contribute?
+
+### Suggesting a List Entry
+
+Most contributions add one project, tutorial, or article to `README.md`. Open a PR that adds one line to the matching section:
+
+```
+- <emoji> [owner/repo](url) <badges> - <one-sentence description>
+```
+
+**Your entry must meet all of these:**
+
+1. It uses Google ADK: `google-adk`, `google.adk`, adk-go, adk-java or adk-js appears in its dependencies or imports (for articles and tutorials: it teaches ADK).
+2. It was updated within the last 6 months and is not archived.
+3. Its README has setup steps.
+4. It adds something no existing entry covers.
+
+**Description:** about 15–20 words of technical fact: what it does, key technologies, what sets it apart. Plain wording, no marketing.
+
+**Badges** (see the legend under "Featured Projects" in the README):
+
+- 🟢🟡🔴 difficulty: match the real technical complexity.
+- 🏭 production-ready: only when the project ships deployment code and docs (Dockerfile, Cloud Run, Agent Runtime, Helm).
+- 🔥 community pick: only for projects with clear community traction (stars, forks, active issues).
+- 📚 learning resource: tutorials, courses, and official Google samples.
+- ⭐ is reserved for the maintainer's own projects.
+
+**Removal:** maintainers remove entries whose links 404, archived repos, and projects with no commits in 12+ months that are broken or built on pre-1.0 ADK.
 
 ### Adding a New Agent
 
@@ -72,10 +99,10 @@ Quality testing helps ensure agents work as expected:
 
 3. **Make Changes** - Implement your contribution following the structure guidelines
 4. **Test Your Changes** - Ensure your agent works as expected
-5. **Commit Changes** - Use clear commit messages
+5. **Commit Changes** - Use [Conventional Commits](https://www.conventionalcommits.org/), as the history does
 
    ```bash
-   git commit -m 'Add amazing agent for [specific purpose]'
+   git commit -m 'docs: add amazing-agent to Domain-Specific Applications'
    ```
 
 6. **Push to Your Fork** - Upload your changes
