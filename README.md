@@ -355,6 +355,15 @@ _Partner-track agent contest on Gemini 3 and Agent Builder; ADK was not required
 </details>
 
 <details>
+<summary><b>AI Agent Hackathon with Google Cloud, 4th edition</b> · Google Cloud Japan on Zenn, March 2026 · 1 ADK winner</summary>
+
+_Japanese hackathon where ADK was one accepted option, not required. Only winners shown that use ADK. Source: [winners on Zenn](https://zenn.dev/hackathons/google-cloud-japan-ai-hackathon-vol4?tab=projects)_
+
+- 🏅 **Encouragement Award**: [COCO](https://zenn.dev/takoeno/articles/ae8e042de0fb62) - AI partner that helps find lost items around the room ([source](https://github.com/h4ckberry/coco-gcaihack4))
+
+</details>
+
+<details>
 <summary><b>Gemini Live Agent Challenge</b> · Google, Feb–Mar 2026 · $80K · 9 ADK winners</summary>
 
 _Real-time voice, vision and storytelling agents on Gemini Live; ADK or the GenAI SDK was allowed. Source: [winners announcement](https://cloud.google.com/blog/topics/developers-practitioners/winners-and-highlights-of-the-gemini-live-agent-challenge)_
@@ -386,6 +395,16 @@ _Capstone of Google and Kaggle's 5-Day AI Agents Intensive (11,453 submissions);
 - 🥇 **Freestyle, 1st**: [Daedalus](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/daedalus) - Self-expanding agent system that designs, tests and registers its own tools and agent pipelines ([source](https://github.com/jovanovic-milos/daedalus))
 - 🥈 **Freestyle, 2nd**: [AI Stock Prediction System](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/ai-stock-prediction-system-multi-agent-a2a-archit) - Six parallel agents with an A2A architecture for stock analysis ([source](https://github.com/nishapp/agents-5days-kaggle-competition))
 - 🥉 **Freestyle, 3rd**: [StoryLand AI](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/storyland-agent) - Turns favorite books into themed travel itineraries ([source](https://github.com/o-ostrovskiy/storyland-ai))
+
+</details>
+
+<details>
+<summary><b>AI Agent Hackathon with Google Cloud, 2nd edition</b> · Google Cloud Japan on Zenn, August 2025 · 2 ADK winners</summary>
+
+_Japanese hackathon where ADK was one accepted option, not required. Only winners shown that use ADK. Source: [winners on Zenn](https://zenn.dev/hackathons/google-cloud-japan-ai-hackathon-vol2?tab=projects)_
+
+- 🥈 **2nd Place**: [学校だよりAI](https://zenn.dev/gakkoudayoriai/articles/d7c61ec828913d) - two-agent Google ADK system for school newsletters
+- 🏅 **Moonshot Award**: [KnockAI](https://zenn.dev/enostech/articles/8a4a3f2589afd7) - ADK agent that passes on craftsmen's tacit estimating knowledge, deployed on Cloud Run
 
 </details>
 
