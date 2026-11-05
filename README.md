@@ -27,7 +27,6 @@ New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [St
 - [💡 About ADK](#-about-adk)
 - [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
-- [🙏 Acknowledgements](#-acknowledgements)
 
 ## 🧰 Official SDKs & Tools
 
@@ -666,26 +665,16 @@ adk deploy gke --project=PROJECT --region=REGION path/to/my_agent            # G
 
 ## 🤝 Contributing
 
-We welcome high-quality contributions that advance the ADK ecosystem. See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Contributions are welcome. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for the entry format and the rules an entry must meet.
 
-**Quality Standards**: Production-ready code, comprehensive documentation, and adherence to ADK best practices.
+Questions and ideas go to [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions). Report broken links and other problems as an [issue](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues).
 
-## 📞 Support
+## 📎 Footnotes
 
-- 🐛 **Issues**: Report bugs or request features via GitHub Issues
-- 💡 **Discussions**: Join the community for questions and ideas
-- 📧 **Maintainer**: Contact repository owner for collaboration opportunities
+Entries were last re-checked against ADK 2.x in November 2026.
 
----
-
-## 🙏 Acknowledgements
-
-**Core Contributors:**
-
-- Google ADK Team - Framework development
-- Brandon Hancock - Educational content and tutorials  
-- Community Contributors - Featured projects and improvements
-
-**Related Lists:**
+Related lists:
 
 - [tsubasakong/awesome-google-adk](https://github.com/tsubasakong/awesome-google-adk) - Another community-curated list of Google ADK resources (last updated May 2025)
+
+Credits: the Google ADK team for the framework, Brandon Hancock for educational content and tutorials, and community contributors for projects and improvements.
