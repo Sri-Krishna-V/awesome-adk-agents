@@ -39,7 +39,7 @@ _Google's official ADK repositories and the protocol ADK builds on_
 - [google/adk-js](https://github.com/google/adk-js) - ADK for TypeScript and JavaScript (npm `@google/adk`) with graph workflows
 - [google/adk-kotlin](https://github.com/google/adk-kotlin) - ADK for Kotlin and Android
 - [google/adk-web](https://github.com/google/adk-web) - The developer UI behind `adk web`: chat, traces, evaluation and the visual builder
-- [google/adk-docs](https://github.com/google/adk-docs) - Source of the official documentation at [adk.dev](https://adk.dev/)
+- [google/adk-docs](https://github.com/google/adk-docs) - Source of the official documentation at adk.dev
 - [google/adk-recipes](https://github.com/google/adk-recipes) - Official runnable recipes: core patterns, contributed agents in five languages, and vertical skill plugins (formerly adk-samples)
 - [google/agents-cli](https://github.com/google/agents-cli) - CLI and skills that let a coding agent scaffold, evaluate, deploy and observe ADK agents on Google Cloud; successor to Agent Starter Pack
 - [google/adk-python-community](https://github.com/google/adk-python-community) - Community-contributed ADK tools, service integrations and deployment scripts (`pip install google-adk-community`)
@@ -51,12 +51,13 @@ _Google's official ADK repositories and the protocol ADK builds on_
 
 _Google ADK recipes repository (formerly adk-samples) - educational and demonstration purposes only_
 
-> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK recipes repository](https://github.com/google/adk-recipes). Deep Search is listed under [Templates & Starters](#-templates--starters).
+> **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. They all live in `google/adk-recipes` (see Official SDKs & Tools).
 
 - 🟡 [ADK Python contributing samples](https://github.com/google/adk-python/tree/main/contributing/samples) - Small feature-focused samples inside the ADK repo, grouped by topic (workflows, A2A, plugins, evaluation, live, MCP, memory and more)
 
 ### Core Recipes
 
+- 🔴 [Deep Search ADK Quickstart](https://github.com/google/adk-recipes/tree/main/core/python/deep-search) 🏭 - Official fullstack research agent (formerly Gemini Fullstack) with a React frontend, human-in-the-loop plan approval, autonomous research pipelines, and Cloud Run deployment
 - 🟡 [Ambient Expense Agent](https://github.com/google/adk-recipes/tree/main/core/python/ambient-expense-agent) - Ambient agent processing expense reports via Pub/Sub through an ADK 2.0 graph workflow, auto-approving low-value items and routing high-value ones through LLM risk review and human approval
 - 🔴 [GenMedia for Commerce](https://github.com/google/adk-recipes/tree/main/core/python/genmedia-for-commerce) - Studio agent and Gemini workflows for retail media: photo and video virtual try-on, 360° product spins, and judge-model quality checks, usable as a web app or inside Gemini Enterprise
 - 🟡 [Safety Guardrail Plugins](https://github.com/google/adk-recipes/tree/main/core/python/safety-plugins) - Security filters using Gemini-as-judge and Model Armor plugins for jailbreak protection
@@ -115,9 +116,8 @@ _Official ADK recipes in Go, Java, Kotlin, and TypeScript_
 
 _Ready-to-use templates to kickstart your ADK projects_
 
-> Agent Starter Pack is archived. For Google's official scaffolding, use [google/agents-cli](https://github.com/google/agents-cli).
+> Agent Starter Pack is archived. For Google's official scaffolding, use `google/agents-cli` (see Official SDKs & Tools).
 
-- 🔴 [Deep Search ADK Quickstart](https://github.com/google/adk-recipes/tree/main/core/python/deep-search) 🏭 - Official fullstack research agent (formerly Gemini Fullstack) with a React frontend, human-in-the-loop plan approval, autonomous research pipelines, and Cloud Run deployment
 - 🟢 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭 - LINE Bot template with Docker, Cloud Run deployment, and security configurations
 - 🟡 [danishi/slack-bot-adk-python-cloudrun](https://github.com/danishi/slack-bot-adk-python-cloudrun) 🏭 - Slack Bolt bot backend powered by ADK and deployed on Cloud Run
 - 🟢 [glaforge/adk-java-maven-template](https://github.com/glaforge/adk-java-maven-template) - Maven project template for a first ADK for Java agent
@@ -205,7 +205,6 @@ _Agents built by the maintainer of this list._
 - 🟡 [serkanh/sre-bot](https://github.com/serkanh/sre-bot) 🏭 - SRE/DevOps bot built on Google ADK for intelligent infrastructure management and incident response
 - 🟡 [sreekarrs/JobSearch-Agent](https://github.com/sreekarrs/JobSearch-Agent) 🏭 - Job search automation built around a LinkedIn scraper, with ADK agents that parse job details and generate tailored CVs and cover letters; Docker and deploy workflow included
 - 🟡 [akajammythakkar/adk_hiring_agent](https://github.com/akajammythakkar/adk_hiring_agent) - AI-powered hiring agent using Google ADK and Gemini to analyze resumes, assess skills, and match candidates via multi-agent collaboration
-- 🟡 [emansarahafi/Research-Assistant-Agent](https://github.com/emansarahafi/Research-Assistant-Agent) - Notebook-based multi-agent research assistant with Researcher, Analyst, and Formatter sub-agents using ArXiv search (README describes Flask and Vertex AI deployment paths)
 - 🟡 [Anubhob435/Ai-Agents-EditorHouse](https://github.com/Anubhob435/Ai-Agents-EditorHouse) - Multi-agent book creation system using Google ADK that plans, writes, edits, illustrates, and compiles complete books from a single topic prompt with MongoDB metadata tracking
 - 🟡 [B4K2/WhatsApp-agent](https://github.com/B4K2/WhatsApp-agent) - Intelligent WhatsApp agent built with MCP + Google ADK for conversational automation
 - 🟡 [Beever-AI/beever-atlas](https://github.com/Beever-AI/beever-atlas) - Conversational wiki knowledge base with Slack/Teams/Discord bots, RAG, and MCP integration built on Google ADK
@@ -220,7 +219,7 @@ _Comprehensive guides, tutorials, and educational content_
 - [r/agentdevelopmentkit](https://www.reddit.com/r/agentdevelopmentkit/) - Community subreddit for ADK questions, project showcases and release news.
 - [DeepWiki: google/adk-python](https://deepwiki.com/google/adk-python) - AI-generated wiki of the adk-python source code that answers questions about how ADK works.
 - 🟡 [mauripsale/doc-adk-training](https://github.com/mauripsale/doc-adk-training) - "ADK: From Zero to Hero": 45-module ADK 2.0 curriculum by GDE and Google Cloud trainer Maurizio Ipsale with labs, quizzes, a solution vault and a Codespaces/Cloud Shell setup ([site](https://mauripsale.github.io/doc-adk-training/))
-- 🟢 [Google ADK Training Hub](https://raphaelmansuy.github.io/adk_training/) - Community-run training site with 35 tutorials covering ADK agents, tools, multi-agent patterns, deployment, and React/Next.js integration. Written for ADK 1.x (1.16+); check the [ADK 2.0 migration notes](https://adk.dev/2.0/) before following the code
+- 🟢 [Google ADK Training Hub](https://raphaelmansuy.github.io/adk_training/) - Community-run training site with 35 tutorials covering ADK agents, tools, multi-agent patterns, deployment, and React/Next.js integration. Written for ADK 1.x (1.16+); check the ADK 2.0 migration notes linked at the top of this list before following the code
 
 ### Courses & Certifications
 
@@ -614,7 +613,7 @@ This is a **hybrid awesome list**: curated resources plus the maintainer's own a
 
 - **Browse & Learn**: Explore categorized projects for inspiration and best practices
 - **Clone & Build**: The maintainer's agents in `/my-adk-agents/` are working ADK agents you can clone and run
-- **Contribute**: Add your own projects or improve existing ones via [CONTRIBUTING.md](./CONTRIBUTING.md)
+- **Contribute**: Add your own projects or improve existing ones (see Contributing below)
 
 ### Essential ADK Commands
 
@@ -632,11 +631,8 @@ adk deploy gke --project=PROJECT --region=REGION path/to/my_agent            # G
 ### Resources
 
 - [Official ADK Documentation](https://adk.dev/)
-- [Python Quickstart](https://adk.dev/get-started/python/)
-- [ADK 2.0 Migration Notes](https://adk.dev/2.0/)
 - [Third-Party Tools for ADK](https://adk.dev/tools/third-party/) - Official catalog of integrated third-party tools, and the [integrations catalog](https://adk.dev/integrations/)
 - [Community Discussions](https://github.com/google/adk-python/discussions) and [ADK community page](https://adk.dev/community/)
-- [Learning Path](#-learning-resources)
 
 ## 🤝 Contributing
 
