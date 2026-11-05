@@ -227,20 +227,22 @@ _Outstanding community projects showcasing ADK capabilities_
 
 ## 🏆 ADK Hackathons & Challenges
 
-_Winners of hackathons built on ADK. Each list comes from the organizer's own announcement._
+_Winners of hackathons where teams built with ADK. Each list comes from the organizer's own announcement. Where ADK was optional, only winners whose code or project page shows ADK are listed._
 
-### Agent Development Kit Hackathon with Google Cloud (2025)
+### ADK-Focused Hackathons
+
+#### Agent Development Kit Hackathon with Google Cloud (2025)
 
 > **477 submissions** | **10,400+ participants from 62 countries** | [Winners announcement](https://cloud.google.com/blog/products/ai-machine-learning/adk-hackathon-results-winners-and-highlights) | [All submissions](https://googlecloudmultiagents.devpost.com/project-gallery)
 
-- 🥇 **Grand Prize ($15,000)**: [SalesShortcut](https://devpost.com/software/salesshortcut) - AI-powered Sales Development Representative system with a multi-agent architecture for automated lead generation, research, proposal generation, and outreach
-- 🌎 **North America ($8,000)**: [Energy Agent AI](https://devpost.com/software/energy-agent-ai) - Multi-agent AI transforming energy customer management through Google ADK orchestration
-- 🌍 **Europe, Middle East & Africa ($8,000)**: [Nexora-AI](https://devpost.com/software/teachai-upzofa) - Next-gen personalized education with interactive lessons, visuals, quizzes, and smart AI support
-- 🌏 **Asia Pacific ($8,000)**: [GreenOps](https://devpost.com/software/greenops-gzp4aj) - AI team that continuously audits, forecasts, and optimizes cloud infrastructure for sustainability
-- 🌎 **Latin America ($8,000)**: [Edu.AI](https://devpost.com/software/edu-ai-multi-agent-educational-system-for-brazil) - Brazilian education system with agents that evaluate essays, generate personalized study plans, and create interdisciplinary mock exams
-- 🎖️ **Honorable Mention ($1,000)**: [Particle Physics Agent](https://devpost.com/software/particle-physics-agent) - Physics AI agent converting natural language into validated Feynman diagrams using real physical laws
+- 🥇 **Grand Prize ($15,000)**: [SalesShortcut](https://devpost.com/software/salesshortcut) - AI-powered Sales Development Representative system with a multi-agent architecture for automated lead generation, research, proposal generation, and outreach ([source](https://github.com/merdandt/SalesShortcut))
+- 🌎 **North America ($8,000)**: [Energy Agent AI](https://devpost.com/software/energy-agent-ai) - Multi-agent AI transforming energy customer management through Google ADK orchestration ([source](https://github.com/hazardscarn/energyagentai))
+- 🌍 **Europe, Middle East & Africa ($8,000)**: [Nexora-AI](https://devpost.com/software/teachai-upzofa) - Next-gen personalized education with interactive lessons, visuals, quizzes, and smart AI support ([source](https://github.com/M4RKUS28/Nexora))
+- 🌏 **Asia Pacific ($8,000)**: [GreenOps](https://devpost.com/software/greenops-gzp4aj) - AI team that continuously audits, forecasts, and optimizes cloud infrastructure for sustainability ([source](https://github.com/niksm7/GreenOps))
+- 🌎 **Latin America ($8,000)**: [Edu.AI](https://devpost.com/software/edu-ai-multi-agent-educational-system-for-brazil) - Brazilian education system with agents that evaluate essays, generate personalized study plans, and create interdisciplinary mock exams ([source](https://github.com/giovannamoeller/edu-ai-adk-version))
+- 🎖️ **Honorable Mention ($1,000)**: [Particle Physics Agent](https://devpost.com/software/particle-physics-agent) - Physics AI agent converting natural language into validated Feynman diagrams using real physical laws ([source](https://github.com/bee4come/Particle-Physics-Agent))
 - 🎖️ **Honorable Mention ($1,000)**: [TradeSage AI](https://devpost.com/software/tradesage-ai) - Multi-agent financial analysis platform for evaluating trading hypotheses with ADK, Agent Engine, Cloud Run and Vertex AI ([source](https://github.com/sudsk/tradesage-mvp))
-- 🎖️ **Honorable Mention ($1,000)**: [Bleach](https://devpost.com/software/bleach-7tqdmo) - Visual AI agent builder for Google ADK: describe agents in plain English, design them visually, and test instantly
+- 🎖️ **Honorable Mention ($1,000)**: [Bleach](https://devpost.com/software/bleach-7tqdmo) - Visual AI agent builder for Google ADK: describe agents in plain English, design them visually, and test instantly ([source](https://github.com/vivek100/bleachAgentBuilder))
 
 ---
 
