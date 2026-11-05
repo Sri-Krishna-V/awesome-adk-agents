@@ -1,0 +1,117 @@
+name: Suggest an entry
+description: Suggest one project, tutorial, article or course for the list (a pull request works too).
+title: "Suggest: "
+labels: ["new entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. One issue suggests one entry.
+
+        Prefer a pull request? Add one line to `README.md` and fill in the PR template. See
+        [Suggesting a List Entry](https://github.com/Sri-Krishna-V/awesome-adk-agents/blob/main/CONTRIBUTING.md#suggesting-a-list-entry).
+        Use this form if you would rather not fork and edit Markdown: the maintainer checks the
+        suggestion and writes the line.
+
+        Not sure your project meets the rules yet? Post it in Show your ADK project in
+        [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions) first.
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: The page the entry links to. Search the README for this URL first; each URL appears once.
+      placeholder: "https://github.com/owner/repo"
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: Label
+      description: >-
+        Optional. The clickable text. Leave it empty for a repository root (the label is then owner/repo).
+        For a folder inside a repository, give the project's name; for an article, video or course, its title.
+      placeholder: "owner/repo"
+
+  - type: dropdown
+    id: placement
+    attributes:
+      label: Section and group
+      description: Optional. Where the entry belongs in the README. Leave it empty and the maintainer will place it.
+      options:
+        - "Templates & Starters"
+        - "Community Projects > Multi-Agent Systems"
+        - "Community Projects > Frameworks & Platforms Built on ADK"
+        - "Community Projects > UI, Protocols & Runtimes"
+        - "Community Projects > Observability, Evaluation & Security"
+        - "Community Projects > Memory, Session & Storage"
+        - "Community Projects > Domain-Specific Applications"
+        - "Learning Resources > Community Training Platforms"
+        - "Learning Resources > Courses & Certifications"
+        - "Learning Resources > Quickstart Courses"
+        - "Learning Resources > Official Hands-on Learning"
+        - "Learning Resources > Tutorials & Walkthroughs"
+        - "Learning Resources > Articles & Best Practices"
+        - "Learning Resources > Video Content"
+        - "ADK Hackathons & Challenges > ADK-Focused Hackathons"
+        - "ADK Hackathons & Challenges > Hackathons Where ADK Was Optional"
+        - "Official SDKs & Tools, or Official Recipes (published by Google)"
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level
+      description: Optional. How much ADK experience the entry expects. The maintainer makes the final call.
+      options:
+        - "🟢 Beginner"
+        - "🟡 Intermediate"
+        - "🔴 Advanced"
+        - "No dot (official SDK repository or community space)"
+
+  - type: checkboxes
+    id: production
+    attributes:
+      label: Production-ready
+      description: Optional. The 🏭 mark.
+      options:
+        - label: "🏭 It ships deployment code and deployment docs (for example a Dockerfile, Cloud Run, Agent Runtime or Helm)."
+
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: >-
+        About 15 to 20 words of technical fact: what it does, key technologies, what sets it apart.
+        Start with a capital letter, end with a period, and do not start with the project's name.
+        Plain wording, no marketing.
+      placeholder: "Template that scaffolds an ADK agent with Docker and Cloud Run deployment, a test suite and CI configuration."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: The four rules
+      description: All four must be true. See [Suggesting a List Entry](https://github.com/Sri-Krishna-V/awesome-adk-agents/blob/main/CONTRIBUTING.md#suggesting-a-list-entry).
+      options:
+        - label: "1. It uses Google ADK: `google-adk`, `google.adk`, adk-go, adk-java or adk-js appears in its dependencies or imports (for an article or tutorial: it teaches ADK)."
+          required: true
+        - label: "2. It was updated within the last 6 months and is not archived."
+          required: true
+        - label: "3. Its README has setup steps."
+          required: true
+        - label: "4. It adds something no existing entry covers."
+          required: true
+
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Your connection to it
+      description: Suggesting your own project is welcome. This only tells the maintainer how to read the suggestion.
+      options:
+        - "I am its author or a maintainer"
+        - "I work for the people who make it"
+        - "No relation"
+    validations:
+      required: true
