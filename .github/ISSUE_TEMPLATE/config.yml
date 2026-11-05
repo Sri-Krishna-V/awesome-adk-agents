@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions/new?category=q-a
+    about: Questions about this list, a listed project or my-adk-agents/.
+  - name: Show your project
+    url: https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions/new?category=show-your-adk-project
+    about: Not sure your ADK project meets the entry rules yet? Post it here first.
+  - name: ADK framework bug
+    url: https://github.com/google/adk-python/issues
+    about: Bugs in Google's ADK itself (not in this list or in my-adk-agents/) go to the ADK tracker.
