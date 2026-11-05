@@ -7,19 +7,13 @@
   </h1>
 </div>
 
-<p align="center"><img src="https://adk.dev/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
-</p>
+<p align="center"><a href="https://adk.dev/"><img src="https://adk.dev/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit"></a></p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/sri-krishna-v/awesome-adk-agents?style=flat-square" alt="Stars">
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-yellow" alt="Powered by Google ADK"></a>
-  <a href="https://www.reddit.com/r/agentdevelopmentkit/"><img src="https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/agentdevelopmentkit"></a>
-  <a href="https://deepwiki.com/google/adk-python"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-  <a href="https://mseep.ai/app/sri-krishna-v-awesome-adk-agents"><img src="https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png" alt="MseeP.ai Security Assessment Badge" height="20"></a>
-</p>
+> Google's Agent Development Kit (ADK) is an open-source, code-first framework for building, evaluating and deploying AI agents in Python, TypeScript, Go, Java and Kotlin.
 
-_A curated collection for Google's Agent Development Kit (ADK): the official SDKs and recipes, community projects and integrations, hackathon winners, and learning resources, from beginner tutorials to production multi-agent systems. Every entry was re-checked against current ADK (2.x) in November 2026: dead links, archived repos and pre-1.0 projects were removed._
+ADK 2.x is current: graph-based Workflows replace `SequentialAgent`, `ParallelAgent` and `LoopAgent` ([migration notes](https://adk.dev/2.0/)).
+
+New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [Start from a template](#start-template) · [Browse official recipes](#start-recipes)
 
 ## 📖 Table of Contents
 
@@ -35,12 +29,6 @@ _A curated collection for Google's Agent Development Kit (ADK): the official SDK
 - [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
 - [🙏 Acknowledgements](#-acknowledgements)
-
-##
-
-> Welcome to **Awesome ADK Agents**👋👋
-
-A comprehensive ecosystem resource for Google's Agent Development Kit - an open-source agent framework with 22K+ GitHub stars, 4.3K+ forks and 400+ contributors on the Python repo alone. Whether you're exploring AI agents for the first time or deploying production multi-agent systems, this collection provides vetted implementations, learning paths, and deployment patterns from Google's official team and a vibrant global community.
 
 ## 🎯 What This List Solves
 
@@ -133,6 +121,8 @@ _My showcase agents demonstrating production-ready ADK implementations_
 ---
 
 ## 🚀 Templates & Starters
+
+<a name="start-template"></a>
 
 _Ready-to-use templates to kickstart your ADK projects_
 
@@ -431,6 +421,8 @@ _Comprehensive guides, tutorials, and educational content_
 
 ### ⭐ Community Training Platforms
 
+- 💬 [r/agentdevelopmentkit](https://www.reddit.com/r/agentdevelopmentkit/) - Community subreddit for ADK questions, project showcases and release news.
+- 🔎 [DeepWiki: google/adk-python](https://deepwiki.com/google/adk-python) - AI-generated wiki of the adk-python source code that answers questions about how ADK works.
 - 🎓 **[mauripsale/doc-adk-training](https://github.com/mauripsale/doc-adk-training)** 🟡📚🔥 - "ADK: From Zero to Hero": 45-module ADK 2.0 curriculum by GDE and Google Cloud trainer Maurizio Ipsale with labs, quizzes, a solution vault and a Codespaces/Cloud Shell setup ([site](https://mauripsale.github.io/doc-adk-training/))
 - 🏆 **[Google ADK Training Hub](https://raphaelmansuy.github.io/adk_training/)** 🟢🟡🔴📚 - Community-run training site with 35 tutorials covering ADK agents, tools, multi-agent patterns, deployment, and React/Next.js integration. Written for ADK 1.x (1.16+); check the [ADK 2.0 migration notes](https://adk.dev/2.0/) before following the code
 
@@ -450,6 +442,8 @@ _Comprehensive guides, tutorials, and educational content_
 - 📚 [omerbsezer/Fast-LLM-Agent-MCP](https://github.com/omerbsezer/Fast-LLM-Agent-MCP) 🟡📚 - Comprehensive resource covering LLMs, RAG, fine-tuning, agents, MCP, and Google ADK both theoretically and practically with reference documents
 
 ### 🧪 Official Hands-on Learning
+
+<a name="start-learn"></a>
 
 - 🧪 [Google ADK Codelabs](https://codelabs.developers.google.com/?text=ADK) 📚 - Interactive, guided tutorials with hands-on coding exercises from Google
 - 🧪 [ADK 2 Orchestration: Graph, Collaborative & Dynamic Workflows](https://codelabs.developers.google.com/adk2/instructions) 🟡🧪 - About 50-minute Colab codelab teaching ADK 2.0 graph, collaborative (chat, single-turn, task) and dynamic workflows by building a race-day coach, one runnable step at a time
@@ -565,6 +559,8 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 
 ## 🎯 Official Examples
 
+<a name="start-recipes"></a>
+
 _Google ADK recipes repository (formerly adk-samples) - educational and demonstration purposes only_
 
 > **⚠️ Important:** These are official Google examples for learning and demonstration purposes only. They are not intended for production use without significant modification. See the [ADK recipes repository](https://github.com/google/adk-recipes). Deep Search is listed under [Templates & Starters](#-templates--starters).
@@ -628,6 +624,8 @@ _Official ADK recipes in Go, Java, Kotlin, and TypeScript_
 ---
 
 ## 🚀 Getting Started
+
+<a name="start-install"></a>
 
 ### Quick Start with Google ADK
 
