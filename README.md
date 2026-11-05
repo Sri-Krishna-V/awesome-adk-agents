@@ -272,6 +272,47 @@ _Student hackathon with a Google ADK and A2A sponsor track. Source: [winners ann
 ### Hackathons Where ADK Was Optional
 
 <details>
+<summary><b>All Things Agentic Hackathon</b> · Google, Aug 2026 · $180K · 13 ADK winners</summary>
+
+_Autonomous agents on Gemini 3.5 and Google Cloud in three tracks; ADK was one of four allowed frameworks, and these winners used it. Source: [winners announcement](https://allthingsagentichackathon.devpost.com/updates/45669-the-moment-you-ve-long-awaited-winners-are-here)_
+
+- 🥇 **Grand Prize**: [Plant Debugger: Agentic Field Partner for Brownfield Ops](https://devpost.com/software/plant-debugger) - For brownfield plants where the last meter has no API, Google ADK leads diagnostic loops while operators provide physical reach and site facts, verified by deterministic plant telemetry.
+- 🏆 **The Taskmaster**: [Latch](https://devpost.com/software/latch-d8u6of) - Gemini evolves verified observers on five FPGAs for instruments producing up to 6.5 Tb/s. Blind tests matched three spacecraft; Latch also preserved a Fermi event NASA’s systems missed.
+- 🏆 **The Collaborative Partner**: [UpRabbit](https://devpost.com/software/thought-visualized) - Collaborative Knowledge Building with Agents.A learning session with someone asking guiding questions, watching your misconceptions, uncovering unknown unknowns, and visualizing connections
+- 🏆 **The Fortified Enterprise Fleet**: [EIR: Healthcare Agent Fleet](https://devpost.com/software/eir-healthcare-agent-fleet) - EIR is a secure hospital agent fleet that coordinates patient access, recovery, scheduling and supply workflows, with persistent memory, managed guardrails and human approval for critical actions. ([source](https://github.com/ybedoyab/eir))
+- 🏆 **Individual/Hobbyist (Best Team/Solo Build)**: [ShipGaurd](https://devpost.com/software/shipgaurd) - From iOS App TestFlight Crash feedback to xcode Validated pull requests.
+- 🏆 **Best Architectural Design**: [Leadsy](https://devpost.com/software/leadsy) - We are an autonomous premium content engine for Indian SMBs who can't afford Ad agencies. We take in a single business/shop url and produce a complete content kit in less than 15 mins. ([source](https://github.com/vn-envy/leadsy-flock))
+- 🏆 **Best Architectural Design**: [Helixstreet — autonomous genomic fleet](https://devpost.com/software/helixstreet-autonomous-genomic-fleet) - Drop raw DNA in a bucket and walk away: five Gemini+Gemma agents screen PII, call variants with DeepVariant, flag drug-gene risks, and file an auditable digital twin. No chat. No clicks. No human.
+- 🏆 **Best Multimodal UX**: [Overturn](https://devpost.com/software/overturn-bu5imz) - Seven agents that appeal wrongful insurance denials on their own: they cite the payer's own policy, verify every citation before a human sees it, and keep escalating for weeks unasked. ([source](https://github.com/Rickygole/overturn))
+- 🏆 **Best Multimodal UX**: [AnbuCare](https://devpost.com/software/anbucare) - My mother is 71 and lives in Thoothukudi. I don't. Anbu Care coordinates her care at 3am: triage, insurance, bookings, payments, with the guardrails in code where no prompt can reach them. ([source](https://github.com/4KInc/anbu-care))
+- 🎖️ **Honorable Mentions**: [Shoots](https://devpost.com/software/shoots) - You take the photos. Shoots does the learning bookkeeping. ([source](https://github.com/fikri2992/shoots))
+- 🎖️ **Honorable Mentions**: [Migration Control Tower](https://devpost.com/software/migration-control-tower) - A governed fleet of AI agents that discovers a legacy data estate, plans its migration to BigQuery, proves every row actually moved, and cuts over only with human approval. ([source](https://github.com/Nikhil0075/MIGRATION-CONTROL-TOWER))
+- 🎖️ **Honorable Mentions**: [EduAgent — Collaborative Partner Socratic Mentor](https://devpost.com/software/eduagent-collaborative-partner-socratic-mentor) - EduAgent goes beyond a chatbot: it challenges student reasoning, remembers progress across essays, and autonomously turns those insights into prioritized, teacher-approved actions. ([source](https://github.com/francisnguyenanh/EduAgent))
+- 🎖️ **Honorable Mentions**: [Groom](https://devpost.com/software/todogs) - Curating a training set means reviewing hundreds of images by hand. Groom inspects every one with Gemini, files the keepers, and refuses to guess when the answer isn't clear. ([source](https://github.com/hackaprende/groom))
+
+</details>
+
+<details>
+<summary><b>Agentic Cinema: The Blockbuster Hackathon</b> · Google, Jul–Sep 2026 · $75K · 12 ADK winners</summary>
+
+_Film-production agents on Gemini and Google Cloud with partner tracks; ADK was one accepted package, and these winners used it. Source: [winners announcement](https://agentic-cinema.devpost.com/updates/45318-and-the-winner-is)_
+
+- 🏆 **IBM - 1st Place**: [Eyeline — Autonomous On-Set Continuity Copilot](https://devpost.com/software/eyeline-autonomous-on-set-continuity-copilot) - Autonomous multimodal continuity copilot for film script supervisors: catches prop, wardrobe, and blocking breaks in the 2-minute on-set window, backed by Gemini 3.8 Flash adjudication and Veo 3.1. ([source](https://github.com/helenkwok/eyeline))
+- 🏆 **IBM - 3rd Place**: [HOLD](https://devpost.com/software/hold-wrp4nq) - Watch HOLD reduce paid waiting in a film schedule, inspect modeled child-performer limits with citations, and re-solve after a confirmed change. ([source](https://github.com/StephenSook/hold))
+- 🏆 **Grafana Labs - 1st Place**: [The Media Customs](https://devpost.com/software/the-media-customs) - The Media Customs clears your commercial for markets before it airs. A Google Agent watches it with you, judges it against each country's law, cites the statute, and re-renders the shots that fail. ([source](https://github.com/tdries/devpost-hackathon-agentic-cinema))
+- 🏆 **Grafana Labs - 2nd Place**: [Raccord - Accessible Experience Reliability for live media.](https://devpost.com/software/raccord-accessible-experience-reliability-for-live-media) - Raccord certifies, monitors, diagnoses, repairs and proves the accessibility of a live media experience. ([source](https://github.com/Marc-Dvci/Raccord))
+- 🏆 **Grafana Labs - 3rd Place**: [Shot Clock](https://devpost.com/software/shot-clock) - A crew of Gemini agents watches a VFX render farm in Grafana, works out which shots miss the delivery date, proves why, looks at the frame, and prices it. ([source](https://github.com/biyonjose10/shot-clock))
+- 🏆 **Parallel - 1st Place**: [CurrentCut](https://devpost.com/software/currentcut) - The overnight AI edit desk for factual TV. Hand over the night's rushes; wake up to a first cut whose every factual line names the source it was checked against, or says why it has none. ([source](https://github.com/tanaka-cell/currentcut))
+- 🏆 **Parallel - 2nd Place**: [Consentinel](https://devpost.com/software/consentinel) - Consentinel: one registry, two directions hunting unauthorized AI clones of performers worldwide in five languages, clearing studio deliveries before ship. AI finds evidence; humans decide. ([source](https://github.com/PRACHIT27/Consentinel))
+- 🏆 **Parallel - 3rd Place**: [The Boxes](https://devpost.com/software/the-boxes) - Stanley Kubrick's boxes in your pocket ([source](https://github.com/rapha18th/agentic-cinema-boxes))
+- 🏆 **Clickhouse - 1st Place**: [THE GATE](https://devpost.com/software/the-gate-yx5z2b) - Drop a day's footage in. It finds what coverage you're missing, works out if there's time to get it, and tells you what each answer costs. ([source](https://github.com/javaonboard/the-gate))
+- 🏆 **Clickhouse - 2nd Place**: [Retention Room](https://devpost.com/software/retention-room) - Which scene lost them? Retention Room puts playback telemetry and scripts in one room: a Gemini agent queries ClickHouse, rules out a CDN problem, then tells the editor what to trim.
+- 🏆 **Clickhouse - 3rd Place**: [Locaish](https://devpost.com/software/locaish) - The location scout you can send anywhere. ([source](https://github.com/JoshuaA1292/Locaish))
+- 🏆 **Replit - 2nd Place**: [FrameKind](https://devpost.com/software/framekind-tz85od) - An accessibility review agent for film editors. Find missing sound captions, rushed dialogue and timing errors, review each proposed repair against the picture, then export a better caption file. ([source](https://github.com/Abhinav0905/Google_All_Agentic_Cinema))
+
+</details>
+
+<details>
 <summary><b>AI Agents: Intensive Vibe Coding Capstone</b> · Kaggle & Google, Jun–Jul 2026 · 10 ADK winners</summary>
 
 _Capstone of Google and Kaggle's AI Agents: Intensive Vibe Coding course (6,033 submissions); ADK was one of the course concepts. Source: [winners](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/hackathon-winners)_
@@ -290,6 +331,47 @@ _Capstone of Google and Kaggle's AI Agents: Intensive Vibe Coding course (6,033 
 </details>
 
 <details>
+<summary><b>Google Cloud Rapid Agent Hackathon</b> · Google, May–Jun 2026 · $60K · 16 ADK winners</summary>
+
+_Partner-track agent contest on Gemini 3 and Agent Builder; ADK was not required, but these winners built on it. Source: [winners announcement](https://rapid-agent.devpost.com/updates/43725-and-the-winner-is)_
+
+- 🏆 **Arize - 1st Place**: [Cassandra](https://devpost.com/software/cassandra-jilmgy) - AI agents fail silently, confidently wrong, and nobody notices. Cassandra is an AI that watches your AIs. It catches every lie, diagnoses why, ships a proven fix, and even grades its own accuracy. ([source](https://github.com/SirjanSingh/cassandra))
+- 🏆 **Arize - 2nd Place**: [ComplianceOS](https://devpost.com/software/compilanceos) - A compliance agent that audits your code against real law, writes the fixes, and reads its own Phoenix traces through MCP to get better after every scan. ([source](https://github.com/bhupenbandi/compliance-os))
+- 🏆 **Elastic - 2nd Place**: [BLUEPRINT: AI Property Due Diligence](https://devpost.com/software/blueprint-ai-property-due-diligence) - Seven AI agents read public records on any US address, permits, flood zones, EPA data, then run an adversarial AI debate before delivering a buyer risk score. Powered by Elastic Agent Builder MCP. ([source](https://github.com/usv240/blueprint))
+- 🏆 **Arize - 3rd Place**: [ClinTrace](https://devpost.com/software/clintrace) - ClinTrace is an AI agent that assists in emergency department triage — severity scoring, red-flag detection, specialist routing — with every reasoning step traced and auditable via Arize Phoenix. ([source](https://github.com/Reuben-Alex/ClinTrace))
+- 🏆 **Fivetran - 1st Place**: [Unravel](https://devpost.com/software/unravel-7ak8lf) - Five agents watch evolving variant evidence, re-score a clinic's uncertain DNA findings with a calibrated Bayesian model, and draft family recontact the moment one turns actionable. Draft-only. ([source](https://github.com/faith-ogun/Unravel))
+- 🏆 **GitLab - 1st Place**: [mnemosyne](https://devpost.com/software/mnemosyne-ubotlw) - The AI that remembers every failure — predicts outages, annotates risky code inline, gates CI pipelines, auto-blocks critical MRs, and diagnoses failures. Powered by Gemini and gitlab on Google Cloud.
+- 🏆 **Fivetran - 2nd Place**: [TruthKeeper](https://devpost.com/software/truthkeeper) - Your stack is lying to itself. TruthKeeper is the agent that listens. ([source](https://github.com/gangix/truthkeeper))
+- 🏆 **GitLab - 2nd Place**: [STYLOMETRY](https://devpost.com/software/stylometry) - STYLOMETRY: The forensic guardrail for your GitLab pipeline ([source](https://github.com/annatchijova/stylometry))
+- 🏆 **Fivetran - 3rd Place**: [How Did I?](https://devpost.com/software/how-did-i) - How Did I? is an agentic ecommerce operator that diagnoses daily revenue leaks across carts, ads, inventory, and support—then drafts owner-approved fixes in one tap.
+- 🏆 **GitLab - 3rd Place**: [ContribPilot](https://devpost.com/software/contribpilot) - Finding an open source issue is easy. Contributing successfully is hard. ContribPilot bridges that gap with personalized guidance powered by Gemini and GitLab MCP. ([source](https://github.com/NiloySaha84/ContribPilot_Google_Rapid_Agent_Hackathon_Proj))
+- 🏆 **MongoDB - 1st Place**: [Epiq](https://devpost.com/software/epiq-1ubx5q) - Intelligent A.I Outbreak Tracker
+- 🏆 **Dynatrace - 1st Place**: [AutoSRE: The Autonomous On-Call Engineer](https://devpost.com/software/autosre-the-autonomous-on-call-engineer) - AutoSRE is an autonomous on-call agent that diagnoses Dynatrace incidents in seconds and queues up the fix, but cannot touch production without your one-tap approval. ([source](https://github.com/thylinao1/autosre))
+- 🏆 **MongoDB - 2nd Place**: [KickOff](https://devpost.com/software/trustos) - Seven Gemini 3 agents move 82,500 World Cup fans to MetLife Stadium — reasoning over live MongoDB Atlas via MCP, every decision a database write streamed onto a photorealistic 3D map.
+- 🏆 **Dynatrace - 2nd Place**: [Karma — The Reincarnation Agent for Deprecated Services](https://devpost.com/software/karma-the-reincarnation-agent-for-deprecated-services) - A multi-agent system that learns a deprecated service's hidden contracts and haunts its replacement, catching silent regressions every test misses. Gemini + Vertex AI Agent Builder + Dynatrace. ([source](https://github.com/rogerjeasy/karma))
+- 🏆 **MongoDB - 3rd Place**: [Sentinel Flood-Watch Agent](https://devpost.com/software/sentinel-flood-watch-agent) - An AI agent that proactively monitors Accra's ecological sites using remote sensing data and advanced analytics, and alerts authorities and stakeholders to potential environmental threats. ([source](https://github.com/Hou-dini/sentinel-flood-watch))
+- 🏆 **Dynatrace - 3rd Place**: [Heimdall: Autonomous Incident Response for Dynatrace](https://devpost.com/software/project-hpfwsu51xila) - Autonomous SRE that watches your Dynatrace tenant 24/7, diagnoses production incidents from real spans and Davis CoPilot, and opens a pull request before your phone stops ringing.
+
+</details>
+
+<details>
+<summary><b>Gemini Live Agent Challenge</b> · Google, Feb–Mar 2026 · $80K · 9 ADK winners</summary>
+
+_Real-time voice, vision and storytelling agents on Gemini Live; ADK or the GenAI SDK was allowed. Source: [winners announcement](https://cloud.google.com/blog/topics/developers-practitioners/winners-and-highlights-of-the-gemini-live-agent-challenge)_
+
+- 🥇 **Grand Prize**: [ORION - Operating Room Intelligent Orchestration Node](https://devpost.com/software/orion-operating-room-intelligent-orchestration-node) - A voice-directed surgical co-pilot for robotic surgery. Surgeons can speak naturally & instantly receive answers, live data on display, and real-time visual assistance - all without breaking scrub.
+- 🏆 **Best of Creative Storytellers**: [Sankofa](https://devpost.com/software/sankofa-y47f9p) - Transforming fragmented family history into living, breathing, multimodal stories. ([source](https://github.com/Jeremiah-Sakuda/Sankofa))
+- 🏆 **Best Multimodal Integration & User Experience**: [Wand -- A live agent that sees, browses, and clicks with you](https://devpost.com/software/wand-a-live-agent-that-sees-browses-and-clicks-with-you) - Wand turns the web into something you can talk to and point at. It’s a live AI agent that sees your screen and acts in real time as you speak and point — no typing, no mouse.
+- 🏆 **Best Technical Execution & Agent Architecture**: [JohnKeats.AI](https://devpost.com/software/johnkeats-ai) - A voice-first AI companion that holds uncertainty instead of solving it. Built on Gemini 2.5 Flash Native Audio with a governed calibration pipeline that learns from every conversation. ([source](https://github.com/johnkeats-ai/johnkeats-ai))
+- 🏆 **Best Innovation & Thought Leadership**: [Rayan Memory](https://devpost.com/software/rayan-memory) - Point your camera at life. Rayan builds a 3D palace from everything you see and hear, rooms you can walk through, memories you can talk to. Your AI that remembers, so you don't have to. ([source](https://github.com/yelnady/rayan))
+- 🎖️ **Honorable Mentions**: [Ekaette](https://devpost.com/software/ekaette) - Ekaette is a configurable AI voice and messaging assistant for customer-facing businesses across multiple industries.
+- 🎖️ **Honorable Mentions**: [Call My Parts](https://devpost.com/software/call-my-parts) - Sit back and relax while our agent help find the right fit ([source](https://github.com/Top-Notch-X/C2B-Concierge))
+- 🎖️ **Honorable Mentions**: [Relay — Real-Time Voice & Vision Lab Tutor for Electronics](https://devpost.com/software/relay-real-time-voice-vision-lab-tutor-for-electronics) - Relay watches your breadboard through your webcam and talks you through building circuits in real time. It sees wiring, catches errors, generates code, and turns builds into 3D digital twins. ([source](https://github.com/faith-ogun/Relay))
+- 🎖️ **Honorable Mentions**: [VibeCat](https://devpost.com/software/vibecat) - Your proactive desktop companion. VibeCat watches your screen via Gemini Live API, suggests actions before you ask, and executes with self-healing navigation. Built with GenAI SDK + ADK on Cloud Run. ([source](https://github.com/Two-Weeks-Team/vibeCat))
+
+</details>
+
+<details>
 <summary><b>Agents Intensive Capstone Project</b> · Kaggle & Google, Nov–Dec 2025 · 10 ADK winners</summary>
 
 _Capstone of Google and Kaggle's 5-Day AI Agents Intensive (11,453 submissions); ADK was the course framework but not required. Source: [winners](https://www.kaggle.com/competitions/agents-intensive-capstone-project/hackathon-winners)_
@@ -304,6 +386,21 @@ _Capstone of Google and Kaggle's 5-Day AI Agents Intensive (11,453 submissions);
 - 🥇 **Freestyle, 1st**: [Daedalus](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/daedalus) - Self-expanding agent system that designs, tests and registers its own tools and agent pipelines ([source](https://github.com/jovanovic-milos/daedalus))
 - 🥈 **Freestyle, 2nd**: [AI Stock Prediction System](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/ai-stock-prediction-system-multi-agent-a2a-archit) - Six parallel agents with an A2A architecture for stock analysis ([source](https://github.com/nishapp/agents-5days-kaggle-competition))
 - 🥉 **Freestyle, 3rd**: [StoryLand AI](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/storyland-agent) - Turns favorite books into themed travel itineraries ([source](https://github.com/o-ostrovskiy/storyland-ai))
+
+</details>
+
+<details>
+<summary><b>GKE Turns 10 Hackathon</b> · Google Cloud, Aug–Sep 2025 · $50K · 7 ADK winners</summary>
+
+_Add agentic AI to Bank of Anthos or Online Boutique on GKE; ADK was recommended, and these winners used it. Source: [winners announcement](https://cloud.google.com/blog/topics/developers-practitioners/winners-and-highlights-from-gke-hackathon)_
+
+- 🥇 **Grand Prize**: [The Cart-to-Kitchen AI Assistant on GKE](https://devpost.com/software/cart-to-kitchen-gke-ai-assistant) - An AI assistant to spice up your online grocery shopping experience!
+- 🎖️ **Honorable Mentions**: [Vigil AI](https://devpost.com/software/vigil-ai) - Vigil AI: Securing financial microservices with autonomous, real-time fraud mitigation. ([source](https://github.com/ayanliger/gke-turns10-hackathon-vigil))
+- 🎖️ **Honorable Mentions**: [Voice Teller - Dial ADK + MCP](https://devpost.com/software/voice-teller-dial-adk-mcp) - Changing how we call. Intelligent phone bots instead of clunky IVR. ([source](https://github.com/julian-hecker/gke-hackathon))
+- 🎖️ **Honorable Mentions**: [CO2‑Aware Shopping Assistant](https://devpost.com/software/co2-aware-shopping-assistant) - Get what you want for less CO2. We optimize products and shipping to lower emissions and cost while meeting your delivery. ([source](https://github.com/prabhakaran-jm/co2-shopping-assistant))
+- 🏆 **Regional Prize: North America**: [CardOS](https://devpost.com/software/cardos) - Applying for a credit card is painful & most rewards don’t fit individual needs. We’re solving this with AI agents that analyze transaction history, tailor terms & perks, & balance bank profitability.
+- 🏆 **Regional Prize: Europe, Middle East, Africa**: [Cartmate](https://devpost.com/software/cartmate-mygdtk) - An Ai-powered shopping experience ([source](https://github.com/victorbash400/Cartmate))
+- 🏆 **Regional Prize: Asia Pacific**: [V-Commerce Studio](https://devpost.com/software/v-commerce-studio) - V-Commerce Studio redefines e-commerce with AI personalized chat, proactive engagement, virtual try-ons, and instant ad generation, built on Google’s ecosystem for intelligent retail automation. ([source](https://github.com/mvp-ing/v-commerce-studio))
 
 </details>
 
