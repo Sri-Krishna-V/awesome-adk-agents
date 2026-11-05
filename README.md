@@ -264,9 +264,10 @@ _Comprehensive guides, tutorials, and educational content_
 - 🟡 [lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk) 🏭 - Design patterns and production-ready architectures for building multi-agent AI systems with Google ADK on Cloud Run, Vertex AI, and AI Studio
 - 🟡 [Give a Google ADK agent per-user OAuth tools with Scalekit](https://docs.scalekit.com/agentkit/examples/google-adk/) - Scalekit guide to a Gmail-reading ADK agent with per-user OAuth tools, from native ADK tools or a Scalekit MCP server through `McpToolset`. Sample code: [scalekit-inc/google-adk-agent-example](https://github.com/scalekit-inc/google-adk-agent-example).
 
-#### Google ADK Tutorial Examples
+<details>
+<summary><b>Google ADK crash course and apps from awesome-llm-apps</b> · 21 lessons and 9 apps</summary>
 
-_Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) demonstrating ADK patterns and capabilities_
+Tutorial examples from [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) that demonstrate ADK patterns and capabilities.
 
 **Fundamentals:**
 
@@ -285,7 +286,9 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 
 - 🟢 [Code Execution Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_1_builtin_tools/code_exec_agent) - Built-in code execution tools
 - 🟢 [Google Search Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_1_builtin_tools/search_agent) - Web search capabilities
+- 🟢 [Function Tools](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_2_function_tools) - Custom Python functions as agent tools, with calculator and utility agent examples.
 - 🟢 [Filesystem Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_4_mcp_tools/filesystem_agent) - MCP filesystem tools integration
+- 🟢 [Firecrawl Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_4_mcp_tools/firecrawl_agent) - Web scraping, site crawling and structured extraction through the Firecrawl MCP server.
 - 🟢 [LangChain Integration Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_3_thirdparty_tools/langchain_agent) - Third-party tool integration with LangChain
 - 🟢 [CrewAI Integration Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/ai_agent_framework_crash_course/google_adk_crash_course/4_tool_using_agent/4_3_thirdparty_tools/crewai_agent) - Third-party tool integration with CrewAI
 
@@ -319,6 +322,8 @@ _Comprehensive tutorial examples from [awesome-llm-apps](https://github.com/Shub
 
 - 🟡 [Earnings Call Analyst Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent) - Ingests and analyzes earnings calls with transcription, research, and analyst agents
 - 🟡 [AI Consultant Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/single_agent_apps/ai_consultant_agent) - Business consulting agent using Google Search grounding and session management
+
+</details>
 
 ### Articles & Best Practices
 
