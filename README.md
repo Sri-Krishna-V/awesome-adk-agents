@@ -356,9 +356,10 @@ _Winners of hackathons where teams built with ADK. Each list comes from the orga
 
 ### ADK-Focused Hackathons
 
-#### Agent Development Kit Hackathon with Google Cloud (2025)
+<details>
+<summary><b>Agent Development Kit Hackathon with Google Cloud</b> · Google Cloud, 2025 · 477 submissions · 8 winners</summary>
 
-> **477 submissions** | **10,400+ participants from 62 countries** | [Winners announcement](https://cloud.google.com/blog/products/ai-machine-learning/adk-hackathon-results-winners-and-highlights) | [All submissions](https://googlecloudmultiagents.devpost.com/project-gallery)
+_The first hackathon built around ADK, with 10,400+ participants from 62 countries. Source: [winners announcement](https://cloud.google.com/blog/products/ai-machine-learning/adk-hackathon-results-winners-and-highlights). Also see [all submissions](https://googlecloudmultiagents.devpost.com/project-gallery)._
 
 - 🥇 **Grand Prize ($15,000)**: [SalesShortcut](https://devpost.com/software/salesshortcut) - AI-powered Sales Development Representative system with a multi-agent architecture for automated lead generation, research, proposal generation, and outreach ([source](https://github.com/merdandt/SalesShortcut))
 - 🌎 **North America ($8,000)**: [Energy Agent AI](https://devpost.com/software/energy-agent-ai) - Multi-agent AI transforming energy customer management through Google ADK orchestration ([source](https://github.com/hazardscarn/energyagentai))
@@ -368,6 +369,8 @@ _Winners of hackathons where teams built with ADK. Each list comes from the orga
 - 🎖️ **Honorable Mention ($1,000)**: [Particle Physics Agent](https://devpost.com/software/particle-physics-agent) - Physics AI agent converting natural language into validated Feynman diagrams using real physical laws ([source](https://github.com/bee4come/Particle-Physics-Agent))
 - 🎖️ **Honorable Mention ($1,000)**: [TradeSage AI](https://devpost.com/software/tradesage-ai) - Multi-agent financial analysis platform for evaluating trading hypotheses with ADK, Agent Engine, Cloud Run and Vertex AI ([source](https://github.com/sudsk/tradesage-mvp))
 - 🎖️ **Honorable Mention ($1,000)**: [Bleach](https://devpost.com/software/bleach-7tqdmo) - Visual AI agent builder for Google ADK: describe agents in plain English, design them visually, and test instantly ([source](https://github.com/vivek100/bleachAgentBuilder))
+
+</details>
 
 <details>
 <summary><b>Cloud Run Hackathon</b> · Google Cloud, Oct–Nov 2025 · ADK-only AI Agents category · 3 ADK winners</summary>
