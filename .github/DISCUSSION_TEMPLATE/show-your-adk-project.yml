@@ -1,0 +1,44 @@
+title: "[Show] "
+labels: ["show-your-project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share an ADK project you built. A project post is not a list entry.
+        A maintainer checks it against the entry rules in
+        [CONTRIBUTING.md](https://github.com/Sri-Krishna-V/awesome-adk-agents/blob/main/CONTRIBUTING.md#suggesting-a-list-entry)
+        and replies with what is missing, or asks you to open a pull request.
+        Say in your post if you wrote the project. Posts that mainly advertise a product or service are removed.
+  - type: input
+    id: url
+    attributes:
+      label: Repository URL
+      description: A public GitHub repository is best. For an article, video or course, link it directly.
+      placeholder: https://github.com/you/your-adk-project
+    validations:
+      required: true
+  - type: textarea
+    id: what-it-does
+    attributes:
+      label: What does it do?
+      description: Two or three sentences of technical fact. What it does, which ADK features it uses, and what sets it apart from the existing entries.
+    validations:
+      required: true
+  - type: input
+    id: adk-version
+    attributes:
+      label: ADK version
+      description: The version in your dependencies, not the latest.
+      placeholder: "google-adk 2.13.0"
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules-not-met
+    attributes:
+      label: Which entry rules does it not meet yet?
+      description: Tick each rule that is not true today. Leave all empty if it meets all four.
+      options:
+        - label: "1. It does not use Google ADK yet (no `google-adk`, `google.adk`, adk-go, adk-java or adk-js in its dependencies or imports)."
+        - label: "2. It was not updated within the last 6 months, or it is archived."
+        - label: "3. Its README has no setup steps yet."
+        - label: "4. An existing entry already covers what it does."
