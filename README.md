@@ -15,7 +15,7 @@ ADK 2.x is current: graph-based Workflows replace `SequentialAgent`, `ParallelAg
 
 New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [Start from a template](#start-template) · [Browse official recipes](#start-recipes)
 
-## 📖 Table of Contents
+## Contents
 
 - [🧰 Official SDKs & Tools](#-official-sdks--tools)
 - [🍳 Official Recipes](#-official-recipes)
@@ -25,7 +25,6 @@ New to ADK? [Install](#start-install) · [Learn the basics](#start-learn) · [St
 - [🏆 ADK Hackathons & Challenges](#-adk-hackathons--challenges)
 - [💡 About ADK](#-about-adk)
 - [🏁 Getting Started](#-getting-started)
-- [🤝 Contributing](#-contributing)
 
 **Legend:** 🟢 Beginner · 🟡 Intermediate · 🔴 Advanced · 🏭 Production-ready (ships deployment code and docs)
 
@@ -48,6 +47,8 @@ _Google's official ADK repositories and the protocol ADK builds on_
 ## 🍳 Official Recipes
 
 <a name="start-recipes"></a>
+
+In this section: [Core Recipes](#core-recipes) · [Contributed & Vertical Agents](#contributed--vertical-agents) · [Other Language Recipes](#other-language-recipes) · [Agent Skill Plugins](#agent-skill-plugins)
 
 _Google ADK recipes repository (formerly adk-samples) - educational and demonstration purposes only_
 
@@ -124,6 +125,8 @@ _Ready-to-use templates to kickstart your ADK projects_
 - 🟡 [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph) - Neo4j Labs scaffolding CLI that generates domain-specific context-graph agent apps; `--framework google-adk` generates an ADK agent backend
 
 ## 🌟 Community Projects
+
+In this section: [Maintainer's Agents](#maintainers-agents) · [Multi-Agent Systems](#multi-agent-systems) · [Frameworks & Platforms Built on ADK](#frameworks--platforms-built-on-adk) · [UI, Protocols & Runtimes](#ui-protocols--runtimes) · [Observability, Evaluation & Security](#observability-evaluation--security) · [Memory, Session & Storage](#memory-session--storage) · [Domain-Specific Applications](#domain-specific-applications)
 
 _Projects that people outside Google publish and that use ADK_
 
@@ -211,6 +214,8 @@ _Agents built by the maintainer of this list._
 - 🟡 [anxuanzi/bua](https://github.com/anxuanzi/bua) - AI-powered browser automation for Go — describe tasks in plain English and let the ADK-powered agent handle the clicks via vision-language models
 
 ## 📚 Learning Resources
+
+In this section: [Community Training Platforms](#community-training-platforms) · [Courses & Certifications](#courses--certifications) · [Quickstart Courses](#quickstart-courses) · [Official Hands-on Learning](#official-hands-on-learning) · [Tutorials & Walkthroughs](#tutorials--walkthroughs) · [Articles & Best Practices](#articles--best-practices) · [Video Content](#video-content)
 
 _Comprehensive guides, tutorials, and educational content_
 
@@ -356,6 +361,8 @@ Tutorial examples from [awesome-llm-apps](https://github.com/Shubhamsaboo/awesom
 - 🟢 [Google ADK Course (theailanguage playlist)](https://www.youtube.com/playlist?list=PL6tW9BrhiPTAZts0W5nQS9dbW6VMnLKab) - Community video course ("End-to-end Course 2026") covering ADK fundamentals and advanced topics
 
 ## 🏆 ADK Hackathons & Challenges
+
+In this section: [ADK-Focused Hackathons](#adk-focused-hackathons) · [Hackathons Where ADK Was Optional](#hackathons-where-adk-was-optional)
 
 _Winners of hackathons where teams built with ADK. Each list comes from the organizer's own announcement. Where ADK was optional, only winners whose code or project page shows ADK are listed._
 
