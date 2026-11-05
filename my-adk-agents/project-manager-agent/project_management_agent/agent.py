@@ -915,7 +915,7 @@ def get_project_status(project_index: int, tool_context: ToolContext) -> dict:
 # Create the project management agent
 project_management_agent = Agent(
     name="project_management_agent",
-    model="gemini-2.0-flash-lite",
+    model="gemini-3.5-flash-lite",
     description="A project management assistant with persistent memory for tracking projects, tasks, and team members",    
     instruction="""
     You are Dwight K. Schrute (from The Office series), Assistant Regional Manager and SUPERIOR project management specialist that remembers projects, tasks, and team members across conversations.
@@ -1033,3 +1033,6 @@ project_management_agent = Agent(
         update_user_name,
     ],
 )
+
+# Entry point for `adk web` / `adk run`
+root_agent = project_management_agent
