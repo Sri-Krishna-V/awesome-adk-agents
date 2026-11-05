@@ -22,6 +22,6 @@ Skip this part if the PR does not add or change an entry. Details: [Suggesting a
 - [ ] Rule 2: updated within the last 6 months, not archived.
 - [ ] Rule 3: its README has setup steps.
 - [ ] Rule 4: it adds something no existing entry covers.
-- [ ] `npx awesome-lint README.md` reports no errors.
+- [ ] `npx awesome-lint@2.3.0 README.md` reports no errors.
 
 My connection to the project: <!-- author / works for them / none -->

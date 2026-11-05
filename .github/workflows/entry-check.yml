@@ -1,0 +1,294 @@
+# Entry check: tests only the lines that a pull request adds to README.md.
+# - Each new link must open (same lychee settings as the link check).
+# - Each new GitHub repo must exist, must not be archived, and must have a
+#   push in the last 6 months (rule 2 in CONTRIBUTING.md). In the Hackathons
+#   section these facts are reported but do not fail the check.
+# - A missing README or no ADK hint in the dependency files is a warning.
+# The check is optional (not a required check) and posts no PR comment.
+name: Entry check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/entry-check.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: entry-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  entries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # On pull_request, HEAD is the merge commit and HEAD^1 is main.
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Find the new lines in README.md
+        id: new
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/entry-check"
+          mkdir -p "$work"
+          base=$(git rev-parse "${BASE_REF:-HEAD^1}")
+
+          # "<line number in the new README>\t<text>" for each added line.
+          git diff --unified=0 --no-color --no-ext-diff "$base" HEAD -- README.md \
+            | tr -d '\r' \
+            | awk '
+                /^diff --git / { inhunk = 0; next }
+                /^@@ / { inhunk = 1; split($3, a, ","); n = substr(a[1], 2) + 0; next }
+                inhunk && /^\+/ { print n "\t" substr($0, 2); n++ }
+              ' > "$work/added.tsv"
+
+          # "<line>\t<H2 section>\t<text>". Headings in code blocks do not count.
+          : > "$work/lines.tsv"
+          if [ -s "$work/added.tsv" ] && [ -f README.md ]; then
+            awk '
+              FILENAME == ARGV[1] { split($0, f, "\t"); want[f[1]] = 1; next }
+              { sub(/\r$/, "") }
+              /^[[:space:]]*```/ { fence = !fence }
+              !fence && /^## / { section = substr($0, 4) }
+              (FNR in want) { print FNR "\t" (section == "" ? "(none)" : section) "\t" $0 }
+            ' "$work/added.tsv" README.md > "$work/lines.tsv"
+          fi
+
+          # lychee reads this file. It is in the repo root so that relative
+          # links resolve the same way as in README.md.
+          cut -f3- "$work/lines.tsv" > .entry-check-new-lines.md
+          lines=$(( $(wc -l < "$work/lines.tsv") ))
+          links=$(( $(grep -cE 'https?://|\]\(' .entry-check-new-lines.md || true) ))
+          echo "lines=$lines" >> "$GITHUB_OUTPUT"
+          echo "links=$links" >> "$GITHUB_OUTPUT"
+          echo "New lines: $lines. Lines with links: $links."
+
+      - name: Check the new links
+        id: lychee
+        if: steps.new.outputs.links != '0'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 30
+            --accept '200..=299,429'
+            --exclude-loopback
+            --exclude '^https?://([a-z0-9-]+\.)*medium\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*datacamp\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*skills\.google([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*reddit\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*deepwiki\.com([/:?#]|$)'
+            .entry-check-new-lines.md
+          fail: false
+          failIfEmpty: false
+          jobSummary: false
+
+      - name: Check the new GitHub repos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/entry-check"
+          : > "$work/repos.tsv"
+          cutoff=$(date -u -d "6 months ago" +%s)
+          adk_re='google-adk|google\.adk|google\.golang\.org/adk|@google/adk|adk-go|adk-java|adk-js'
+          dep_re='^(requirements[A-Za-z0-9._-]*\.txt|pyproject\.toml|setup\.py|setup\.cfg|Pipfile|package\.json|go\.mod|pom\.xml|build\.gradle|build\.gradle\.kts)$'
+          url_re='^https?://(www\.)?github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)(/.*)?$'
+          folder_re='^/(tree|blob)/([A-Za-z0-9._-]+)(/([A-Za-z0-9._/-]+))?$'
+          # First path parts on github.com that are not a user or an org.
+          reserved=' about apps collections customer-stories enterprise events explore features login marketplace new notifications orgs organizations pricing search security settings site sponsors topics trending users '
+
+          # Collect each repo once. A repo is "strict" if any new line outside
+          # the Hackathons section links to it.
+          declare -A name_of line_of strict_of dir_of ref_of
+          order=()
+          while IFS=$'\t' read -r line section text; do
+            hack=0
+            if [[ $section == *Hackathons* ]]; then hack=1; fi
+            while read -r url; do
+              if [ -z "$url" ]; then continue; fi
+              url=${url%%[?#]*}
+              url=${url%/}
+              if ! [[ $url =~ $url_re ]]; then continue; fi
+              owner=${BASH_REMATCH[2]}
+              repo=${BASH_REMATCH[3]%.git}
+              rest=${BASH_REMATCH[4]}
+              if [[ $reserved == *" ${owner,,} "* ]] || [ -z "$repo" ]; then continue; fi
+              key="${owner,,}/${repo,,}"
+              if [ -z "${name_of[$key]+x}" ]; then
+                order+=("$key")
+                name_of[$key]="$owner/$repo"
+                line_of[$key]=$line
+                strict_of[$key]=0
+              fi
+              if [ "$hack" -eq 0 ]; then strict_of[$key]=1; fi
+              # A link to a folder or a file: also look in that folder.
+              if [ -z "${dir_of[$key]+x}" ] && [[ $rest =~ $folder_re ]]; then
+                ref=${BASH_REMATCH[2]}
+                dir=${BASH_REMATCH[4]}
+                if [ "${BASH_REMATCH[1]}" = blob ]; then
+                  dir=$(dirname "$dir")
+                  if [ "$dir" = . ]; then dir=""; fi
+                fi
+                if [[ $dir == *..* ]]; then dir=""; fi
+                dir_of[$key]=$dir
+                ref_of[$key]=$ref
+              fi
+            done < <(printf '%s\n' "$text" | grep -oE 'https?://(www\.)?github\.com/[^ )<>"]+' || true)
+          done < "$work/lines.tsv"
+
+          for key in "${order[@]}"; do
+            name=${name_of[$key]}
+            line=${line_of[$key]}
+            strict=${strict_of[$key]}
+            dir=${dir_of[$key]-}
+            ref=${ref_of[$key]-}
+            q=""
+            if [ -n "$ref" ]; then q="?ref=$ref"; fi
+            archived="?"; pushed="?"; readme="?"; hint="?"
+            reasons=()
+
+            if meta=$(gh api "repos/$name" --jq '[.full_name, (.archived | tostring), (.pushed_at // "")] | @tsv' 2>"$work/err"); then
+              IFS=$'\t' read -r full archived pushed_at <<< "$meta"
+              if [ "$archived" = true ]; then archived=yes; else archived=no; fi
+              if [ "${full,,}" != "${name,,}" ]; then
+                reasons+=("warning|The repo moved to $full. Update the link.")
+              fi
+              if [ "$archived" = yes ]; then
+                if [ "$strict" -eq 1 ]; then reasons+=("error|The repo is archived (rule 2).")
+                else reasons+=("notice|The repo is archived. Hackathon entry, so this does not fail.")
+                fi
+              fi
+              if [ -z "$pushed_at" ]; then
+                pushed="never"
+                if [ "$strict" -eq 1 ]; then reasons+=("error|The repo has no commits (rule 2).")
+                else reasons+=("notice|The repo has no commits. Hackathon entry, so this does not fail.")
+                fi
+              else
+                pushed=${pushed_at%%T*}
+                if [ "$(date -u -d "$pushed_at" +%s)" -lt "$cutoff" ]; then
+                  if [ "$strict" -eq 1 ]; then reasons+=("error|The last push was on $pushed, more than 6 months ago (rule 2).")
+                  else reasons+=("notice|The last push was on $pushed. Hackathon entry, so this does not fail.")
+                  fi
+                fi
+              fi
+
+              if gh api "repos/$full/readme${dir:+/$dir}$q" --silent 2>/dev/null; then
+                readme=yes
+              else
+                readme=no
+                reasons+=("warning|No README found${dir:+ in $dir}. Check the setup steps by hand (rule 3).")
+              fi
+
+              # ADK hint: dependency files in the linked folder, then the repo root.
+              dirs=()
+              if [ -n "$dir" ]; then dirs+=("$dir"); fi
+              dirs+=("")
+              hint=""
+              for d in "${dirs[@]}"; do
+                listing=$(gh api "repos/$full/contents${d:+/$d}$q" --jq '.[] | select(.type == "file") | .name' 2>/dev/null) || listing=""
+                while read -r f; do
+                  if ! [[ $f =~ $dep_re ]]; then continue; fi
+                  content=$(gh api "repos/$full/contents/${d:+$d/}$f$q" -H "Accept: application/vnd.github.raw" 2>/dev/null) || content=""
+                  if grep -Eiq "$adk_re" <<< "$content"; then
+                    hint="found in ${d:+$d/}$f"
+                    break 2
+                  fi
+                done <<< "$listing"
+              done
+              if [ -z "$hint" ]; then
+                hint="not found"
+                reasons+=("warning|No ADK package found in the top-level dependency files. Check rule 1 by hand.")
+              fi
+            elif grep -q "HTTP 404" "$work/err"; then
+              reasons+=("error|The repo does not exist.")
+            else
+              reasons+=("error|The GitHub API call failed. Re-run the check.")
+            fi
+
+            result=pass
+            for r in "${reasons[@]}"; do
+              level=${r%%|*}
+              if [ "$level" = error ]; then result=fail
+              elif [ "$level" = warning ] && [ "$result" != fail ]; then result=warning
+              elif [ "$level" = notice ] && [ "$result" = pass ]; then result=note
+              fi
+              echo "::$level file=README.md,line=$line::$name: ${r#*|}"
+            done
+            joined=""
+            for r in "${reasons[@]}"; do joined="${joined:+$joined }${r#*|}"; done
+            printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
+              "$line" "$name" "$archived" "$pushed" "$readme" "$hint" "$result" "$joined" >> "$work/repos.tsv"
+          done
+          echo "GitHub repos checked: ${#order[@]}."
+
+      - name: Write the summary
+        env:
+          LINES: ${{ steps.new.outputs.lines }}
+          LINKS: ${{ steps.new.outputs.links }}
+          LYCHEE_EXIT: ${{ steps.lychee.outputs.exit_code }}
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/entry-check"
+          rules="https://github.com/$GITHUB_REPOSITORY/blob/main/CONTRIBUTING.md#suggesting-a-list-entry"
+          failed=0
+          {
+            echo "## Entry check"
+            echo
+            if [ "$LINES" -eq 0 ]; then
+              echo "This pull request adds no lines to \`README.md\`. There is nothing to check."
+            else
+              echo "This pull request adds $LINES lines to \`README.md\`."
+              echo
+              echo "### GitHub repos"
+              echo
+              if [ -s "$work/repos.tsv" ]; then
+                echo "| Line | Repo | Archived | Last push | README | ADK hint | Result | Notes |"
+                echo "|---|---|---|---|---|---|---|---|"
+                while IFS=$'\t' read -r line name archived pushed readme hint result notes; do
+                  case "$result" in
+                    pass) icon="✅ pass" ;;
+                    note) icon="📝 note" ;;
+                    warning) icon="⚠️ check by hand" ;;
+                    *) icon="❌ fail" ;;
+                  esac
+                  echo "| $line | [$name](https://github.com/$name) | $archived | $pushed | $readme | $hint | $icon | ${notes//|/\\|} |"
+                done < "$work/repos.tsv"
+              else
+                echo "The new lines link to no GitHub repo."
+              fi
+              echo
+              echo "### Links"
+              echo
+              if [ "$LINKS" -eq 0 ]; then
+                echo "The new lines have no links."
+              elif [ "$LYCHEE_EXIT" = 0 ]; then
+                echo "All links in the new lines open."
+              elif [ "$LYCHEE_EXIT" = 2 ]; then
+                echo "Some links in the new lines do not open:"
+                echo
+                # Move lychee's headings below the headings of this summary.
+                sed 's/^#/###/' lychee/out.md
+              else
+                echo "lychee failed (exit code '$LYCHEE_EXIT'). See the log of the \"Check the new links\" step."
+              fi
+              echo
+              echo "This check does not test rule 4 or the setup steps in rule 3. The maintainer checks them. Rules: [Suggesting a List Entry]($rules)."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -s "$work/repos.tsv" ] && cut -f7 "$work/repos.tsv" | grep -qx fail; then failed=1; fi
+          if [ "$LINKS" -ne 0 ] && [ "$LYCHEE_EXIT" != 0 ]; then failed=1; fi
+          if [ "$failed" -eq 1 ]; then
+            echo "::error::The entry check found problems. See the job summary."
+            exit 1
+          fi
+          echo "The entry check passed."

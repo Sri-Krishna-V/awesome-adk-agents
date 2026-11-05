@@ -345,7 +345,7 @@ To learn more about Agent Development Kit concepts, explore these resources:
 
 - [Google ADK Documentation](https://github.com/google/adk-docs) - Official documentation for the ADK
 - [ADK Sessions Documentation](https://google.github.io/adk-docs/sessions/session/) - Details on session management
-- [ADK Tools Documentation](https://google.github.io/adk-docs/agents/tools/) - Learn more about creating tools
-- [ADK GitHub Repository](https://github.com/google/adk) - Source code and examples
+- [ADK Tools Documentation](https://adk.dev/tools-custom/) - Learn more about creating tools
+- [ADK GitHub Repository](https://github.com/google/adk-python) - Source code and examples
 
 Happy building with ADK!

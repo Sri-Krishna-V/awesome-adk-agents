@@ -1,0 +1,46 @@
+# Lint check: runs awesome-lint when a file that it reads changes.
+# awesome-lint reads README.md, CONTRIBUTING.md and CODE_OF_CONDUCT.md.
+name: Lint check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - README.md
+      - CONTRIBUTING.md
+      - CODE_OF_CONDUCT.md
+      - .github/workflows/lint.yml
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - CONTRIBUTING.md
+      - CODE_OF_CONDUCT.md
+      - .github/workflows/lint.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lint-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  awesome-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # awesome-lint 2.3.0 does not need the full history (its repo-age rule
+      # is off), but a later version can turn that rule on again.
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # awesome-lint reads the token from the lowercase variable github_token.
+      # It uses it only to read this repo's description, topics and license.
+      - name: Run awesome-lint 2.3.0
+        env:
+          github_token: ${{ github.token }}
+        run: npx --yes awesome-lint@2.3.0 README.md

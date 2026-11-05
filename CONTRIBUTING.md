@@ -4,7 +4,7 @@ First off, thank you for considering contributing to Awesome ADK Agents! This re
 
 ## Code of Conduct
 
-Be respectful and constructive in issues, pull requests, and reviews. Please report unacceptable behavior to the repository maintainers.
+This project follows the [Contributor Covenant 3.0](CODE_OF_CONDUCT.md). It says how to report a problem.
 
 ## How Can I Contribute?
 
@@ -44,7 +44,9 @@ Not sure your project meets these rules yet? Post it in [Show your ADK project](
 
 **One link, one place:** each URL appears once in the list. If your project is already listed, update its line instead of adding a new one.
 
-**Before you open the PR:** run `npx awesome-lint README.md`. It must report no errors.
+**Before you open the PR:** run `npx awesome-lint@2.3.0 README.md`. It must report no errors.
+
+**Checks on your PR:** the lint check runs awesome-lint, and the entry check tests each line you add: its links must open, and a GitHub repo must not be archived and must have a push in the last 6 months. If a check shows a red ✗, open its details to see what to fix.
 
 **Removal:** maintainers remove entries whose links 404, archived repos, and projects with no commits in 12+ months that are broken or built on pre-1.0 ADK.
 
