@@ -1,0 +1,114 @@
+# Link check: tests every link in README.md once a week.
+# A failed run opens or updates one entry report. A clean run closes it.
+# On a pull request that changes this file, the result goes to the job
+# summary only, so the workflow can be tested before a merge.
+name: Link check
+
+on:
+  schedule:
+    - cron: "30 3 * * 1" # Monday 03:30 UTC (09:00 IST)
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/links.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # Excluded hosts block bots (403 or 429 to automated clients). A browser
+      # check covers them instead. 429 means "slow down", not "dead".
+      - name: Check links in README.md
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 30
+            --accept '200..=299,429'
+            --include-fragments
+            --exclude-loopback
+            --exclude '^https?://([a-z0-9-]+\.)*medium\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*datacamp\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*skills\.google([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*reddit\.com([/:?#]|$)'
+            --exclude '^https?://([a-z0-9-]+\.)*deepwiki\.com([/:?#]|$)'
+            README.md
+          fail: false
+
+      # lychee exit codes: 0 = all links pass, 2 = some links fail,
+      # anything else = lychee itself failed (bad config or crash).
+      - name: Open, update or close the entry report
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          label="entry report"
+          title="Link check: broken links in README.md"
+
+          # The open entry report that this workflow made earlier, if any.
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
+            --label "$label" --limit 100 --json number,title,author \
+            --jq "[.[] | select(.author.login == \"app/github-actions\" and .title == \"$title\")][0].number // empty")
+
+          case "$EXIT_CODE" in
+            0)
+              if [ -n "$number" ]; then
+                gh issue close "$number" --repo "$GITHUB_REPOSITORY" \
+                  --comment "All links in README.md pass in [this run]($RUN_URL)."
+                echo "Closed entry report #$number."
+              else
+                echo "All links pass. No entry report is open."
+              fi
+              ;;
+            2)
+              {
+                echo "The weekly link check found links in \`README.md\` that do not open."
+                echo "Fix or remove each entry below. A later clean run closes this entry report."
+                echo
+                echo "Run: $RUN_URL"
+                echo
+                head -c 60000 lychee/out.md
+              } > "$RUNNER_TEMP/body.md"
+              if [ -n "$number" ]; then
+                gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/body.md"
+                echo "Updated entry report #$number."
+              else
+                gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" \
+                  --label "$label" --assignee "$GITHUB_REPOSITORY_OWNER" \
+                  --body-file "$RUNNER_TEMP/body.md"
+              fi
+              ;;
+            *)
+              echo "::error::lychee failed with exit code '$EXIT_CODE'. See the step above."
+              exit 1
+              ;;
+          esac
+
+      - name: Fail the pull request run if links fail
+        if: github.event_name == 'pull_request' && steps.lychee.outputs.exit_code != '0'
+        env:
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+        run: |
+          echo "::error::lychee exit code $EXIT_CODE. See the job summary."
+          exit 1
