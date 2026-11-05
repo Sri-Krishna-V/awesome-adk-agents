@@ -58,6 +58,8 @@ changelog.md
 
 # Local AI tooling and working notes (kept off GitHub)
 CLAUDE.md
+GLOSSARY.md
+docs/adr/
 .github/
 .cursor/
 research/
