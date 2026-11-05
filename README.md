@@ -7,7 +7,7 @@
   </h1>
 </div>
 
-<p align="center"><img src="https://google.github.io/adk-docs/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
+<p align="center"><img src="https://adk.dev/assets/agent-development-kit.png" width="200px" alt="Agent Development Kit">
 </p>
 
 <p align="center">
@@ -19,16 +19,17 @@
   <a href="https://mseep.ai/app/sri-krishna-v-awesome-adk-agents"><img src="https://mseep.net/pr/sri-krishna-v-awesome-adk-agents-badge.png" alt="MseeP.ai Security Assessment Badge" height="20"></a>
 </p>
 
-_The most comprehensive curated collection for Google's Agent Development Kit (ADK) - featuring **90+ production-ready agents, learning resources, and deployment templates** from hackathon winners ($50K prize pool, 476 submissions), Google's official samples (70+ examples), and a growing community of 20K+ GitHub stars. From beginner tutorials to enterprise-grade multi-agent systems, discover battle-tested solutions for research, business automation, education, and specialized domains._
+_A curated collection for Google's Agent Development Kit (ADK): the official SDKs and recipes, community projects and integrations, hackathon winners, and learning resources, from beginner tutorials to production multi-agent systems. Every entry was re-checked against current ADK (2.x) in November 2026: dead links, archived repos and pre-1.0 projects were removed._
 
 ## 📖 Table of Contents
 
 - [🎯 What This List Solves](#-what-this-list-solves)
 - [What is Google's Agent Development Kit (ADK)?](#what-is-googles-agent-development-kit-adk)
+- [🧰 Official SDKs & Tools](#-official-sdks--tools)
 - [🏆 Featured Projects](#-featured-projects)
-- [🏆 ADK Hackathon Winners](#-adk-hackathon-winners)
 - [🚀 Templates & Starters](#-templates--starters)
 - [🌟 Community Excellence](#-community-excellence)
+- [🏆 ADK Hackathons & Challenges](#-adk-hackathons--challenges)
 - [📚 Learning Resources](#-learning-resources)
 - [🎯 Official Examples](#-official-examples)
 - [🚀 Getting Started](#-getting-started)
@@ -117,15 +118,16 @@ _My showcase agents demonstrating production-ready ADK implementations_
 | [Academic Research Assistant](./my-adk-agents/academic-research-assistant/) | Research/Academia | Multi-agent literature review assistant with profile analysis, robust paper search (with SerpAPI fallback), and personalized research synthesis | 🟡 |
 | [Project Manager Agent](./my-adk-agents/project-manager-agent/) | Productivity/Management | Automated project management with task tracking and progress monitoring | 🟡 |
 | [Learning Content System (WIP)](./my-adk-agents/learning-content-system%28WIP%29/) | Education/Content Creation | Multi-agent system that turns source material into lessons with visuals, audio, and slides, using Sequential, Parallel, and Loop agents, MCP tools, and a quality-check loop | 🚧🟡 |
-| [Local Code Assistant (WIP)](./my-adk-agents/data-analyst/) | Software Development | Single agent that runs a local model (Ollama `qwen3:8b` via LiteLLM) with code execution and suggests React, Vue, Next.js, and Node.js code | 🚧🟢 |
+| [Local Code Assistant (WIP)](./my-adk-agents/data-analyst/) | Software Development | Single agent that runs a local model (Ollama `qwen3:8b` via LiteLLM) and suggests React, Vue, Next.js, and Node.js code | 🚧🟢 |
 
 **Badge Legend:**
 
 - ⭐ **My Showcase** - Featured portfolio projects
 - 🏭 **Production-Ready** - Has deployment code and infrastructure
-- 🔥 **Community Pick** - Outstanding community contributions
+- 🔥 **Community Pick** - Outstanding community traction
 - 🚧 **In Development** - Work in progress
 - 📚 **Learning Resource** - Educational/tutorial content (official examples are demo/educational only)
+- 📖 **Tutorial / Walkthrough**, 📝 **Article**, 🎥 **Video**, 🧪 **Hands-on Lab**, 🎓 **Course**, 💡 **Worked Example**
 - 🟢🟡🔴 **Difficulty**: Beginner, Intermediate, Advanced
 
 ---
