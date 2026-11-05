@@ -182,6 +182,9 @@ _Ready-to-use templates to kickstart your ADK projects_
 
 - 🔍 [Deep Search ADK Quickstart](https://github.com/google/adk-recipes/tree/main/core/python/deep-search) 🏭🔴📚 - Official fullstack research agent (formerly Gemini Fullstack) with a React frontend, human-in-the-loop plan approval, autonomous research pipelines, and Cloud Run deployment
 - 📱 [kkdai/linebot-adk](https://github.com/kkdai/linebot-adk) 🏭🟢 - LINE Bot template with Docker, Cloud Run deployment, and security configurations
+- 💬 [danishi/slack-bot-adk-python-cloudrun](https://github.com/danishi/slack-bot-adk-python-cloudrun) 🏭🟡 - Slack Bolt bot backend powered by ADK and deployed on Cloud Run
+- ☕ [glaforge/adk-java-maven-template](https://github.com/glaforge/adk-java-maven-template) 🟢 - Maven project template for a first ADK for Java agent
+- 🚀 [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph) 🟡 - Neo4j Labs scaffolding CLI that generates domain-specific context-graph agent apps; `--framework google-adk` generates an ADK agent backend
 
 ---
 
