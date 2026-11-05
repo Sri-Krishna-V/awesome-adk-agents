@@ -658,7 +658,9 @@ adk deploy gke --project=PROJECT --region=REGION path/to/my_agent            # G
 
 Contributions are welcome. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for the entry format and the rules an entry must meet.
 
-Questions and ideas go to [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions). Report broken links and other problems as an [issue](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues).
+Questions, ideas and project posts go to [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions). Questions about ADK itself go to the adk-python Discussions linked under [Resources](#resources).
+
+To add or fix an entry, open a pull request. For a broken or outdated entry, open an [issue](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues/new/choose).
 
 ## Footnotes
 

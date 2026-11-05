@@ -10,7 +10,7 @@ Be respectful and constructive in issues, pull requests, and reviews. Please rep
 
 ### Suggesting a List Entry
 
-Most contributions add one project, tutorial, or article to `README.md`. Open a PR that adds one line to the matching section:
+Most contributions add one project, tutorial, or article to `README.md`. Open a PR that adds one line to the matching section.
 
 ```text
 - <level> [<label>](<url>) <🏭 if production-ready> - <Description.>
@@ -28,6 +28,10 @@ For example:
 2. It was updated within the last 6 months and is not archived.
 3. Its README has setup steps.
 4. It adds something no existing entry covers.
+
+No fork? Use the [Suggest an entry](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues/new?template=1-suggest-entry.yml) issue form instead: the maintainer checks the suggestion and writes the line.
+
+Not sure your project meets these rules yet? Post it in [Show your ADK project](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions/new?category=show-your-adk-project) first. A project post is not an entry.
 
 **Label:** `owner/repo` when the link points to a repository's root. Use the project's name for a folder inside a repository, and the title for an article, video or course.
 
@@ -149,6 +153,6 @@ When submitting a pull request, please:
 
 ## Questions?
 
-If you have any questions about contributing, please open an issue or reach out to the repository maintainers.
+Ask in [Discussions](https://github.com/Sri-Krishna-V/awesome-adk-agents/discussions): Q&A for questions about the list, a listed project or `my-adk-agents/`, and Ideas for changes to the list. Questions about ADK itself go to [google/adk-python Discussions](https://github.com/google/adk-python/discussions). Use an [issue](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues/new/choose) for a broken or outdated entry or a bug in an agent.
 
 Thank you for your contributions!
