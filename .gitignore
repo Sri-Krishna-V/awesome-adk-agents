@@ -60,7 +60,11 @@ changelog.md
 CLAUDE.md
 GLOSSARY.md
 docs/adr/
-.github/
+.github/*
+!.github/workflows/
+!.github/ISSUE_TEMPLATE/
+!.github/PULL_REQUEST_TEMPLATE.md
+!.github/DISCUSSION_TEMPLATE/
 .cursor/
 research/
 
