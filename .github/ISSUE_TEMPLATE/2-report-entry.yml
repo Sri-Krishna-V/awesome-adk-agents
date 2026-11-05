@@ -1,0 +1,50 @@
+name: Report an entry problem
+description: A listed entry is broken, moved, outdated or wrongly marked, or you want your own entry changed or removed.
+title: "Report: "
+labels: ["entry report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for keeping the list accurate. A pull request that edits or removes the line is just as welcome.
+
+        Maintainers remove entries whose links 404, archived repositories, and projects with no commits
+        in 12+ months that are broken or built on pre-1.0 ADK.
+
+  - type: input
+    id: entry_url
+    attributes:
+      label: Entry URL
+      description: The URL of the entry, exactly as it appears in the README.
+      placeholder: "https://github.com/owner/repo"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - "The link is broken (404, domain gone)"
+        - "The repository is archived or has had no commits in 12+ months"
+        - "It moved or was renamed"
+        - "Outdated: no longer uses ADK, or is built on pre-1.0 ADK"
+        - "Wrong level (🟢🟡🔴) or wrong 🏭 mark"
+        - "The description is wrong or reads like marketing"
+        - "It duplicates another entry"
+        - "I am the author and want this entry changed or removed"
+    validations:
+      required: true
+
+  - type: input
+    id: new_url
+    attributes:
+      label: New URL
+      description: Optional. Where it lives now, if it moved.
+      placeholder: "https://github.com/new-owner/new-repo"
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What did you see?
+      description: Optional. A status code, the archive banner or the date of the last commit makes this a one-minute fix.
