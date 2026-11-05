@@ -203,15 +203,35 @@ _Outstanding community projects showcasing ADK capabilities_
 
 - 🏗️ [antiv/mate](https://github.com/antiv/mate) 🏭🔴🔥 - Production-ready multi-agent orchestration engine built on Google ADK with database-driven agent config, 50+ LLM providers, MCP protocol, persistent memory, web dashboard, and RBAC
 - 🏗️ [apowerb/apowerb](https://github.com/apowerb/apowerb) 🏭🔴 - Open-source platform that builds Google ADK agents (single, sequential, parallel, loop) from a web UI or REST API, with LiteLLM models, RAG, Text-to-SQL, MCP tools, token quotas and per-session audit; Docker Compose and Helm
+- ☁️ [volcengine/veadk-python](https://github.com/volcengine/veadk-python) 🏭🔴 - Volcengine's agent development kit layered on Google ADK, with Volcengine model, memory, tracing and AgentKit deployment integrations; Go port: [volcengine/veadk-go](https://github.com/volcengine/veadk-go)
+- 🧱 [yaalalabs/agent-kernel](https://github.com/yaalalabs/agent-kernel) 🏭🔴 - Runtime that runs Google ADK, LangGraph, CrewAI, OpenAI Agents SDK and others side by side, adding governance, pause/resume, sessions and multi-cloud deployment
+- 🧪 [opensage-agent/opensage-adk](https://github.com/opensage-agent/opensage-adk) 🔴 - Research kit on ADK where the model creates its own agent topology, synthesizes toolsets and manages structured memory at runtime (paper and docs linked; pinned to ADK 1.x)
 
 ### UI, Protocols & Runtimes
 
+- 🖥️ [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) 🟡🔥 - The AG-UI agent-to-frontend protocol; its ADK middleware (Python, JS, TypeScript) streams ADK agents to AG-UI clients
+- 🪁 [CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit) 🟡🔥 - Frontend stack for agents and generative UI, with an ADK + Angular starter (`examples/integrations/adk-angular`)
 - 🖥️ [trendmicro/adk-agui-middleware](https://github.com/trendmicro/adk-agui-middleware) 🟡 - Python middleware bridging Google ADK agents with the AG-UI protocol via Server-Sent Events for real-time agent interactions in frontend applications
+- 🎛️ [neo-fetch/draw-your-agents](https://github.com/neo-fetch/draw-your-agents) 🟡 - Browser-based visual builder that compiles drag-and-drop agent graphs (or draw.io XML) into runnable ADK 2.0 graph-workflow projects, or LangGraph (AGPL-3.0)
+- ⚡ [Atmosphere/atmosphere](https://github.com/Atmosphere/atmosphere) 🔴 - Portable JVM agent runtime whose `atmosphere-adk` module bridges ADK Java agent streams to WebSocket, SSE and gRPC clients
+- ⏱️ [temporalio/samples-python (google_adk_agents)](https://github.com/temporalio/samples-python/tree/main/google_adk_agents) 🔴 - Run ADK agents durably inside Temporal workflows; the integration ships as the `temporalio-google-adk` package
 - ⚡ [lemony-ai/cascadeflow](https://github.com/lemony-ai/cascadeflow) 🏭🔴🔥 - Cascading runtime that optimizes cost, latency, quality, and policy decisions inside the agent loop, with a Google ADK integration and support for 17+ model providers
 
 ### Observability, Evaluation & Security
 
+- 🔭 [Arize-ai/openinference](https://github.com/Arize-ai/openinference) 🟡 - OpenTelemetry instrumentation for AI apps with ADK support (Python instrumentor and an ADK Java example) for any OTel backend
+- 🔎 [Arize-ai/phoenix](https://github.com/Arize-ai/phoenix) 🟡 - AI observability and evaluation platform with ADK integration guides for Python and Java
+- 🧭 [langfuse/langfuse](https://github.com/langfuse/langfuse) 🟡 - Open-source LLM observability that traces ADK agents via OpenTelemetry
+- 🔬 [comet-ml/opik](https://github.com/comet-ml/opik) 🟡 - Debug, evaluate and monitor LLM apps and agents, with a native ADK integration
+- 📊 [mlflow/mlflow](https://github.com/mlflow/mlflow) 🟡 - AI engineering platform with ADK tracing and `mlflow.genai.scorers.google_adk` scorers for evaluating ADK agents
+- 🕵️ [AgentOps-AI/agentops](https://github.com/AgentOps-AI/agentops) 🟡 - Agent monitoring and cost tracking with a built-in ADK instrumentor
+- 🧿 [monocle2ai/monocle](https://github.com/monocle2ai/monocle) 🟡 - OpenTelemetry-based GenAI tracing framework with ADK support and a sample ADK travel agent
+- 📈 [grafana/agento11y](https://github.com/grafana/agento11y) 🟡 - Grafana Agent Observability SDK with ADK helpers for Python, TypeScript, Go and Java that map ADK callbacks to generation and tool recordings
+- 🧪 [arklexai/arksim](https://github.com/arklexai/arksim) 🟡 - Multi-turn simulation testing where LLM-driven synthetic users converse with your agent to find failures before production; includes an ADK example
+- 🚧 [trustabl/agent-reliability-analyzer](https://github.com/trustabl/agent-reliability-analyzer) 🟡 - Local, deterministic static scanner (340+ rules) that finds and fixes agent reliability failures, with deep Google ADK coverage
 - 🚦 [ThreeMoonsLab/agents-shipgate](https://github.com/ThreeMoonsLab/agents-shipgate) 🟡 - Deterministic merge gate performing local-first, static Tool-Use Readiness review for MCP, OpenAPI, and SDK tool surfaces, including Google ADK Python and YAML configs (CLI + GitHub Action)
+- 🧱 [pipelab-org/pipelock](https://github.com/pipelab-org/pipelock) 🟡 - Open-source agent firewall for MCP and agent egress (exfiltration, SSRF and prompt-injection scanning, signed action receipts) with a Google ADK guide
+- 🛂 [sondera-ai/sondera-harness-python](https://github.com/sondera-ai/sondera-harness-python) 🟡 - Deterministic guardrails for agents with native ADK middleware (also LangGraph and Strands)
 - 🛡️ [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) 🏭🔴🔥 - Governance toolkit for AI agents (maintained by Microsoft; successor to the archived `imran-siddique/agent-os`) with policy enforcement, zero-trust identity, execution sandboxing, and OWASP Agentic Top 10 coverage (7 full, 3 partial per its README); includes a Google ADK adapter
 - 🔐 [Idun-Group/idun-agent-platform](https://github.com/Idun-Group/idun-agent-platform) 🏭🔴🔥 - Open-source Agent Governance Platform that turns any LangGraph or ADK agent into a production-ready service with AG-UI, OpenTelemetry, MCP, memory, guardrails, SSO, and RBAC
 - 🔌 [RubensZimbres/Agent-to-Agent-Security-Pipeline](https://github.com/RubensZimbres/Agent-to-Agent-Security-Pipeline) 🔴 - Security-focused multi-agent pipeline using ADK + A2A + MCP: natural-language salary-database queries pass through threat-detection, SQL-execution, and PII-masking agents (requires `google-adk>=1.0,<2.0`)
@@ -221,10 +241,15 @@ _Outstanding community projects showcasing ADK capabilities_
 
 ### Memory, Session & Storage
 
+- 🧠 [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) 🟡 - Agent memory that learns; its ADK integration implements `BaseMemoryService` (retain on session end, recall on search) plus explicit tool wrappers
+- 🧠 [moorcheh-ai/memanto (google-adk)](https://github.com/moorcheh-ai/memanto/tree/main/integrations/google-adk) 🟡 - Drop-in ADK memory service that extracts typed memories (preferences, facts, decisions) from turns, replacing `InMemoryMemoryService`
+- 🗃️ [achetronic/adk-utils-go](https://github.com/achetronic/adk-utils-go) 🏭🟡 - Go utilities for ADK: OpenAI and Anthropic model clients, Redis sessions, Postgres + pgvector long-term memory, filesystem artifacts and a context-window guard plugin
 - 🗄️ [edu010101/adk-extra-services](https://github.com/edu010101/adk-extra-services) 🟡 - Community Python package with extra session (Redis, MongoDB) and artifact (S3, Azure, Supabase, local folder) service backends for ADK. Last updated October 2025: artifact services lack the newer `list_artifact_versions` / `get_artifact_version` methods, so test against your ADK version
 
 ### Domain-Specific Applications
 
+- 🛡️ [dandye/adk_runbooks](https://github.com/dandye/adk_runbooks) 🟡 - Manager-orchestrated multi-agent security operations system (incident response, threat hunting, detection engineering, alert triage) with a progressive-disclosure skills architecture
+- 🏥 [hastimal/gemini-healthcare-agentic-platform](https://github.com/hastimal/gemini-healthcare-agentic-platform) 🏭🟡 - Agentic healthcare search with a three-agent ADK workflow, MCP, FHIR interoperability, grounding and citations; Streamlit demo, Docker and GKE deployment
 - 💹 [RubensZimbres/Financial-Multi-Agents-Graph-Databasee](https://github.com/RubensZimbres/Financial-Multi-Agents-Graph-Databasee) 🏭🔴 - Multi-agent financial analytics with Neo4j graph database, SEC filings RAG, and ML stock predictions (requires `google-adk>=1.0,<2.0`)
 - 🏭 [ntg2208/production-ai-customer-support](https://github.com/ntg2208/production-ai-customer-support) 🔴 - Multi-agent customer-support system with Policy Agent, Ticket Agent, and Master orchestrator featuring location intelligence, RAG knowledge base, guardrails, evaluation code, and step-by-step tutorials
 - 🔧 [codeninja/Mongoose Migration Agent System](https://gist.github.com/codeninja/a6e117a3480de8d32dd9ef01b519cdae) 🔴🔥 - Multi-agent system for automated Mongoose database migration (v6→v8) with specialized agents and MCP integration
