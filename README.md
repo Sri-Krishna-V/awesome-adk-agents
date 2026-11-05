@@ -269,6 +269,44 @@ _Student hackathon with a Google ADK and A2A sponsor track. Source: [winners ann
 
 </details>
 
+### Hackathons Where ADK Was Optional
+
+<details>
+<summary><b>AI Agents: Intensive Vibe Coding Capstone</b> · Kaggle & Google, Jun–Jul 2026 · 10 ADK winners</summary>
+
+_Capstone of Google and Kaggle's AI Agents: Intensive Vibe Coding course (6,033 submissions); ADK was one of the course concepts. Source: [winners](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/hackathon-winners)_
+
+- 🏅 **Agents for Good, Award 2**: [CritiqAI](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1781911352583) - AI debate coach that teaches students not to depend on AI ([source](https://github.com/francisnguyenanh/CritqAI))
+- 🏅 **Agents for Good, Award 3**: [AccessPilot](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/accesspilot-autonomous-accessibility-repair-agent) - Turns web accessibility audits into verified repairs, built on ADK 2 ([source](https://github.com/joinarun/accesspilot))
+- 🏅 **Agents for Business, Award 1**: [Chance Electro](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/chance-electro-draft) - Estimator for electrical contractors: from a sketch to a priced proposal with A2A agents, an MCP pricing server and skills ([source](https://github.com/barmanoff/chance-electro-capstone))
+- 🏅 **Agents for Business, Award 2**: [Trajectory Auditor](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783355733656) - Multi-agent ADK pipeline that grades how a coding agent reached its result ([source](https://github.com/ShayIsso/trajectory-auditor))
+- 🏅 **Agents for Business, Award 3**: [ReviewOps Agent](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783340134268) - Drafts fair, cited performance reviews from employee-approved evidence, with access control before the model ([source](https://github.com/mkiselyow/ReviewOps-Agent))
+- 🏅 **Concierge Agents, Award 1**: [BiteBudget](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/bitebudget-an-intelligent-cooking-and-grocery-exp) - ADK Workflow state machine for meal plans, shopping lists and receipt logging with Gemini OCR ([source](https://github.com/crisstugui-png/cooking-shopping-assistant))
+- 🏅 **Concierge Agents, Award 2**: [TripWeaver](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/tripweaver-a-multi-agent-travel-planner-that-fix) - Multi-agent travel planner with a self-correcting budget and schedule loop ([source](https://github.com/VenuAIAgenticDev/TripWeaver))
+- 🏅 **Concierge Agents, Award 3**: [KinKeeper](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/kinkeeper-never-forget-to-remember-the-people-yo) - Memory concierge for birthdays and family moments hidden in chats ([source](https://github.com/gpshalini/KinKeeper))
+- 🏅 **Freestyle, Award 1**: [Palimpsest](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/palimpsest) - Multi-agent pipeline for historical manuscript transcription with an ADK agent skill ([source](https://github.com/carlosapsa/palimpsest))
+- 🏅 **Freestyle, Award 2**: [Project A.R.I.E.S.](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/project-aries) - Space-weather assistant that fetches NASA data and writes structured reports ([source](https://github.com/N-Garai/Project-A.R.I.E.S))
+
+</details>
+
+<details>
+<summary><b>Agents Intensive Capstone Project</b> · Kaggle & Google, Nov–Dec 2025 · 10 ADK winners</summary>
+
+_Capstone of Google and Kaggle's 5-Day AI Agents Intensive (11,453 submissions); ADK was the course framework but not required. Source: [winners](https://www.kaggle.com/competitions/agents-intensive-capstone-project/hackathon-winners)_
+
+- 🥇 **Agents for Good, 1st**: [Carbon Footprint Optimization Engine (CfoE)](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/carbon-footprint-optimization-engine-cfoe) - Multi-agent procurement compliance with carbon-footprint analysis and human-in-the-loop review ([notebook](https://www.kaggle.com/code/sumitkumarguha/global-cfoe))
+- 🥉 **Agents for Good, 3rd**: [Parallel Scholar](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/parallel-scholar) - Research assistant with parallel paper discovery, trend analysis, citation management and persistent memory ([source](https://github.com/emansarahafi/Research-Assistant-Agent))
+- 🥇 **Enterprise Agents, 1st**: [Chaos Playbook Engine](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/new-writeup-1763223319877) - Reproducible chaos lab that tests and compares agent resilience with RAG playbooks, from tools to MCP/A2A ([source](https://github.com/alberto-martinez-zurita/chaos-playbook-engine))
+- 🥈 **Enterprise Agents, 2nd**: [Coderama](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/coderama-reimagining-enterprise-software-deliver) - A2A agents that plan, build, test and deploy software ([source](https://github.com/debasisdwivedy/Coderama))
+- 🥉 **Enterprise Agents, 3rd**: [VeganFlow](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/veganflow-autonomous-supply-chain-intelligence) - Supply-chain intelligence for plant-based retail micro-vendors ([source](https://github.com/karthick-sothivelr/Autonomous_Supply_Chain_Intelligence))
+- 🥇 **Concierge Agents, 1st**: [NewsPulse AI Agent](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/NewsPulse-AI-Agent) - Self-correcting multi-agent news digest tailored to executives ([source](https://github.com/azhang6-nlp/NewsPulse_AI_Agent))
+- 🥈 **Concierge Agents, 2nd**: [FIL Content Agent System](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/fil-content-agent-system) - Agents that draft website content from natural-language requests ([source](https://github.com/jasononaquest/fil-agent))
+- 🥇 **Freestyle, 1st**: [Daedalus](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/daedalus) - Self-expanding agent system that designs, tests and registers its own tools and agent pipelines ([source](https://github.com/jovanovic-milos/daedalus))
+- 🥈 **Freestyle, 2nd**: [AI Stock Prediction System](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/ai-stock-prediction-system-multi-agent-a2a-archit) - Six parallel agents with an A2A architecture for stock analysis ([source](https://github.com/nishapp/agents-5days-kaggle-competition))
+- 🥉 **Freestyle, 3rd**: [StoryLand AI](https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/storyland-agent) - Turns favorite books into themed travel itineraries ([source](https://github.com/o-ostrovskiy/storyland-ai))
+
+</details>
+
 ---
 
 ## 📚 Learning Resources
