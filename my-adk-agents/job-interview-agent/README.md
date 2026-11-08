@@ -355,7 +355,7 @@ docker run -it -p 8000:8000 --env-file .env job-interview-agent
 ## Support
 
 - [ADK Documentation](https://google.github.io/adk-docs/)
-- [Report Issues](https://github.com/awesome-adk-agents/issues)
+- [Report Issues](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues/new?template=3-agent-bug.yml)
 
 ---
 

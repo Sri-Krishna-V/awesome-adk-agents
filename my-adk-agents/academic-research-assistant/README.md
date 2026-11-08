@@ -200,7 +200,7 @@ You can modify the prompts in `academic_research_assistant/sub_agents/comparison
 ## Support
 
 - [ADK Documentation](https://google.github.io/adk-docs/)
-- [Report Issues](https://github.com/awesome-adk-agents/issues)
+- [Report Issues](https://github.com/Sri-Krishna-V/awesome-adk-agents/issues/new?template=3-agent-bug.yml)
 
 ---
 
