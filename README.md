@@ -236,8 +236,6 @@ _Comprehensive guides, tutorials, and educational content_
 
 ### Courses & Certifications
 
-- 🟡 [Building Live Voice Agents with Google's ADK (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/building-live-voice-agents-with-googles-adk/) - Short course by Google engineers: voice agent, sessions, state and memory, tools, callback guardrails, multi-agent orchestration, and a Gemini TTS podcast capstone.
-- 🟡 [A2A: The Agent2Agent Protocol (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/a2a-the-agent2agent-protocol/) - Course with Google Cloud and IBM Research: wrap agents built on ADK and other frameworks in A2A servers and orchestrate them in a healthcare multi-agent system.
 - 🟢 [Develop Agents with Agent Development Kit (ADK) track (DataCamp x Google Cloud)](https://www.datacamp.com/tracks/develop-agents-with-agent-development-kit-adk) - Five Google-created courses: build agents, optimize agent behavior, add tools, and manage memory and state.
 - 🟢 [Build Your First Agent with Agent Development Kit (Google Skills)](https://www.skills.google/course_templates/1563) - Introductory Google Skills course for building and running an ADK agent in Python and YAML.
 - 🟢 [5-Day AI Agents Intensive on Kaggle](https://www.kaggle.com/learn-guide/5-day-agents) - Free, self-paced guide from Google and Kaggle's November 2025 course: whitepapers, podcasts, livestreams and ADK codelabs on agent foundations, tools, memory, evaluation and production.
