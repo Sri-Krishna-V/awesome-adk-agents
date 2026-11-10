@@ -156,6 +156,7 @@ _Agents built by the maintainer of this list._
 - 🔴 [volcengine/veadk-python](https://github.com/volcengine/veadk-python) 🏭 - Volcengine's agent development kit layered on Google ADK, with Volcengine model, memory, tracing and AgentKit deployment integrations; Go port: [volcengine/veadk-go](https://github.com/volcengine/veadk-go).
 - 🔴 [yaalalabs/agent-kernel](https://github.com/yaalalabs/agent-kernel) 🏭 - Runtime that runs Google ADK, LangGraph, CrewAI, OpenAI Agents SDK and others side by side, adding governance, pause/resume, sessions and multi-cloud deployment.
 - 🔴 [opensage-agent/opensage-adk](https://github.com/opensage-agent/opensage-adk) - Research kit on ADK where the model creates its own agent topology, synthesizes toolsets and manages structured memory at runtime (paper and docs linked; pinned to ADK 1.x).
+- 🟡 [VeloceAI/agent-adapter](https://github.com/VeloceAI/agent-adapter) - Python library that turns plain functions into ADK tools that also run in 18 other frameworks, with approvals, budgets and traces.
 
 ### UI, Protocols & Runtimes
 
