@@ -246,6 +246,7 @@ _Comprehensive guides, tutorials, and educational content_
 - 🟢 [chongdashu/adk-made-simple](https://github.com/chongdashu/adk-made-simple) - From basics to A2A integration with real world applications and projects.
 - 🟡 [arjunprabhulal/google-adk-masterclass](https://github.com/arjunprabhulal/google-adk-masterclass) - 20-module masterclass covering ADK basics through advanced topics including MCP, Vertex AI, and production deployment.
 - 🟡 [omerbsezer/Fast-LLM-Agent-MCP](https://github.com/omerbsezer/Fast-LLM-Agent-MCP) - Comprehensive resource covering LLMs, RAG, fine-tuning, agents, MCP, and Google ADK both theoretically and practically with reference documents.
+- 🟡 [himanshu231204/google-adk](https://github.com/himanshu231204/google-adk) - Free 96-page illustrated ADK 2.x guide covering agents, tools, MCP, graph workflows, multi-agent, memory, guardrails, evaluation and deployment.
 
 ### Official Hands-on Learning
 
